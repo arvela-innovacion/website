@@ -1,0 +1,3 @@
+Contact: mailto:arvelainnovacion@gmail.com
+Preferred-Languages: es
+Canonical: https://arvelainnova.es/.well-known/security.txt
