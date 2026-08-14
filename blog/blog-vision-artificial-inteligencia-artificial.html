@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Qué es la visión artificial y cómo funciona | Computer Vision aplicada | ARVELA</title>
+  <meta name="description" content="Guía completa sobre visión artificial: qué es, cómo funciona, tipos de modelos, detección de objetos, segmentación, OCR, Edge AI, cámaras inteligentes y casos de uso empresariales." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://arvelainnova.es/blog/vision-artificial-inteligencia-artificial/" />
+
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Qué es la visión artificial y cómo funciona" />
+  <meta property="og:description" content="Cómo las cámaras y los modelos de IA convierten imágenes y vídeo en detecciones, eventos, alertas y datos útiles." />
+  <meta property="og:url" content="https://arvelainnova.es/blog/vision-artificial-inteligencia-artificial/" />
+  <meta property="og:site_name" content="ARVELA Innovación" />
+  <meta property="og:image" content="https://arvelainnova.es/og-image.png" />
+  <meta property="article:publisher" content="https://arvelainnova.es/" />
+  <meta property="article:section" content="Visión artificial" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Qué es la visión artificial y cómo funciona" />
+  <meta name="twitter:description" content="Detección de objetos, segmentación, OCR, análisis de vídeo, Edge AI y casos de uso reales." />
+  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#172033" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Qué es la visión artificial y cómo funciona",
+    "description": "Guía práctica sobre Computer Vision, cámaras inteligentes, detección de objetos, segmentación, OCR, Edge AI, analítica de vídeo y aplicaciones empresariales.",
+    "url": "https://arvelainnova.es/blog/vision-artificial-inteligencia-artificial/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://arvelainnova.es/blog/vision-artificial-inteligencia-artificial/"
+    },
+    "image": "https://arvelainnova.es/og-image.png",
+    "author": {
+      "@type": "Organization",
+      "name": "ARVELA Innovación",
+      "url": "https://arvelainnova.es/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ARVELA Innovación",
+      "url": "https://arvelainnova.es/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://arvelainnova.es/logo.jpg"
+      }
+    },
+    "datePublished": "2026-08-06",
+    "dateModified": "2026-08-06",
+    "inLanguage": "es",
+    "articleSection": "Visión artificial",
+    "keywords": [
+      "visión artificial",
+      "computer vision",
+      "detección de objetos",
+      "reconocimiento de objetos",
+      "segmentación de imágenes",
+      "OCR inteligencia artificial",
+      "Edge AI",
+      "cámaras inteligentes",
+      "analítica de vídeo"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://arvelainnova.es/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://arvelainnova.es/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Qué es la visión artificial",
+        "item": "https://arvelainnova.es/blog/vision-artificial-inteligencia-artificial/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es la visión artificial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es el conjunto de técnicas que permite a un sistema analizar imágenes y vídeo para detectar objetos, clasificar escenas, reconocer texto, segmentar elementos o identificar eventos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué diferencia hay entre visión artificial e Inteligencia Artificial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La visión artificial es un campo especializado dentro de la Inteligencia Artificial centrado en interpretar información visual."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué puede detectar una cámara con IA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puede detectar personas, animales, vehículos, objetos, defectos, matrículas, texto, movimientos, zonas ocupadas y eventos definidos por el proyecto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La visión artificial necesita conexión a Internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No siempre. El análisis puede ejecutarse localmente mediante Edge AI, en la nube o con una arquitectura híbrida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se empieza un proyecto de visión artificial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Se empieza definiendo el evento que debe detectarse, revisando las condiciones reales, recopilando imágenes representativas y construyendo un piloto medible."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f8fafc;
+      --text: #172033;
+      --muted: #5f6b85;
+      --line: #e5e9f2;
+      --primary: #1f6feb;
+      --violet: #6d5dfc;
+      --cyan: #0891b2;
+      --warning: #9a6700;
+      --shadow: 0 20px 55px rgba(23, 32, 51, 0.08);
+      --radius: 22px;
+      --max: 1180px;
+      --article: 790px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(109,93,252,.09), transparent 27rem),
+        radial-gradient(circle at 90% 10%, rgba(8,145,178,.08), transparent 28rem),
+        var(--bg);
+      line-height: 1.72;
+    }
+
+    a { color: inherit; }
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    header { padding: 22px 0 12px; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 15px 18px;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(229,233,242,.95);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; min-width: 0; }
+    .brand-logo {
+      width: 52px; height: 52px; border-radius: 15px; overflow: hidden;
+      border: 1px solid #dbeafe; background: linear-gradient(135deg,#eff6ff,#f5f3ff);
+      display: grid; place-items: center; flex: 0 0 auto;
+    }
+    .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
+    .brand strong { display: block; line-height: 1.15; letter-spacing: .02em; }
+    .brand span { display: block; margin-top: 4px; color: var(--muted); font-size: .9rem; }
+
+    nav { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    nav a {
+      text-decoration: none; color: var(--muted); font-size: .92rem;
+      padding: 8px 10px; border-radius: 999px;
+    }
+    nav a:hover, nav a.active { color: var(--text); background: #f3f4f6; }
+
+    .breadcrumb { padding: 18px 0 0; color: var(--muted); font-size: .92rem; }
+    .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 700; }
+
+    .hero { padding: 28px 0 22px; }
+    .hero-card {
+      padding: 42px;
+      background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(248,247,255,.96));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+    .category {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 11px; border-radius: 999px;
+      background: #f5f3ff; color: var(--violet);
+      font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em;
+    }
+    .hero h1 {
+      margin: 18px 0 0;
+      max-width: 960px;
+      font-size: clamp(2.25rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+    .lead {
+      max-width: 880px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 1.16rem;
+    }
+    .meta {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-top: 24px; color: var(--muted); font-size: .92rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, var(--article)) 290px;
+      gap: 28px;
+      align-items: start;
+      padding: 12px 0 38px;
+      justify-content: center;
+    }
+
+    article {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 38px;
+      min-width: 0;
+    }
+    article h2 {
+      margin: 2.6rem 0 1rem;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      line-height: 1.2;
+      letter-spacing: -.025em;
+      scroll-margin-top: 20px;
+    }
+    article h2:first-of-type { margin-top: 0; }
+    article h3 {
+      margin: 2rem 0 .75rem;
+      font-size: 1.24rem;
+      line-height: 1.3;
+      scroll-margin-top: 20px;
+    }
+    article p, article li { color: var(--muted); }
+    article strong { color: var(--text); }
+    article ul, article ol { padding-left: 1.25rem; }
+    article li + li { margin-top: .55rem; }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.94);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .toc strong { display: block; margin-bottom: 12px; }
+    .toc ol { margin: 0; padding-left: 18px; }
+    .toc li + li { margin-top: 8px; }
+    .toc a { color: var(--muted); text-decoration: none; font-size: .9rem; }
+    .toc a:hover { color: var(--primary); }
+
+    .highlight {
+      margin: 24px 0;
+      padding: 22px;
+      border-radius: 18px;
+      background: linear-gradient(135deg,#f6f3ff,#effcff);
+      border: 1px solid #ddd7fb;
+    }
+    .highlight strong { display: block; margin-bottom: 7px; }
+    .highlight p { margin: 0; }
+
+    .warning {
+      margin: 24px 0;
+      padding: 20px 22px;
+      border-radius: 18px;
+      background: #fffaf0;
+      border: 1px solid #f2dfb2;
+    }
+    .warning strong { color: var(--warning); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 14px;
+      margin: 22px 0;
+    }
+    .card {
+      border: 1px solid var(--line);
+      background: var(--surface-soft);
+      border-radius: 18px;
+      padding: 19px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1.04rem; }
+    .card p { margin: 0; font-size: .95rem; }
+
+    .comparison {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: .95rem;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(23,32,51,.06);
+    }
+    .comparison th, .comparison td {
+      padding: 14px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    .comparison th { background: #f8fafc; color: var(--text); }
+    .comparison td { color: var(--muted); }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(6,minmax(0,1fr));
+      gap: 10px;
+      margin: 24px 0;
+    }
+    .node {
+      padding: 15px 10px;
+      text-align: center;
+      border-radius: 16px;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+    }
+    .node strong { display:block; font-size:.9rem; }
+    .node span { display:block; margin-top:6px; color:var(--muted); font-size:.8rem; }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .step {
+      position: relative;
+      padding: 20px 20px 20px 68px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface-soft);
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 20px; top: 19px;
+      width: 32px; height: 32px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: var(--violet);
+      color: white; font-weight: 800;
+    }
+    .step h3 { margin: 0 0 7px; font-size: 1.05rem; }
+    .step p { margin: 0; }
+
+    .internal-link {
+      color: var(--primary);
+      font-weight: 750;
+      text-decoration-thickness: .08em;
+      text-underline-offset: .16em;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+    details + details { margin-top: 10px; }
+    summary { cursor: pointer; font-weight: 800; }
+    details p { margin-bottom: 0; }
+
+    .cta {
+      margin-top: 36px;
+      padding: 28px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #172033, #362d65);
+      color: white;
+    }
+    .cta h2 { margin: 0 0 10px; color: white; }
+    .cta p { color: rgba(255,255,255,.78); }
+    .cta a {
+      display: inline-flex;
+      margin-top: 8px;
+      padding: 12px 16px;
+      border-radius: 13px;
+      background: white;
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .related { padding: 12px 0 42px; }
+    .related h2 { margin-bottom: 16px; letter-spacing: -.02em; }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 16px;
+    }
+    .related-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .related-card span { color: var(--violet); font-size: .82rem; font-weight: 800; }
+    .related-card h3 { margin: 9px 0; font-size: 1.08rem; }
+    .related-card p { color: var(--muted); font-size: .93rem; }
+    .related-card a { color: var(--primary); font-weight: 800; text-decoration: none; }
+
+    footer { padding: 26px 0 34px; color: var(--muted); font-size: .92rem; }
+
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; order: -1; }
+      .related-grid { grid-template-columns: 1fr; }
+      .pipeline { grid-template-columns: repeat(3,1fr); }
+    }
+
+    @media (max-width: 760px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      nav { justify-content: flex-start; }
+      .hero-card, article { padding: 24px; }
+      .grid, .pipeline { grid-template-columns: 1fr; }
+      .comparison { display: block; overflow-x: auto; }
+      .hero h1 { font-size: 2.45rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="/" aria-label="Inicio de ARVELA Innovación">
+        <span class="brand-logo">
+          <img src="/logo.jpg" alt="Logo de ARVELA Innovación" onerror="this.style.display='none'" />
+        </span>
+        <span>
+          <strong>ARVELA INNOVACION, S.L.</strong>
+          <span>Innovación tecnológica con impacto real</span>
+        </span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a href="/que-hacemos/">Qué hacemos</a>
+        <a href="/soluciones/">Soluciones</a>
+        <a href="/proyectos/">Proyectos</a>
+        <a href="/conocenos/">Conócenos</a>
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Qué es la visión artificial
+    </div>
+
+    <section class="hero">
+      <div class="hero-card">
+        <span class="category">Visión artificial</span>
+        <h1>Qué es la visión artificial y cómo funciona</h1>
+        <p class="lead">
+          La visión artificial permite que un sistema analice imágenes y vídeo para detectar objetos, reconocer texto,
+          segmentar elementos, identificar eventos y generar datos. Su utilidad aparece cuando esas detecciones se integran
+          con alertas, dashboards y procesos reales.
+        </p>
+        <div class="meta">
+          <span>Publicado por ARVELA Innovación</span>
+          <span>6 de agosto de 2026</span>
+          <span>Lectura aproximada: 20 minutos</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <article>
+        <h2 id="introduccion">De la imagen a la información</h2>
+        <p>
+          Una cámara tradicional captura imágenes o vídeo, pero no comprende lo que ocurre dentro de la escena. Una persona
+          debe revisar el contenido, interpretar lo que ve y decidir si existe un evento relevante. Cuando el volumen es alto
+          o la supervisión debe mantenerse durante muchas horas, esta revisión manual resulta costosa y difícil de sostener.
+        </p>
+        <p>
+          La visión artificial intenta automatizar una parte de ese proceso. Mediante modelos de Inteligencia Artificial, un
+          sistema puede localizar personas, animales, vehículos, productos, defectos, texto o zonas dentro de una imagen.
+          También puede seguir objetos a lo largo del tiempo y aplicar reglas para generar eventos.
+        </p>
+        <p>
+          El valor no está solo en reconocer algo. Está en convertir una detección en información útil: una alerta, un registro,
+          una evidencia, un contador, un estado o una tarea dentro de otro sistema.
+        </p>
+        <div class="highlight">
+          <strong>Idea principal</strong>
+          <p>
+            La visión artificial no consiste únicamente en instalar cámaras con IA. Consiste en diseñar una cadena completa
+            desde la imagen hasta una decisión o acción medible.
+          </p>
+        </div>
+
+        <h2 id="que-es">¿Qué es la visión artificial?</h2>
+        <p>
+          La visión artificial, conocida también como Computer Vision, es el campo de la Inteligencia Artificial orientado a
+          interpretar imágenes y vídeo. Su objetivo es extraer información estructurada de contenido visual.
+        </p>
+        <p>
+          Según el proyecto, esa información puede ser una clase, una caja delimitadora, una máscara de píxeles, un texto,
+          una pose, una trayectoria o un evento. El resultado puede almacenarse y combinarse con otras fuentes de datos.
+        </p>
+        <p>
+          La solución de <a class="internal-link" href="/soluciones/monitorizacion-inteligente-ia.html">Monitorización Inteligente mediante IA</a>
+          de ARVELA aplica esta tecnología a cámaras, eventos, alertas y revisión operativa.
+        </p>
+
+        <h2 id="diferencias">Diferencias entre IA, Machine Learning y visión artificial</h2>
+        <table class="comparison">
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Qué abarca</th>
+              <th>Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Inteligencia Artificial</strong></td>
+              <td>Campo general para análisis, predicción, generación y toma de decisiones asistida.</td>
+              <td>Priorizar incidencias según múltiples datos.</td>
+            </tr>
+            <tr>
+              <td><strong>Machine Learning</strong></td>
+              <td>Modelos que aprenden patrones a partir de ejemplos.</td>
+              <td>Predecir la probabilidad de un fallo.</td>
+            </tr>
+            <tr>
+              <td><strong>Deep Learning</strong></td>
+              <td>Redes neuronales profundas utilizadas en imagen, lenguaje y audio.</td>
+              <td>Detectar objetos en vídeo.</td>
+            </tr>
+            <tr>
+              <td><strong>Visión artificial</strong></td>
+              <td>Aplicación de IA a imágenes y vídeo.</td>
+              <td>Reconocer vehículos, personas o defectos.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="como-funciona">Cómo funciona un sistema de Computer Vision</h2>
+        <div class="pipeline" aria-label="Flujo de una solución de visión artificial">
+          <div class="node"><strong>Captura</strong><span>Cámara o imagen</span></div>
+          <div class="node"><strong>Preparación</strong><span>Calidad y formato</span></div>
+          <div class="node"><strong>Modelo</strong><span>Inferencia</span></div>
+          <div class="node"><strong>Resultado</strong><span>Detección o clase</span></div>
+          <div class="node"><strong>Regla</strong><span>Contexto</span></div>
+          <div class="node"><strong>Acción</strong><span>Alerta o registro</span></div>
+        </div>
+        <p>
+          La cámara produce una imagen o una secuencia de vídeo. El sistema adapta el formato, ejecuta un modelo y obtiene
+          resultados. Después se aplican reglas de negocio: zona, horario, duración, dirección, cantidad o combinación con
+          otros datos.
+        </p>
+        <p>
+          Una persona detectada no tiene por qué generar una alerta. Puede ser relevante solo si entra en una zona restringida,
+          permanece durante cierto tiempo o aparece fuera de horario.
+        </p>
+
+        <h2 id="tareas">Principales tareas de visión artificial</h2>
+
+        <h3>Clasificación de imágenes</h3>
+        <p>
+          Asigna una categoría general a una imagen. Puede utilizarse para distinguir tipos de producto, estados o escenas.
+          No indica necesariamente dónde está el elemento.
+        </p>
+
+        <h3>Detección de objetos</h3>
+        <p>
+          Localiza uno o varios objetos mediante cajas y asigna una clase a cada uno. Es habitual para personas, animales,
+          vehículos, herramientas, mercancías y otros elementos.
+        </p>
+
+        <h3>Segmentación</h3>
+        <p>
+          Identifica con mayor precisión los píxeles que pertenecen a cada objeto o región. Es útil cuando la forma, superficie
+          o contorno importa.
+        </p>
+
+        <h3>Seguimiento</h3>
+        <p>
+          Mantiene la identidad aproximada de un objeto a través de varios fotogramas. Permite contar, analizar trayectorias,
+          medir permanencia o detectar cruces.
+        </p>
+
+        <h3>OCR</h3>
+        <p>
+          Reconoce texto dentro de una imagen. Puede aplicarse a documentos, etiquetas, códigos, matrículas, carteles o pantallas.
+          La calidad depende del ángulo, iluminación, resolución y formato del texto.
+        </p>
+
+        <h3>Estimación de pose</h3>
+        <p>
+          Identifica puntos relevantes del cuerpo para estimar postura o movimiento. Puede utilizarse en ergonomía, deporte,
+          seguridad o análisis de comportamiento.
+        </p>
+
+        <h3>Detección de anomalías</h3>
+        <p>
+          Busca diferencias respecto a un patrón normal. Puede aplicarse a inspección visual cuando existen pocos ejemplos de
+          defectos, aunque requiere una definición cuidadosa de normalidad.
+        </p>
+
+        <h2 id="modelos">Cómo se entrenan los modelos</h2>
+        <p>
+          Muchos proyectos comienzan con modelos preentrenados capaces de reconocer categorías generales. Cuando el contexto es
+          específico, puede ser necesario ajustar el modelo con imágenes propias.
+        </p>
+        <p>
+          El proceso suele incluir recopilación, selección, etiquetado, entrenamiento, validación y prueba en condiciones reales.
+          La calidad del conjunto de datos importa tanto como el algoritmo.
+        </p>
+        <ul>
+          <li>Imágenes representativas de cámaras y ubicaciones reales.</li>
+          <li>Diferentes horarios, estaciones y condiciones de iluminación.</li>
+          <li>Ejemplos positivos y negativos.</li>
+          <li>Variación de tamaños, ángulos y oclusiones.</li>
+          <li>Etiquetas consistentes y revisadas.</li>
+          <li>Separación entre datos de entrenamiento y evaluación.</li>
+        </ul>
+        <div class="warning">
+          <strong>Una demostración con imágenes seleccionadas no valida el sistema.</strong>
+          <p>
+            El rendimiento debe medirse con escenas reales, incluyendo condiciones difíciles y casos donde no debería producirse
+            ninguna alerta.
+          </p>
+        </div>
+
+        <h2 id="metricas">Cómo medir el rendimiento</h2>
+        <p>
+          La precisión global no basta. Es necesario analizar falsos positivos, falsos negativos y el coste de cada error.
+        </p>
+        <table class="comparison">
+          <thead>
+            <tr>
+              <th>Métrica</th>
+              <th>Qué indica</th>
+              <th>Por qué importa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Precisión</strong></td>
+              <td>Qué proporción de detecciones es correcta.</td>
+              <td>Ayuda a controlar falsas alarmas.</td>
+            </tr>
+            <tr>
+              <td><strong>Exhaustividad</strong></td>
+              <td>Qué proporción de objetos reales se detecta.</td>
+              <td>Ayuda a controlar eventos perdidos.</td>
+            </tr>
+            <tr>
+              <td><strong>Latencia</strong></td>
+              <td>Cuánto tarda el sistema en responder.</td>
+              <td>Es crítica para decisiones en tiempo real.</td>
+            </tr>
+            <tr>
+              <td><strong>Estabilidad</strong></td>
+              <td>Cómo cambia el rendimiento según condiciones.</td>
+              <td>Evita depender de una única escena favorable.</td>
+            </tr>
+            <tr>
+              <td><strong>Tasa de alertas útiles</strong></td>
+              <td>Cuántos eventos generan una acción válida.</td>
+              <td>Mide utilidad operativa, no solo rendimiento técnico.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="edge-cloud">Edge AI frente a procesamiento en la nube</h2>
+        <p>
+          El análisis puede realizarse cerca de la cámara, en un servidor central o en la nube. Cada opción tiene ventajas y
+          limitaciones.
+        </p>
+        <table class="comparison">
+          <thead>
+            <tr>
+              <th>Criterio</th>
+              <th>Edge AI</th>
+              <th>Nube</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Latencia</strong></td>
+              <td>Respuesta local más rápida.</td>
+              <td>Depende de conexión y distancia.</td>
+            </tr>
+            <tr>
+              <td><strong>Conectividad</strong></td>
+              <td>Puede seguir funcionando con conexión limitada.</td>
+              <td>Requiere envío estable.</td>
+            </tr>
+            <tr>
+              <td><strong>Privacidad</strong></td>
+              <td>Puede evitar enviar vídeo completo.</td>
+              <td>Exige revisar almacenamiento y transmisión.</td>
+            </tr>
+            <tr>
+              <td><strong>Escalado</strong></td>
+              <td>Depende de capacidad local.</td>
+              <td>Facilita recursos centralizados.</td>
+            </tr>
+            <tr>
+              <td><strong>Mantenimiento</strong></td>
+              <td>Hay que gestionar equipos distribuidos.</td>
+              <td>Actualización más centralizada.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Una arquitectura híbrida puede ejecutar detección local y enviar solo eventos, metadatos o fragmentos relevantes.
+          Esto reduce ancho de banda y facilita una respuesta rápida.
+        </p>
+
+        <h2 id="camaras">Cámaras y condiciones de captura</h2>
+        <p>
+          La cámara condiciona el proyecto. La resolución, óptica, posición, altura, iluminación, compresión y velocidad de
+          fotogramas afectan al resultado.
+        </p>
+        <p>
+          Antes de entrenar modelos conviene revisar:
+        </p>
+        <ul>
+          <li>Distancia y tamaño esperado de los objetos.</li>
+          <li>Ángulo y posibles oclusiones.</li>
+          <li>Cambios entre día y noche.</li>
+          <li>Contraluces, sombras, lluvia, polvo o reflejos.</li>
+          <li>Movimiento de la cámara.</li>
+          <li>Calidad de la red y almacenamiento.</li>
+          <li>Zonas de interés y áreas que deben excluirse.</li>
+        </ul>
+
+        <h2 id="eventos">De la detección al evento inteligente</h2>
+        <p>
+          Un sistema de monitorización debe interpretar detecciones dentro de un contexto. Algunas reglas habituales son:
+        </p>
+        <ul>
+          <li>Entrada en una zona.</li>
+          <li>Salida de un perímetro.</li>
+          <li>Permanencia durante un tiempo.</li>
+          <li>Cruce de una línea en una dirección.</li>
+          <li>Conteo superior o inferior a un umbral.</li>
+          <li>Aparición de una categoría fuera de horario.</li>
+          <li>Ausencia de un objeto esperado.</li>
+          <li>Combinación con sensores o estados de otro sistema.</li>
+        </ul>
+        <p>
+          La detección debe conectarse con una plataforma que permita revisar evidencias, cambiar estado, añadir comentarios y
+          analizar históricos.
+        </p>
+
+        <h2 id="industria">Aplicaciones en industria</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Inspección visual</h3>
+            <p>Detección de defectos, piezas incorrectas, ausencia de componentes o problemas de acabado.</p>
+          </div>
+          <div class="card">
+            <h3>Seguridad operativa</h3>
+            <p>Identificación de presencia en zonas, equipos de protección o situaciones definidas.</p>
+          </div>
+          <div class="card">
+            <h3>Conteo y trazabilidad</h3>
+            <p>Control de unidades, movimientos, entradas y salidas.</p>
+          </div>
+          <div class="card">
+            <h3>Mantenimiento</h3>
+            <p>Observación de estados, indicadores visuales o anomalías evidentes.</p>
+          </div>
+        </div>
+
+        <h2 id="ganaderia">Aplicaciones en ganadería y agricultura</h2>
+        <p>
+          Las cámaras pueden utilizarse para contar animales, detectar presencia, observar comportamiento o complementar
+          sensores de actividad y localización. En agricultura pueden apoyar clasificación, seguimiento y análisis visual.
+        </p>
+        <p>
+          El artículo sobre <a class="internal-link" href="/blog/inteligencia-artificial-ganaderia/">Inteligencia Artificial en ganadería</a>
+          desarrolla la combinación de cámaras, sensores, GPS y analítica dentro de explotaciones.
+        </p>
+
+        <h2 id="administracion">Administraciones públicas y Smart Cities</h2>
+        <p>
+          La visión artificial puede aplicarse a movilidad, ocupación, mantenimiento, tráfico, conteo, incidencias o análisis
+          territorial. Cada proyecto debe revisar proporcionalidad, necesidad, acceso, conservación y finalidad del tratamiento.
+        </p>
+        <p>
+          No todas las aplicaciones requieren identificar personas. En muchos casos basta con detectar categorías, contar o
+          analizar eventos sin conservar imágenes más allá del tiempo necesario.
+        </p>
+
+        <h2 id="ocr">OCR y reconocimiento de texto</h2>
+        <p>
+          El OCR convierte texto visual en información digital. Puede aplicarse a documentos, etiquetas, matrículas, códigos,
+          formularios o pantallas.
+        </p>
+        <p>
+          El reconocimiento puede fallar por reflejos, tipografías, suciedad, perspectiva o baja resolución. Para mejorar
+          resultados se combinan preprocesado, detección de región y validación con reglas.
+        </p>
+
+        <h2 id="privacidad">Privacidad, seguridad y uso responsable</h2>
+        <p>
+          Los proyectos con cámaras deben diseñarse con una finalidad clara y limitar la recogida de información. Conviene
+          reducir zonas innecesarias, utilizar máscaras, definir tiempos de conservación y controlar accesos.
+        </p>
+        <p>
+          También debe distinguirse entre detección y reconocimiento de identidad. Detectar una persona no implica necesariamente
+          saber quién es. Cuanto mayor sea el nivel de identificación y el impacto sobre las personas, mayor debe ser el control.
+        </p>
+        <p>
+          La seguridad debe incluir credenciales, cifrado, actualizaciones, registros de acceso y protección de dispositivos.
+        </p>
+
+        <h2 id="como-empezar">Cómo empezar un proyecto de visión artificial</h2>
+        <div class="steps">
+          <div class="step">
+            <h3>Definir el evento</h3>
+            <p>Describir exactamente qué debe detectarse, dónde, cuándo y para qué decisión.</p>
+          </div>
+          <div class="step">
+            <h3>Revisar la escena</h3>
+            <p>Analizar cámaras, iluminación, distancias, obstáculos, conectividad y variaciones.</p>
+          </div>
+          <div class="step">
+            <h3>Recopilar ejemplos</h3>
+            <p>Obtener imágenes representativas, incluyendo casos difíciles y ausencia del evento.</p>
+          </div>
+          <div class="step">
+            <h3>Construir un piloto</h3>
+            <p>Probar una cámara, una zona y pocas reglas antes de escalar.</p>
+          </div>
+          <div class="step">
+            <h3>Medir errores y utilidad</h3>
+            <p>Analizar detecciones, falsas alarmas, eventos perdidos, latencia y tiempo ahorrado.</p>
+          </div>
+          <div class="step">
+            <h3>Integrar y evolucionar</h3>
+            <p>Conectar alertas, dashboards y procesos, revisando seguridad y mantenimiento.</p>
+          </div>
+        </div>
+
+        <h2 id="errores">Errores habituales</h2>
+        <ul>
+          <li><strong>Elegir el modelo antes de definir el evento.</strong></li>
+          <li><strong>Entrenar con imágenes distintas a las cámaras reales.</strong></li>
+          <li><strong>Ignorar iluminación, distancia y oclusiones.</strong></li>
+          <li><strong>Medir precisión sin revisar falsas alarmas.</strong></li>
+          <li><strong>Generar una alerta por cada detección.</strong></li>
+          <li><strong>No distinguir detección de identidad.</strong></li>
+          <li><strong>Procesar vídeo completo cuando bastan eventos.</strong></li>
+          <li><strong>Escalar sin validar una escena representativa.</strong></li>
+          <li><strong>No planificar mantenimiento de cámaras y equipos.</strong></li>
+          <li><strong>Crear un modelo aislado sin integración operativa.</strong></li>
+        </ul>
+
+        <h2 id="futuro">El futuro de la visión artificial</h2>
+        <p>
+          Los modelos seguirán mejorando en capacidad y eficiencia. Será más habitual ejecutar análisis en dispositivos pequeños,
+          combinar visión con lenguaje y utilizar modelos capaces de adaptarse con menos ejemplos.
+        </p>
+        <p>
+          Aun así, los proyectos seguirán dependiendo de cámaras bien ubicadas, datos representativos, métricas claras y procesos
+          donde las detecciones puedan convertirse en acciones.
+        </p>
+        <p>
+          La evolución más importante no será solo reconocer más categorías, sino crear sistemas que expliquen eventos, integren
+          varias fuentes y faciliten revisión humana.
+        </p>
+
+        <h2 id="faq">Preguntas frecuentes sobre visión artificial</h2>
+        <details>
+          <summary>¿Qué es la visión artificial?</summary>
+          <p>Es el uso de algoritmos para analizar imágenes y vídeo y extraer información estructurada.</p>
+        </details>
+        <details>
+          <summary>¿Qué puede detectar?</summary>
+          <p>Personas, animales, vehículos, objetos, texto, defectos, posturas, trayectorias y eventos definidos.</p>
+        </details>
+        <details>
+          <summary>¿Qué diferencia hay entre clasificación y detección?</summary>
+          <p>La clasificación asigna una categoría a la imagen; la detección localiza objetos dentro de ella.</p>
+        </details>
+        <details>
+          <summary>¿Qué es la segmentación?</summary>
+          <p>Es la identificación detallada de los píxeles que pertenecen a un objeto o región.</p>
+        </details>
+        <details>
+          <summary>¿Puede funcionar sin Internet?</summary>
+          <p>Sí. Con Edge AI el análisis puede realizarse localmente y enviar solo eventos o metadatos.</p>
+        </details>
+        <details>
+          <summary>¿Se pueden usar cámaras existentes?</summary>
+          <p>En algunos casos sí, siempre que la calidad, posición, acceso y flujo de vídeo sean adecuados.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se reducen falsas alarmas?</summary>
+          <p>Con datos representativos, reglas de contexto, duración, zonas, seguimiento y ajuste continuo.</p>
+        </details>
+        <details>
+          <summary>¿La visión artificial identifica personas?</summary>
+          <p>Puede detectar que hay una persona sin identificarla. El reconocimiento de identidad es una capacidad distinta y más sensible.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tarda un piloto?</summary>
+          <p>Depende de cámaras, datos, complejidad y reglas. Conviene acotar una escena y un evento concreto.</p>
+        </details>
+        <details>
+          <summary>¿Cuál es el primer paso?</summary>
+          <p>Definir qué evento debe detectarse, en qué condiciones y qué acción se realizará con el resultado.</p>
+        </details>
+
+        <h2 id="conclusion">Conclusión</h2>
+        <p>
+          La visión artificial permite transformar imágenes y vídeo en detecciones, eventos y datos útiles. Su eficacia depende
+          de una combinación de cámaras, modelos, reglas, integración y supervisión.
+        </p>
+        <p>
+          Un proyecto debe comenzar con una necesidad concreta y un piloto limitado. Medir falsas alarmas, eventos perdidos,
+          latencia y utilidad operativa es tan importante como evaluar el modelo.
+        </p>
+        <p>
+          Cuando se diseña correctamente, la visión artificial puede reducir revisión manual, mejorar trazabilidad y ayudar a
+          detectar situaciones relevantes antes. La tecnología no reemplaza el proceso: lo complementa con una nueva capacidad
+          de observación.
+        </p>
+
+        <div class="cta">
+          <h2>¿Quieres convertir cámaras en eventos y alertas útiles?</h2>
+          <p>
+            ARVELA puede ayudarte a definir el caso de uso, revisar las condiciones, construir un piloto e integrar visión
+            artificial con dashboards, evidencias y procesos.
+          </p>
+          <a href="/soluciones/monitorizacion-inteligente-ia.html">Ver Monitorización Inteligente mediante IA</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="Índice del artículo">
+        <strong>Contenido</strong>
+        <ol>
+          <li><a href="#introduccion">De la imagen al dato</a></li>
+          <li><a href="#que-es">Qué es visión artificial</a></li>
+          <li><a href="#diferencias">Conceptos principales</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#tareas">Tipos de tareas</a></li>
+          <li><a href="#modelos">Entrenamiento</a></li>
+          <li><a href="#metricas">Métricas</a></li>
+          <li><a href="#edge-cloud">Edge y nube</a></li>
+          <li><a href="#camaras">Cámaras</a></li>
+          <li><a href="#eventos">Eventos inteligentes</a></li>
+          <li><a href="#industria">Industria</a></li>
+          <li><a href="#ganaderia">Ganadería</a></li>
+          <li><a href="#administracion">Administración pública</a></li>
+          <li><a href="#ocr">OCR</a></li>
+          <li><a href="#privacidad">Privacidad</a></li>
+          <li><a href="#como-empezar">Cómo empezar</a></li>
+          <li><a href="#errores">Errores habituales</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ol>
+      </aside>
+    </div>
+
+    <section class="related">
+      <h2>Contenidos y soluciones relacionados</h2>
+      <div class="related-grid">
+        <article class="related-card">
+          <span>Solución</span>
+          <h3>Monitorización Inteligente mediante IA</h3>
+          <p>Cámaras, detecciones, eventos, evidencias, alertas y analítica integrada.</p>
+          <a href="/soluciones/monitorizacion-inteligente-ia.html">Ver solución →</a>
+        </article>
+        <article class="related-card">
+          <span>Artículo</span>
+          <h3>Inteligencia Artificial para empresas</h3>
+          <p>Conceptos, aplicaciones, límites y pasos para empezar un proyecto de IA.</p>
+          <a href="/blog/que-es-inteligencia-artificial-empresas/">Leer artículo →</a>
+        </article>
+        <article class="related-card">
+          <span>Solución</span>
+          <h3>Integración IoT y Sensores</h3>
+          <p>Conexión de cámaras y dispositivos con plataformas, dashboards y alertas.</p>
+          <a href="/soluciones/integracion-iot-sensores.html">Ver solución →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© ARVELA INNOVACION, S.L. · Visión artificial, cámaras inteligentes, IA, analítica de vídeo y Edge AI.</p>
+  </footer>
+</body>
+</html>
