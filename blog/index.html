@@ -1,116 +1,639 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inteligencia Artificial para empresas: qué es, aplicaciones y cómo empezar | ARVELA</title>
-  <meta name="description" content="Guía completa sobre Inteligencia Artificial para empresas: qué es, cómo funciona, aplicaciones reales, sectores, riesgos, errores habituales y cómo iniciar un proyecto de IA.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://arvelainnova.es/blog/que-es-inteligencia-artificial-empresas/">
-  <meta property="og:locale" content="es_ES">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Inteligencia Artificial para empresas: qué es, aplicaciones y cómo empezar">
-  <meta property="og:description" content="Una guía práctica para entender qué puede aportar la IA a una empresa, cuándo merece la pena utilizarla y cómo plantear un proyecto realista.">
-  <meta property="og:url" content="https://arvelainnova.es/blog/que-es-inteligencia-artificial-empresas/">
-  <meta property="og:site_name" content="ARVELA Innovación">
-  <meta property="og:image" content="https://arvelainnova.es/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Inteligencia Artificial para empresas: guía práctica">
-  <meta name="twitter:description" content="Aplicaciones reales, límites, riesgos y pasos para empezar un proyecto de IA en una organización.">
-  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#172033">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blog de tecnología, IA, IoT e innovación | ARVELA Innovación</title>
+  <meta name="description" content="Blog de ARVELA sobre Inteligencia Artificial, IoT, software a medida, visión artificial, analítica, innovación, ganadería inteligente, educación y transformación digital municipal." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://arvelainnova.es/blog/" />
+
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog de tecnología, IA, IoT e innovación | ARVELA" />
+  <meta property="og:description" content="Guías y contenidos prácticos sobre IA, IoT, software, datos, innovación, educación, ganadería y administración pública." />
+  <meta property="og:url" content="https://arvelainnova.es/blog/" />
+  <meta property="og:site_name" content="ARVELA Innovación" />
+  <meta property="og:image" content="https://arvelainnova.es/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog de ARVELA Innovación" />
+  <meta name="twitter:description" content="Tecnología aplicada, IA, IoT, software, datos, innovación y transformación digital." />
+  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#172033" />
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"BlogPosting",
-    "headline":"Inteligencia Artificial para empresas: qué es, aplicaciones y cómo empezar",
-    "description":"Guía práctica sobre Inteligencia Artificial para empresas, aplicaciones reales, sectores, límites, errores habituales y pasos para iniciar un proyecto.",
-    "url":"https://arvelainnova.es/blog/que-es-inteligencia-artificial-empresas/",
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://arvelainnova.es/blog/que-es-inteligencia-artificial-empresas/"},
-    "image":"https://arvelainnova.es/og-image.png",
-    "author":{"@type":"Organization","name":"ARVELA Innovación","url":"https://arvelainnova.es/"},
-    "publisher":{"@type":"Organization","name":"ARVELA Innovación","url":"https://arvelainnova.es/","logo":{"@type":"ImageObject","url":"https://arvelainnova.es/logo.jpg"}},
-    "datePublished":"2026-07-31",
-    "dateModified":"2026-07-31",
-    "inLanguage":"es",
-    "articleSection":"Inteligencia Artificial",
-    "keywords":["inteligencia artificial para empresas","aplicaciones de inteligencia artificial","cómo implementar inteligencia artificial","IA en empresas","automatización con IA","proyectos de inteligencia artificial"]
+    "@type":"Blog",
+    "name":"Blog de ARVELA Innovación",
+    "url":"https://arvelainnova.es/blog/",
+    "description":"Contenidos sobre Inteligencia Artificial, IoT, software, analítica, innovación y transformación digital aplicada.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"ARVELA Innovación",
+      "url":"https://arvelainnova.es/",
+      "logo":{
+        "@type":"ImageObject",
+        "url":"https://arvelainnova.es/logo.jpg"
+      }
+    },
+    "inLanguage":"es"
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Inicio","item":"https://arvelainnova.es/"},
-      {"@type":"ListItem","position":2,"name":"Blog","item":"https://arvelainnova.es/blog/"},
-      {"@type":"ListItem","position":3,"name":"Inteligencia Artificial para empresas","item":"https://arvelainnova.es/blog/que-es-inteligencia-artificial-empresas/"}
+      {
+        "@type":"ListItem",
+        "position":1,
+        "name":"Inicio",
+        "item":"https://arvelainnova.es/"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "name":"Blog",
+        "item":"https://arvelainnova.es/blog/"
+      }
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"¿Qué es la Inteligencia Artificial en una empresa?","acceptedAnswer":{"@type":"Answer","text":"Es el uso de sistemas capaces de analizar datos, reconocer patrones, clasificar información, generar predicciones o asistir en tareas que normalmente requieren interpretación humana."}},
-      {"@type":"Question","name":"¿Qué empresas pueden aplicar Inteligencia Artificial?","acceptedAnswer":{"@type":"Answer","text":"Cualquier organización que disponga de un problema definido, datos suficientes o un proceso repetitivo susceptible de análisis, clasificación, detección o automatización."}},
-      {"@type":"Question","name":"¿Hace falta tener grandes cantidades de datos?","acceptedAnswer":{"@type":"Answer","text":"No siempre. Algunos proyectos pueden comenzar con modelos preentrenados, reglas híbridas o pilotos con un conjunto de datos limitado pero representativo."}},
-      {"@type":"Question","name":"¿La IA sustituye completamente a las personas?","acceptedAnswer":{"@type":"Answer","text":"En la mayoría de proyectos empresariales la IA complementa el trabajo humano. Automatiza partes concretas, prioriza información o ayuda a tomar decisiones, pero requiere supervisión, contexto y responsabilidad."}},
-      {"@type":"Question","name":"¿Cómo se empieza un proyecto de IA?","acceptedAnswer":{"@type":"Answer","text":"Se empieza identificando un problema concreto, revisando los datos disponibles, definiendo una métrica de éxito y construyendo un piloto antes de escalar."}}
-    ]
-  }
-  </script>
+
   <style>
-    :root{--bg:#f5f7fb;--surface:#fff;--soft:#f8fafc;--text:#172033;--muted:#5f6b85;--line:#e5e9f2;--primary:#1f6feb;--shadow:0 20px 55px rgba(23,32,51,.08);--radius:22px;--max:1180px;--article:790px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 0%,rgba(31,111,235,.08),transparent 27rem),radial-gradient(circle at 90% 12%,rgba(109,93,252,.08),transparent 28rem),var(--bg);line-height:1.72}a{color:inherit}.wrap{width:min(calc(100% - 32px),var(--max));margin:0 auto}header{padding:22px 0 12px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:15px 18px;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.brand{display:flex;align-items:center;gap:13px;text-decoration:none}.brand-logo{width:52px;height:52px;border-radius:15px;overflow:hidden;border:1px solid #dbeafe;background:#eff6ff;display:grid;place-items:center}.brand-logo img{width:100%;height:100%;object-fit:cover}.brand strong{display:block;line-height:1.15}.brand span span{display:block;margin-top:4px;color:var(--muted);font-size:.9rem}nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}nav a{text-decoration:none;color:var(--muted);font-size:.92rem;padding:8px 10px;border-radius:999px}nav a:hover,nav a.active{color:var(--text);background:#f3f4f6}.breadcrumb{padding:18px 0 0;color:var(--muted);font-size:.92rem}.breadcrumb a{color:var(--primary);text-decoration:none;font-weight:700}.hero{padding:28px 0 22px}.hero-card{padding:42px;background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(247,250,255,.96));border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}.category{display:inline-flex;padding:7px 11px;border-radius:999px;background:#eef4ff;color:var(--primary);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em}.hero h1{margin:18px 0 0;max-width:960px;font-size:clamp(2.25rem,5vw,4.5rem);line-height:1.05;letter-spacing:-.045em}.lead{max-width:880px;margin:22px 0 0;color:var(--muted);font-size:1.16rem}.meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:.92rem}.layout{display:grid;grid-template-columns:minmax(0,var(--article)) 290px;gap:28px;align-items:start;padding:12px 0 38px;justify-content:center}article{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px;min-width:0}article h2{margin:2.6rem 0 1rem;font-size:clamp(1.55rem,3vw,2.15rem);line-height:1.2;letter-spacing:-.025em;scroll-margin-top:20px}article h2:first-of-type{margin-top:0}article h3{margin:2rem 0 .75rem;font-size:1.24rem;line-height:1.3}article p,article li{color:var(--muted)}article strong{color:var(--text)}article li+li{margin-top:.55rem}.toc{position:sticky;top:20px;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.94);border-radius:20px;box-shadow:var(--shadow)}.toc strong{display:block;margin-bottom:12px}.toc ol{margin:0;padding-left:18px}.toc li+li{margin-top:8px}.toc a{color:var(--muted);text-decoration:none;font-size:.9rem}.toc a:hover{color:var(--primary)}.highlight,.warning{margin:24px 0;padding:22px;border-radius:18px}.highlight{background:linear-gradient(135deg,#f2f7ff,#f8f7ff);border:1px solid #dce6fb}.warning{background:#fffaf0;border:1px solid #f2dfb2}.highlight strong,.warning strong{display:block;margin-bottom:7px}.highlight p,.warning p{margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0}.card{border:1px solid var(--line);background:var(--soft);border-radius:18px;padding:19px}.card h3{margin:0 0 8px;font-size:1.04rem}.card p{margin:0;font-size:.95rem}.comparison{width:100%;border-collapse:collapse;margin:24px 0;font-size:.95rem}.comparison th,.comparison td{padding:14px;border:1px solid var(--line);text-align:left;vertical-align:top}.comparison th{background:#f8fafc}.comparison td{color:var(--muted)}.steps{counter-reset:step;display:grid;gap:14px;margin:24px 0}.step{position:relative;padding:20px 20px 20px 68px;border:1px solid var(--line);border-radius:18px;background:var(--soft)}.step:before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:19px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:var(--primary);color:#fff;font-weight:800}.step h3{margin:0 0 7px;font-size:1.05rem}.step p{margin:0}.internal-link{color:var(--primary);font-weight:750;text-underline-offset:.16em}details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}details+details{margin-top:10px}summary{cursor:pointer;font-weight:800}details p{margin-bottom:0}.cta{margin-top:36px;padding:28px;border-radius:22px;background:linear-gradient(135deg,#172033,#243b63);color:#fff}.cta h2{margin:0 0 10px;color:#fff}.cta p{color:rgba(255,255,255,.78)}.cta a{display:inline-flex;margin-top:8px;padding:12px 16px;border-radius:13px;background:#fff;color:var(--text);font-weight:800;text-decoration:none}.related{padding:12px 0 42px}.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.related-card{background:#fff;border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow);padding:20px}.related-card span{color:var(--primary);font-size:.82rem;font-weight:800}.related-card h3{margin:9px 0;font-size:1.08rem}.related-card p{color:var(--muted);font-size:.93rem}.related-card a{color:var(--primary);font-weight:800;text-decoration:none}footer{padding:26px 0 34px;color:var(--muted);font-size:.92rem}@media(max-width:980px){.layout{grid-template-columns:1fr}.toc{position:static;order:-1}.related-grid{grid-template-columns:1fr}}@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start}.hero-card,article{padding:24px}.grid{grid-template-columns:1fr}.comparison{display:block;overflow-x:auto}.hero h1{font-size:2.45rem}}
+    :root{
+      --bg:#f5f7fb;
+      --surface:#ffffff;
+      --surface-soft:#f8fafc;
+      --text:#172033;
+      --muted:#5f6b85;
+      --line:#e5e9f2;
+      --primary:#1f6feb;
+      --violet:#6d5dfc;
+      --cyan:#0891b2;
+      --green:#0f9f76;
+      --orange:#d97706;
+      --pink:#c2418c;
+      --shadow:0 20px 55px rgba(23,32,51,.08);
+      --radius:22px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 12% 0%,rgba(31,111,235,.08),transparent 27rem),
+        radial-gradient(circle at 90% 10%,rgba(109,93,252,.08),transparent 28rem),
+        var(--bg);
+      line-height:1.7;
+    }
+
+    a{color:inherit}
+    .wrap{width:min(calc(100% - 32px),var(--max));margin:0 auto}
+
+    header{padding:22px 0 12px}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      padding:15px 18px;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(229,233,242,.95);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      text-decoration:none;
+      min-width:0;
+    }
+
+    .brand-logo{
+      width:52px;
+      height:52px;
+      border-radius:15px;
+      overflow:hidden;
+      border:1px solid #dbeafe;
+      background:linear-gradient(135deg,#eff6ff,#f5f3ff);
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+    }
+
+    .brand-logo img{width:100%;height:100%;object-fit:cover}
+    .brand strong{display:block;line-height:1.15;letter-spacing:.02em}
+    .brand span{display:block;margin-top:4px;color:var(--muted);font-size:.9rem}
+
+    nav{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:.92rem;
+      padding:8px 10px;
+      border-radius:999px;
+    }
+
+    nav a:hover,nav a.active{color:var(--text);background:#f3f4f6}
+
+    .breadcrumb{
+      padding:18px 0 0;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .breadcrumb a{
+      color:var(--primary);
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    .hero{padding:28px 0 24px}
+    .hero-card{
+      padding:48px;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:linear-gradient(135deg,rgba(255,255,255,.97),rgba(246,248,255,.97));
+      box-shadow:var(--shadow);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      padding:7px 11px;
+      border-radius:999px;
+      background:#eef4ff;
+      color:var(--primary);
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:18px 0 0;
+      max-width:970px;
+      font-size:clamp(2.4rem,5vw,4.7rem);
+      line-height:1.03;
+      letter-spacing:-.05em;
+    }
+
+    .hero p{
+      max-width:900px;
+      margin:22px 0 0;
+      color:var(--muted);
+      font-size:1.15rem;
+    }
+
+    .intro{
+      display:grid;
+      grid-template-columns:1.35fr .65fr;
+      gap:18px;
+      margin:0 0 26px;
+    }
+
+    .intro-card,.topics-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      padding:26px;
+    }
+
+    .intro-card h2,.topics-card h2{margin:0 0 10px;line-height:1.2}
+    .intro-card p,.topics-card p{color:var(--muted);margin:0}
+
+    .topics{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:15px;
+    }
+
+    .topic{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--surface-soft);
+      color:var(--muted);
+      font-size:.84rem;
+      font-weight:700;
+    }
+
+    .section-title{
+      margin:42px 0 18px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:end;
+    }
+
+    .section-title h2{
+      margin:0;
+      font-size:clamp(1.8rem,3vw,2.6rem);
+      letter-spacing:-.03em;
+      line-height:1.1;
+    }
+
+    .section-title p{
+      margin:0;
+      max-width:530px;
+      text-align:right;
+      color:var(--muted);
+    }
+
+    .articles{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+      padding-bottom:42px;
+    }
+
+    .article-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      min-height:330px;
+      transition:transform .18s ease,box-shadow .18s ease;
+    }
+
+    .article-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 25px 60px rgba(23,32,51,.11);
+    }
+
+    .category{
+      align-self:flex-start;
+      display:inline-flex;
+      padding:6px 9px;
+      border-radius:999px;
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      margin-bottom:15px;
+    }
+
+    .cat-ia{background:#f5f3ff;color:var(--violet)}
+    .cat-iot{background:#ecfdf5;color:var(--green)}
+    .cat-soft{background:#eff6ff;color:var(--primary)}
+    .cat-data{background:#ecfeff;color:var(--cyan)}
+    .cat-public{background:#effcff;color:var(--cyan)}
+    .cat-rural{background:#f0fdf4;color:var(--green)}
+    .cat-idi{background:#fff7ed;color:var(--orange)}
+    .cat-edu{background:#fdf2f8;color:var(--pink)}
+
+    .article-card h3{
+      margin:0;
+      font-size:1.25rem;
+      line-height:1.25;
+      letter-spacing:-.02em;
+    }
+
+    .article-card p{
+      margin:14px 0 0;
+      color:var(--muted);
+      font-size:.95rem;
+      flex:1;
+    }
+
+    .article-meta{
+      margin-top:20px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+    }
+
+    .article-meta span{
+      color:var(--muted);
+      font-size:.82rem;
+    }
+
+    .article-meta a{
+      color:var(--primary);
+      font-weight:800;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+
+    .cta{
+      margin:8px 0 46px;
+      padding:34px;
+      border-radius:24px;
+      background:linear-gradient(135deg,#172033,#263a66);
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .cta h2{
+      margin:0;
+      font-size:clamp(1.7rem,3vw,2.4rem);
+      line-height:1.15;
+    }
+
+    .cta p{
+      max-width:800px;
+      color:rgba(255,255,255,.78);
+      margin:12px 0 0;
+    }
+
+    .cta a{
+      display:inline-flex;
+      margin-top:18px;
+      padding:12px 16px;
+      border-radius:13px;
+      background:#fff;
+      color:var(--text);
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    footer{
+      padding:26px 0 34px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    @media(max-width:980px){
+      .articles{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .intro{grid-template-columns:1fr}
+      .section-title{align-items:start;flex-direction:column}
+      .section-title p{text-align:left}
+    }
+
+    @media(max-width:720px){
+      .topbar{align-items:flex-start;flex-direction:column}
+      nav{justify-content:flex-start}
+      .hero-card{padding:28px 24px}
+      .articles{grid-template-columns:1fr}
+      .article-card{min-height:auto}
+      h1{font-size:2.55rem}
+    }
   </style>
 </head>
+
 <body>
-<header><div class="wrap topbar"><a class="brand" href="/" aria-label="Inicio de ARVELA Innovación"><span class="brand-logo"><img src="/logo.jpg" alt="Logo de ARVELA Innovación" onerror="this.style.display='none'"></span><span><strong>ARVELA INNOVACION, S.L.</strong><span>Innovación tecnológica con impacto real</span></span></a><nav aria-label="Navegación principal"><a href="/que-hacemos/">Qué hacemos</a><a href="/soluciones/">Soluciones</a><a href="/proyectos/">Proyectos</a><a href="/conocenos/">Conócenos</a><a class="active" href="/blog/">Blog</a><a href="/#contacto">Contacto</a></nav></div></header>
-<main class="wrap">
-<div class="breadcrumb"><a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Inteligencia Artificial para empresas</div>
-<section class="hero"><div class="hero-card"><span class="category">Inteligencia Artificial</span><h1>Inteligencia Artificial para empresas: qué es, aplicaciones y cómo empezar</h1><p class="lead">La Inteligencia Artificial puede ayudar a automatizar tareas, detectar patrones, analizar imágenes, interpretar sensores y apoyar decisiones. Pero su valor no depende de utilizar la tecnología más avanzada, sino de aplicarla a un problema bien definido.</p><div class="meta"><span>Publicado por ARVELA Innovación</span><span>31 de julio de 2026</span><span>Lectura aproximada: 18 minutos</span></div></div></section>
-<div class="layout"><article>
-<h2 id="introduccion">La Inteligencia Artificial más allá de la moda</h2>
-<p>La Inteligencia Artificial se ha convertido en uno de los términos más utilizados en el ámbito empresarial. Aparece en planes estratégicos, presentaciones comerciales, convocatorias de innovación y conversaciones sobre transformación digital. Sin embargo, esa popularidad también ha generado confusión. En muchas ocasiones se habla de IA como si fuera una única herramienta capaz de resolver cualquier problema, cuando en realidad engloba un conjunto amplio de métodos con objetivos muy diferentes.</p>
-<p>Para una empresa, lo importante no es adoptar Inteligencia Artificial por tendencia. Lo importante es determinar si puede mejorar un proceso, reducir tiempos, detectar incidencias, anticipar riesgos, clasificar información o aportar una capacidad que antes no existía. La tecnología solo tiene sentido cuando se conecta con una necesidad operativa y puede evaluarse mediante resultados.</p>
-<div class="highlight"><strong>Idea principal</strong><p>Un proyecto de IA no debería empezar preguntando «¿dónde podemos utilizar Inteligencia Artificial?», sino «¿qué problema queremos resolver y qué información tenemos para hacerlo?».</p></div>
-<h2 id="que-es">¿Qué es realmente la Inteligencia Artificial?</h2>
-<p>En un contexto empresarial, podemos entender la Inteligencia Artificial como el conjunto de técnicas que permite a un sistema analizar información y realizar tareas que requieren cierta capacidad de interpretación. Esas tareas pueden consistir en reconocer objetos en una imagen, clasificar documentos, detectar comportamientos anómalos, estimar una demanda futura, resumir contenido o priorizar alertas.</p>
-<p>La IA no implica necesariamente que una máquina piense como una persona. En la mayoría de las aplicaciones reales, el sistema aprende relaciones estadísticas a partir de datos o aplica modelos ya entrenados para producir una salida. Esa salida puede ser una categoría, una puntuación, una predicción, un texto, una imagen o una señal que active otro proceso.</p>
-<p>Tampoco debe confundirse Inteligencia Artificial con automatización tradicional. Un programa convencional sigue reglas explícitas: si ocurre una condición, ejecuta una acción. Un sistema de IA puede trabajar con situaciones donde las reglas son difíciles de describir manualmente, pero existen patrones que pueden aprenderse a partir de ejemplos.</p>
-<h2 id="diferencias">IA, Machine Learning, Deep Learning, IA generativa y visión artificial</h2>
-<p>Estos conceptos suelen utilizarse como sinónimos, aunque representan niveles y aplicaciones diferentes. Entender la diferencia ayuda a definir mejor un proyecto y evita adoptar soluciones innecesariamente complejas.</p>
-<table class="comparison"><thead><tr><th>Concepto</th><th>Qué significa</th><th>Ejemplo empresarial</th></tr></thead><tbody><tr><td><strong>Inteligencia Artificial</strong></td><td>Campo general que reúne técnicas para realizar tareas de percepción, análisis, predicción o generación.</td><td>Un sistema que prioriza incidencias según su gravedad.</td></tr><tr><td><strong>Machine Learning</strong></td><td>Modelos que aprenden patrones a partir de datos históricos.</td><td>Predecir la probabilidad de avería de un equipo.</td></tr><tr><td><strong>Deep Learning</strong></td><td>Redes neuronales profundas, especialmente útiles en imagen, audio y lenguaje.</td><td>Detectar animales, vehículos o defectos en imágenes.</td></tr><tr><td><strong>IA generativa</strong></td><td>Modelos capaces de generar contenido nuevo, como texto, imágenes, código o resúmenes.</td><td>Crear un borrador de informe a partir de datos operativos.</td></tr><tr><td><strong>Visión artificial</strong></td><td>Técnicas para interpretar imágenes y vídeo.</td><td>Detectar accesos, contar objetos o identificar incidencias visuales.</td></tr></tbody></table>
-<p>No todos los problemas requieren Deep Learning ni modelos generativos. En muchos casos, una combinación de reglas, analítica convencional y un modelo sencillo ofrece mejores resultados, menor coste y mayor facilidad de mantenimiento. La elección técnica debe estar subordinada al problema.</p>
-<h2 id="que-puede-hacer">¿Qué puede hacer la IA en una empresa?</h2>
-<p>La utilidad de la Inteligencia Artificial suele concentrarse en tareas donde existe un volumen considerable de información, se repiten patrones o es necesario revisar datos con rapidez.</p>
-<div class="grid"><div class="card"><h3>Clasificar información</h3><p>Ordenar correos, documentos, imágenes, incidencias o solicitudes según contenido, prioridad o categoría.</p></div><div class="card"><h3>Detectar anomalías</h3><p>Identificar comportamientos inusuales en sensores, procesos, consumos, accesos o indicadores.</p></div><div class="card"><h3>Analizar imágenes y vídeo</h3><p>Reconocer objetos, personas, animales, vehículos, defectos, eventos o cambios dentro de una escena.</p></div><div class="card"><h3>Generar predicciones</h3><p>Estimar demanda, riesgo, mantenimiento, evolución o probabilidad de incidencias.</p></div><div class="card"><h3>Asistir en decisiones</h3><p>Presentar recomendaciones, alertas o prioridades a partir de datos distribuidos.</p></div><div class="card"><h3>Generar contenido</h3><p>Preparar borradores, resúmenes, respuestas o informes que después revisa una persona.</p></div></div>
-<h3>Automatizar no significa eliminar la supervisión</h3><p>En muchas empresas, el mayor valor de la IA no está en sustituir completamente una tarea, sino en reducir el trabajo manual previo. Un sistema puede filtrar miles de eventos y mostrar solo los que requieren revisión. También puede preparar una propuesta de clasificación, mientras la decisión final sigue perteneciendo a una persona.</p><p>Este enfoque suele ser más realista y seguro. Permite aprovechar la velocidad de la máquina sin perder el conocimiento del profesional que entiende el contexto, las excepciones y las consecuencias de cada decisión.</p>
-<h2 id="sectores">Aplicaciones por sectores</h2>
-<h3>Ganadería y agricultura</h3><p>En ganadería, la IA puede combinarse con sensores, localización, cámaras y datos ambientales para detectar cambios de actividad, apoyar el seguimiento del bienestar animal o priorizar alertas. En agricultura puede emplearse para analizar imágenes, estimar necesidades de riego, identificar anomalías o interpretar información procedente de dispositivos IoT.</p><p>Una solución como <a class="internal-link" href="/soluciones/avega-ganaderia-inteligente.html">AVEGA · Ganadería Inteligente</a> puede integrar varias de estas capacidades dentro de una plataforma orientada a explotaciones, técnicos y pilotos de validación.</p>
-<h3>Industria y mantenimiento</h3><p>En entornos industriales, la IA se utiliza para inspección visual, mantenimiento predictivo, detección de desviaciones, análisis de calidad y monitorización de procesos. Su aportación es especialmente relevante cuando existen datos históricos, imágenes repetitivas o señales que deben revisarse continuamente.</p><p>La <a class="internal-link" href="/soluciones/monitorizacion-inteligente-ia.html">monitorización inteligente mediante IA</a> permite convertir cámaras y sensores en eventos, alertas y evidencias que pueden integrarse con sistemas ya existentes.</p>
-<h3>Educación y formación</h3><p>En educación, la IA puede ayudar a personalizar ejercicios, ofrecer retroalimentación, detectar dificultades recurrentes y analizar el progreso. No sustituye la función del docente, pero puede aportar una visión más detallada sobre la evolución del alumnado y reducir tareas repetitivas.</p><p>Las <a class="internal-link" href="/soluciones/plataformas-aprendizaje.html">plataformas de aprendizaje</a> pueden combinar analítica educativa, evaluación continua y mecanismos adaptativos.</p>
-<h3>Administración pública</h3><p>Las administraciones pueden utilizar IA para clasificar solicitudes, detectar incidencias recurrentes, analizar datos territoriales, priorizar actuaciones o facilitar la consulta de información. En este ámbito es especialmente importante evitar sistemas opacos o decisiones automáticas sin mecanismos de revisión.</p>
-<h3>Logística y movilidad</h3><p>La IA puede emplearse para optimizar rutas, detectar retrasos, analizar demanda, clasificar mercancías o interpretar cámaras y sensores. Puede combinarse con mapas, datos históricos y eventos en tiempo real para mejorar la planificación.</p>
-<h3>Servicios profesionales</h3><p>En despachos, consultoras, ingeniería o servicios técnicos, la IA puede apoyar la revisión documental, búsqueda de información, preparación de borradores y clasificación de expedientes. El valor suele encontrarse en acelerar tareas preparatorias, manteniendo la validación profesional.</p>
-<h2 id="casos">Casos de uso concretos</h2><ul><li><strong>Detección visual de eventos:</strong> una cámara identifica personas, vehículos, animales u objetos en una zona definida.</li><li><strong>Priorización de incidencias:</strong> un sistema clasifica avisos según urgencia, tipo y localización.</li><li><strong>Análisis de sensores:</strong> los datos de temperatura, actividad, consumo o posición se revisan para detectar valores anómalos.</li><li><strong>Generación de informes:</strong> la plataforma resume datos y prepara un borrador que valida un responsable.</li><li><strong>Predicción de demanda:</strong> el modelo estima necesidades futuras a partir del histórico.</li><li><strong>Apoyo a la formación:</strong> el sistema recomienda ejercicios según errores previos.</li><li><strong>Control de calidad:</strong> una solución visual señala posibles defectos.</li><li><strong>Búsqueda documental:</strong> un asistente localiza información dentro de documentación autorizada.</li></ul>
-<h2 id="beneficios">Beneficios que pueden medirse</h2><p>Un proyecto de IA debe vincularse a indicadores concretos. Expresiones como «ser más innovadores» o «digitalizarse» son demasiado generales.</p><ul><li>Reducir el tiempo necesario para revisar información.</li><li>Disminuir errores de clasificación o registro.</li><li>Detectar eventos antes de que generen un problema mayor.</li><li>Aumentar la capacidad de seguimiento sin incrementar proporcionalmente el equipo.</li><li>Mejorar la calidad o disponibilidad de la información.</li><li>Priorizar recursos según riesgo, urgencia o impacto.</li><li>Generar evidencias para analizar y mejorar un proceso.</li></ul>
-<h2 id="limites">Qué no puede hacer la IA</h2><p>La Inteligencia Artificial tiene limitaciones y no debe presentarse como una solución infalible. Un sistema puede cometer errores, amplificar sesgos presentes en los datos o funcionar bien en un entorno y fallar cuando cambian las condiciones.</p><div class="warning"><strong>La precisión nunca debe evaluarse de forma aislada.</strong><p>También importan los falsos positivos, los falsos negativos, el impacto de cada error, el coste de revisión y la capacidad de corregir el resultado.</p></div><h3>Depende de los datos</h3><p>Si los datos son incompletos, desactualizados o poco representativos, el modelo aprenderá una visión parcial del problema. Mejorar la calidad del dato puede aportar más valor que utilizar un algoritmo más sofisticado.</p><h3>No comprende el contexto como una persona</h3><p>Un sistema puede reconocer patrones, pero no posee necesariamente el conocimiento operativo, social o normativo que rodea una decisión.</p><h3>No elimina la responsabilidad</h3><p>La decisión de utilizar un sistema, aceptar una recomendación o automatizar una acción pertenece a la organización.</p><h3>Puede degradarse con el tiempo</h3><p>Los procesos cambian y los datos futuros pueden ser distintos. Un sistema necesita seguimiento, mantenimiento y reevaluación.</p>
-<h2 id="datos">¿Hace falta disponer de muchos datos?</h2><p>No existe una respuesta única. Algunos proyectos requieren miles de ejemplos. Otros pueden comenzar con un conjunto limitado si el problema está bien acotado. También es posible utilizar modelos preentrenados y adaptarlos.</p><ul><li>¿Qué datos existen y quién puede utilizarlos?</li><li>¿Con qué frecuencia se generan?</li><li>¿Están etiquetados?</li><li>¿Representan las condiciones reales?</li><li>¿Contienen información personal o confidencial?</li><li>¿Existe una forma fiable de medir si la respuesta es correcta?</li></ul><p>A veces será necesario empezar por una fase de instrumentación, recogida, limpieza o etiquetado antes de entrenar un modelo.</p>
-<h2 id="como-empezar">Cómo empezar un proyecto de Inteligencia Artificial</h2><p>La mejor forma de reducir incertidumbre es avanzar por fases. Un piloto limitado permite descubrir problemas técnicos, revisar datos y estimar valor antes de una inversión mayor.</p><div class="steps"><div class="step"><h3>Definir el problema</h3><p>Describir qué ocurre hoy, quién interviene, cuánto cuesta y qué resultado debería mejorar.</p></div><div class="step"><h3>Revisar los datos</h3><p>Comprobar disponibilidad, calidad, permisos y representatividad.</p></div><div class="step"><h3>Establecer una métrica</h3><p>Decidir cómo se medirá el éxito: precisión, tiempo, anticipación, errores o impacto económico.</p></div><div class="step"><h3>Construir un piloto</h3><p>Desarrollar una versión limitada y validarla con usuarios y condiciones reales.</p></div><div class="step"><h3>Evaluar y escalar</h3><p>Analizar resultados, corregir limitaciones y decidir si integrar, ampliar o detener.</p></div></div><p>Este enfoque encaja con los proyectos de <a class="internal-link" href="/soluciones/innovacion-idi.html">Innovación e I+D+i</a>, donde hipótesis, prototipo, validación y métricas forman parte del desarrollo.</p>
-<h2 id="errores">Errores habituales al implementar IA</h2><h3>Empezar por una herramienta</h3><p>Elegir primero una plataforma o un modelo puede condicionar el proyecto antes de entender la necesidad.</p><h3>Intentar automatizar todo</h3><p>Los primeros proyectos funcionan mejor cuando se concentran en una tarea delimitada.</p><h3>No definir una referencia</h3><p>Sin conocer el rendimiento actual no es posible demostrar valor.</p><h3>Ignorar la integración</h3><p>Un modelo aislado tiene poca utilidad. Debe conectarse con aplicaciones, bases de datos, sensores, usuarios y procedimientos.</p><h3>Confundir una demostración con producción</h3><p>Una prueba sobre ejemplos no es todavía una solución operativa: faltan seguridad, monitorización, mantenimiento y gestión de errores.</p><h3>No involucrar a los usuarios</h3><p>El conocimiento de quienes usarán la solución permite detectar excepciones y diseñar flujos realistas.</p>
-<h2 id="construir-comprar">¿Desarrollar una solución propia o utilizar una herramienta existente?</h2><p>Muchas necesidades pueden resolverse con productos disponibles. Desarrollar a medida tiene sentido cuando el proceso es diferencial, existen integraciones específicas o la organización necesita controlar la evolución.</p><table class="comparison"><thead><tr><th>Herramienta existente</th><th>Desarrollo personalizado</th></tr></thead><tbody><tr><td>Implantación más rápida en casos estándar.</td><td>Mayor adaptación a procesos, datos y usuarios propios.</td></tr><tr><td>Coste inicial normalmente menor.</td><td>Mayor control sobre integraciones y evolución.</td></tr><tr><td>Funcionalidades definidas por el proveedor.</td><td>Posibilidad de construir solo lo necesario.</td></tr><tr><td>Dependencia del roadmap del producto.</td><td>Responsabilidad propia sobre mantenimiento y operación.</td></tr></tbody></table><p>En ocasiones la mejor opción es híbrida: utilizar modelos existentes y desarrollar una capa propia de integración, reglas y experiencia de usuario. Las <a class="internal-link" href="/soluciones/software-medida.html">soluciones digitales a medida</a> permiten adaptar esa combinación.</p>
-<h2 id="etica">Privacidad, seguridad y uso responsable</h2><p>Un proyecto de IA debe considerar desde el principio qué información utiliza, quién puede acceder a ella y qué consecuencias tiene el resultado. La seguridad y la privacidad no son tareas que deban añadirse al final.</p><p>También conviene documentar los criterios de evaluación, los límites conocidos, las condiciones de uso y los mecanismos de supervisión. Cuanto mayor sea el impacto de una decisión, mayor debe ser el nivel de control, trazabilidad y revisión humana.</p>
-<h2 id="cuando-compensa">¿Cuándo merece la pena aplicar IA?</h2><p>La Inteligencia Artificial suele ser una buena candidata cuando existe un problema concreto, la tarea se repite, hay datos suficientes, el resultado puede medirse, los errores pueden supervisarse y la solución puede integrarse dentro de un proceso real.</p><p>No merece la pena cuando la tecnología se introduce solo por tendencia, cuando el proceso todavía no está definido o cuando una regla sencilla resolvería el problema con menos coste y riesgo.</p>
-<h2 id="faq">Preguntas frecuentes</h2><details><summary>¿Qué es la Inteligencia Artificial en una empresa?</summary><p>Es el uso de sistemas capaces de analizar datos, reconocer patrones, generar predicciones o asistir en tareas que requieren interpretación.</p></details><details><summary>¿La IA es solo para grandes empresas?</summary><p>No. Una pyme puede aplicarla a un proceso concreto mediante un piloto limitado.</p></details><details><summary>¿Hace falta entrenar siempre un modelo desde cero?</summary><p>No. Muchos proyectos utilizan modelos preentrenados o soluciones híbridas.</p></details><details><summary>¿Cómo se mide si funciona?</summary><p>Mediante métricas técnicas y de negocio: precisión, falsas alarmas, tiempo ahorrado, errores o impacto económico.</p></details><details><summary>¿Puede integrarse con software existente?</summary><p>Sí. La integración mediante APIs, bases de datos, dashboards o sensores es una parte habitual.</p></details><details><summary>¿Cuál es el primer paso?</summary><p>Definir el problema, revisar los datos y establecer una métrica antes de elegir herramientas.</p></details>
-<h2 id="conclusion">Conclusión</h2><p>La Inteligencia Artificial puede aportar valor real cuando se utiliza para resolver un problema definido, se apoya en datos adecuados y se integra dentro de un proceso operativo. No es una solución universal ni una sustitución automática del conocimiento humano.</p><p>Empezar con un piloto, medir resultados y avanzar por fases permite reducir riesgos. En muchos casos, la mejor solución no será el modelo más complejo, sino la combinación más equilibrada entre datos, software, automatización, supervisión y experiencia de usuario.</p>
-<div class="cta"><h2>¿Estás valorando un proyecto de Inteligencia Artificial?</h2><p>ARVELA puede ayudarte a definir el caso de uso, revisar los datos, plantear un piloto y convertirlo en una solución integrada.</p><a href="/#contacto">Hablar sobre el proyecto</a></div>
-</article><aside class="toc" aria-label="Índice del artículo"><strong>Contenido</strong><ol><li><a href="#introduccion">La IA más allá de la moda</a></li><li><a href="#que-es">Qué es realmente</a></li><li><a href="#diferencias">Conceptos principales</a></li><li><a href="#que-puede-hacer">Qué puede hacer</a></li><li><a href="#sectores">Aplicaciones por sectores</a></li><li><a href="#casos">Casos de uso</a></li><li><a href="#beneficios">Beneficios medibles</a></li><li><a href="#limites">Límites de la IA</a></li><li><a href="#datos">Datos necesarios</a></li><li><a href="#como-empezar">Cómo empezar</a></li><li><a href="#errores">Errores habituales</a></li><li><a href="#construir-comprar">Construir o comprar</a></li><li><a href="#etica">Uso responsable</a></li><li><a href="#cuando-compensa">Cuándo compensa</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ol></aside></div>
-<section class="related"><h2>Contenidos y soluciones relacionados</h2><div class="related-grid"><article class="related-card"><span>Solución</span><h3>Monitorización Inteligente mediante IA</h3><p>Cámaras, visión artificial, alertas, eventos y evidencias para procesos reales.</p><a href="/soluciones/monitorizacion-inteligente-ia.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>Analítica y Apoyo a la Decisión</h3><p>Cuadros de mando, indicadores, integración de datos y sistemas orientados a decisiones.</p><a href="/soluciones/analitica-datos-decision.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>Innovación e I+D+i</h3><p>Prototipos, pilotos y validación tecnológica para convertir una hipótesis en una solución viable.</p><a href="/soluciones/innovacion-idi.html">Ver solución →</a></article></div></section>
-</main><footer class="wrap"><p>© ARVELA INNOVACION, S.L. · Inteligencia Artificial, IoT, software, analítica e innovación aplicada.</p></footer>
-</body></html>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="/" aria-label="Inicio de ARVELA Innovación">
+        <span class="brand-logo">
+          <img src="/logo.jpg" alt="Logo de ARVELA Innovación" onerror="this.style.display='none'" />
+        </span>
+        <span>
+          <strong>ARVELA INNOVACION, S.L.</strong>
+          <span>Innovación tecnológica con impacto real</span>
+        </span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a href="/que-hacemos/">Qué hacemos</a>
+        <a href="/soluciones/">Soluciones</a>
+        <a href="/proyectos/">Proyectos</a>
+        <a href="/conocenos/">Conócenos</a>
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a> · Blog
+    </div>
+
+    <section class="hero">
+      <div class="hero-card">
+        <span class="eyebrow">Conocimiento y tecnología aplicada</span>
+        <h1>Blog de innovación, Inteligencia Artificial, IoT y transformación digital</h1>
+        <p>
+          Guías desarrolladas desde una perspectiva práctica sobre tecnologías y sectores en los que trabaja ARVELA:
+          software, Inteligencia Artificial, visión artificial, IoT, analítica, I+D+i, educación, ganadería inteligente
+          y administración pública.
+        </p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="intro-card">
+        <h2>Tecnología explicada desde el problema que resuelve</h2>
+        <p>
+          Los artículos profundizan en conceptos, arquitecturas, criterios de decisión, errores habituales y formas de
+          iniciar proyectos reales. El objetivo es que cada contenido complemente las páginas de soluciones y permita
+          ampliar temas que no tendría sentido desarrollar completamente dentro de una página comercial.
+        </p>
+      </div>
+
+      <div class="topics-card">
+        <h2>Temas</h2>
+        <p>La biblioteca crecerá por áreas relacionadas entre sí.</p>
+        <div class="topics">
+          <span class="topic">IA</span>
+          <span class="topic">IoT</span>
+          <span class="topic">Software</span>
+          <span class="topic">Datos</span>
+          <span class="topic">I+D+i</span>
+          <span class="topic">Ganadería</span>
+          <span class="topic">Educación</span>
+          <span class="topic">Sector público</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Todos los artículos</h2>
+      <p>12 contenidos especializados, enlazados con las áreas y soluciones de ARVELA.</p>
+    </div>
+
+    <section class="articles" aria-label="Artículos del blog">
+
+      <article class="article-card">
+        <span class="category cat-ia">Inteligencia Artificial</span>
+        <h3>Qué es la Inteligencia Artificial para empresas y cómo aplicarla</h3>
+        <p>
+          Conceptos, casos de uso, datos, automatización, modelos, riesgos y una metodología para empezar un proyecto de IA con objetivos medibles.
+        </p>
+        <div class="article-meta">
+          <span>Guía práctica</span>
+          <a href="/blog-que-es-inteligencia-artificial-empresas.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-iot">IoT y sensores</span>
+        <h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
+        <p>
+          Dispositivos conectados, telemetría, redes, plataformas, alertas y aplicaciones del Internet de las Cosas en entornos reales.
+        </p>
+        <div class="article-meta">
+          <span>IoT</span>
+          <a href="/blog-que-es-iot-sensores-inteligentes.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-soft">Software a medida</span>
+        <h3>Cuándo desarrollar software a medida y cuándo utilizar una solución existente</h3>
+        <p>
+          Criterios para decidir entre software estándar y desarrollo personalizado: costes, integraciones, procesos, escalabilidad y retorno.
+        </p>
+        <div class="article-meta">
+          <span>Desarrollo de software</span>
+          <a href="/blog-cuando-desarrollar-software-a-medida.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-idi">Innovación</span>
+        <h3>Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico</h3>
+        <p>
+          Diferencias entre MVP, prototipo, prueba de concepto y piloto, con criterios para validar una idea antes de desarrollar el producto completo.
+        </p>
+        <div class="article-meta">
+          <span>MVP y producto</span>
+          <a href="/blog-que-es-un-mvp.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-data">Analítica de datos</span>
+        <h3>Cómo convertir datos en decisiones mediante cuadros de mando y KPIs</h3>
+        <p>
+          Diseño de dashboards, selección de indicadores, calidad del dato, alertas y analítica orientada a decisiones reales.
+        </p>
+        <div class="article-meta">
+          <span>Datos y BI</span>
+          <a href="/blog-cuadros-de-mando-analitica-datos.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-rural">Ganadería inteligente</span>
+        <h3>Inteligencia Artificial en ganadería: sensores, bienestar y digitalización</h3>
+        <p>
+          GPS, geovallas, actividad, bienestar animal, datos, predicción, cuadros de mando y aplicaciones de IA en explotaciones ganaderas.
+        </p>
+        <div class="article-meta">
+          <span>AVEGA y ganadería</span>
+          <a href="/blog-inteligencia-artificial-ganaderia.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-ia">Visión artificial</span>
+        <h3>Qué es la visión artificial y cómo funciona</h3>
+        <p>
+          Computer Vision, detección de objetos, segmentación, OCR, seguimiento, Edge AI, cámaras inteligentes y aplicaciones empresariales.
+        </p>
+        <div class="article-meta">
+          <span>Computer Vision</span>
+          <a href="/blog-vision-artificial-inteligencia-artificial.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-public">Administración pública</span>
+        <h3>Cómo digitalizar un Ayuntamiento paso a paso</h3>
+        <p>
+          Procesos, ciudadanía, GIS, IoT, analítica, Smart City, integración e Inteligencia Artificial dentro de una hoja de ruta municipal.
+        </p>
+        <div class="article-meta">
+          <span>Transformación municipal</span>
+          <a href="/blog-digitalizacion-ayuntamientos-corregido.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-idi">Innovación e I+D+i</span>
+        <h3>Proyectos de I+D+i: financiación, TRL y cómo preparar una propuesta</h3>
+        <p>
+          De la oportunidad tecnológica al piloto: objetivos, TRL, paquetes de trabajo, riesgos, impacto, consorcios y explotación de resultados.
+        </p>
+        <div class="article-meta">
+          <span>I+D+i</span>
+          <a href="/blog-proyectos-idi-financiacion.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-iot">IoT técnico</span>
+        <h3>Cómo integrar sensores IoT en una plataforma web</h3>
+        <p>
+          Arquitectura IoT, MQTT, HTTP, LoRaWAN, gateways, APIs, series temporales, alertas, seguridad y escalabilidad de dispositivos.
+        </p>
+        <div class="article-meta">
+          <span>Arquitectura IoT</span>
+          <a href="/blog-integracion-sensores-iot-plataformas.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-edu">Educación y formación</span>
+        <h3>Aprendizaje adaptativo: cómo personalizar la formación con datos e IA</h3>
+        <p>
+          Competencias, evaluación, analítica educativa, reglas de adaptación, recomendaciones, feedback e Inteligencia Artificial aplicada al aprendizaje.
+        </p>
+        <div class="article-meta">
+          <span>EdTech</span>
+          <a href="/blog-aprendizaje-adaptativo-inteligencia-artificial.html">Leer artículo →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <span class="category cat-public">Administración pública</span>
+        <h3>Gestión de incidencias municipales: cómo digitalizar avisos y actuaciones</h3>
+        <p>
+          Canales ciudadanos, geolocalización, GIS, clasificación, duplicados, SLA, contratas, cuadros de mando, IoT e IA.
+        </p>
+        <div class="article-meta">
+          <span>Servicios municipales</span>
+          <a href="/blog-gestion-incidencias-municipales.html">Leer artículo →</a>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="cta">
+      <h2>De la lectura al proyecto</h2>
+      <p>
+        Los contenidos del blog están conectados con las soluciones de ARVELA. Si una necesidad requiere pasar de la idea
+        a un piloto, una integración o una plataforma completa, podemos analizar el caso y definir un alcance tecnológico.
+      </p>
+      <a href="/#contacto">Hablar con ARVELA</a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© ARVELA INNOVACION, S.L. · Inteligencia Artificial, IoT, software, datos, innovación y transformación digital aplicada.</p>
+  </footer>
+</body>
+</html>
