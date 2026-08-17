@@ -1,0 +1,20 @@
+<!-- Cargador del footer global -->
+<div id="footer-container"></div>
+<script>
+  fetch('/components/footer.html')
+    .then(response => {
+      if (!response.ok) throw new Error('No se pudo cargar el footer');
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+      document.querySelectorAll('#footer-container script').forEach(oldScript => {
+        const newScript = document.createElement('script');
+        if (oldScript.src) newScript.src = oldScript.src;
+        else newScript.textContent = oldScript.textContent;
+        document.body.appendChild(newScript);
+        oldScript.remove();
+      });
+    })
+    .catch(error => console.error('Footer ARVELA:', error));
+</script>
