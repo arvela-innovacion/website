@@ -719,8 +719,13 @@
     </section>
   </main>
 
-  <footer class="wrap">
-    <p>© ARVELA INNOVACION, S.L. · Ciudadanía, participación, incidencias, servicios públicos y datos para administraciones.</p>
-  </footer>
+  <div id="footer-container"></div>
+  <script>
+  fetch('/Components/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+  </script>
 </body>
 </html>
