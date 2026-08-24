@@ -803,8 +803,13 @@
     </section>
   </main>
 
-  <footer class="wrap">
-    <p>© ARVELA INNOVACION, S.L. · Plataformas SaaS, software cloud y soluciones tecnológicas con impacto.</p>
-  </footer>
+  <div id="footer-container"></div>
+  <script>
+  fetch('/Components/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+  </script>
 </body>
 </html>
