@@ -162,22 +162,12 @@
     </section>
   </main>
 
-  <div id="footer-container">
-    <footer class="wrap" style="padding:22px 0 30px;color:#5f6b85;font-size:.92rem">
-      <p>© ARVELA INNOVACION, S.L.</p>
-    </footer>
-  </div>
+  <div id="footer-container"></div>
   <script>
   fetch('/Components/footer.html')
-    .then(response => {
-      if (!response.ok) throw new Error('No se pudo cargar el footer');
-      return response.text();
-    })
+    .then(response => response.text())
     .then(html => {
       document.getElementById('footer-container').innerHTML = html;
-    })
-    .catch(() => {
-      /* Mantiene el footer mínimo de respaldo si se abre el HTML fuera del servidor */
     });
   </script>
 </body>
