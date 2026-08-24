@@ -1046,8 +1046,13 @@
     </section>
   </main>
 
-  <footer class="wrap">
-    <p>© ARVELA INNOVACION, S.L. · Ganadería inteligente, IA, IoT, sensores, datos y bienestar animal.</p>
-  </footer>
+  <div id="footer-container"></div>
+  <script>
+  fetch('/Components/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+  </script>
 </body>
 </html>
