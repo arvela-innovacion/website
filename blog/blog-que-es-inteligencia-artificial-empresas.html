@@ -112,5 +112,16 @@
 <div class="cta"><h2>¿Estás valorando un proyecto de Inteligencia Artificial?</h2><p>ARVELA puede ayudarte a definir el caso de uso, revisar los datos, plantear un piloto y convertirlo en una solución integrada.</p><a href="/#contacto">Hablar sobre el proyecto</a></div>
 </article><aside class="toc" aria-label="Índice del artículo"><strong>Contenido</strong><ol><li><a href="#introduccion">La IA más allá de la moda</a></li><li><a href="#que-es">Qué es realmente</a></li><li><a href="#diferencias">Conceptos principales</a></li><li><a href="#que-puede-hacer">Qué puede hacer</a></li><li><a href="#sectores">Aplicaciones por sectores</a></li><li><a href="#casos">Casos de uso</a></li><li><a href="#beneficios">Beneficios medibles</a></li><li><a href="#limites">Límites de la IA</a></li><li><a href="#datos">Datos necesarios</a></li><li><a href="#como-empezar">Cómo empezar</a></li><li><a href="#errores">Errores habituales</a></li><li><a href="#construir-comprar">Construir o comprar</a></li><li><a href="#etica">Uso responsable</a></li><li><a href="#cuando-compensa">Cuándo compensa</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ol></aside></div>
 <section class="related"><h2>Contenidos y soluciones relacionados</h2><div class="related-grid"><article class="related-card"><span>Solución</span><h3>Monitorización Inteligente mediante IA</h3><p>Cámaras, visión artificial, alertas, eventos y evidencias para procesos reales.</p><a href="/soluciones/monitorizacion-inteligente-ia.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>Analítica y Apoyo a la Decisión</h3><p>Cuadros de mando, indicadores, integración de datos y sistemas orientados a decisiones.</p><a href="/soluciones/analitica-datos-decision.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>Innovación e I+D+i</h3><p>Prototipos, pilotos y validación tecnológica para convertir una hipótesis en una solución viable.</p><a href="/soluciones/innovacion-idi.html">Ver solución →</a></article></div></section>
-</main><footer class="wrap"><p>© ARVELA INNOVACION, S.L. · Inteligencia Artificial, IoT, software, analítica e innovación aplicada.</p></footer>
+</main>
+  
+<div id="footer-container"></div>
+  <script>
+  fetch('/Components/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+  </script>
+
+  
 </body></html>
