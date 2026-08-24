@@ -1174,8 +1174,13 @@ POST /api/v1/webhooks/integrations</code></pre>
     </section>
   </main>
 
-  <footer class="wrap">
-    <p>© ARVELA INNOVACION, S.L. · IoT, MQTT, LoRaWAN, APIs, sensores, dashboards e integración.</p>
-  </footer>
+  <div id="footer-container"></div>
+  <script>
+  fetch('/Components/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+  </script>
 </body>
 </html>
