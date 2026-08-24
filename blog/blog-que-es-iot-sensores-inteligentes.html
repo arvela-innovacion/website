@@ -94,5 +94,14 @@
 </div>
 <section class="related"><h2>Contenidos y soluciones relacionados</h2><div class="related-grid"><article class="related-card"><span>Solución</span><h3>Integración IoT y Sensores</h3><p>Conexión de dispositivos, gateways, APIs, dashboards, históricos y alertas.</p><a href="/soluciones/integracion-iot-sensores.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>AVEGA · Ganadería Inteligente</h3><p>Sensores, localización, datos ambientales y alertas para explotaciones ganaderas.</p><a href="/soluciones/avega-ganaderia-inteligente.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>Analítica y Apoyo a la Decisión</h3><p>Conversión de datos IoT en indicadores, tendencias y cuadros de mando.</p><a href="/soluciones/analitica-datos-decision.html">Ver solución →</a></article></div></section>
 </main>
-<footer class="wrap"><p>© ARVELA INNOVACION, S.L. · IoT, sensores inteligentes, software, analítica e innovación aplicada.</p></footer>
+  
+<div id="footer-container"></div>
+  <script>
+  fetch('/Components/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+  </script>
+  
 </body></html>
