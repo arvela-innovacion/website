@@ -1054,8 +1054,13 @@
     </section>
   </main>
 
-  <footer class="wrap">
-    <p>© ARVELA INNOVACION, S.L. · Incidencias municipales, participación ciudadana, GIS, Smart City y analítica.</p>
-  </footer>
+  <div id="footer-container"></div>
+  <script>
+  fetch('/Components/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+  </script>
 </body>
 </html>
