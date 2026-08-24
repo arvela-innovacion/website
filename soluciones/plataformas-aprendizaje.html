@@ -702,8 +702,13 @@
     </section>
   </main>
 
-  <footer class="wrap">
-    <p>© ARVELA INNOVACION, S.L. · Plataformas de aprendizaje, formación digital, evaluación y analítica educativa.</p>
-  </footer>
+  <div id="footer-container"></div>
+  <script>
+  fetch('/Components/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+  </script>
 </body>
 </html>
