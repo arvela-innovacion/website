@@ -178,25 +178,28 @@ footer { padding: 22px 0 30px; color: var(--muted); font-size: 0.92rem; }
 </style>
 </head>
 <body>
-  <header>
-    <div class="wrap topbar">
-      <div class="brand">
-        <a class="logo-box" href="/" aria-label="Inicio ARVELA Innovación">
-          <img src="/logo.jpg" alt="Logo de ARVELA Innovación" onerror="this.style.display='none'" />
-        </a>
-        <div class="brand-text">
-          <h1>ARVELA INNOVACION, S.L.</h1>
-          <p>Innovación tecnológica con impacto real</p>
-        </div>
-      </div>
-      <nav aria-label="Navegación principal">
-        <a href="/que-hacemos/">Qué hacemos</a>
-        <a href="/soluciones/">Soluciones</a>
-        <a href="/blog/">Blog</a>
-        <a href="/contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
+
+  <div id="header-container"></div>
+  <script>
+    fetch('/Components/header.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('header-container').innerHTML = html;
+        const path = window.location.pathname;
+
+        document.querySelectorAll('#header-container nav a').forEach(link => {
+        const href = link.getAttribute('href');
+
+        if (
+          path === href ||
+          (href.endsWith('/') && href !== '/' && path.startsWith(href))
+        ) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+  
   <main class="wrap">
     <div class="breadcrumb"><a href="/">Inicio</a> · Inicio</div>
     <section class="hero">
