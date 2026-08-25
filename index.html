@@ -179,26 +179,7 @@ footer { padding: 22px 0 30px; color: var(--muted); font-size: 0.92rem; }
 </head>
 <body>
 
-  <div id="header-container"></div>
-  <script>
-    fetch('/Components/header.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('header-container').innerHTML = html;
-        const path = window.location.pathname;
-
-        document.querySelectorAll('#header-container nav a').forEach(link => {
-        const href = link.getAttribute('href');
-
-        if (
-          path === href ||
-          (href.endsWith('/') && href !== '/' && path.startsWith(href))
-        ) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
+  <script src="/Components/header-loader.js"></script>
   
   <main class="wrap">
     <div class="breadcrumb"><a href="/">Inicio</a> · Inicio</div>
