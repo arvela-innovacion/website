@@ -516,3 +516,26 @@ nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft
     gap: 13px;
   }
 }
+
+/* Header compacto en móvil */
+@media (max-width: 640px) {
+  #header-container:empty { min-height: 128px; }
+
+  header { padding-top: 8px; }
+
+  .topbar {
+    padding: 11px 12px;
+    gap: 10px;
+  }
+
+  nav {
+    gap: 5px;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 7px 9px;
+    font-size: .86rem;
+    line-height: 1.2;
+  }
+}
