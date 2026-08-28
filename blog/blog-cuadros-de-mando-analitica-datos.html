@@ -1,997 +1,624 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Cómo convertir datos en decisiones con cuadros de mando y KPIs | ARVELA</title>
-  <meta name="description" content="Guía completa sobre cuadros de mando, dashboards y KPIs: qué son, cómo diseñarlos, errores habituales, tipos de indicadores, calidad de datos y cómo convertir información en decisiones." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://arvelainnova.es/blog/cuadros-de-mando-analitica-datos/" />
-
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cómo convertir datos en decisiones con cuadros de mando y KPIs" />
-  <meta property="og:description" content="Una guía práctica para diseñar dashboards útiles, elegir indicadores y evitar cuadros de mando llenos de datos pero vacíos de decisiones." />
-  <meta property="og:url" content="https://arvelainnova.es/blog/cuadros-de-mando-analitica-datos/" />
-  <meta property="og:site_name" content="ARVELA Innovación" />
-  <meta property="og:image" content="https://arvelainnova.es/og-image.png" />
-  <meta property="article:publisher" content="https://arvelainnova.es/" />
-  <meta property="article:section" content="Analítica de datos" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cómo convertir datos en decisiones con cuadros de mando" />
-  <meta name="twitter:description" content="Dashboards, KPIs, calidad del dato, alertas, visualización y criterios para diseñar analítica útil." />
-  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#172033" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Cómo convertir datos en decisiones con cuadros de mando y KPIs",
-    "description": "Guía práctica sobre dashboards, cuadros de mando, KPIs, calidad del dato, visualización, alertas y toma de decisiones.",
-    "url": "https://arvelainnova.es/blog/cuadros-de-mando-analitica-datos/",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://arvelainnova.es/blog/cuadros-de-mando-analitica-datos/"
-    },
-    "image": "https://arvelainnova.es/og-image.png",
-    "author": {
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cómo convertir datos en decisiones con cuadros de mando y KPIs | ARVELA</title>
+<meta content="Guía completa sobre cuadros de mando, dashboards y KPIs: qué son, cómo diseñarlos, errores habituales, tipos de indicadores, calidad de datos y cómo convertir información en decisiones." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://arvelainnova.es/blog/blog-cuadros-de-mando-analitica-datos.html" rel="canonical"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="Cómo convertir datos en decisiones con cuadros de mando y KPIs" property="og:title"/>
+<meta content="Una guía práctica para diseñar dashboards útiles, elegir indicadores y evitar cuadros de mando llenos de datos pero vacíos de decisiones." property="og:description"/>
+<meta content="https://arvelainnova.es/blog/blog-cuadros-de-mando-analitica-datos.html" property="og:url"/>
+<meta content="ARVELA Innovación" property="og:site_name"/>
+<meta content="https://arvelainnova.es/og-image.png" property="og:image"/>
+<meta content="https://arvelainnova.es/" property="article:publisher"/>
+<meta content="Analítica de datos" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cómo convertir datos en decisiones con cuadros de mando" name="twitter:title"/>
+<meta content="Dashboards, KPIs, calidad del dato, alertas, visualización y criterios para diseñar analítica útil." name="twitter:description"/>
+<meta content="https://arvelainnova.es/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#172033" name="theme-color"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cómo convertir datos en decisiones con cuadros de mando y KPIs",
+  "description": "Guía práctica sobre dashboards, cuadros de mando, KPIs, calidad del dato, visualización, alertas y toma de decisiones.",
+  "url": "https://arvelainnova.es/blog/blog-cuadros-de-mando-analitica-datos.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://arvelainnova.es/blog/blog-cuadros-de-mando-analitica-datos.html"
+  },
+  "image": "https://arvelainnova.es/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergio Alonso",
+    "jobTitle": "CEO",
+    "worksFor": {
       "@type": "Organization",
       "name": "ARVELA Innovación",
       "url": "https://arvelainnova.es/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARVELA Innovación",
+    "url": "https://arvelainnova.es/blog/blog-cuadros-de-mando-analitica-datos.html",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arvelainnova.es/logo.jpg"
+    }
+  },
+  "datePublished": "2026-07-14",
+  "dateModified": "2026-08-28",
+  "inLanguage": "es",
+  "articleSection": "Analítica de datos",
+  "keywords": [
+    "cuadros de mando",
+    "dashboards",
+    "KPIs",
+    "analítica de datos",
+    "apoyo a la decisión",
+    "indicadores empresariales",
+    "visualización de datos"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://arvelainnova.es/"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ARVELA Innovación",
-      "url": "https://arvelainnova.es/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://arvelainnova.es/logo.jpg"
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://arvelainnova.es/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cuadros de mando y analítica de datos",
+      "item": "https://arvelainnova.es/blog/blog-cuadros-de-mando-analitica-datos.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es un cuadro de mando?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es una herramienta visual que reúne indicadores relevantes para supervisar una actividad, detectar desviaciones y apoyar decisiones."
       }
     },
-    "datePublished": "2026-08-06",
-    "dateModified": "2026-08-06",
-    "inLanguage": "es",
-    "articleSection": "Analítica de datos",
-    "keywords": [
-      "cuadros de mando",
-      "dashboards",
-      "KPIs",
-      "analítica de datos",
-      "apoyo a la decisión",
-      "indicadores empresariales",
-      "visualización de datos"
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://arvelainnova.es/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://arvelainnova.es/blog/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Cuadros de mando y analítica de datos",
-        "item": "https://arvelainnova.es/blog/cuadros-de-mando-analitica-datos/"
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre un dato y un KPI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un dato describe un hecho. Un KPI es un indicador relacionado con un objetivo, una referencia y una decisión."
       }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Qué es un cuadro de mando?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Es una herramienta visual que reúne indicadores relevantes para supervisar una actividad, detectar desviaciones y apoyar decisiones."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué diferencia hay entre un dato y un KPI?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Un dato describe un hecho. Un KPI es un indicador relacionado con un objetivo, una referencia y una decisión."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuántos KPIs debe tener un dashboard?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No existe un número universal. Debe incluir los indicadores necesarios para responder preguntas concretas sin saturar al usuario con métricas irrelevantes."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Un dashboard tiene que mostrar datos en tiempo real?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No siempre. La frecuencia debe adaptarse a la velocidad con la que cambia la decisión. Algunos procesos requieren segundos y otros se gestionan semanal o mensualmente."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo se empieza un proyecto de analítica?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Se empieza definiendo las decisiones que se quieren mejorar, revisando las fuentes de datos y seleccionando indicadores con responsables, frecuencia y criterios de interpretación."
-        }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántos KPIs debe tener un dashboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No existe un número universal. Debe incluir los indicadores necesarios para responder preguntas concretas sin saturar al usuario con métricas irrelevantes."
       }
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-soft: #f8fafc;
-      --text: #172033;
-      --muted: #5f6b85;
-      --line: #e5e9f2;
-      --primary: #1f6feb;
-      --cyan: #0891b2;
-      --green: #0f9f76;
-      --violet: #6d5dfc;
-      --warning: #9a6700;
-      --shadow: 0 20px 55px rgba(23, 32, 51, 0.08);
-      --radius: 22px;
-      --max: 1180px;
-      --article: 790px;
+    },
+    {
+      "@type": "Question",
+      "name": "¿Un dashboard tiene que mostrar datos en tiempo real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No siempre. La frecuencia debe adaptarse a la velocidad con la que cambia la decisión. Algunos procesos requieren segundos y otros se gestionan semanal o mensualmente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se empieza un proyecto de analítica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se empieza definiendo las decisiones que se quieren mejorar, revisando las fuentes de datos y seleccionando indicadores con responsables, frecuencia y criterios de interpretación."
+      }
     }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 12% 0%, rgba(8,145,178,.09), transparent 27rem),
-        radial-gradient(circle at 90% 10%, rgba(31,111,235,.08), transparent 28rem),
-        var(--bg);
-      line-height: 1.72;
-    }
-
-    a { color: inherit; }
-    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
-
-    header { padding: 22px 0 12px; }
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 15px 18px;
-      background: rgba(255,255,255,.88);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(229,233,242,.95);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; min-width: 0; }
-    .brand-logo {
-      width: 52px; height: 52px; border-radius: 15px; overflow: hidden;
-      border: 1px solid #dbeafe; background: linear-gradient(135deg,#eff6ff,#ecfeff);
-      display: grid; place-items: center; flex: 0 0 auto;
-    }
-    .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
-    .brand strong { display: block; line-height: 1.15; letter-spacing: .02em; }
-    .brand span { display: block; margin-top: 4px; color: var(--muted); font-size: .9rem; }
-
-    nav { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-    nav a {
-      text-decoration: none; color: var(--muted); font-size: .92rem;
-      padding: 8px 10px; border-radius: 999px;
-    }
-    nav a:hover, nav a.active { color: var(--text); background: #f3f4f6; }
-
-    .breadcrumb { padding: 18px 0 0; color: var(--muted); font-size: .92rem; }
-    .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 700; }
-
-    .hero { padding: 28px 0 22px; }
-    .hero-card {
-      padding: 42px;
-      background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(241,252,255,.96));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-    .category {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 7px 11px; border-radius: 999px;
-      background: #ecfeff; color: var(--cyan);
-      font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em;
-    }
-    .hero h1 {
-      margin: 18px 0 0;
-      max-width: 960px;
-      font-size: clamp(2.25rem, 5vw, 4.5rem);
-      line-height: 1.05;
-      letter-spacing: -.045em;
-    }
-    .lead {
-      max-width: 880px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 1.16rem;
-    }
-    .meta {
-      display: flex; gap: 16px; flex-wrap: wrap;
-      margin-top: 24px; color: var(--muted); font-size: .92rem;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, var(--article)) 290px;
-      gap: 28px;
-      align-items: start;
-      padding: 12px 0 38px;
-      justify-content: center;
-    }
-
-    article {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 38px;
-      min-width: 0;
-    }
-    article h2 {
-      margin: 2.6rem 0 1rem;
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
-      line-height: 1.2;
-      letter-spacing: -.025em;
-      scroll-margin-top: 20px;
-    }
-    article h2:first-of-type { margin-top: 0; }
-    article h3 {
-      margin: 2rem 0 .75rem;
-      font-size: 1.24rem;
-      line-height: 1.3;
-      scroll-margin-top: 20px;
-    }
-    article p, article li { color: var(--muted); }
-    article strong { color: var(--text); }
-    article ul, article ol { padding-left: 1.25rem; }
-    article li + li { margin-top: .55rem; }
-
-    .toc {
-      position: sticky;
-      top: 20px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.94);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-    .toc strong { display: block; margin-bottom: 12px; }
-    .toc ol { margin: 0; padding-left: 18px; }
-    .toc li + li { margin-top: 8px; }
-    .toc a { color: var(--muted); text-decoration: none; font-size: .9rem; }
-    .toc a:hover { color: var(--primary); }
-
-    .highlight {
-      margin: 24px 0;
-      padding: 22px;
-      border-radius: 18px;
-      background: linear-gradient(135deg,#effcff,#f2f7ff);
-      border: 1px solid #cdeaf0;
-    }
-    .highlight strong { display: block; margin-bottom: 7px; }
-    .highlight p { margin: 0; }
-
-    .warning {
-      margin: 24px 0;
-      padding: 20px 22px;
-      border-radius: 18px;
-      background: #fffaf0;
-      border: 1px solid #f2dfb2;
-    }
-    .warning strong { color: var(--warning); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 14px;
-      margin: 22px 0;
-    }
-    .card {
-      border: 1px solid var(--line);
-      background: var(--surface-soft);
-      border-radius: 18px;
-      padding: 19px;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 1.04rem; }
-    .card p { margin: 0; font-size: .95rem; }
-
-    .comparison {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 24px 0;
-      font-size: .95rem;
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(23,32,51,.06);
-    }
-    .comparison th, .comparison td {
-      padding: 14px;
-      border: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-    .comparison th { background: #f8fafc; color: var(--text); }
-    .comparison td { color: var(--muted); }
-
-    .pipeline {
-      display: grid;
-      grid-template-columns: repeat(6,minmax(0,1fr));
-      gap: 10px;
-      margin: 24px 0;
-    }
-    .node {
-      padding: 15px 10px;
-      text-align: center;
-      border-radius: 16px;
-      background: var(--surface-soft);
-      border: 1px solid var(--line);
-    }
-    .node strong { display:block; font-size:.9rem; }
-    .node span { display:block; margin-top:6px; color:var(--muted); font-size:.8rem; }
-
-    .steps {
-      counter-reset: step;
-      display: grid;
-      gap: 14px;
-      margin: 24px 0;
-    }
-    .step {
-      position: relative;
-      padding: 20px 20px 20px 68px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--surface-soft);
-    }
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 20px; top: 19px;
-      width: 32px; height: 32px;
-      display: grid; place-items: center;
-      border-radius: 50%;
-      background: var(--cyan);
-      color: white; font-weight: 800;
-    }
-    .step h3 { margin: 0 0 7px; font-size: 1.05rem; }
-    .step p { margin: 0; }
-
-    .internal-link {
-      color: var(--primary);
-      font-weight: 750;
-      text-decoration-thickness: .08em;
-      text-underline-offset: .16em;
-    }
-
-    details {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px 18px;
-    }
-    details + details { margin-top: 10px; }
-    summary { cursor: pointer; font-weight: 800; }
-    details p { margin-bottom: 0; }
-
-    .cta {
-      margin-top: 36px;
-      padding: 28px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #172033, #164e63);
-      color: white;
-    }
-    .cta h2 { margin: 0 0 10px; color: white; }
-    .cta p { color: rgba(255,255,255,.78); }
-    .cta a {
-      display: inline-flex;
-      margin-top: 8px;
-      padding: 12px 16px;
-      border-radius: 13px;
-      background: white;
-      color: var(--text);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .related { padding: 12px 0 42px; }
-    .related h2 { margin-bottom: 16px; letter-spacing: -.02em; }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 16px;
-    }
-    .related-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 19px;
-      box-shadow: var(--shadow);
-      padding: 20px;
-    }
-    .related-card span { color: var(--cyan); font-size: .82rem; font-weight: 800; }
-    .related-card h3 { margin: 9px 0; font-size: 1.08rem; }
-    .related-card p { color: var(--muted); font-size: .93rem; }
-    .related-card a { color: var(--primary); font-weight: 800; text-decoration: none; }
-
-    footer { padding: 26px 0 34px; color: var(--muted); font-size: .92rem; }
-
-    @media (max-width: 980px) {
-      .layout { grid-template-columns: 1fr; }
-      .toc { position: static; order: -1; }
-      .related-grid { grid-template-columns: 1fr; }
-      .pipeline { grid-template-columns: repeat(3,1fr); }
-    }
-
-    @media (max-width: 760px) {
-      .topbar { align-items: flex-start; flex-direction: column; }
-      nav { justify-content: flex-start; }
-      .hero-card, article { padding: 24px; }
-      .grid, .pipeline { grid-template-columns: 1fr; }
-      .comparison { display: block; overflow-x: auto; }
-      .hero h1 { font-size: 2.45rem; }
-    }
-  </style>
+  ]
+}
+</script>
+<link href="/Components/styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-  
-  <script src="/Components/header-loader.js"></script>
-  
-  <main class="wrap">
-    <div class="breadcrumb">
-      <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Cuadros de mando y analítica de datos
+<div id="header-container"></div>
+<script src="/Components/components.js"></script>
+<main class="wrap">
+<div class="breadcrumb">
+<a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Cuadros de mando y analítica de datos
     </div>
-
-    <section class="hero">
-      <div class="hero-card">
-        <span class="category">Analítica de datos</span>
-        <h1>Cómo convertir datos en decisiones mediante cuadros de mando y KPIs</h1>
-        <p class="lead">
+<section class="hero">
+<div class="hero-card">
+<span class="category">Analítica de datos</span>
+<h1>Cómo convertir datos en decisiones mediante cuadros de mando y KPIs</h1>
+<p class="lead">
           Un dashboard útil no es una colección de gráficos. Es una herramienta para responder preguntas, detectar desviaciones
           y decidir qué hacer. La calidad del diseño depende tanto de los datos como de las decisiones que pretende mejorar.
         </p>
-        <div class="meta">
-          <span>Publicado por ARVELA Innovación</span>
-          <span>6 de agosto de 2026</span>
-          <span>Lectura aproximada: 19 minutos</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="layout">
-      <article>
-        <h2 id="introduccion">Tener datos no significa disponer de información útil</h2>
-        <p>
+<div class="meta"><span>Sergio Alonso · CEO</span><span>14 de julio de 2026</span><span>Lectura aproximada: 9 min</span></div>
+</div>
+</section>
+<div class="layout">
+<article>
+<h2 id="introduccion">Tener datos no significa disponer de información útil</h2>
+<p>
           Muchas organizaciones generan más datos de los que pueden interpretar. Aplicaciones, hojas de cálculo, sensores,
           plataformas, formularios y sistemas internos registran actividad continuamente. Sin embargo, cuando llega el momento
           de tomar una decisión, la información sigue dispersa, llega tarde o exige preparar informes manuales.
         </p>
-        <p>
+<p>
           El problema no siempre es la falta de datos. A menudo faltan definiciones comunes, contexto, calidad, responsables y
           una relación clara entre los indicadores y las acciones. Un cuadro de mando puede ayudar a resolverlo, pero solo si
           se diseña para responder preguntas reales.
         </p>
-        <div class="highlight">
-          <strong>Idea principal</strong>
-          <p>
+<div class="highlight">
+<strong>Idea principal</strong>
+<p>
             Un buen dashboard no muestra todo lo que se puede medir. Muestra lo necesario para entender una situación y decidir.
           </p>
-        </div>
-
-        <h2 id="que-es">¿Qué es un cuadro de mando?</h2>
-        <p>
+</div>
+<h2 id="que-es">¿Qué es un cuadro de mando?</h2>
+<p>
           Un cuadro de mando es una herramienta visual que reúne indicadores relevantes sobre una actividad, proceso, servicio
           o proyecto. Su función es facilitar la supervisión, detectar desviaciones, comparar resultados y apoyar decisiones.
         </p>
-        <p>
+<p>
           Puede adoptar la forma de dashboard operativo, informe ejecutivo, panel analítico, mapa, sistema de alertas o una
           combinación de varios elementos. No tiene que ser una pantalla llena de gráficos ni utilizar datos en tiempo real.
           Debe adaptarse a la frecuencia y al nivel de detalle de la decisión.
         </p>
-        <p>
+<p>
           La solución de <a class="internal-link" href="/soluciones/analitica-datos-decision.html">Analítica y Apoyo a la Decisión</a>
           de ARVELA se centra en esa conexión entre datos, indicadores, visualización y acción.
         </p>
-
-        <h2 id="dato-indicador-kpi">Dato, métrica, indicador y KPI</h2>
-        <p>
+<h2 id="dato-indicador-kpi">Dato, métrica, indicador y KPI</h2>
+<p>
           Estos términos suelen mezclarse, pero representan niveles distintos de interpretación.
         </p>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Concepto</th>
-              <th>Qué representa</th>
-              <th>Ejemplo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Dato</strong></td>
-              <td>Un valor registrado sin interpretación suficiente por sí solo.</td>
-              <td>47 incidencias recibidas.</td>
-            </tr>
-            <tr>
-              <td><strong>Métrica</strong></td>
-              <td>Una medida calculada o agregada sobre varios datos.</td>
-              <td>Tiempo medio de resolución: 3,2 días.</td>
-            </tr>
-            <tr>
-              <td><strong>Indicador</strong></td>
-              <td>Una medida interpretada dentro de un contexto.</td>
-              <td>El tiempo medio ha mejorado un 18 % respecto al trimestre anterior.</td>
-            </tr>
-            <tr>
-              <td><strong>KPI</strong></td>
-              <td>Un indicador clave vinculado a un objetivo y una decisión.</td>
-              <td>Mantener el 90 % de incidencias resueltas en menos de cinco días.</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Qué representa</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dato</strong></td>
+<td>Un valor registrado sin interpretación suficiente por sí solo.</td>
+<td>47 incidencias recibidas.</td>
+</tr>
+<tr>
+<td><strong>Métrica</strong></td>
+<td>Una medida calculada o agregada sobre varios datos.</td>
+<td>Tiempo medio de resolución: 3,2 días.</td>
+</tr>
+<tr>
+<td><strong>Indicador</strong></td>
+<td>Una medida interpretada dentro de un contexto.</td>
+<td>El tiempo medio ha mejorado un 18 % respecto al trimestre anterior.</td>
+</tr>
+<tr>
+<td><strong>KPI</strong></td>
+<td>Un indicador clave vinculado a un objetivo y una decisión.</td>
+<td>Mantener el 90 % de incidencias resueltas en menos de cinco días.</td>
+</tr>
+</tbody>
+</table>
+<p>
           Un KPI no es importante por el nombre, sino por su capacidad para indicar si un objetivo avanza o se desvía. Para ser
           útil necesita definición, fórmula, fuente, frecuencia, responsable y criterio de interpretación.
         </p>
-
-        <h2 id="pregunta">El dashboard debe empezar por una pregunta</h2>
-        <p>
+<h2 id="pregunta">El dashboard debe empezar por una pregunta</h2>
+<p>
           Diseñar primero los gráficos suele conducir a paneles decorativos. Es mejor comenzar identificando qué preguntas deben
           responderse. Por ejemplo:
         </p>
-        <ul>
-          <li>¿Qué áreas acumulan más retrasos?</li>
-          <li>¿Qué animales o activos requieren revisión hoy?</li>
-          <li>¿Qué alumnos muestran riesgo de abandono?</li>
-          <li>¿Qué sensores han dejado de comunicar?</li>
-          <li>¿Qué productos concentran más devoluciones?</li>
-          <li>¿Qué zonas registran incidencias recurrentes?</li>
-          <li>¿Qué proyectos están desviándose en coste o plazo?</li>
-        </ul>
-        <p>
+<ul>
+<li>¿Qué áreas acumulan más retrasos?</li>
+<li>¿Qué animales o activos requieren revisión hoy?</li>
+<li>¿Qué alumnos muestran riesgo de abandono?</li>
+<li>¿Qué sensores han dejado de comunicar?</li>
+<li>¿Qué productos concentran más devoluciones?</li>
+<li>¿Qué zonas registran incidencias recurrentes?</li>
+<li>¿Qué proyectos están desviándose en coste o plazo?</li>
+</ul>
+<p>
           Cada pregunta define el dato, la visualización y la acción necesaria. Si un gráfico no ayuda a responder nada
           relevante, probablemente no debería ocupar espacio.
         </p>
-
-        <h2 id="tipos">Tipos de cuadros de mando</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Operativo</h3>
-            <p>Muestra el estado actual, alertas, tareas y elementos que requieren actuación inmediata.</p>
-          </div>
-          <div class="card">
-            <h3>Táctico</h3>
-            <p>Analiza evolución por semanas o meses para ajustar recursos, procesos y prioridades.</p>
-          </div>
-          <div class="card">
-            <h3>Estratégico</h3>
-            <p>Resume objetivos, impacto, tendencias y resultados para dirección o responsables.</p>
-          </div>
-          <div class="card">
-            <h3>Analítico</h3>
-            <p>Permite explorar datos, filtros, segmentos, causas y relaciones con mayor detalle.</p>
-          </div>
-          <div class="card">
-            <h3>Geográfico</h3>
-            <p>Representa activos, incidencias, rutas, parcelas o eventos sobre mapas.</p>
-          </div>
-          <div class="card">
-            <h3>Predictivo</h3>
-            <p>Incluye estimaciones, riesgos, tendencias futuras o detección de anomalías.</p>
-          </div>
-        </div>
-
-        <h2 id="flujo">Del dato a la decisión</h2>
-        <div class="pipeline" aria-label="Proceso desde el dato hasta la decisión">
-          <div class="node"><strong>Fuente</strong><span>De dónde viene</span></div>
-          <div class="node"><strong>Calidad</strong><span>Si puede usarse</span></div>
-          <div class="node"><strong>Modelo</strong><span>Cómo se organiza</span></div>
-          <div class="node"><strong>Indicador</strong><span>Qué significa</span></div>
-          <div class="node"><strong>Visualización</strong><span>Cómo se entiende</span></div>
-          <div class="node"><strong>Acción</strong><span>Qué se decide</span></div>
-        </div>
-        <p>
+<h2 id="tipos">Tipos de cuadros de mando</h2>
+<div class="grid">
+<div class="card">
+<h3>Operativo</h3>
+<p>Muestra el estado actual, alertas, tareas y elementos que requieren actuación inmediata.</p>
+</div>
+<div class="card">
+<h3>Táctico</h3>
+<p>Analiza evolución por semanas o meses para ajustar recursos, procesos y prioridades.</p>
+</div>
+<div class="card">
+<h3>Estratégico</h3>
+<p>Resume objetivos, impacto, tendencias y resultados para dirección o responsables.</p>
+</div>
+<div class="card">
+<h3>Analítico</h3>
+<p>Permite explorar datos, filtros, segmentos, causas y relaciones con mayor detalle.</p>
+</div>
+<div class="card">
+<h3>Geográfico</h3>
+<p>Representa activos, incidencias, rutas, parcelas o eventos sobre mapas.</p>
+</div>
+<div class="card">
+<h3>Predictivo</h3>
+<p>Incluye estimaciones, riesgos, tendencias futuras o detección de anomalías.</p>
+</div>
+</div>
+<h2 id="flujo">Del dato a la decisión</h2>
+<div aria-label="Proceso desde el dato hasta la decisión" class="pipeline">
+<div class="node"><strong>Fuente</strong><span>De dónde viene</span></div>
+<div class="node"><strong>Calidad</strong><span>Si puede usarse</span></div>
+<div class="node"><strong>Modelo</strong><span>Cómo se organiza</span></div>
+<div class="node"><strong>Indicador</strong><span>Qué significa</span></div>
+<div class="node"><strong>Visualización</strong><span>Cómo se entiende</span></div>
+<div class="node"><strong>Acción</strong><span>Qué se decide</span></div>
+</div>
+<p>
           Saltarse una capa genera problemas. Una visualización atractiva no corrige datos duplicados. Un indicador bien
           calculado tampoco sirve si nadie sabe qué hacer cuando se desvía.
         </p>
-
-        <h2 id="calidad">La calidad del dato</h2>
-        <p>
+<h2 id="calidad">La calidad del dato</h2>
+<p>
           Un cuadro de mando hereda los problemas de sus fuentes. Si los registros están incompletos, las definiciones cambian
           entre departamentos o las fechas no son comparables, el dashboard transmitirá una falsa sensación de precisión.
         </p>
-        <p>
+<p>
           Antes de construir indicadores conviene revisar:
         </p>
-        <ul>
-          <li>Completitud: qué campos faltan y con qué frecuencia.</li>
-          <li>Consistencia: si la misma categoría significa lo mismo en todas las fuentes.</li>
-          <li>Actualización: cuándo se reciben y cuánto retraso tienen los datos.</li>
-          <li>Unicidad: si existen registros duplicados.</li>
-          <li>Validez: si los valores cumplen reglas razonables.</li>
-          <li>Trazabilidad: si puede conocerse el origen de cada dato.</li>
-        </ul>
-        <div class="warning">
-          <strong>El dashboard no debe ocultar la incertidumbre.</strong>
-          <p>
+<ul>
+<li>Completitud: qué campos faltan y con qué frecuencia.</li>
+<li>Consistencia: si la misma categoría significa lo mismo en todas las fuentes.</li>
+<li>Actualización: cuándo se reciben y cuánto retraso tienen los datos.</li>
+<li>Unicidad: si existen registros duplicados.</li>
+<li>Validez: si los valores cumplen reglas razonables.</li>
+<li>Trazabilidad: si puede conocerse el origen de cada dato.</li>
+</ul>
+<div class="warning">
+<strong>El dashboard no debe ocultar la incertidumbre.</strong>
+<p>
             Si un indicador utiliza datos incompletos o estimados, conviene mostrarlo. La transparencia genera más confianza que
             una cifra aparentemente exacta pero poco fiable.
           </p>
-        </div>
-
-        <h2 id="kpis">Cómo elegir buenos KPIs</h2>
-        <p>
+</div>
+<h2 id="kpis">Cómo elegir buenos KPIs</h2>
+<p>
           Un KPI útil tiene relación con un objetivo, puede medirse de forma estable y conduce a una decisión. No debería elegirse
           porque la información ya esté disponible o porque otro sector utilice el mismo indicador.
         </p>
-        <p>
+<p>
           Conviene definir para cada KPI:
         </p>
-        <ul>
-          <li>Nombre y propósito.</li>
-          <li>Fórmula exacta.</li>
-          <li>Fuente o fuentes de datos.</li>
-          <li>Frecuencia de actualización.</li>
-          <li>Segmentos relevantes.</li>
-          <li>Objetivo, umbral o rango esperado.</li>
-          <li>Responsable de interpretación.</li>
-          <li>Acción asociada a una desviación.</li>
-        </ul>
-
-        <h3>Indicadores adelantados y retrasados</h3>
-        <p>
+<ul>
+<li>Nombre y propósito.</li>
+<li>Fórmula exacta.</li>
+<li>Fuente o fuentes de datos.</li>
+<li>Frecuencia de actualización.</li>
+<li>Segmentos relevantes.</li>
+<li>Objetivo, umbral o rango esperado.</li>
+<li>Responsable de interpretación.</li>
+<li>Acción asociada a una desviación.</li>
+</ul>
+<h3>Indicadores adelantados y retrasados</h3>
+<p>
           Los indicadores retrasados muestran un resultado ya ocurrido, como ingresos, averías o abandono. Los adelantados
           intentan anticipar ese resultado mediante señales previas, como actividad, incidencias, retrasos o cambios de consumo.
         </p>
-        <p>
+<p>
           Un cuadro de mando equilibrado combina ambos. Los resultados permiten evaluar, mientras las señales tempranas permiten
           actuar.
         </p>
-
-        <h2 id="visualizacion">Cómo elegir la visualización adecuada</h2>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Pregunta</th>
-              <th>Visualización frecuente</th>
-              <th>Precaución</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>¿Cómo evoluciona en el tiempo?</td>
-              <td>Línea o área.</td>
-              <td>Mantener escalas comparables y no ocultar cambios.</td>
-            </tr>
-            <tr>
-              <td>¿Qué categorías son mayores?</td>
-              <td>Barras ordenadas.</td>
-              <td>Evitar demasiadas categorías o etiquetas ilegibles.</td>
-            </tr>
-            <tr>
-              <td>¿Dónde ocurre?</td>
-              <td>Mapa o distribución territorial.</td>
-              <td>No confundir volumen con densidad o población.</td>
-            </tr>
-            <tr>
-              <td>¿Qué parte representa cada elemento?</td>
-              <td>Barras apiladas o proporciones.</td>
-              <td>Usar pocos segmentos; evitar gráficos circulares complejos.</td>
-            </tr>
-            <tr>
-              <td>¿Existe relación entre variables?</td>
-              <td>Dispersión.</td>
-              <td>Correlación no implica causalidad.</td>
-            </tr>
-            <tr>
-              <td>¿Qué requiere atención?</td>
-              <td>Tabla priorizada, semáforo o alertas.</td>
-              <td>Definir umbrales y responsables claros.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="tiempo-real">¿Es necesario trabajar en tiempo real?</h2>
-        <p>
+<h2 id="visualizacion">Cómo elegir la visualización adecuada</h2>
+<table class="comparison">
+<thead>
+<tr>
+<th>Pregunta</th>
+<th>Visualización frecuente</th>
+<th>Precaución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¿Cómo evoluciona en el tiempo?</td>
+<td>Línea o área.</td>
+<td>Mantener escalas comparables y no ocultar cambios.</td>
+</tr>
+<tr>
+<td>¿Qué categorías son mayores?</td>
+<td>Barras ordenadas.</td>
+<td>Evitar demasiadas categorías o etiquetas ilegibles.</td>
+</tr>
+<tr>
+<td>¿Dónde ocurre?</td>
+<td>Mapa o distribución territorial.</td>
+<td>No confundir volumen con densidad o población.</td>
+</tr>
+<tr>
+<td>¿Qué parte representa cada elemento?</td>
+<td>Barras apiladas o proporciones.</td>
+<td>Usar pocos segmentos; evitar gráficos circulares complejos.</td>
+</tr>
+<tr>
+<td>¿Existe relación entre variables?</td>
+<td>Dispersión.</td>
+<td>Correlación no implica causalidad.</td>
+</tr>
+<tr>
+<td>¿Qué requiere atención?</td>
+<td>Tabla priorizada, semáforo o alertas.</td>
+<td>Definir umbrales y responsables claros.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tiempo-real">¿Es necesario trabajar en tiempo real?</h2>
+<p>
           La frecuencia debe adaptarse a la decisión. Mostrar datos cada segundo puede aumentar coste y complejidad sin aportar
           valor si la actuación se realiza una vez por semana.
         </p>
-        <p>
+<p>
           Algunas decisiones requieren tiempo real: seguridad, procesos industriales críticos o alertas de sensores. Otras
           funcionan con actualizaciones horarias, diarias o mensuales. El criterio debe ser la velocidad a la que cambia la
           situación y la capacidad de respuesta del usuario.
         </p>
-
-        <h2 id="alertas">Alertas y gestión por excepción</h2>
-        <p>
+<h2 id="alertas">Alertas y gestión por excepción</h2>
+<p>
           Un dashboard obliga al usuario a entrar y revisar. Una alerta le informa cuando algo supera un umbral o presenta un
           comportamiento anómalo. Ambos mecanismos se complementan.
         </p>
-        <p>
+<p>
           Las alertas deben incluir contexto: qué ocurrió, dónde, desde cuándo, qué prioridad tiene y qué acción se espera. Si
           generan demasiados falsos avisos, pierden credibilidad.
         </p>
-        <p>
-          En proyectos de <a class="internal-link" href="/soluciones/integracion-iot-sensores.html">IoT y sensores</a>, las
+<p>
+          En proyectos de <a class="internal-link" href="/soluciones/iot-sensores.html">IoT y sensores</a>, las
           alertas pueden combinar umbrales, históricos y estado del dispositivo. En
           <a class="internal-link" href="/soluciones/monitorizacion-inteligente-ia.html">monitorización mediante IA</a>, pueden
           activarse por eventos detectados en imagen o vídeo.
         </p>
-
-        <h2 id="casos">Casos de uso por sector</h2>
-
-        <h3>Ganadería inteligente</h3>
-        <p>
+<h2 id="casos">Casos de uso por sector</h2>
+<h3>Ganadería inteligente</h3>
+<p>
           Un dashboard puede mostrar ubicación, actividad, estado de sensores, alertas, condiciones ambientales y evolución por
           animal o lote. La clave es priorizar qué requiere atención, no mostrar todas las lecturas.
         </p>
-
-        <h3>Educación</h3>
-        <p>
+<h3>Educación</h3>
+<p>
           Los cuadros de mando educativos pueden mostrar progreso, participación, errores frecuentes, finalización y riesgo.
           Cada perfil necesita una vista distinta: alumno, docente, tutor o responsable del programa.
         </p>
-
-        <h3>Administración pública</h3>
-        <p>
+<h3>Administración pública</h3>
+<p>
           Incidencias, tiempos de respuesta, zonas recurrentes, carga por área y evolución de actuaciones pueden apoyar la gestión
           y la transparencia. La solución de
           <a class="internal-link" href="/soluciones/ciudadania-participacion.html">Ciudadanía y Participación</a> puede generar
           este tipo de información.
         </p>
-
-        <h3>Industria y mantenimiento</h3>
-        <p>
+<h3>Industria y mantenimiento</h3>
+<p>
           Estado de equipos, consumo, paradas, vibración, temperatura, incidencias y mantenimiento pendiente permiten identificar
           desviaciones antes de que afecten a la operación.
         </p>
-
-        <h3>Proyectos e innovación</h3>
-        <p>
+<h3>Proyectos e innovación</h3>
+<p>
           Un cuadro de mando puede seguir hitos, presupuesto, entregables, riesgos, indicadores de piloto y resultados de
           validación. No sustituye la gestión, pero ayuda a mantener una visión común.
         </p>
-
-        <h2 id="arquitectura">Arquitectura de un proyecto de analítica</h2>
-        <p>
+<h2 id="arquitectura">Arquitectura de un proyecto de analítica</h2>
+<p>
           Un dashboard suele ser la parte visible de una arquitectura más amplia. Debajo puede haber procesos de extracción,
           limpieza, integración, almacenamiento y cálculo.
         </p>
-        <ul>
-          <li>Fuentes: aplicaciones, ficheros, APIs, sensores o bases de datos.</li>
-          <li>Integración: procesos que extraen y normalizan información.</li>
-          <li>Almacenamiento: base operativa, almacén analítico o series temporales.</li>
-          <li>Modelo: relaciones, dimensiones, reglas y definiciones comunes.</li>
-          <li>Cálculo: métricas, agregaciones y alertas.</li>
-          <li>Visualización: paneles, informes, mapas y vistas por perfil.</li>
-          <li>Gobierno: permisos, calidad, documentación y responsables.</li>
-        </ul>
-
-        <h2 id="como-empezar">Cómo empezar un proyecto de cuadros de mando</h2>
-        <div class="steps">
-          <div class="step">
-            <h3>Definir decisiones</h3>
-            <p>Identificar qué decisiones se toman hoy, con qué frecuencia y qué información falta.</p>
-          </div>
-          <div class="step">
-            <h3>Seleccionar usuarios</h3>
-            <p>Diferenciar necesidades de operación, responsables, dirección y análisis.</p>
-          </div>
-          <div class="step">
-            <h3>Revisar fuentes</h3>
-            <p>Comprobar acceso, calidad, frecuencia, definiciones y propietarios del dato.</p>
-          </div>
-          <div class="step">
-            <h3>Definir indicadores</h3>
-            <p>Documentar fórmula, objetivo, umbral, frecuencia, responsable y acción.</p>
-          </div>
-          <div class="step">
-            <h3>Construir una primera versión</h3>
-            <p>Empezar con pocas preguntas y validar si el panel mejora el trabajo.</p>
-          </div>
-          <div class="step">
-            <h3>Medir uso y evolucionar</h3>
-            <p>Eliminar métricas irrelevantes, corregir fuentes y añadir profundidad según necesidades reales.</p>
-          </div>
-        </div>
-
-        <h2 id="errores">Errores habituales</h2>
-        <ul>
-          <li><strong>Crear el dashboard antes de definir las decisiones.</strong></li>
-          <li><strong>Mostrar demasiados indicadores en una sola pantalla.</strong></li>
-          <li><strong>Utilizar términos distintos para la misma métrica.</strong></li>
-          <li><strong>No documentar fórmulas ni fuentes.</strong></li>
-          <li><strong>Confundir datos en tiempo real con datos útiles.</strong></li>
-          <li><strong>Usar colores sin un significado consistente.</strong></li>
-          <li><strong>No adaptar las vistas a cada tipo de usuario.</strong></li>
-          <li><strong>Ignorar problemas de calidad y datos faltantes.</strong></li>
-          <li><strong>No asociar acciones a las desviaciones.</strong></li>
-          <li><strong>Medir el éxito por el número de gráficos creados.</strong></li>
-        </ul>
-
-        <h2 id="herramienta-medida">Herramienta estándar o dashboard a medida</h2>
-        <p>
+<ul>
+<li>Fuentes: aplicaciones, ficheros, APIs, sensores o bases de datos.</li>
+<li>Integración: procesos que extraen y normalizan información.</li>
+<li>Almacenamiento: base operativa, almacén analítico o series temporales.</li>
+<li>Modelo: relaciones, dimensiones, reglas y definiciones comunes.</li>
+<li>Cálculo: métricas, agregaciones y alertas.</li>
+<li>Visualización: paneles, informes, mapas y vistas por perfil.</li>
+<li>Gobierno: permisos, calidad, documentación y responsables.</li>
+</ul>
+<h2 id="como-empezar">Cómo empezar un proyecto de cuadros de mando</h2>
+<div class="steps">
+<div class="step">
+<h3>Definir decisiones</h3>
+<p>Identificar qué decisiones se toman hoy, con qué frecuencia y qué información falta.</p>
+</div>
+<div class="step">
+<h3>Seleccionar usuarios</h3>
+<p>Diferenciar necesidades de operación, responsables, dirección y análisis.</p>
+</div>
+<div class="step">
+<h3>Revisar fuentes</h3>
+<p>Comprobar acceso, calidad, frecuencia, definiciones y propietarios del dato.</p>
+</div>
+<div class="step">
+<h3>Definir indicadores</h3>
+<p>Documentar fórmula, objetivo, umbral, frecuencia, responsable y acción.</p>
+</div>
+<div class="step">
+<h3>Construir una primera versión</h3>
+<p>Empezar con pocas preguntas y validar si el panel mejora el trabajo.</p>
+</div>
+<div class="step">
+<h3>Medir uso y evolucionar</h3>
+<p>Eliminar métricas irrelevantes, corregir fuentes y añadir profundidad según necesidades reales.</p>
+</div>
+</div>
+<h2 id="errores">Errores habituales</h2>
+<ul>
+<li><strong>Crear el dashboard antes de definir las decisiones.</strong></li>
+<li><strong>Mostrar demasiados indicadores en una sola pantalla.</strong></li>
+<li><strong>Utilizar términos distintos para la misma métrica.</strong></li>
+<li><strong>No documentar fórmulas ni fuentes.</strong></li>
+<li><strong>Confundir datos en tiempo real con datos útiles.</strong></li>
+<li><strong>Usar colores sin un significado consistente.</strong></li>
+<li><strong>No adaptar las vistas a cada tipo de usuario.</strong></li>
+<li><strong>Ignorar problemas de calidad y datos faltantes.</strong></li>
+<li><strong>No asociar acciones a las desviaciones.</strong></li>
+<li><strong>Medir el éxito por el número de gráficos creados.</strong></li>
+</ul>
+<h2 id="herramienta-medida">Herramienta estándar o dashboard a medida</h2>
+<p>
           Herramientas de Business Intelligence pueden resolver muchos casos mediante conectores, modelos y visualizaciones.
           Una solución a medida tiene sentido cuando el panel debe integrarse dentro de un proceso, incorporar mapas, sensores,
           roles específicos, alertas propias o una experiencia adaptada.
         </p>
-        <p>
+<p>
           En muchos proyectos la mejor opción es híbrida: utilizar componentes analíticos existentes y desarrollar una capa
           específica de integración, reglas o interacción dentro de una
-          <a class="internal-link" href="/soluciones/software-medida.html">solución digital a medida</a>.
+          <a class="internal-link" href="/soluciones/soluciones-digitales-medida.html">solución digital a medida</a>.
         </p>
-
-        <h2 id="medir-dashboard">Cómo evaluar si un dashboard funciona</h2>
-        <p>
+<h2 id="medir-dashboard">Cómo evaluar si un dashboard funciona</h2>
+<p>
           El éxito no consiste en que el panel exista, sino en que ayude a trabajar mejor. Algunas métricas de evaluación son:
         </p>
-        <ul>
-          <li>Frecuencia de uso por perfil.</li>
-          <li>Tiempo necesario para preparar informes.</li>
-          <li>Reducción de consultas manuales.</li>
-          <li>Tiempo desde la desviación hasta la actuación.</li>
-          <li>Número de indicadores realmente utilizados.</li>
-          <li>Errores detectados en datos y definiciones.</li>
-          <li>Decisiones o procesos apoyados por la herramienta.</li>
-        </ul>
-
-        <h2 id="faq">Preguntas frecuentes sobre cuadros de mando</h2>
-        <details>
-          <summary>¿Qué es un cuadro de mando?</summary>
-          <p>Es una herramienta visual que reúne indicadores relevantes para supervisar una actividad y apoyar decisiones.</p>
-        </details>
-        <details>
-          <summary>¿Qué diferencia hay entre dashboard e informe?</summary>
-          <p>Un dashboard suele ser interactivo y orientado a seguimiento. Un informe presenta resultados de un periodo o análisis concreto.</p>
-        </details>
-        <details>
-          <summary>¿Cuántos KPIs debe mostrar?</summary>
-          <p>Los necesarios para responder las preguntas principales. Añadir más métricas no mejora automáticamente la información.</p>
-        </details>
-        <details>
-          <summary>¿Tiene que actualizarse en tiempo real?</summary>
-          <p>No. La frecuencia debe ajustarse a la velocidad de la decisión y a la capacidad real de actuar.</p>
-        </details>
-        <details>
-          <summary>¿Puede integrar datos de varias herramientas?</summary>
-          <p>Sí, mediante APIs, bases de datos, ficheros, conectores o procesos de integración.</p>
-        </details>
-        <details>
-          <summary>¿Qué pasa si los datos tienen errores?</summary>
-          <p>Hay que corregir las fuentes o mostrar la limitación. Un dashboard no puede compensar automáticamente datos de mala calidad.</p>
-        </details>
-        <details>
-          <summary>¿Puede incluir mapas?</summary>
-          <p>Sí, cuando la ubicación es relevante para interpretar activos, incidencias, rutas, parcelas o eventos.</p>
-        </details>
-        <details>
-          <summary>¿Se pueden generar alertas?</summary>
-          <p>Sí. Pueden basarse en umbrales, falta de datos, cambios, tendencias o anomalías.</p>
-        </details>
-        <details>
-          <summary>¿Puede incorporar Inteligencia Artificial?</summary>
-          <p>Sí. Puede añadir predicciones, clasificación, detección de anomalías o recomendaciones, siempre que existan datos y una utilidad clara.</p>
-        </details>
-        <details>
-          <summary>¿Cuál es el primer paso?</summary>
-          <p>Definir qué decisiones se quieren mejorar y qué preguntas debe responder el cuadro de mando.</p>
-        </details>
-
-        <h2 id="conclusion">Conclusión</h2>
-        <p>
+<ul>
+<li>Frecuencia de uso por perfil.</li>
+<li>Tiempo necesario para preparar informes.</li>
+<li>Reducción de consultas manuales.</li>
+<li>Tiempo desde la desviación hasta la actuación.</li>
+<li>Número de indicadores realmente utilizados.</li>
+<li>Errores detectados en datos y definiciones.</li>
+<li>Decisiones o procesos apoyados por la herramienta.</li>
+</ul>
+<h2 id="faq">Preguntas frecuentes sobre cuadros de mando</h2>
+<details>
+<summary>¿Qué es un cuadro de mando?</summary>
+<p>Es una herramienta visual que reúne indicadores relevantes para supervisar una actividad y apoyar decisiones.</p>
+</details>
+<details>
+<summary>¿Qué diferencia hay entre dashboard e informe?</summary>
+<p>Un dashboard suele ser interactivo y orientado a seguimiento. Un informe presenta resultados de un periodo o análisis concreto.</p>
+</details>
+<details>
+<summary>¿Cuántos KPIs debe mostrar?</summary>
+<p>Los necesarios para responder las preguntas principales. Añadir más métricas no mejora automáticamente la información.</p>
+</details>
+<details>
+<summary>¿Tiene que actualizarse en tiempo real?</summary>
+<p>No. La frecuencia debe ajustarse a la velocidad de la decisión y a la capacidad real de actuar.</p>
+</details>
+<details>
+<summary>¿Puede integrar datos de varias herramientas?</summary>
+<p>Sí, mediante APIs, bases de datos, ficheros, conectores o procesos de integración.</p>
+</details>
+<details>
+<summary>¿Qué pasa si los datos tienen errores?</summary>
+<p>Hay que corregir las fuentes o mostrar la limitación. Un dashboard no puede compensar automáticamente datos de mala calidad.</p>
+</details>
+<details>
+<summary>¿Puede incluir mapas?</summary>
+<p>Sí, cuando la ubicación es relevante para interpretar activos, incidencias, rutas, parcelas o eventos.</p>
+</details>
+<details>
+<summary>¿Se pueden generar alertas?</summary>
+<p>Sí. Pueden basarse en umbrales, falta de datos, cambios, tendencias o anomalías.</p>
+</details>
+<details>
+<summary>¿Puede incorporar Inteligencia Artificial?</summary>
+<p>Sí. Puede añadir predicciones, clasificación, detección de anomalías o recomendaciones, siempre que existan datos y una utilidad clara.</p>
+</details>
+<details>
+<summary>¿Cuál es el primer paso?</summary>
+<p>Definir qué decisiones se quieren mejorar y qué preguntas debe responder el cuadro de mando.</p>
+</details>
+<h2 id="conclusion">Conclusión</h2>
+<p>
           Los cuadros de mando aportan valor cuando convierten datos dispersos en una visión comprensible y accionable. Su
           diseño debe comenzar por las decisiones, continuar con la calidad y definición de los indicadores, y terminar con
           una visualización adaptada al usuario.
         </p>
-        <p>
+<p>
           Un dashboard eficaz no necesita mostrarlo todo ni actualizarse constantemente. Necesita responder preguntas, señalar
           desviaciones y facilitar acciones. La simplicidad, la consistencia y la confianza en el dato suelen ser más importantes
           que el número de gráficos o la sofisticación visual.
         </p>
-
-        <div class="cta">
-          <h2>¿Quieres convertir tus datos en un cuadro de mando útil?</h2>
-          <p>
-            ARVELA puede ayudarte a revisar fuentes, definir KPIs, integrar información y construir dashboards, alertas e
-            informes adaptados a tus decisiones y usuarios.
-          </p>
-          <a href="/#contacto">Plantear un proyecto de analítica</a>
-        </div>
-      </article>
-
-      <aside class="toc" aria-label="Índice del artículo">
-        <strong>Contenido</strong>
-        <ol>
-          <li><a href="#introduccion">Datos e información útil</a></li>
-          <li><a href="#que-es">Qué es un cuadro de mando</a></li>
-          <li><a href="#dato-indicador-kpi">Datos, métricas y KPIs</a></li>
-          <li><a href="#pregunta">Empezar por preguntas</a></li>
-          <li><a href="#tipos">Tipos de dashboards</a></li>
-          <li><a href="#flujo">Del dato a la decisión</a></li>
-          <li><a href="#calidad">Calidad del dato</a></li>
-          <li><a href="#kpis">Elegir KPIs</a></li>
-          <li><a href="#visualizacion">Visualización</a></li>
-          <li><a href="#tiempo-real">Tiempo real</a></li>
-          <li><a href="#alertas">Alertas</a></li>
-          <li><a href="#casos">Casos de uso</a></li>
-          <li><a href="#arquitectura">Arquitectura</a></li>
-          <li><a href="#como-empezar">Cómo empezar</a></li>
-          <li><a href="#errores">Errores habituales</a></li>
-          <li><a href="#herramienta-medida">Estándar o a medida</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ol>
-      </aside>
-    </div>
-
-    <section class="related">
-      <h2>Contenidos y soluciones relacionados</h2>
-      <div class="related-grid">
-        <article class="related-card">
-          <span>Solución</span>
-          <h3>Analítica y Apoyo a la Decisión</h3>
-          <p>Dashboards, KPIs, integración de fuentes, informes, alertas y explotación de datos.</p>
-          <a href="/soluciones/analitica-datos-decision.html">Ver solución →</a>
-        </article>
-        <article class="related-card">
-          <span>Artículo</span>
-          <h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
-          <p>Cómo los dispositivos conectados generan datos que pueden transformarse en indicadores y alertas.</p>
-          <a href="/blog/que-es-iot-sensores-inteligentes/">Leer artículo →</a>
-        </article>
-        <article class="related-card">
-          <span>Artículo</span>
-          <h3>Inteligencia Artificial para empresas</h3>
-          <p>Cómo utilizar modelos para detectar patrones, anomalías y apoyar decisiones con datos.</p>
-          <a href="/blog/que-es-inteligencia-artificial-empresas/">Leer artículo →</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <div id="footer-container"></div>
-  <script>
-  fetch('/Components/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-  </script>
+</article>
+<aside aria-label="Índice del artículo" class="toc">
+<strong>Contenido</strong>
+<ol>
+<li><a href="#introduccion">Datos e información útil</a></li>
+<li><a href="#que-es">Qué es un cuadro de mando</a></li>
+<li><a href="#dato-indicador-kpi">Datos, métricas y KPIs</a></li>
+<li><a href="#pregunta">Empezar por preguntas</a></li>
+<li><a href="#tipos">Tipos de dashboards</a></li>
+<li><a href="#flujo">Del dato a la decisión</a></li>
+<li><a href="#calidad">Calidad del dato</a></li>
+<li><a href="#kpis">Elegir KPIs</a></li>
+<li><a href="#visualizacion">Visualización</a></li>
+<li><a href="#tiempo-real">Tiempo real</a></li>
+<li><a href="#alertas">Alertas</a></li>
+<li><a href="#casos">Casos de uso</a></li>
+<li><a href="#arquitectura">Arquitectura</a></li>
+<li><a href="#como-empezar">Cómo empezar</a></li>
+<li><a href="#errores">Errores habituales</a></li>
+<li><a href="#herramienta-medida">Estándar o a medida</a></li>
+<li><a href="#faq">Preguntas frecuentes</a></li>
+</ol>
+</aside>
+</div>
+<section class="related">
+<h2>Contenidos y soluciones relacionados</h2>
+<div class="related-grid">
+<article class="related-card">
+<span>Solución</span>
+<h3>Analítica y Apoyo a la Decisión</h3>
+<p>Dashboards, KPIs, integración de fuentes, informes, alertas y explotación de datos.</p>
+<a href="/soluciones/analitica-datos-decision.html">Ver solución →</a>
+</article>
+<article class="related-card">
+<span>Artículo</span>
+<h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
+<p>Cómo los dispositivos conectados generan datos que pueden transformarse en indicadores y alertas.</p>
+<a href="/blog/blog-que-es-iot-sensores-inteligentes.html">Leer artículo →</a>
+</article>
+<article class="related-card">
+<span>Artículo</span>
+<h3>Inteligencia Artificial para empresas</h3>
+<p>Cómo utilizar modelos para detectar patrones, anomalías y apoyar decisiones con datos.</p>
+<a href="/blog/blog-que-es-inteligencia-artificial-empresas.html">Leer artículo →</a>
+</article>
+</div>
+</section>
+<section aria-labelledby="cta-final-title" class="site-cta"><h2 id="cta-final-title">¿Quieres valorar un sistema de analítica y cuadros de mando?</h2><p>Cuéntanos el contexto, el objetivo y el punto en el que estás. Te ayudamos a definir un primer alcance realista y los siguientes pasos.</p><div class="cta-row"><a class="btn btn-primary" href="/contacto.html#formulario">Cuéntanos tu proyecto</a></div></section></main>
+<div id="footer-container"></div>
 </body>
 </html>

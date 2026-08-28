@@ -1,1038 +1,660 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Inteligencia Artificial en ganadería: sensores, bienestar y digitalización | ARVELA</title>
-  <meta name="description" content="Guía completa sobre Inteligencia Artificial en ganadería: sensores, GPS, geovallas, bienestar animal, analítica, predicción, digitalización de explotaciones y cómo empezar un proyecto ganadero inteligente." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://arvelainnova.es/blog/inteligencia-artificial-ganaderia/" />
-
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Inteligencia Artificial en ganadería: sensores, bienestar y digitalización" />
-  <meta property="og:description" content="Cómo combinar IA, sensores, GPS, analítica y plataformas digitales para mejorar la gestión de explotaciones ganaderas." />
-  <meta property="og:url" content="https://arvelainnova.es/blog/inteligencia-artificial-ganaderia/" />
-  <meta property="og:site_name" content="ARVELA Innovación" />
-  <meta property="og:image" content="https://arvelainnova.es/og-image.png" />
-  <meta property="article:publisher" content="https://arvelainnova.es/" />
-  <meta property="article:section" content="Ganadería inteligente" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Inteligencia Artificial en ganadería" />
-  <meta name="twitter:description" content="Sensores, GPS, geovallas, bienestar animal, predicción y digitalización de explotaciones ganaderas." />
-  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#172033" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Inteligencia Artificial en ganadería: sensores, bienestar y digitalización",
-    "description": "Guía práctica sobre ganadería inteligente, sensores, GPS, geovallas, bienestar animal, analítica, predicción y plataformas digitales.",
-    "url": "https://arvelainnova.es/blog/inteligencia-artificial-ganaderia/",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://arvelainnova.es/blog/inteligencia-artificial-ganaderia/"
-    },
-    "image": "https://arvelainnova.es/og-image.png",
-    "author": {
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inteligencia Artificial en ganadería: sensores, bienestar y digitalización | ARVELA</title>
+<meta content="Guía completa sobre Inteligencia Artificial en ganadería: sensores, GPS, geovallas, bienestar animal, analítica, predicción, digitalización de explotaciones y cómo empezar un proyecto ganadero inteligente." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://arvelainnova.es/blog/blog-inteligencia-artificial-ganaderia.html" rel="canonical"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="Inteligencia Artificial en ganadería: sensores, bienestar y digitalización" property="og:title"/>
+<meta content="Cómo combinar IA, sensores, GPS, analítica y plataformas digitales para mejorar la gestión de explotaciones ganaderas." property="og:description"/>
+<meta content="https://arvelainnova.es/blog/blog-inteligencia-artificial-ganaderia.html" property="og:url"/>
+<meta content="ARVELA Innovación" property="og:site_name"/>
+<meta content="https://arvelainnova.es/og-image.png" property="og:image"/>
+<meta content="https://arvelainnova.es/" property="article:publisher"/>
+<meta content="Ganadería inteligente" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Inteligencia Artificial en ganadería" name="twitter:title"/>
+<meta content="Sensores, GPS, geovallas, bienestar animal, predicción y digitalización de explotaciones ganaderas." name="twitter:description"/>
+<meta content="https://arvelainnova.es/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#172033" name="theme-color"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Inteligencia Artificial en ganadería: sensores, bienestar y digitalización",
+  "description": "Guía práctica sobre ganadería inteligente, sensores, GPS, geovallas, bienestar animal, analítica, predicción y plataformas digitales.",
+  "url": "https://arvelainnova.es/blog/blog-inteligencia-artificial-ganaderia.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://arvelainnova.es/blog/blog-inteligencia-artificial-ganaderia.html"
+  },
+  "image": "https://arvelainnova.es/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergio Alonso",
+    "jobTitle": "CEO",
+    "worksFor": {
       "@type": "Organization",
       "name": "ARVELA Innovación",
       "url": "https://arvelainnova.es/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARVELA Innovación",
+    "url": "https://arvelainnova.es/blog/blog-inteligencia-artificial-ganaderia.html",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arvelainnova.es/logo.jpg"
+    }
+  },
+  "datePublished": "2026-08-08",
+  "dateModified": "2026-08-28",
+  "inLanguage": "es",
+  "articleSection": "Ganadería inteligente",
+  "keywords": [
+    "inteligencia artificial ganadería",
+    "ganadería inteligente",
+    "sensores para ganado",
+    "GPS para ganado",
+    "bienestar animal",
+    "digitalización ganadera",
+    "IoT ganadero",
+    "software para ganadería",
+    "monitorización del ganado"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://arvelainnova.es/"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ARVELA Innovación",
-      "url": "https://arvelainnova.es/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://arvelainnova.es/logo.jpg"
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://arvelainnova.es/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Inteligencia Artificial en ganadería",
+      "item": "https://arvelainnova.es/blog/blog-inteligencia-artificial-ganaderia.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es la ganadería inteligente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es el uso combinado de sensores, software, conectividad, analítica e Inteligencia Artificial para monitorizar animales, entorno y explotación, mejorar decisiones y anticipar incidencias."
       }
     },
-    "datePublished": "2026-08-06",
-    "dateModified": "2026-08-06",
-    "inLanguage": "es",
-    "articleSection": "Ganadería inteligente",
-    "keywords": [
-      "inteligencia artificial ganadería",
-      "ganadería inteligente",
-      "sensores para ganado",
-      "GPS para ganado",
-      "bienestar animal",
-      "digitalización ganadera",
-      "IoT ganadero",
-      "software para ganadería",
-      "monitorización del ganado"
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://arvelainnova.es/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://arvelainnova.es/blog/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Inteligencia Artificial en ganadería",
-        "item": "https://arvelainnova.es/blog/inteligencia-artificial-ganaderia/"
+    {
+      "@type": "Question",
+      "name": "¿Qué sensores se utilizan en ganadería?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pueden utilizarse collares GPS, bolos ruminales, crotales electrónicos, acelerómetros, cámaras, estaciones ambientales, básculas y sensores de consumo o presencia."
       }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Qué es la ganadería inteligente?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Es el uso combinado de sensores, software, conectividad, analítica e Inteligencia Artificial para monitorizar animales, entorno y explotación, mejorar decisiones y anticipar incidencias."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué sensores se utilizan en ganadería?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pueden utilizarse collares GPS, bolos ruminales, crotales electrónicos, acelerómetros, cámaras, estaciones ambientales, básculas y sensores de consumo o presencia."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿La Inteligencia Artificial puede detectar enfermedades en el ganado?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Puede ayudar a detectar patrones anómalos de actividad, temperatura, consumo o comportamiento que indiquen riesgo, pero no sustituye el diagnóstico veterinario."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Sirve también para ganadería extensiva?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. La localización GPS, las geovallas, la monitorización de actividad y los datos ambientales son especialmente útiles en explotaciones extensivas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo se empieza un proyecto de ganadería inteligente?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Se empieza definiendo un problema concreto, seleccionando pocos animales o una zona piloto, eligiendo sensores adecuados y midiendo utilidad, cobertura, autonomía y calidad de las alertas."
-        }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La Inteligencia Artificial puede detectar enfermedades en el ganado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede ayudar a detectar patrones anómalos de actividad, temperatura, consumo o comportamiento que indiquen riesgo, pero no sustituye el diagnóstico veterinario."
       }
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-soft: #f8fafc;
-      --text: #172033;
-      --muted: #5f6b85;
-      --line: #e5e9f2;
-      --primary: #1f6feb;
-      --green: #0f9f76;
-      --earth: #8a6a3f;
-      --warning: #9a6700;
-      --shadow: 0 20px 55px rgba(23, 32, 51, 0.08);
-      --radius: 22px;
-      --max: 1180px;
-      --article: 790px;
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sirve también para ganadería extensiva?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La localización GPS, las geovallas, la monitorización de actividad y los datos ambientales son especialmente útiles en explotaciones extensivas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se empieza un proyecto de ganadería inteligente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se empieza definiendo un problema concreto, seleccionando pocos animales o una zona piloto, eligiendo sensores adecuados y midiendo utilidad, cobertura, autonomía y calidad de las alertas."
+      }
     }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 12% 0%, rgba(15,159,118,.10), transparent 27rem),
-        radial-gradient(circle at 90% 10%, rgba(138,106,63,.08), transparent 28rem),
-        var(--bg);
-      line-height: 1.72;
-    }
-
-    a { color: inherit; }
-    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
-
-    header { padding: 22px 0 12px; }
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 15px 18px;
-      background: rgba(255,255,255,.88);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(229,233,242,.95);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; min-width: 0; }
-    .brand-logo {
-      width: 52px; height: 52px; border-radius: 15px; overflow: hidden;
-      border: 1px solid #dbeafe; background: linear-gradient(135deg,#eff6ff,#ecfdf5);
-      display: grid; place-items: center; flex: 0 0 auto;
-    }
-    .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
-    .brand strong { display: block; line-height: 1.15; letter-spacing: .02em; }
-    .brand span { display: block; margin-top: 4px; color: var(--muted); font-size: .9rem; }
-
-    nav { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-    nav a {
-      text-decoration: none; color: var(--muted); font-size: .92rem;
-      padding: 8px 10px; border-radius: 999px;
-    }
-    nav a:hover, nav a.active { color: var(--text); background: #f3f4f6; }
-
-    .breadcrumb { padding: 18px 0 0; color: var(--muted); font-size: .92rem; }
-    .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 700; }
-
-    .hero { padding: 28px 0 22px; }
-    .hero-card {
-      padding: 42px;
-      background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(242,253,248,.96));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-    .category {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 7px 11px; border-radius: 999px;
-      background: #ecfdf5; color: var(--green);
-      font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em;
-    }
-    .hero h1 {
-      margin: 18px 0 0;
-      max-width: 960px;
-      font-size: clamp(2.25rem, 5vw, 4.5rem);
-      line-height: 1.05;
-      letter-spacing: -.045em;
-    }
-    .lead {
-      max-width: 880px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 1.16rem;
-    }
-    .meta {
-      display: flex; gap: 16px; flex-wrap: wrap;
-      margin-top: 24px; color: var(--muted); font-size: .92rem;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, var(--article)) 290px;
-      gap: 28px;
-      align-items: start;
-      padding: 12px 0 38px;
-      justify-content: center;
-    }
-
-    article {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 38px;
-      min-width: 0;
-    }
-    article h2 {
-      margin: 2.6rem 0 1rem;
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
-      line-height: 1.2;
-      letter-spacing: -.025em;
-      scroll-margin-top: 20px;
-    }
-    article h2:first-of-type { margin-top: 0; }
-    article h3 {
-      margin: 2rem 0 .75rem;
-      font-size: 1.24rem;
-      line-height: 1.3;
-      scroll-margin-top: 20px;
-    }
-    article p, article li { color: var(--muted); }
-    article strong { color: var(--text); }
-    article ul, article ol { padding-left: 1.25rem; }
-    article li + li { margin-top: .55rem; }
-
-    .toc {
-      position: sticky;
-      top: 20px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.94);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-    .toc strong { display: block; margin-bottom: 12px; }
-    .toc ol { margin: 0; padding-left: 18px; }
-    .toc li + li { margin-top: 8px; }
-    .toc a { color: var(--muted); text-decoration: none; font-size: .9rem; }
-    .toc a:hover { color: var(--primary); }
-
-    .highlight {
-      margin: 24px 0;
-      padding: 22px;
-      border-radius: 18px;
-      background: linear-gradient(135deg,#effdf7,#faf7f2);
-      border: 1px solid #cfe9dd;
-    }
-    .highlight strong { display: block; margin-bottom: 7px; }
-    .highlight p { margin: 0; }
-
-    .warning {
-      margin: 24px 0;
-      padding: 20px 22px;
-      border-radius: 18px;
-      background: #fffaf0;
-      border: 1px solid #f2dfb2;
-    }
-    .warning strong { color: var(--warning); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 14px;
-      margin: 22px 0;
-    }
-    .card {
-      border: 1px solid var(--line);
-      background: var(--surface-soft);
-      border-radius: 18px;
-      padding: 19px;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 1.04rem; }
-    .card p { margin: 0; font-size: .95rem; }
-
-    .comparison {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 24px 0;
-      font-size: .95rem;
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(23,32,51,.06);
-    }
-    .comparison th, .comparison td {
-      padding: 14px;
-      border: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-    .comparison th { background: #f8fafc; color: var(--text); }
-    .comparison td { color: var(--muted); }
-
-    .pipeline {
-      display: grid;
-      grid-template-columns: repeat(6,minmax(0,1fr));
-      gap: 10px;
-      margin: 24px 0;
-    }
-    .node {
-      padding: 15px 10px;
-      text-align: center;
-      border-radius: 16px;
-      background: var(--surface-soft);
-      border: 1px solid var(--line);
-    }
-    .node strong { display:block; font-size:.9rem; }
-    .node span { display:block; margin-top:6px; color:var(--muted); font-size:.8rem; }
-
-    .steps {
-      counter-reset: step;
-      display: grid;
-      gap: 14px;
-      margin: 24px 0;
-    }
-    .step {
-      position: relative;
-      padding: 20px 20px 20px 68px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--surface-soft);
-    }
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 20px; top: 19px;
-      width: 32px; height: 32px;
-      display: grid; place-items: center;
-      border-radius: 50%;
-      background: var(--green);
-      color: white; font-weight: 800;
-    }
-    .step h3 { margin: 0 0 7px; font-size: 1.05rem; }
-    .step p { margin: 0; }
-
-    .internal-link {
-      color: var(--primary);
-      font-weight: 750;
-      text-decoration-thickness: .08em;
-      text-underline-offset: .16em;
-    }
-
-    details {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px 18px;
-    }
-    details + details { margin-top: 10px; }
-    summary { cursor: pointer; font-weight: 800; }
-    details p { margin-bottom: 0; }
-
-    .cta {
-      margin-top: 36px;
-      padding: 28px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #172033, #244b3e);
-      color: white;
-    }
-    .cta h2 { margin: 0 0 10px; color: white; }
-    .cta p { color: rgba(255,255,255,.78); }
-    .cta a {
-      display: inline-flex;
-      margin-top: 8px;
-      padding: 12px 16px;
-      border-radius: 13px;
-      background: white;
-      color: var(--text);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .related { padding: 12px 0 42px; }
-    .related h2 { margin-bottom: 16px; letter-spacing: -.02em; }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 16px;
-    }
-    .related-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 19px;
-      box-shadow: var(--shadow);
-      padding: 20px;
-    }
-    .related-card span { color: var(--green); font-size: .82rem; font-weight: 800; }
-    .related-card h3 { margin: 9px 0; font-size: 1.08rem; }
-    .related-card p { color: var(--muted); font-size: .93rem; }
-    .related-card a { color: var(--primary); font-weight: 800; text-decoration: none; }
-
-    footer { padding: 26px 0 34px; color: var(--muted); font-size: .92rem; }
-
-    @media (max-width: 980px) {
-      .layout { grid-template-columns: 1fr; }
-      .toc { position: static; order: -1; }
-      .related-grid { grid-template-columns: 1fr; }
-      .pipeline { grid-template-columns: repeat(3,1fr); }
-    }
-
-    @media (max-width: 760px) {
-      .topbar { align-items: flex-start; flex-direction: column; }
-      nav { justify-content: flex-start; }
-      .hero-card, article { padding: 24px; }
-      .grid, .pipeline { grid-template-columns: 1fr; }
-      .comparison { display: block; overflow-x: auto; }
-      .hero h1 { font-size: 2.45rem; }
-    }
-  </style>
+  ]
+}
+</script>
+<link href="/Components/styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-  
-  <script src="/Components/header-loader.js"></script>
-
-  <main class="wrap">
-    <div class="breadcrumb">
-      <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Inteligencia Artificial en ganadería
+<div id="header-container"></div>
+<script src="/Components/components.js"></script>
+<main class="wrap">
+<div class="breadcrumb">
+<a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Inteligencia Artificial en ganadería
     </div>
-
-    <section class="hero">
-      <div class="hero-card">
-        <span class="category">Ganadería inteligente</span>
-        <h1>Inteligencia Artificial en ganadería: sensores, bienestar y digitalización</h1>
-        <p class="lead">
+<section class="hero">
+<div class="hero-card">
+<span class="category">Ganadería inteligente</span>
+<h1>Inteligencia Artificial en ganadería: sensores, bienestar y digitalización</h1>
+<p class="lead">
           La ganadería inteligente combina sensores, GPS, cámaras, analítica e Inteligencia Artificial para conocer mejor
           el estado de los animales y de la explotación. Su valor no está en vigilar más, sino en detectar antes, priorizar
           mejor y tomar decisiones con información que antes no estaba disponible.
         </p>
-        <div class="meta">
-          <span>Publicado por ARVELA Innovación</span>
-          <span>6 de agosto de 2026</span>
-          <span>Lectura aproximada: 21 minutos</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="layout">
-      <article>
-        <h2 id="introduccion">La transformación digital también ocurre en el campo</h2>
-        <p>
+<div class="meta"><span>Sergio Alonso · CEO</span><span>8 de agosto de 2026</span><span>Lectura aproximada: 10 min</span></div>
+</div>
+</section>
+<div class="layout">
+<article>
+<h2 id="introduccion">La transformación digital también ocurre en el campo</h2>
+<p>
           Una explotación ganadera genera información constantemente, aunque gran parte de ella no quede registrada. Los
           animales se desplazan, cambian su actividad, comen, beben, descansan y reaccionan a las condiciones ambientales.
           También se producen incidencias: salidas de parcela, periodos de inmovilidad, cambios de comportamiento, estrés
           térmico, problemas reproductivos o pérdida de comunicación con un dispositivo.
         </p>
-        <p>
+<p>
           Tradicionalmente, buena parte de esta información se ha interpretado mediante observación directa, experiencia y
           revisiones periódicas. Ese conocimiento sigue siendo esencial, pero puede complementarse con datos continuos. La
           digitalización permite observar señales que de otro modo pasarían desapercibidas o llegarían demasiado tarde.
         </p>
-        <p>
+<p>
           La Inteligencia Artificial puede ayudar a encontrar patrones dentro de esos datos, priorizar animales o eventos y
           generar alertas. No sustituye al ganadero, al técnico ni al veterinario. Su función es aportar una capa adicional de
           información para facilitar la supervisión y la toma de decisiones.
         </p>
-
-        <div class="highlight">
-          <strong>Idea principal</strong>
-          <p>
+<div class="highlight">
+<strong>Idea principal</strong>
+<p>
             La ganadería inteligente no consiste en instalar muchos sensores, sino en convertir datos de animales y entorno
             en decisiones concretas, comprensibles y útiles para la explotación.
           </p>
-        </div>
-
-        <h2 id="que-es">¿Qué es la ganadería inteligente?</h2>
-        <p>
+</div>
+<h2 id="que-es">¿Qué es la ganadería inteligente?</h2>
+<p>
           La ganadería inteligente, también denominada ganadería de precisión, aplica tecnologías digitales al seguimiento de
           animales, instalaciones y entorno. Puede integrar sensores, localización, identificación electrónica, cámaras,
           software de gestión, mapas, analítica e Inteligencia Artificial.
         </p>
-        <p>
+<p>
           El objetivo es obtener una visión más continua de la explotación. En lugar de depender únicamente de observaciones
           puntuales, el sistema recopila información durante el día y permite analizar tendencias, excepciones y cambios.
         </p>
-        <p>
+<p>
           La solución <a class="internal-link" href="/soluciones/avega-ganaderia-inteligente.html">AVEGA · Ganadería Inteligente</a>
           se plantea como una plataforma capaz de integrar estas fuentes para ofrecer mapas, históricos, alertas e indicadores
           adaptados al contexto ganadero.
         </p>
-
-        <h2 id="problemas">Qué problemas puede ayudar a resolver</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Localización de animales</h3>
-            <p>Conocer posición, desplazamientos, permanencia en zonas y salidas de perímetros.</p>
-          </div>
-          <div class="card">
-            <h3>Cambios de actividad</h3>
-            <p>Detectar inmovilidad, agitación, variaciones respecto al patrón habitual o posibles incidencias.</p>
-          </div>
-          <div class="card">
-            <h3>Bienestar animal</h3>
-            <p>Relacionar actividad, temperatura, ambiente, consumo y comportamiento con posibles riesgos.</p>
-          </div>
-          <div class="card">
-            <h3>Supervisión extensiva</h3>
-            <p>Reducir incertidumbre en explotaciones donde los animales ocupan grandes superficies.</p>
-          </div>
-          <div class="card">
-            <h3>Gestión reproductiva</h3>
-            <p>Apoyar la detección de cambios compatibles con celo, parto u otros eventos.</p>
-          </div>
-          <div class="card">
-            <h3>Planificación y registros</h3>
-            <p>Centralizar información de animales, lotes, parcelas, eventos e intervenciones.</p>
-          </div>
-        </div>
-
-        <h2 id="datos">Qué datos puede recoger una explotación ganadera</h2>
-        <p>
+<h2 id="problemas">Qué problemas puede ayudar a resolver</h2>
+<div class="grid">
+<div class="card">
+<h3>Localización de animales</h3>
+<p>Conocer posición, desplazamientos, permanencia en zonas y salidas de perímetros.</p>
+</div>
+<div class="card">
+<h3>Cambios de actividad</h3>
+<p>Detectar inmovilidad, agitación, variaciones respecto al patrón habitual o posibles incidencias.</p>
+</div>
+<div class="card">
+<h3>Bienestar animal</h3>
+<p>Relacionar actividad, temperatura, ambiente, consumo y comportamiento con posibles riesgos.</p>
+</div>
+<div class="card">
+<h3>Supervisión extensiva</h3>
+<p>Reducir incertidumbre en explotaciones donde los animales ocupan grandes superficies.</p>
+</div>
+<div class="card">
+<h3>Gestión reproductiva</h3>
+<p>Apoyar la detección de cambios compatibles con celo, parto u otros eventos.</p>
+</div>
+<div class="card">
+<h3>Planificación y registros</h3>
+<p>Centralizar información de animales, lotes, parcelas, eventos e intervenciones.</p>
+</div>
+</div>
+<h2 id="datos">Qué datos puede recoger una explotación ganadera</h2>
+<p>
           Los datos dependen del tipo de explotación, especie, manejo y objetivo. No todos los proyectos necesitan las mismas
           variables. La selección debe partir del problema que se quiere resolver.
         </p>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Dato</th>
-              <th>Cómo se obtiene</th>
-              <th>Qué puede aportar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Ubicación</strong></td>
-              <td>Collares o dispositivos GPS.</td>
-              <td>Rutas, geovallas, permanencia, dispersión y localización.</td>
-            </tr>
-            <tr>
-              <td><strong>Actividad</strong></td>
-              <td>Acelerómetros o sensores de movimiento.</td>
-              <td>Inmovilidad, agitación, descanso y cambios de comportamiento.</td>
-            </tr>
-            <tr>
-              <td><strong>Temperatura interna</strong></td>
-              <td>Bolos ruminales u otros sensores específicos.</td>
-              <td>Seguimiento de cambios fisiológicos y posibles alertas.</td>
-            </tr>
-            <tr>
-              <td><strong>Identificación</strong></td>
-              <td>Crotales RFID, NFC u otros sistemas.</td>
-              <td>Trazabilidad, asociación de datos y control de eventos.</td>
-            </tr>
-            <tr>
-              <td><strong>Entorno</strong></td>
-              <td>Estaciones de temperatura, humedad, lluvia o calidad ambiental.</td>
-              <td>Riesgo térmico, confort y relación con el comportamiento.</td>
-            </tr>
-            <tr>
-              <td><strong>Imagen y vídeo</strong></td>
-              <td>Cámaras convencionales, térmicas o inteligentes.</td>
-              <td>Conteo, presencia, comportamiento y revisión visual.</td>
-            </tr>
-            <tr>
-              <td><strong>Peso y consumo</strong></td>
-              <td>Básculas, comederos o bebederos instrumentados.</td>
-              <td>Evolución, rendimiento y detección de desviaciones.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="sensores">Sensores aplicados al ganado</h2>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Dato</th>
+<th>Cómo se obtiene</th>
+<th>Qué puede aportar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ubicación</strong></td>
+<td>Collares o dispositivos GPS.</td>
+<td>Rutas, geovallas, permanencia, dispersión y localización.</td>
+</tr>
+<tr>
+<td><strong>Actividad</strong></td>
+<td>Acelerómetros o sensores de movimiento.</td>
+<td>Inmovilidad, agitación, descanso y cambios de comportamiento.</td>
+</tr>
+<tr>
+<td><strong>Temperatura interna</strong></td>
+<td>Bolos ruminales u otros sensores específicos.</td>
+<td>Seguimiento de cambios fisiológicos y posibles alertas.</td>
+</tr>
+<tr>
+<td><strong>Identificación</strong></td>
+<td>Crotales RFID, NFC u otros sistemas.</td>
+<td>Trazabilidad, asociación de datos y control de eventos.</td>
+</tr>
+<tr>
+<td><strong>Entorno</strong></td>
+<td>Estaciones de temperatura, humedad, lluvia o calidad ambiental.</td>
+<td>Riesgo térmico, confort y relación con el comportamiento.</td>
+</tr>
+<tr>
+<td><strong>Imagen y vídeo</strong></td>
+<td>Cámaras convencionales, térmicas o inteligentes.</td>
+<td>Conteo, presencia, comportamiento y revisión visual.</td>
+</tr>
+<tr>
+<td><strong>Peso y consumo</strong></td>
+<td>Básculas, comederos o bebederos instrumentados.</td>
+<td>Evolución, rendimiento y detección de desviaciones.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sensores">Sensores aplicados al ganado</h2>
+<p>
           El sensor adecuado debe resistir las condiciones reales. En campo, el polvo, la humedad, los golpes, la temperatura,
           la cobertura y la batería afectan al funcionamiento. Un dispositivo puede medir bien en laboratorio y ser poco útil
           si exige mantenimiento frecuente o pierde comunicación.
         </p>
-
-        <h3>Collares GPS</h3>
-        <p>
+<h3>Collares GPS</h3>
+<p>
           Permiten conocer la posición de animales o lotes. Pueden configurarse para enviar datos a intervalos y detectar la
           salida de una zona. Su autonomía depende de la frecuencia de comunicación, la cobertura y el uso del posicionamiento.
         </p>
-
-        <h3>Bolos ruminales</h3>
-        <p>
+<h3>Bolos ruminales</h3>
+<p>
           Se utilizan para obtener determinadas señales internas, como temperatura. Deben seleccionarse según especie, edad,
           manejo y objetivo. Su utilidad aumenta cuando los datos se interpretan junto con actividad y condiciones ambientales.
         </p>
-
-        <h3>Crotales electrónicos</h3>
-        <p>
+<h3>Crotales electrónicos</h3>
+<p>
           Facilitan la identificación y trazabilidad. No siempre transmiten datos de forma continua, pero permiten relacionar
           lecturas, intervenciones y registros con un animal concreto.
         </p>
-
-        <h3>Acelerómetros</h3>
-        <p>
+<h3>Acelerómetros</h3>
+<p>
           Registran movimiento y pueden ayudar a estimar actividad, descanso o cambios bruscos. La interpretación requiere
           establecer patrones normales por especie, edad y contexto.
         </p>
-
-        <h3>Cámaras</h3>
-        <p>
+<h3>Cámaras</h3>
+<p>
           Pueden utilizarse como sensores visuales para contar, detectar presencia, observar comportamiento o registrar eventos.
           La <a class="internal-link" href="/soluciones/monitorizacion-inteligente-ia.html">monitorización inteligente mediante IA</a>
           permite transformar imágenes en eventos y evidencias.
         </p>
-
-        <h2 id="gps">GPS y geolocalización del ganado</h2>
-        <p>
+<h2 id="gps">GPS y geolocalización del ganado</h2>
+<p>
           La localización es especialmente valiosa en ganadería extensiva. Permite reducir el tiempo dedicado a buscar animales,
           conocer patrones de movimiento y detectar salidas de zonas permitidas.
         </p>
-        <p>
+<p>
           La posición aislada aporta poco. El valor aparece al relacionarla con parcelas, agua, refugio, zonas de riesgo,
           históricos y actividad. Un animal fuera de una geovalla durante pocos minutos puede no requerir la misma respuesta
           que otro que mantiene una trayectoria de salida.
         </p>
-
-        <h3>Geovallas inteligentes</h3>
-        <p>
+<h3>Geovallas inteligentes</h3>
+<p>
           Una geovalla es un perímetro virtual definido sobre un mapa. El sistema puede generar eventos cuando un animal entra,
           sale o permanece fuera durante un tiempo. Para evitar falsas alarmas, deben considerarse la precisión GPS, la frecuencia
           de lectura y la proximidad al límite.
         </p>
-
-        <h3>Rutas y comportamiento espacial</h3>
-        <p>
+<h3>Rutas y comportamiento espacial</h3>
+<p>
           Los históricos permiten analizar zonas de uso frecuente, desplazamientos, agrupamiento y periodos de permanencia.
           Esta información puede apoyar decisiones sobre agua, alimento, pastoreo y revisión de parcelas.
         </p>
-
-        <h2 id="actividad">Monitorización de actividad y comportamiento</h2>
-        <p>
+<h2 id="actividad">Monitorización de actividad y comportamiento</h2>
+<p>
           Cada animal presenta patrones de actividad. La tecnología puede ayudar a detectar cambios respecto a su propio
           histórico o al comportamiento del lote. Esto es más útil que aplicar un único umbral a todos los animales.
         </p>
-        <p>
+<p>
           Un descenso de actividad puede relacionarse con descanso, calor, enfermedad, parto, falta de batería o ausencia de
           datos. Por eso la plataforma debe combinar señales y mostrar contexto antes de generar una conclusión.
         </p>
-
-        <div class="warning">
-          <strong>Una alerta no es un diagnóstico.</strong>
-          <p>
+<div class="warning">
+<strong>Una alerta no es un diagnóstico.</strong>
+<p>
             La tecnología debe señalar que algo merece revisión. La interpretación clínica y la decisión sanitaria corresponden
             a profesionales y responsables de la explotación.
           </p>
-        </div>
-
-        <h2 id="bienestar">Bienestar animal y detección temprana</h2>
-        <p>
+</div>
+<h2 id="bienestar">Bienestar animal y detección temprana</h2>
+<p>
           El bienestar animal depende de múltiples factores: salud, alimentación, descanso, ambiente, manejo y acceso a recursos.
           Los sensores pueden aportar señales indirectas que ayuden a detectar cambios antes de que resulten evidentes.
         </p>
-        <p>
+<p>
           Por ejemplo, una combinación de menor actividad, temperatura anómala y cambio de localización puede aumentar la
           prioridad de revisión. Ninguna variable aislada debe interpretarse de forma automática.
         </p>
-        <p>
+<p>
           La Inteligencia Artificial puede ayudar a combinar históricos y múltiples fuentes, pero necesita datos representativos,
           validación en campo y seguimiento continuo.
         </p>
-
-        <h2 id="ia">Qué puede aportar la Inteligencia Artificial</h2>
-        <p>
+<h2 id="ia">Qué puede aportar la Inteligencia Artificial</h2>
+<p>
           En ganadería, la IA puede utilizarse para clasificación, detección de anomalías, predicción y análisis visual. Su
           aplicación debe partir de datos de calidad y de un problema concreto.
         </p>
-        <ul>
-          <li>Detectar patrones de actividad anómalos.</li>
-          <li>Priorizar animales que requieren revisión.</li>
-          <li>Combinar señales de temperatura, ambiente y movimiento.</li>
-          <li>Analizar imágenes y vídeo.</li>
-          <li>Estimar riesgos o probabilidad de eventos.</li>
-          <li>Generar resúmenes e informes de explotación.</li>
-          <li>Identificar fallos o comportamiento anómalo de dispositivos.</li>
-        </ul>
-        <p>
-          El artículo sobre <a class="internal-link" href="/blog/que-es-inteligencia-artificial-empresas/">Inteligencia Artificial para empresas</a>
+<ul>
+<li>Detectar patrones de actividad anómalos.</li>
+<li>Priorizar animales que requieren revisión.</li>
+<li>Combinar señales de temperatura, ambiente y movimiento.</li>
+<li>Analizar imágenes y vídeo.</li>
+<li>Estimar riesgos o probabilidad de eventos.</li>
+<li>Generar resúmenes e informes de explotación.</li>
+<li>Identificar fallos o comportamiento anómalo de dispositivos.</li>
+</ul>
+<p>
+          El artículo sobre <a class="internal-link" href="/blog/blog-que-es-inteligencia-artificial-empresas.html">Inteligencia Artificial para empresas</a>
           explica con más detalle las diferencias entre IA, Machine Learning, visión artificial y automatización.
         </p>
-
-        <h2 id="reproduccion">Reproducción, celo y parto</h2>
-        <p>
+<h2 id="reproduccion">Reproducción, celo y parto</h2>
+<p>
           Los cambios de actividad y comportamiento pueden aportar señales útiles para la gestión reproductiva. En algunos
           contextos, el aumento de movimiento puede relacionarse con celo, mientras otros patrones pueden ayudar a priorizar
           la vigilancia ante un posible parto.
         </p>
-        <p>
+<p>
           La utilidad depende de la especie, el manejo, la calidad de los datos y la validación. Un modelo desarrollado en una
           explotación no debe trasladarse automáticamente a otra sin revisar condiciones y resultados.
         </p>
-
-        <h2 id="pastoreo">Optimización del pastoreo</h2>
-        <p>
+<h2 id="pastoreo">Optimización del pastoreo</h2>
+<p>
           Los datos de localización permiten analizar cómo se utiliza el territorio. Pueden mostrar zonas de concentración,
           rutas, puntos de agua visitados, permanencia y áreas infrautilizadas.
         </p>
-        <p>
+<p>
           Esta información puede combinarse con parcelas, clima, vegetación y planificación para apoyar decisiones de rotación.
           No sustituye la valoración del terreno, pero aporta histórico y evidencia.
         </p>
-
-        <h2 id="plataforma">Por qué hace falta una plataforma unificada</h2>
-        <p>
+<h2 id="plataforma">Por qué hace falta una plataforma unificada</h2>
+<p>
           Una explotación puede utilizar dispositivos de varios proveedores. Cada uno puede tener su propia aplicación y formato.
           Si los datos permanecen separados, resulta difícil combinar ubicación, salud, ambiente y registros.
         </p>
-        <p>
+<p>
           Una plataforma ganadera debe relacionar cada lectura con un animal, lote, parcela o instalación. También debe gestionar
           usuarios, mapas, históricos, alertas, dispositivos y evidencias.
         </p>
-
-        <div class="pipeline" aria-label="Flujo de una plataforma de ganadería inteligente">
-          <div class="node"><strong>Animal</strong><span>Entidad monitorizada</span></div>
-          <div class="node"><strong>Sensor</strong><span>Dato físico</span></div>
-          <div class="node"><strong>Conectividad</strong><span>Envío</span></div>
-          <div class="node"><strong>Plataforma</strong><span>Integración</span></div>
-          <div class="node"><strong>Análisis</strong><span>Contexto</span></div>
-          <div class="node"><strong>Decisión</strong><span>Actuación</span></div>
-        </div>
-
-        <p>
-          La solución de <a class="internal-link" href="/soluciones/integracion-iot-sensores.html">Integración IoT y Sensores</a>
+<div aria-label="Flujo de una plataforma de ganadería inteligente" class="pipeline">
+<div class="node"><strong>Animal</strong><span>Entidad monitorizada</span></div>
+<div class="node"><strong>Sensor</strong><span>Dato físico</span></div>
+<div class="node"><strong>Conectividad</strong><span>Envío</span></div>
+<div class="node"><strong>Plataforma</strong><span>Integración</span></div>
+<div class="node"><strong>Análisis</strong><span>Contexto</span></div>
+<div class="node"><strong>Decisión</strong><span>Actuación</span></div>
+</div>
+<p>
+          La solución de <a class="internal-link" href="/soluciones/iot-sensores.html">Integración IoT y Sensores</a>
           aborda precisamente la conexión entre hardware, dispositivos, APIs, dashboards y alertas.
         </p>
-
-        <h2 id="dashboards">Cuadros de mando y KPIs ganaderos</h2>
-        <p>
+<h2 id="dashboards">Cuadros de mando y KPIs ganaderos</h2>
+<p>
           El dashboard no debe mostrar todas las lecturas. Debe destacar animales, dispositivos y situaciones que requieren
           atención. También puede permitir análisis histórico y comparativas.
         </p>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Indicador</th>
-              <th>Qué muestra</th>
-              <th>Decisión relacionada</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Animales fuera de geovalla</td>
-              <td>Número, duración y ubicación.</td>
-              <td>Priorizar localización o revisión.</td>
-            </tr>
-            <tr>
-              <td>Dispositivos sin comunicación</td>
-              <td>Última lectura, batería y cobertura.</td>
-              <td>Planificar mantenimiento.</td>
-            </tr>
-            <tr>
-              <td>Cambios de actividad</td>
-              <td>Desviación respecto al histórico.</td>
-              <td>Revisar animales prioritarios.</td>
-            </tr>
-            <tr>
-              <td>Riesgo térmico</td>
-              <td>Temperatura, humedad y duración.</td>
-              <td>Adaptar manejo o revisar zonas.</td>
-            </tr>
-            <tr>
-              <td>Uso de parcelas</td>
-              <td>Tiempo, rutas y concentración.</td>
-              <td>Apoyar planificación del pastoreo.</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          La guía sobre <a class="internal-link" href="/blog/cuadros-de-mando-analitica-datos/">cuadros de mando y KPIs</a>
+<table class="comparison">
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Qué muestra</th>
+<th>Decisión relacionada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Animales fuera de geovalla</td>
+<td>Número, duración y ubicación.</td>
+<td>Priorizar localización o revisión.</td>
+</tr>
+<tr>
+<td>Dispositivos sin comunicación</td>
+<td>Última lectura, batería y cobertura.</td>
+<td>Planificar mantenimiento.</td>
+</tr>
+<tr>
+<td>Cambios de actividad</td>
+<td>Desviación respecto al histórico.</td>
+<td>Revisar animales prioritarios.</td>
+</tr>
+<tr>
+<td>Riesgo térmico</td>
+<td>Temperatura, humedad y duración.</td>
+<td>Adaptar manejo o revisar zonas.</td>
+</tr>
+<tr>
+<td>Uso de parcelas</td>
+<td>Tiempo, rutas y concentración.</td>
+<td>Apoyar planificación del pastoreo.</td>
+</tr>
+</tbody>
+</table>
+<p>
+          La guía sobre <a class="internal-link" href="/blog/blog-cuadros-de-mando-analitica-datos.html">cuadros de mando y KPIs</a>
           desarrolla cómo convertir datos en indicadores y decisiones.
         </p>
-
-        <h2 id="roi">Retorno de la digitalización ganadera</h2>
-        <p>
+<h2 id="roi">Retorno de la digitalización ganadera</h2>
+<p>
           El retorno debe evaluarse según el problema. No todos los beneficios se traducen inmediatamente en ingresos. Algunos
           reducen tiempo, pérdidas, desplazamientos, incertidumbre o respuesta tardía.
         </p>
-        <ul>
-          <li>Tiempo dedicado a localizar animales.</li>
-          <li>Número de desplazamientos evitados.</li>
-          <li>Incidencias detectadas con mayor anticipación.</li>
-          <li>Reducción de pérdidas o salidas no detectadas.</li>
-          <li>Mejora de trazabilidad y registros.</li>
-          <li>Capacidad de supervisar más animales o superficie.</li>
-          <li>Reducción de tareas manuales y preparación de informes.</li>
-        </ul>
-        <p>
+<ul>
+<li>Tiempo dedicado a localizar animales.</li>
+<li>Número de desplazamientos evitados.</li>
+<li>Incidencias detectadas con mayor anticipación.</li>
+<li>Reducción de pérdidas o salidas no detectadas.</li>
+<li>Mejora de trazabilidad y registros.</li>
+<li>Capacidad de supervisar más animales o superficie.</li>
+<li>Reducción de tareas manuales y preparación de informes.</li>
+</ul>
+<p>
           También deben incluirse costes de hardware, conectividad, instalación, mantenimiento, batería, soporte y plataforma.
           El sensor más barato no siempre es la opción con menor coste total.
         </p>
-
-        <h2 id="piloto">Cómo empezar con un piloto</h2>
-        <div class="steps">
-          <div class="step">
-            <h3>Elegir un problema concreto</h3>
-            <p>Localización, actividad, bienestar, dispositivos o reproducción, evitando abarcar todo.</p>
-          </div>
-          <div class="step">
-            <h3>Seleccionar un grupo limitado</h3>
-            <p>Trabajar con pocos animales, una parcela o un lote representativo.</p>
-          </div>
-          <div class="step">
-            <h3>Probar el entorno real</h3>
-            <p>Validar cobertura, batería, resistencia, instalación y frecuencia de datos.</p>
-          </div>
-          <div class="step">
-            <h3>Definir alertas y responsables</h3>
-            <p>Establecer qué evento importa, quién lo recibe y qué acción debe realizar.</p>
-          </div>
-          <div class="step">
-            <h3>Medir utilidad</h3>
-            <p>Analizar falsos avisos, tiempo ahorrado, adopción y calidad de la información.</p>
-          </div>
-          <div class="step">
-            <h3>Decidir si escalar</h3>
-            <p>Ampliar solo si el piloto demuestra valor y viabilidad operativa.</p>
-          </div>
-        </div>
-
-        <h2 id="errores">Errores habituales</h2>
-        <ul>
-          <li><strong>Comprar sensores sin definir qué decisión mejorarán.</strong></li>
-          <li><strong>Confiar en la cobertura sin probarla en campo.</strong></li>
-          <li><strong>Enviar datos con demasiada frecuencia y agotar baterías.</strong></li>
-          <li><strong>Generar alertas sin contexto ni prioridad.</strong></li>
-          <li><strong>No revisar la calidad de la identificación de animales.</strong></li>
-          <li><strong>Interpretar una correlación como diagnóstico.</strong></li>
-          <li><strong>Depender de plataformas cerradas sin acceso a datos.</strong></li>
-          <li><strong>Desplegar muchos dispositivos antes de validar mantenimiento.</strong></li>
-          <li><strong>No involucrar a ganaderos, técnicos y veterinarios.</strong></li>
-        </ul>
-
-        <h2 id="privacidad-seguridad">Seguridad, propiedad y control de los datos</h2>
-        <p>
+<h2 id="piloto">Cómo empezar con un piloto</h2>
+<div class="steps">
+<div class="step">
+<h3>Elegir un problema concreto</h3>
+<p>Localización, actividad, bienestar, dispositivos o reproducción, evitando abarcar todo.</p>
+</div>
+<div class="step">
+<h3>Seleccionar un grupo limitado</h3>
+<p>Trabajar con pocos animales, una parcela o un lote representativo.</p>
+</div>
+<div class="step">
+<h3>Probar el entorno real</h3>
+<p>Validar cobertura, batería, resistencia, instalación y frecuencia de datos.</p>
+</div>
+<div class="step">
+<h3>Definir alertas y responsables</h3>
+<p>Establecer qué evento importa, quién lo recibe y qué acción debe realizar.</p>
+</div>
+<div class="step">
+<h3>Medir utilidad</h3>
+<p>Analizar falsos avisos, tiempo ahorrado, adopción y calidad de la información.</p>
+</div>
+<div class="step">
+<h3>Decidir si escalar</h3>
+<p>Ampliar solo si el piloto demuestra valor y viabilidad operativa.</p>
+</div>
+</div>
+<h2 id="errores">Errores habituales</h2>
+<ul>
+<li><strong>Comprar sensores sin definir qué decisión mejorarán.</strong></li>
+<li><strong>Confiar en la cobertura sin probarla en campo.</strong></li>
+<li><strong>Enviar datos con demasiada frecuencia y agotar baterías.</strong></li>
+<li><strong>Generar alertas sin contexto ni prioridad.</strong></li>
+<li><strong>No revisar la calidad de la identificación de animales.</strong></li>
+<li><strong>Interpretar una correlación como diagnóstico.</strong></li>
+<li><strong>Depender de plataformas cerradas sin acceso a datos.</strong></li>
+<li><strong>Desplegar muchos dispositivos antes de validar mantenimiento.</strong></li>
+<li><strong>No involucrar a ganaderos, técnicos y veterinarios.</strong></li>
+</ul>
+<h2 id="privacidad-seguridad">Seguridad, propiedad y control de los datos</h2>
+<p>
           La explotación debe saber qué datos se recogen, dónde se almacenan, quién puede acceder y cómo se exportan. También
           conviene revisar qué ocurre si se cambia de proveedor.
         </p>
-        <p>
+<p>
           Los dispositivos deben utilizar credenciales seguras, comunicaciones protegidas y mecanismos de actualización.
           La trazabilidad es importante para saber si una alerta procede de un dato real, un fallo de sensor o un problema de
           comunicación.
         </p>
-
-        <h2 id="futuro">El futuro de la IA aplicada a la ganadería</h2>
-        <p>
+<h2 id="futuro">El futuro de la IA aplicada a la ganadería</h2>
+<p>
           La evolución probablemente no dependerá de un único sensor, sino de la combinación de fuentes. Ubicación, actividad,
           ambiente, imagen y registros permitirán modelos más contextualizados.
         </p>
-        <p>
+<p>
           También crecerá el procesamiento en el borde, donde algunos análisis se ejecutan cerca de la explotación para reducir
           latencia y dependencia de la red. Las plataformas deberán ser más interoperables y facilitar la integración de
           proveedores.
         </p>
-        <p>
+<p>
           La tecnología más útil será la que reduzca complejidad para el usuario. Un sistema avanzado debe presentar alertas
           claras, explicar por qué se generan y permitir revisar la evidencia.
         </p>
-
-        <h2 id="faq">Preguntas frecuentes sobre IA y ganadería inteligente</h2>
-        <details>
-          <summary>¿Qué es la ganadería inteligente?</summary>
-          <p>Es la aplicación de sensores, software, conectividad, analítica e IA para monitorizar animales y mejorar decisiones.</p>
-        </details>
-        <details>
-          <summary>¿Qué sensores pueden utilizarse?</summary>
-          <p>GPS, acelerómetros, bolos ruminales, crotales electrónicos, cámaras, estaciones ambientales, básculas y sensores de consumo.</p>
-        </details>
-        <details>
-          <summary>¿La IA puede diagnosticar enfermedades?</summary>
-          <p>No debe sustituir el diagnóstico veterinario. Puede detectar patrones anómalos y priorizar animales para revisión.</p>
-        </details>
-        <details>
-          <summary>¿Sirve para explotaciones extensivas?</summary>
-          <p>Sí. La localización, las geovallas, la actividad y la conectividad son especialmente relevantes en grandes superficies.</p>
-        </details>
-        <details>
-          <summary>¿Qué autonomía tienen los dispositivos?</summary>
-          <p>Depende del hardware, frecuencia de lectura, comunicación, cobertura, temperatura y capacidad de batería.</p>
-        </details>
-        <details>
-          <summary>¿Se pueden integrar sensores de distintos proveedores?</summary>
-          <p>Sí, si existen APIs, exportaciones o protocolos accesibles. La normalización forma parte de la plataforma.</p>
-        </details>
-        <details>
-          <summary>¿Qué es una geovalla?</summary>
-          <p>Es un perímetro virtual que permite detectar entradas, salidas o permanencia fuera de una zona.</p>
-        </details>
-        <details>
-          <summary>¿Cómo se evitan falsas alarmas?</summary>
-          <p>Combinando duración, histórico, varias señales, contexto y validación con usuarios.</p>
-        </details>
-        <details>
-          <summary>¿Cuánto cuesta digitalizar una explotación?</summary>
-          <p>Depende de animales, superficie, sensores, conectividad, plataforma, instalación y mantenimiento. Conviene empezar con un piloto.</p>
-        </details>
-        <details>
-          <summary>¿Cuál es el primer paso?</summary>
-          <p>Definir un problema concreto, seleccionar un grupo piloto y comprobar utilidad, cobertura, autonomía y calidad de alertas.</p>
-        </details>
-
-        <h2 id="conclusion">Conclusión</h2>
-        <p>
+<h2 id="faq">Preguntas frecuentes sobre IA y ganadería inteligente</h2>
+<details>
+<summary>¿Qué es la ganadería inteligente?</summary>
+<p>Es la aplicación de sensores, software, conectividad, analítica e IA para monitorizar animales y mejorar decisiones.</p>
+</details>
+<details>
+<summary>¿Qué sensores pueden utilizarse?</summary>
+<p>GPS, acelerómetros, bolos ruminales, crotales electrónicos, cámaras, estaciones ambientales, básculas y sensores de consumo.</p>
+</details>
+<details>
+<summary>¿La IA puede diagnosticar enfermedades?</summary>
+<p>No debe sustituir el diagnóstico veterinario. Puede detectar patrones anómalos y priorizar animales para revisión.</p>
+</details>
+<details>
+<summary>¿Sirve para explotaciones extensivas?</summary>
+<p>Sí. La localización, las geovallas, la actividad y la conectividad son especialmente relevantes en grandes superficies.</p>
+</details>
+<details>
+<summary>¿Qué autonomía tienen los dispositivos?</summary>
+<p>Depende del hardware, frecuencia de lectura, comunicación, cobertura, temperatura y capacidad de batería.</p>
+</details>
+<details>
+<summary>¿Se pueden integrar sensores de distintos proveedores?</summary>
+<p>Sí, si existen APIs, exportaciones o protocolos accesibles. La normalización forma parte de la plataforma.</p>
+</details>
+<details>
+<summary>¿Qué es una geovalla?</summary>
+<p>Es un perímetro virtual que permite detectar entradas, salidas o permanencia fuera de una zona.</p>
+</details>
+<details>
+<summary>¿Cómo se evitan falsas alarmas?</summary>
+<p>Combinando duración, histórico, varias señales, contexto y validación con usuarios.</p>
+</details>
+<details>
+<summary>¿Cuánto cuesta digitalizar una explotación?</summary>
+<p>Depende de animales, superficie, sensores, conectividad, plataforma, instalación y mantenimiento. Conviene empezar con un piloto.</p>
+</details>
+<details>
+<summary>¿Cuál es el primer paso?</summary>
+<p>Definir un problema concreto, seleccionar un grupo piloto y comprobar utilidad, cobertura, autonomía y calidad de alertas.</p>
+</details>
+<h2 id="conclusion">Conclusión</h2>
+<p>
           La Inteligencia Artificial aplicada a la ganadería puede mejorar la supervisión, la localización, el bienestar y la
           capacidad de anticipar incidencias. Su valor depende de combinar sensores adecuados, conectividad fiable, datos con
           contexto y una plataforma que facilite decisiones.
         </p>
-        <p>
+<p>
           Empezar con un piloto pequeño permite comprobar si la tecnología funciona en el entorno real y si las alertas ayudan
           al usuario. La digitalización ganadera no debe aumentar la carga de trabajo ni llenar la explotación de dispositivos
           aislados. Debe aportar información clara, reducir incertidumbre y complementar el conocimiento profesional.
         </p>
-
-        <div class="cta">
-          <h2>¿Quieres explorar un proyecto de ganadería inteligente?</h2>
-          <p>
-            ARVELA desarrolla AVEGA para integrar sensores, localización, analítica y alertas en una plataforma orientada a
-            explotaciones ganaderas y pilotos de innovación.
-          </p>
-          <a href="/soluciones/avega-ganaderia-inteligente.html">Conocer AVEGA</a>
-        </div>
-      </article>
-
-      <aside class="toc" aria-label="Índice del artículo">
-        <strong>Contenido</strong>
-        <ol>
-          <li><a href="#introduccion">Transformación digital</a></li>
-          <li><a href="#que-es">Ganadería inteligente</a></li>
-          <li><a href="#problemas">Problemas que resuelve</a></li>
-          <li><a href="#datos">Datos de la explotación</a></li>
-          <li><a href="#sensores">Sensores ganaderos</a></li>
-          <li><a href="#gps">GPS y geovallas</a></li>
-          <li><a href="#actividad">Actividad y comportamiento</a></li>
-          <li><a href="#bienestar">Bienestar animal</a></li>
-          <li><a href="#ia">Aplicaciones de IA</a></li>
-          <li><a href="#reproduccion">Reproducción</a></li>
-          <li><a href="#pastoreo">Pastoreo</a></li>
-          <li><a href="#plataforma">Plataforma unificada</a></li>
-          <li><a href="#dashboards">KPIs ganaderos</a></li>
-          <li><a href="#roi">Retorno</a></li>
-          <li><a href="#piloto">Cómo empezar</a></li>
-          <li><a href="#errores">Errores habituales</a></li>
-          <li><a href="#futuro">Futuro</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ol>
-      </aside>
-    </div>
-
-    <section class="related">
-      <h2>Contenidos y soluciones relacionados</h2>
-      <div class="related-grid">
-        <article class="related-card">
-          <span>Solución</span>
-          <h3>AVEGA · Ganadería Inteligente</h3>
-          <p>Plataforma de monitorización ganadera con sensores, mapas, alertas, datos e Inteligencia Artificial.</p>
-          <a href="/soluciones/avega-ganaderia-inteligente.html">Ver solución →</a>
-        </article>
-        <article class="related-card">
-          <span>Artículo</span>
-          <h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
-          <p>Cómo los dispositivos conectados convierten señales físicas en datos, alertas e históricos.</p>
-          <a href="/blog/que-es-iot-sensores-inteligentes/">Leer artículo →</a>
-        </article>
-        <article class="related-card">
-          <span>Solución</span>
-          <h3>Analítica y Apoyo a la Decisión</h3>
-          <p>Dashboards, KPIs, integración de fuentes y explotación de datos para apoyar decisiones.</p>
-          <a href="/soluciones/analitica-datos-decision.html">Ver solución →</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <div id="footer-container"></div>
-  <script>
-  fetch('/Components/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-  </script>
+</article>
+<aside aria-label="Índice del artículo" class="toc">
+<strong>Contenido</strong>
+<ol>
+<li><a href="#introduccion">Transformación digital</a></li>
+<li><a href="#que-es">Ganadería inteligente</a></li>
+<li><a href="#problemas">Problemas que resuelve</a></li>
+<li><a href="#datos">Datos de la explotación</a></li>
+<li><a href="#sensores">Sensores ganaderos</a></li>
+<li><a href="#gps">GPS y geovallas</a></li>
+<li><a href="#actividad">Actividad y comportamiento</a></li>
+<li><a href="#bienestar">Bienestar animal</a></li>
+<li><a href="#ia">Aplicaciones de IA</a></li>
+<li><a href="#reproduccion">Reproducción</a></li>
+<li><a href="#pastoreo">Pastoreo</a></li>
+<li><a href="#plataforma">Plataforma unificada</a></li>
+<li><a href="#dashboards">KPIs ganaderos</a></li>
+<li><a href="#roi">Retorno</a></li>
+<li><a href="#piloto">Cómo empezar</a></li>
+<li><a href="#errores">Errores habituales</a></li>
+<li><a href="#futuro">Futuro</a></li>
+<li><a href="#faq">Preguntas frecuentes</a></li>
+</ol>
+</aside>
+</div>
+<section class="related">
+<h2>Contenidos y soluciones relacionados</h2>
+<div class="related-grid">
+<article class="related-card">
+<span>Solución</span>
+<h3>AVEGA · Ganadería Inteligente</h3>
+<p>Plataforma de monitorización ganadera con sensores, mapas, alertas, datos e Inteligencia Artificial.</p>
+<a href="/soluciones/avega-ganaderia-inteligente.html">Ver solución →</a>
+</article>
+<article class="related-card">
+<span>Artículo</span>
+<h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
+<p>Cómo los dispositivos conectados convierten señales físicas en datos, alertas e históricos.</p>
+<a href="/blog/blog-que-es-iot-sensores-inteligentes.html">Leer artículo →</a>
+</article>
+<article class="related-card">
+<span>Solución</span>
+<h3>Analítica y Apoyo a la Decisión</h3>
+<p>Dashboards, KPIs, integración de fuentes y explotación de datos para apoyar decisiones.</p>
+<a href="/soluciones/analitica-datos-decision.html">Ver solución →</a>
+</article>
+</div>
+</section>
+<section aria-labelledby="cta-final-title" class="site-cta"><h2 id="cta-final-title">¿Quieres aplicar IA e IoT en un proyecto ganadero?</h2><p>Cuéntanos el contexto, el objetivo y el punto en el que estás. Te ayudamos a definir un primer alcance realista y los siguientes pasos.</p><div class="cta-row"><a class="btn btn-primary" href="/contacto.html#formulario">Cuéntanos tu proyecto</a></div></section></main>
+<div id="footer-container"></div>
 </body>
 </html>

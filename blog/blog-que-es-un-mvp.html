@@ -1,1035 +1,651 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico | ARVELA</title>
-  <meta name="description" content="Guía completa sobre MVP tecnológico: qué es, diferencias con prototipo y piloto, ventajas, errores, costes, fases y cómo validar una idea antes de desarrollar una plataforma completa." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://arvelainnova.es/blog/que-es-un-mvp/" />
-
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico" />
-  <meta property="og:description" content="Cómo validar una idea con una primera versión funcional, medir resultados y evitar desarrollar de más." />
-  <meta property="og:url" content="https://arvelainnova.es/blog/que-es-un-mvp/" />
-  <meta property="og:site_name" content="ARVELA Innovación" />
-  <meta property="og:image" content="https://arvelainnova.es/og-image.png" />
-  <meta property="article:publisher" content="https://arvelainnova.es/" />
-  <meta property="article:section" content="Innovación y MVP" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Qué es un MVP y cómo reduce el riesgo" />
-  <meta name="twitter:description" content="Diferencias entre MVP, prototipo, prueba de concepto y piloto, con pasos para definir una primera versión útil." />
-  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#172033" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico",
-    "description": "Guía práctica sobre producto mínimo viable, prototipos, pruebas de concepto, pilotos, validación, métricas y evolución tecnológica.",
-    "url": "https://arvelainnova.es/blog/que-es-un-mvp/",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://arvelainnova.es/blog/que-es-un-mvp/"
-    },
-    "image": "https://arvelainnova.es/og-image.png",
-    "author": {
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico | ARVELA</title>
+<meta content="Guía completa sobre MVP tecnológico: qué es, diferencias con prototipo y piloto, ventajas, errores, costes, fases y cómo validar una idea antes de desarrollar una plataforma completa." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://arvelainnova.es/blog/blog-que-es-un-mvp.html" rel="canonical"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico" property="og:title"/>
+<meta content="Cómo validar una idea con una primera versión funcional, medir resultados y evitar desarrollar de más." property="og:description"/>
+<meta content="https://arvelainnova.es/blog/blog-que-es-un-mvp.html" property="og:url"/>
+<meta content="ARVELA Innovación" property="og:site_name"/>
+<meta content="https://arvelainnova.es/og-image.png" property="og:image"/>
+<meta content="https://arvelainnova.es/" property="article:publisher"/>
+<meta content="Innovación y MVP" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Qué es un MVP y cómo reduce el riesgo" name="twitter:title"/>
+<meta content="Diferencias entre MVP, prototipo, prueba de concepto y piloto, con pasos para definir una primera versión útil." name="twitter:description"/>
+<meta content="https://arvelainnova.es/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#172033" name="theme-color"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico",
+  "description": "Guía práctica sobre producto mínimo viable, prototipos, pruebas de concepto, pilotos, validación, métricas y evolución tecnológica.",
+  "url": "https://arvelainnova.es/blog/blog-que-es-un-mvp.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://arvelainnova.es/blog/blog-que-es-un-mvp.html"
+  },
+  "image": "https://arvelainnova.es/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergio Alonso",
+    "jobTitle": "CEO",
+    "worksFor": {
       "@type": "Organization",
       "name": "ARVELA Innovación",
       "url": "https://arvelainnova.es/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARVELA Innovación",
+    "url": "https://arvelainnova.es/blog/blog-que-es-un-mvp.html",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arvelainnova.es/logo.jpg"
+    }
+  },
+  "datePublished": "2026-07-18",
+  "dateModified": "2026-08-28",
+  "inLanguage": "es",
+  "articleSection": "Innovación y MVP",
+  "keywords": [
+    "qué es un MVP",
+    "producto mínimo viable",
+    "MVP tecnológico",
+    "prueba de concepto",
+    "prototipo tecnológico",
+    "piloto tecnológico",
+    "validar una idea"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://arvelainnova.es/"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ARVELA Innovación",
-      "url": "https://arvelainnova.es/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://arvelainnova.es/logo.jpg"
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://arvelainnova.es/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Qué es un MVP",
+      "item": "https://arvelainnova.es/blog/blog-que-es-un-mvp.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es un MVP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un MVP es una primera versión funcional de un producto o solución que incluye lo mínimo necesario para validar una hipótesis con usuarios, datos o condiciones reales."
       }
     },
-    "datePublished": "2026-08-06",
-    "dateModified": "2026-08-06",
-    "inLanguage": "es",
-    "articleSection": "Innovación y MVP",
-    "keywords": [
-      "qué es un MVP",
-      "producto mínimo viable",
-      "MVP tecnológico",
-      "prueba de concepto",
-      "prototipo tecnológico",
-      "piloto tecnológico",
-      "validar una idea"
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://arvelainnova.es/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://arvelainnova.es/blog/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Qué es un MVP",
-        "item": "https://arvelainnova.es/blog/que-es-un-mvp/"
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre MVP y prototipo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El prototipo sirve para explorar o representar una idea. El MVP funciona de extremo a extremo para un caso limitado y permite medir su uso y valor."
       }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Qué es un MVP?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Un MVP es una primera versión funcional de un producto o solución que incluye lo mínimo necesario para validar una hipótesis con usuarios, datos o condiciones reales."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué diferencia hay entre MVP y prototipo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El prototipo sirve para explorar o representar una idea. El MVP funciona de extremo a extremo para un caso limitado y permite medir su uso y valor."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Un MVP tiene que ser un producto incompleto?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Debe ser limitado en alcance, pero completo en el flujo que valida. No debería ser una versión defectuosa ni una colección de funciones inconexas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuánto debe durar el desarrollo de un MVP?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Depende del problema, las integraciones y los datos. Debe ser suficientemente corto para aprender pronto y suficientemente sólido para probar la hipótesis principal."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué ocurre después de validar un MVP?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Se analizan los resultados y se decide si conviene corregir, ampliar, escalar, cambiar el enfoque o detener el proyecto."
-        }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Un MVP tiene que ser un producto incompleto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Debe ser limitado en alcance, pero completo en el flujo que valida. No debería ser una versión defectuosa ni una colección de funciones inconexas."
       }
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-soft: #f8fafc;
-      --text: #172033;
-      --muted: #5f6b85;
-      --line: #e5e9f2;
-      --primary: #1f6feb;
-      --orange: #d97706;
-      --green: #0f9f76;
-      --violet: #6d5dfc;
-      --warning: #9a6700;
-      --shadow: 0 20px 55px rgba(23, 32, 51, 0.08);
-      --radius: 22px;
-      --max: 1180px;
-      --article: 790px;
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto debe durar el desarrollo de un MVP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del problema, las integraciones y los datos. Debe ser suficientemente corto para aprender pronto y suficientemente sólido para probar la hipótesis principal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué ocurre después de validar un MVP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se analizan los resultados y se decide si conviene corregir, ampliar, escalar, cambiar el enfoque o detener el proyecto."
+      }
     }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 12% 0%, rgba(217,119,6,.08), transparent 27rem),
-        radial-gradient(circle at 90% 10%, rgba(109,93,252,.08), transparent 28rem),
-        var(--bg);
-      line-height: 1.72;
-    }
-
-    a { color: inherit; }
-    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
-
-    header { padding: 22px 0 12px; }
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 15px 18px;
-      background: rgba(255,255,255,.88);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(229,233,242,.95);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; min-width: 0; }
-    .brand-logo {
-      width: 52px; height: 52px; border-radius: 15px; overflow: hidden;
-      border: 1px solid #dbeafe; background: linear-gradient(135deg,#eff6ff,#fff7ed);
-      display: grid; place-items: center; flex: 0 0 auto;
-    }
-    .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
-    .brand strong { display: block; line-height: 1.15; letter-spacing: .02em; }
-    .brand span { display: block; margin-top: 4px; color: var(--muted); font-size: .9rem; }
-
-    nav { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-    nav a {
-      text-decoration: none; color: var(--muted); font-size: .92rem;
-      padding: 8px 10px; border-radius: 999px;
-    }
-    nav a:hover, nav a.active { color: var(--text); background: #f3f4f6; }
-
-    .breadcrumb { padding: 18px 0 0; color: var(--muted); font-size: .92rem; }
-    .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 700; }
-
-    .hero { padding: 28px 0 22px; }
-    .hero-card {
-      padding: 42px;
-      background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(255,249,240,.96));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-    .category {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 7px 11px; border-radius: 999px;
-      background: #fff7ed; color: var(--orange);
-      font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em;
-    }
-    .hero h1 {
-      margin: 18px 0 0;
-      max-width: 960px;
-      font-size: clamp(2.25rem, 5vw, 4.5rem);
-      line-height: 1.05;
-      letter-spacing: -.045em;
-    }
-    .lead {
-      max-width: 880px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 1.16rem;
-    }
-    .meta {
-      display: flex; gap: 16px; flex-wrap: wrap;
-      margin-top: 24px; color: var(--muted); font-size: .92rem;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, var(--article)) 290px;
-      gap: 28px;
-      align-items: start;
-      padding: 12px 0 38px;
-      justify-content: center;
-    }
-
-    article {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 38px;
-      min-width: 0;
-    }
-    article h2 {
-      margin: 2.6rem 0 1rem;
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
-      line-height: 1.2;
-      letter-spacing: -.025em;
-      scroll-margin-top: 20px;
-    }
-    article h2:first-of-type { margin-top: 0; }
-    article h3 {
-      margin: 2rem 0 .75rem;
-      font-size: 1.24rem;
-      line-height: 1.3;
-      scroll-margin-top: 20px;
-    }
-    article p, article li { color: var(--muted); }
-    article strong { color: var(--text); }
-    article ul, article ol { padding-left: 1.25rem; }
-    article li + li { margin-top: .55rem; }
-
-    .toc {
-      position: sticky;
-      top: 20px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.94);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-    .toc strong { display: block; margin-bottom: 12px; }
-    .toc ol { margin: 0; padding-left: 18px; }
-    .toc li + li { margin-top: 8px; }
-    .toc a { color: var(--muted); text-decoration: none; font-size: .9rem; }
-    .toc a:hover { color: var(--primary); }
-
-    .highlight {
-      margin: 24px 0;
-      padding: 22px;
-      border-radius: 18px;
-      background: linear-gradient(135deg,#fff8ed,#f7f4ff);
-      border: 1px solid #f2dfbd;
-    }
-    .highlight strong { display: block; margin-bottom: 7px; }
-    .highlight p { margin: 0; }
-
-    .warning {
-      margin: 24px 0;
-      padding: 20px 22px;
-      border-radius: 18px;
-      background: #fffaf0;
-      border: 1px solid #f2dfb2;
-    }
-    .warning strong { color: var(--warning); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 14px;
-      margin: 22px 0;
-    }
-    .card {
-      border: 1px solid var(--line);
-      background: var(--surface-soft);
-      border-radius: 18px;
-      padding: 19px;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 1.04rem; }
-    .card p { margin: 0; font-size: .95rem; }
-
-    .comparison {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 24px 0;
-      font-size: .95rem;
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(23,32,51,.06);
-    }
-    .comparison th, .comparison td {
-      padding: 14px;
-      border: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-    .comparison th { background: #f8fafc; color: var(--text); }
-    .comparison td { color: var(--muted); }
-
-    .pipeline {
-      display: grid;
-      grid-template-columns: repeat(6,minmax(0,1fr));
-      gap: 10px;
-      margin: 24px 0;
-    }
-    .node {
-      padding: 15px 10px;
-      text-align: center;
-      border-radius: 16px;
-      background: var(--surface-soft);
-      border: 1px solid var(--line);
-    }
-    .node strong { display:block; font-size:.9rem; }
-    .node span { display:block; margin-top:6px; color:var(--muted); font-size:.8rem; }
-
-    .steps {
-      counter-reset: step;
-      display: grid;
-      gap: 14px;
-      margin: 24px 0;
-    }
-    .step {
-      position: relative;
-      padding: 20px 20px 20px 68px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--surface-soft);
-    }
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 20px; top: 19px;
-      width: 32px; height: 32px;
-      display: grid; place-items: center;
-      border-radius: 50%;
-      background: var(--orange);
-      color: white; font-weight: 800;
-    }
-    .step h3 { margin: 0 0 7px; font-size: 1.05rem; }
-    .step p { margin: 0; }
-
-    .internal-link {
-      color: var(--primary);
-      font-weight: 750;
-      text-decoration-thickness: .08em;
-      text-underline-offset: .16em;
-    }
-
-    details {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px 18px;
-    }
-    details + details { margin-top: 10px; }
-    summary { cursor: pointer; font-weight: 800; }
-    details p { margin-bottom: 0; }
-
-    .cta {
-      margin-top: 36px;
-      padding: 28px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #172033, #4a3218);
-      color: white;
-    }
-    .cta h2 { margin: 0 0 10px; color: white; }
-    .cta p { color: rgba(255,255,255,.78); }
-    .cta a {
-      display: inline-flex;
-      margin-top: 8px;
-      padding: 12px 16px;
-      border-radius: 13px;
-      background: white;
-      color: var(--text);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .related { padding: 12px 0 42px; }
-    .related h2 { margin-bottom: 16px; letter-spacing: -.02em; }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 16px;
-    }
-    .related-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 19px;
-      box-shadow: var(--shadow);
-      padding: 20px;
-    }
-    .related-card span { color: var(--orange); font-size: .82rem; font-weight: 800; }
-    .related-card h3 { margin: 9px 0; font-size: 1.08rem; }
-    .related-card p { color: var(--muted); font-size: .93rem; }
-    .related-card a { color: var(--primary); font-weight: 800; text-decoration: none; }
-
-    footer { padding: 26px 0 34px; color: var(--muted); font-size: .92rem; }
-
-    @media (max-width: 980px) {
-      .layout { grid-template-columns: 1fr; }
-      .toc { position: static; order: -1; }
-      .related-grid { grid-template-columns: 1fr; }
-      .pipeline { grid-template-columns: repeat(3,1fr); }
-    }
-
-    @media (max-width: 760px) {
-      .topbar { align-items: flex-start; flex-direction: column; }
-      nav { justify-content: flex-start; }
-      .hero-card, article { padding: 24px; }
-      .grid, .pipeline { grid-template-columns: 1fr; }
-      .comparison { display: block; overflow-x: auto; }
-      .hero h1 { font-size: 2.45rem; }
-    }
-  </style>
+  ]
+}
+</script>
+<link href="/Components/styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-  
-  <script src="/Components/header-loader.js"></script>
-
-  <main class="wrap">
-    <div class="breadcrumb">
-      <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Qué es un MVP
+<div id="header-container"></div>
+<script src="/Components/components.js"></script>
+<main class="wrap">
+<div class="breadcrumb">
+<a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Qué es un MVP
     </div>
-
-    <section class="hero">
-      <div class="hero-card">
-        <span class="category">Innovación y producto</span>
-        <h1>Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico</h1>
-        <p class="lead">
+<section class="hero">
+<div class="hero-card">
+<span class="category">Innovación y producto</span>
+<h1>Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico</h1>
+<p class="lead">
           Un MVP permite comprobar si una idea resuelve un problema antes de invertir en una plataforma completa.
           Su objetivo no es lanzar un producto pobre, sino construir la versión mínima que genere evidencia útil.
         </p>
-        <div class="meta">
-          <span>Publicado por ARVELA Innovación</span>
-          <span>6 de agosto de 2026</span>
-          <span>Lectura aproximada: 18 minutos</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="layout">
-      <article>
-        <h2 id="introduccion">El problema de desarrollar antes de validar</h2>
-        <p>
+<div class="meta"><span>Sergio Alonso · CEO</span><span>18 de julio de 2026</span><span>Lectura aproximada: 10 min</span></div>
+</div>
+</section>
+<div class="layout">
+<article>
+<h2 id="introduccion">El problema de desarrollar antes de validar</h2>
+<p>
           Una idea tecnológica puede parecer evidente sobre el papel. Existe un problema, una posible solución y una lista de
           funciones que podrían construirse. Sin embargo, hasta que usuarios reales interactúan con la propuesta o los datos
           se prueban en condiciones relevantes, muchas decisiones siguen siendo hipótesis.
         </p>
-        <p>
+<p>
           Desarrollar una plataforma completa desde el principio obliga a invertir tiempo y dinero antes de saber si el flujo
           encaja, si los usuarios la utilizarán, si los datos son suficientes o si la tecnología responde como se esperaba.
           Cuanto mayor es el alcance inicial, más caro resulta descubrir que una suposición era incorrecta.
         </p>
-        <div class="highlight">
-          <strong>Idea principal</strong>
-          <p>
+<div class="highlight">
+<strong>Idea principal</strong>
+<p>
             El MVP reduce riesgo porque permite aprender con una solución funcional antes de comprometerse con todo el producto.
           </p>
-        </div>
-
-        <h2 id="que-es">¿Qué es un MVP?</h2>
-        <p>
+</div>
+<h2 id="que-es">¿Qué es un MVP?</h2>
+<p>
           MVP son las siglas de <em>Minimum Viable Product</em>, traducido habitualmente como producto mínimo viable. Es una
           primera versión funcional que contiene lo necesario para validar una hipótesis principal con usuarios, datos o
           condiciones reales.
         </p>
-        <p>
+<p>
           La palabra “mínimo” se refiere al alcance, no a la calidad. El MVP debe limitar el número de funciones, perfiles o
           escenarios, pero el flujo elegido tiene que funcionar de extremo a extremo. Si el objetivo es validar una plataforma
           de incidencias, por ejemplo, un usuario debe poder comunicar un aviso y un responsable debe poder gestionarlo.
         </p>
-        <p>
+<p>
           La palabra “viable” significa que la versión puede utilizarse para obtener evidencia. Una maqueta que solo muestra
           pantallas puede servir para evaluar diseño, pero no para comprobar si la integración, los datos o la operación funcionan.
         </p>
-
-        <h2 id="diferencias">MVP, prototipo, prueba de concepto y piloto</h2>
-        <p>
+<h2 id="diferencias">MVP, prototipo, prueba de concepto y piloto</h2>
+<p>
           Estos términos se utilizan a menudo de forma intercambiable, aunque responden a preguntas distintas. Elegir el formato
           adecuado evita construir más de lo necesario.
         </p>
-
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Formato</th>
-              <th>Pregunta principal</th>
-              <th>Resultado esperado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Prototipo</strong></td>
-              <td>¿Cómo podría funcionar o verse la idea?</td>
-              <td>Representación, flujo visual o interacción simulada.</td>
-            </tr>
-            <tr>
-              <td><strong>Prueba de concepto</strong></td>
-              <td>¿Es técnicamente posible?</td>
-              <td>Demostración limitada de una tecnología, integración o modelo.</td>
-            </tr>
-            <tr>
-              <td><strong>MVP</strong></td>
-              <td>¿La solución mínima aporta valor a usuarios reales?</td>
-              <td>Versión funcional con un flujo completo y medible.</td>
-            </tr>
-            <tr>
-              <td><strong>Piloto</strong></td>
-              <td>¿Funciona en un entorno real o representativo?</td>
-              <td>Prueba controlada con condiciones, usuarios y restricciones reales.</td>
-            </tr>
-            <tr>
-              <td><strong>Producto</strong></td>
-              <td>¿Puede operarse, mantenerse y crecer de forma estable?</td>
-              <td>Solución preparada para uso continuo, soporte y escalado.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="no-es">Lo que un MVP no debería ser</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>No es una maqueta</h3>
-            <p>Una maqueta ayuda a revisar pantallas, pero no valida datos, integraciones ni operación.</p>
-          </div>
-          <div class="card">
-            <h3>No es un producto defectuoso</h3>
-            <p>Debe ser limitado, pero suficientemente fiable para probar la hipótesis seleccionada.</p>
-          </div>
-          <div class="card">
-            <h3>No es una demo comercial</h3>
-            <p>Su objetivo es generar aprendizaje, no solo impresionar en una presentación.</p>
-          </div>
-          <div class="card">
-            <h3>No es todo el roadmap</h3>
-            <p>Incluye lo imprescindible para validar, dejando el resto como evolución futura.</p>
-          </div>
-          <div class="card">
-            <h3>No elimina el análisis</h3>
-            <p>Reducir alcance no significa programar sin entender usuarios, datos y objetivos.</p>
-          </div>
-          <div class="card">
-            <h3>No garantiza éxito</h3>
-            <p>Puede demostrar que una idea debe cambiarse o detenerse, y eso también es un resultado valioso.</p>
-          </div>
-        </div>
-
-        <h2 id="beneficios">Por qué reduce el riesgo</h2>
-
-        <h3>Permite detectar errores pronto</h3>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Formato</th>
+<th>Pregunta principal</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prototipo</strong></td>
+<td>¿Cómo podría funcionar o verse la idea?</td>
+<td>Representación, flujo visual o interacción simulada.</td>
+</tr>
+<tr>
+<td><strong>Prueba de concepto</strong></td>
+<td>¿Es técnicamente posible?</td>
+<td>Demostración limitada de una tecnología, integración o modelo.</td>
+</tr>
+<tr>
+<td><strong>MVP</strong></td>
+<td>¿La solución mínima aporta valor a usuarios reales?</td>
+<td>Versión funcional con un flujo completo y medible.</td>
+</tr>
+<tr>
+<td><strong>Piloto</strong></td>
+<td>¿Funciona en un entorno real o representativo?</td>
+<td>Prueba controlada con condiciones, usuarios y restricciones reales.</td>
+</tr>
+<tr>
+<td><strong>Producto</strong></td>
+<td>¿Puede operarse, mantenerse y crecer de forma estable?</td>
+<td>Solución preparada para uso continuo, soporte y escalado.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="no-es">Lo que un MVP no debería ser</h2>
+<div class="grid">
+<div class="card">
+<h3>No es una maqueta</h3>
+<p>Una maqueta ayuda a revisar pantallas, pero no valida datos, integraciones ni operación.</p>
+</div>
+<div class="card">
+<h3>No es un producto defectuoso</h3>
+<p>Debe ser limitado, pero suficientemente fiable para probar la hipótesis seleccionada.</p>
+</div>
+<div class="card">
+<h3>No es una demo comercial</h3>
+<p>Su objetivo es generar aprendizaje, no solo impresionar en una presentación.</p>
+</div>
+<div class="card">
+<h3>No es todo el roadmap</h3>
+<p>Incluye lo imprescindible para validar, dejando el resto como evolución futura.</p>
+</div>
+<div class="card">
+<h3>No elimina el análisis</h3>
+<p>Reducir alcance no significa programar sin entender usuarios, datos y objetivos.</p>
+</div>
+<div class="card">
+<h3>No garantiza éxito</h3>
+<p>Puede demostrar que una idea debe cambiarse o detenerse, y eso también es un resultado valioso.</p>
+</div>
+</div>
+<h2 id="beneficios">Por qué reduce el riesgo</h2>
+<h3>Permite detectar errores pronto</h3>
+<p>
           Los cambios realizados sobre una primera versión pequeña son menos costosos que los realizados sobre una plataforma
           con muchos módulos, integraciones y usuarios.
         </p>
-
-        <h3>Genera datos reales</h3>
-        <p>
+<h3>Genera datos reales</h3>
+<p>
           En lugar de decidir mediante opiniones, el equipo puede observar uso, tiempos, errores, resultados y comportamiento
           de los usuarios.
         </p>
-
-        <h3>Obliga a priorizar</h3>
-        <p>
+<h3>Obliga a priorizar</h3>
+<p>
           Definir un MVP requiere identificar qué función crea valor y qué elementos pueden esperar. Esta priorización mejora
           el diseño del producto.
         </p>
-
-        <h3>Facilita validar tecnología</h3>
-        <p>
+<h3>Facilita validar tecnología</h3>
+<p>
           En proyectos de IA, IoT o integración, permite comprobar calidad de datos, precisión, cobertura, latencia y fiabilidad
           antes de escalar.
         </p>
-
-        <h3>Mejora la conversación con usuarios e inversores</h3>
-        <p>
+<h3>Mejora la conversación con usuarios e inversores</h3>
+<p>
           Una versión funcional permite discutir sobre evidencias y no solo sobre una presentación o una lista de funciones.
         </p>
-
-        <h2 id="cuando-usar">Cuándo tiene sentido desarrollar un MVP</h2>
-        <ul>
-          <li>Existe una idea de producto digital que todavía no se ha validado.</li>
-          <li>El proyecto incorpora una tecnología nueva o una integración incierta.</li>
-          <li>No está claro qué funciones valorarán más los usuarios.</li>
-          <li>La solución podría evolucionar hacia SaaS o plataforma sectorial.</li>
-          <li>Hay que demostrar viabilidad antes de una inversión mayor.</li>
-          <li>Se necesita un piloto para un proyecto de innovación o I+D+i.</li>
-          <li>El proceso actual es manual y se quiere validar su digitalización.</li>
-        </ul>
-        <p>
+<h2 id="cuando-usar">Cuándo tiene sentido desarrollar un MVP</h2>
+<ul>
+<li>Existe una idea de producto digital que todavía no se ha validado.</li>
+<li>El proyecto incorpora una tecnología nueva o una integración incierta.</li>
+<li>No está claro qué funciones valorarán más los usuarios.</li>
+<li>La solución podría evolucionar hacia SaaS o plataforma sectorial.</li>
+<li>Hay que demostrar viabilidad antes de una inversión mayor.</li>
+<li>Se necesita un piloto para un proyecto de innovación o I+D+i.</li>
+<li>El proceso actual es manual y se quiere validar su digitalización.</li>
+</ul>
+<p>
           La solución de <a class="internal-link" href="/soluciones/innovacion-idi.html">Innovación e I+D+i</a>
           de ARVELA integra esta lógica de hipótesis, prototipo, piloto, métricas y transferencia.
         </p>
-
-        <h2 id="hipotesis">Todo MVP debe validar una hipótesis</h2>
-        <p>
+<h2 id="hipotesis">Todo MVP debe validar una hipótesis</h2>
+<p>
           Un MVP sin hipótesis clara se convierte en una aplicación pequeña sin criterio de evaluación. Antes de definir
           funciones, hay que expresar qué se quiere aprender.
         </p>
-        <p>
+<p>
           Algunos ejemplos:
         </p>
-        <ul>
-          <li>Los ganaderos utilizarán alertas de ubicación si reducen el tiempo de supervisión.</li>
-          <li>Los alumnos practicarán más si reciben feedback inmediato y recomendaciones.</li>
-          <li>Un ayuntamiento reducirá tiempos si centraliza incidencias y responsables.</li>
-          <li>Un modelo de visión artificial puede detectar un evento con una tasa de error aceptable.</li>
-          <li>Los técnicos utilizarán un dashboard si reúne datos actualmente dispersos.</li>
-        </ul>
-        <div class="warning">
-          <strong>Una hipótesis debe poder refutarse.</strong>
-          <p>
+<ul>
+<li>Los ganaderos utilizarán alertas de ubicación si reducen el tiempo de supervisión.</li>
+<li>Los alumnos practicarán más si reciben feedback inmediato y recomendaciones.</li>
+<li>Un ayuntamiento reducirá tiempos si centraliza incidencias y responsables.</li>
+<li>Un modelo de visión artificial puede detectar un evento con una tasa de error aceptable.</li>
+<li>Los técnicos utilizarán un dashboard si reúne datos actualmente dispersos.</li>
+</ul>
+<div class="warning">
+<strong>Una hipótesis debe poder refutarse.</strong>
+<p>
             “La plataforma será útil” es demasiado ambiguo. Es mejor definir quién la usará, para qué tarea y qué cambio
             observable indicará que aporta valor.
           </p>
-        </div>
-
-        <h2 id="flujo">Del problema al aprendizaje</h2>
-        <div class="pipeline" aria-label="Proceso de desarrollo y validación de un MVP">
-          <div class="node"><strong>Problema</strong><span>Qué ocurre hoy</span></div>
-          <div class="node"><strong>Hipótesis</strong><span>Qué creemos</span></div>
-          <div class="node"><strong>MVP</strong><span>Qué construimos</span></div>
-          <div class="node"><strong>Prueba</strong><span>Con quién y dónde</span></div>
-          <div class="node"><strong>Métrica</strong><span>Qué observamos</span></div>
-          <div class="node"><strong>Decisión</strong><span>Qué hacemos después</span></div>
-        </div>
-
-        <h2 id="alcance">Cómo definir el alcance mínimo</h2>
-        <p>
+</div>
+<h2 id="flujo">Del problema al aprendizaje</h2>
+<div aria-label="Proceso de desarrollo y validación de un MVP" class="pipeline">
+<div class="node"><strong>Problema</strong><span>Qué ocurre hoy</span></div>
+<div class="node"><strong>Hipótesis</strong><span>Qué creemos</span></div>
+<div class="node"><strong>MVP</strong><span>Qué construimos</span></div>
+<div class="node"><strong>Prueba</strong><span>Con quién y dónde</span></div>
+<div class="node"><strong>Métrica</strong><span>Qué observamos</span></div>
+<div class="node"><strong>Decisión</strong><span>Qué hacemos después</span></div>
+</div>
+<h2 id="alcance">Cómo definir el alcance mínimo</h2>
+<p>
           La dificultad principal no suele ser decidir qué incluir, sino qué dejar fuera. Para acotar una primera versión,
           conviene separar las funciones según su relación con la hipótesis.
         </p>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Prioridad</th>
-              <th>Criterio</th>
-              <th>Ejemplo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Imprescindible</strong></td>
-              <td>Sin esta función no puede probarse el flujo principal.</td>
-              <td>Registrar una incidencia y cambiar su estado.</td>
-            </tr>
-            <tr>
-              <td><strong>Importante</strong></td>
-              <td>Mejora la prueba, pero puede resolverse temporalmente de otra forma.</td>
-              <td>Notificación automática al usuario.</td>
-            </tr>
-            <tr>
-              <td><strong>Posterior</strong></td>
-              <td>Aporta valor cuando la hipótesis principal ya está validada.</td>
-              <td>Panel avanzado de analítica o configuración multiempresa.</td>
-            </tr>
-            <tr>
-              <td><strong>Descartable</strong></td>
-              <td>No contribuye al aprendizaje actual.</td>
-              <td>Personalizaciones visuales o funciones sin usuario definido.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="componentes">Qué debe tener un buen MVP tecnológico</h2>
-        <ul>
-          <li>Un problema y un usuario claramente definidos.</li>
-          <li>Un flujo principal funcional de principio a fin.</li>
-          <li>Datos suficientes para evaluar la hipótesis.</li>
-          <li>Una métrica de éxito y una referencia de comparación.</li>
-          <li>Trazabilidad básica para entender qué ocurre.</li>
-          <li>Mecanismos de feedback con usuarios.</li>
-          <li>Una arquitectura que no impida evolucionar si la prueba funciona.</li>
-          <li>Un límite temporal y una decisión prevista al finalizar.</li>
-        </ul>
-
-        <h2 id="metricas">Qué métricas utilizar</h2>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Prioridad</th>
+<th>Criterio</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Imprescindible</strong></td>
+<td>Sin esta función no puede probarse el flujo principal.</td>
+<td>Registrar una incidencia y cambiar su estado.</td>
+</tr>
+<tr>
+<td><strong>Importante</strong></td>
+<td>Mejora la prueba, pero puede resolverse temporalmente de otra forma.</td>
+<td>Notificación automática al usuario.</td>
+</tr>
+<tr>
+<td><strong>Posterior</strong></td>
+<td>Aporta valor cuando la hipótesis principal ya está validada.</td>
+<td>Panel avanzado de analítica o configuración multiempresa.</td>
+</tr>
+<tr>
+<td><strong>Descartable</strong></td>
+<td>No contribuye al aprendizaje actual.</td>
+<td>Personalizaciones visuales o funciones sin usuario definido.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="componentes">Qué debe tener un buen MVP tecnológico</h2>
+<ul>
+<li>Un problema y un usuario claramente definidos.</li>
+<li>Un flujo principal funcional de principio a fin.</li>
+<li>Datos suficientes para evaluar la hipótesis.</li>
+<li>Una métrica de éxito y una referencia de comparación.</li>
+<li>Trazabilidad básica para entender qué ocurre.</li>
+<li>Mecanismos de feedback con usuarios.</li>
+<li>Una arquitectura que no impida evolucionar si la prueba funciona.</li>
+<li>Un límite temporal y una decisión prevista al finalizar.</li>
+</ul>
+<h2 id="metricas">Qué métricas utilizar</h2>
+<p>
           Las métricas deben relacionarse con el riesgo principal. No todas las pruebas necesitan medir ingresos. En un MVP
           tecnológico puede ser más importante comprobar precisión, cobertura o adopción.
         </p>
-
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Tipo de riesgo</th>
-              <th>Métricas posibles</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Valor</strong></td>
-              <td>Tiempo ahorrado, errores reducidos, tareas completadas o frecuencia de uso.</td>
-            </tr>
-            <tr>
-              <td><strong>Adopción</strong></td>
-              <td>Usuarios activos, repetición, finalización, abandono o satisfacción.</td>
-            </tr>
-            <tr>
-              <td><strong>Técnico</strong></td>
-              <td>Precisión, latencia, cobertura, disponibilidad, calidad del dato o falsas alarmas.</td>
-            </tr>
-            <tr>
-              <td><strong>Operativo</strong></td>
-              <td>Tiempo de respuesta, carga de soporte, incidencias y facilidad de mantenimiento.</td>
-            </tr>
-            <tr>
-              <td><strong>Económico</strong></td>
-              <td>Coste por usuario, ahorro, margen, disposición a pagar o coste de escalado.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="tipos">Tipos de MVP</h2>
-
-        <h3>MVP de software</h3>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Tipo de riesgo</th>
+<th>Métricas posibles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Valor</strong></td>
+<td>Tiempo ahorrado, errores reducidos, tareas completadas o frecuencia de uso.</td>
+</tr>
+<tr>
+<td><strong>Adopción</strong></td>
+<td>Usuarios activos, repetición, finalización, abandono o satisfacción.</td>
+</tr>
+<tr>
+<td><strong>Técnico</strong></td>
+<td>Precisión, latencia, cobertura, disponibilidad, calidad del dato o falsas alarmas.</td>
+</tr>
+<tr>
+<td><strong>Operativo</strong></td>
+<td>Tiempo de respuesta, carga de soporte, incidencias y facilidad de mantenimiento.</td>
+</tr>
+<tr>
+<td><strong>Económico</strong></td>
+<td>Coste por usuario, ahorro, margen, disposición a pagar o coste de escalado.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tipos">Tipos de MVP</h2>
+<h3>MVP de software</h3>
+<p>
           Una aplicación web o sistema interno que resuelve un flujo limitado. Puede utilizarse para validar digitalización,
           adopción y datos antes de incorporar módulos avanzados.
         </p>
-
-        <h3>MVP de plataforma SaaS</h3>
-        <p>
+<h3>MVP de plataforma SaaS</h3>
+<p>
           Una primera versión para un único tipo de cliente o sector, con funciones esenciales y una arquitectura preparada
           para evolucionar hacia múltiples organizaciones.
         </p>
-
-        <h3>MVP de IA</h3>
-        <p>
+<h3>MVP de IA</h3>
+<p>
           Combina una prueba del modelo con una interfaz o proceso real. No basta con evaluar el algoritmo en un cuaderno:
           hay que comprobar cómo se presentan resultados y cómo se gestionan errores.
         </p>
-
-        <h3>MVP de IoT</h3>
-        <p>
+<h3>MVP de IoT</h3>
+<p>
           Integra pocos dispositivos en un entorno real para validar cobertura, autonomía, calidad de datos, alertas y
-          mantenimiento. La solución de <a class="internal-link" href="/soluciones/integracion-iot-sensores.html">Integración IoT y Sensores</a>
+          mantenimiento. La solución de <a class="internal-link" href="/soluciones/iot-sensores.html">Integración IoT y Sensores</a>
           puede comenzar de esta forma.
         </p>
-
-        <h3>MVP de visión artificial</h3>
-        <p>
+<h3>MVP de visión artificial</h3>
+<p>
           Prueba cámaras, posiciones, iluminación, precisión y flujo de revisión. El objetivo es saber si la detección puede
           utilizarse operativamente, no solo si reconoce algunos ejemplos.
         </p>
-
-        <h2 id="proceso">Cómo desarrollar un MVP paso a paso</h2>
-        <div class="steps">
-          <div class="step">
-            <h3>Definir el problema y el usuario</h3>
-            <p>Describir qué tarea se quiere mejorar, quién la realiza y qué coste tiene hoy.</p>
-          </div>
-          <div class="step">
-            <h3>Formular la hipótesis</h3>
-            <p>Expresar qué cambio se espera y qué evidencia permitiría validarlo.</p>
-          </div>
-          <div class="step">
-            <h3>Identificar el mayor riesgo</h3>
-            <p>Determinar si la incertidumbre principal es técnica, de uso, de datos, operativa o económica.</p>
-          </div>
-          <div class="step">
-            <h3>Diseñar el flujo mínimo</h3>
-            <p>Seleccionar las funciones imprescindibles para probar la hipótesis de extremo a extremo.</p>
-          </div>
-          <div class="step">
-            <h3>Construir y probar</h3>
-            <p>Desarrollar por iteraciones, revisar con usuarios y corregir antes del piloto.</p>
-          </div>
-          <div class="step">
-            <h3>Medir y decidir</h3>
-            <p>Comparar resultados con los criterios iniciales y decidir si escalar, modificar o detener.</p>
-          </div>
-        </div>
-
-        <h2 id="coste">Qué determina el coste de un MVP</h2>
-        <p>
+<h2 id="proceso">Cómo desarrollar un MVP paso a paso</h2>
+<div class="steps">
+<div class="step">
+<h3>Definir el problema y el usuario</h3>
+<p>Describir qué tarea se quiere mejorar, quién la realiza y qué coste tiene hoy.</p>
+</div>
+<div class="step">
+<h3>Formular la hipótesis</h3>
+<p>Expresar qué cambio se espera y qué evidencia permitiría validarlo.</p>
+</div>
+<div class="step">
+<h3>Identificar el mayor riesgo</h3>
+<p>Determinar si la incertidumbre principal es técnica, de uso, de datos, operativa o económica.</p>
+</div>
+<div class="step">
+<h3>Diseñar el flujo mínimo</h3>
+<p>Seleccionar las funciones imprescindibles para probar la hipótesis de extremo a extremo.</p>
+</div>
+<div class="step">
+<h3>Construir y probar</h3>
+<p>Desarrollar por iteraciones, revisar con usuarios y corregir antes del piloto.</p>
+</div>
+<div class="step">
+<h3>Medir y decidir</h3>
+<p>Comparar resultados con los criterios iniciales y decidir si escalar, modificar o detener.</p>
+</div>
+</div>
+<h2 id="coste">Qué determina el coste de un MVP</h2>
+<p>
           Un MVP no tiene un precio fijo. Su coste depende de la complejidad del flujo y del riesgo que debe validar. Una
           prueba de una integración puede ser pequeña, mientras que un MVP con sensores, IA y usuarios reales puede requerir
           más esfuerzo.
         </p>
-        <ul>
-          <li>Número de perfiles y permisos.</li>
-          <li>Complejidad del modelo de datos.</li>
-          <li>Integraciones con plataformas externas.</li>
-          <li>Necesidad de hardware, sensores o cámaras.</li>
-          <li>Preparación, limpieza o etiquetado de datos.</li>
-          <li>Aplicación web, móvil o panel administrativo.</li>
-          <li>Requisitos de seguridad y privacidad.</li>
-          <li>Entorno y duración del piloto.</li>
-          <li>Instrumentación necesaria para medir resultados.</li>
-        </ul>
-        <p>
+<ul>
+<li>Número de perfiles y permisos.</li>
+<li>Complejidad del modelo de datos.</li>
+<li>Integraciones con plataformas externas.</li>
+<li>Necesidad de hardware, sensores o cámaras.</li>
+<li>Preparación, limpieza o etiquetado de datos.</li>
+<li>Aplicación web, móvil o panel administrativo.</li>
+<li>Requisitos de seguridad y privacidad.</li>
+<li>Entorno y duración del piloto.</li>
+<li>Instrumentación necesaria para medir resultados.</li>
+</ul>
+<p>
           Reducir coste no consiste en eliminar todo lo invisible. La seguridad básica, la calidad del dato y la capacidad de
           medir son parte del propio MVP.
         </p>
-
-        <h2 id="errores">Errores habituales al crear un MVP</h2>
-        <ul>
-          <li><strong>Construir demasiadas funciones para satisfacer a todos los posibles usuarios.</strong></li>
-          <li><strong>No definir una hipótesis ni una métrica antes del desarrollo.</strong></li>
-          <li><strong>Confundir rápido con improvisado.</strong></li>
-          <li><strong>Probar solo con el equipo que creó la idea.</strong></li>
-          <li><strong>Evitar las condiciones reales que podrían hacer fallar la solución.</strong></li>
-          <li><strong>Interpretar cualquier feedback positivo como validación.</strong></li>
-          <li><strong>No preparar una decisión concreta para después del piloto.</strong></li>
-          <li><strong>Convertir el MVP temporal en producto definitivo sin revisar su arquitectura.</strong></li>
-        </ul>
-
-        <h2 id="despues">Qué ocurre después del MVP</h2>
-        <p>
+<h2 id="errores">Errores habituales al crear un MVP</h2>
+<ul>
+<li><strong>Construir demasiadas funciones para satisfacer a todos los posibles usuarios.</strong></li>
+<li><strong>No definir una hipótesis ni una métrica antes del desarrollo.</strong></li>
+<li><strong>Confundir rápido con improvisado.</strong></li>
+<li><strong>Probar solo con el equipo que creó la idea.</strong></li>
+<li><strong>Evitar las condiciones reales que podrían hacer fallar la solución.</strong></li>
+<li><strong>Interpretar cualquier feedback positivo como validación.</strong></li>
+<li><strong>No preparar una decisión concreta para después del piloto.</strong></li>
+<li><strong>Convertir el MVP temporal en producto definitivo sin revisar su arquitectura.</strong></li>
+</ul>
+<h2 id="despues">Qué ocurre después del MVP</h2>
+<p>
           El resultado no siempre es “seguir desarrollando”. Una prueba puede conducir a varias decisiones:
         </p>
-        <ul>
-          <li><strong>Escalar:</strong> la hipótesis se confirma y conviene ampliar usuarios, módulos o infraestructura.</li>
-          <li><strong>Iterar:</strong> existe valor, pero el flujo, la tecnología o el público deben ajustarse.</li>
-          <li><strong>Cambiar:</strong> el problema es real, pero la solución propuesta no es la adecuada.</li>
-          <li><strong>Detener:</strong> el valor esperado no justifica la inversión o el riesgo técnico es demasiado alto.</li>
-        </ul>
-        <p>
+<ul>
+<li><strong>Escalar:</strong> la hipótesis se confirma y conviene ampliar usuarios, módulos o infraestructura.</li>
+<li><strong>Iterar:</strong> existe valor, pero el flujo, la tecnología o el público deben ajustarse.</li>
+<li><strong>Cambiar:</strong> el problema es real, pero la solución propuesta no es la adecuada.</li>
+<li><strong>Detener:</strong> el valor esperado no justifica la inversión o el riesgo técnico es demasiado alto.</li>
+</ul>
+<p>
           Detener un proyecto después de una prueba limitada puede ser una buena decisión. El MVP habrá evitado una inversión
           mayor y habrá generado conocimiento reutilizable.
         </p>
-
-        <h2 id="casos">Ejemplos aplicados</h2>
-
-        <h3>Ganadería inteligente</h3>
-        <p>
+<h2 id="casos">Ejemplos aplicados</h2>
+<h3>Ganadería inteligente</h3>
+<p>
           Un MVP de <a class="internal-link" href="/soluciones/avega-ganaderia-inteligente.html">AVEGA</a> podría comenzar con
           un número reducido de animales, un tipo de sensor y dos alertas concretas. La prueba mediría cobertura, utilidad y
           capacidad de respuesta antes de ampliar el sistema.
         </p>
-
-        <h3>Plataforma de aprendizaje</h3>
-        <p>
+<h3>Plataforma de aprendizaje</h3>
+<p>
           La primera versión puede centrarse en un curso, un tipo de ejercicio y un panel de progreso. El objetivo sería
           comprobar si el feedback mejora la práctica y si los docentes utilizan la analítica.
         </p>
-
-        <h3>Ciudadanía y participación</h3>
-        <p>
+<h3>Ciudadanía y participación</h3>
+<p>
           Un municipio puede probar un único canal de incidencias, pocas categorías y un backoffice básico. Se medirían
           adopción, tiempos de clasificación y trazabilidad.
         </p>
-
-        <h3>Monitorización mediante IA</h3>
-        <p>
+<h3>Monitorización mediante IA</h3>
+<p>
           El MVP puede utilizar una cámara en una zona concreta para detectar un evento definido. Debe medir precisión, falsas
           alarmas y utilidad para el equipo responsable.
         </p>
-
-        <h3>Software interno</h3>
-        <p>
+<h3>Software interno</h3>
+<p>
           Una organización puede digitalizar solo el flujo con más errores o carga manual, dejando para después informes,
           automatizaciones y módulos secundarios.
         </p>
-
-        <h2 id="faq">Preguntas frecuentes sobre MVP</h2>
-        <details>
-          <summary>¿Qué significa MVP?</summary>
-          <p>Significa producto mínimo viable: una primera versión funcional diseñada para validar una hipótesis con el menor alcance razonable.</p>
-        </details>
-        <details>
-          <summary>¿Un MVP es una versión barata del producto final?</summary>
-          <p>No necesariamente. Es una versión enfocada en aprendizaje. Puede requerir inversión si la hipótesis implica hardware, integración o datos complejos.</p>
-        </details>
-        <details>
-          <summary>¿Qué diferencia hay entre MVP y prototipo?</summary>
-          <p>El prototipo explora diseño o funcionamiento. El MVP permite utilizar un flujo real y medir resultados.</p>
-        </details>
-        <details>
-          <summary>¿Cuántas funciones debe tener?</summary>
-          <p>Las imprescindibles para validar la hipótesis principal. El número importa menos que la relación de cada función con el aprendizaje esperado.</p>
-        </details>
-        <details>
-          <summary>¿Cuánto tiempo debe durar?</summary>
-          <p>Lo suficiente para construir y probar el flujo principal, evitando plazos tan largos que retrasen el aprendizaje.</p>
-        </details>
-        <details>
-          <summary>¿Se puede usar código temporal?</summary>
-          <p>Puede utilizarse una arquitectura simplificada, pero deben evitarse decisiones que impidan medir, proteger datos o evolucionar si la prueba funciona.</p>
-        </details>
-        <details>
-          <summary>¿Quién debe probarlo?</summary>
-          <p>Usuarios representativos del público real, en condiciones suficientemente cercanas al uso previsto.</p>
-        </details>
-        <details>
-          <summary>¿Qué pasa si los usuarios no lo utilizan?</summary>
-          <p>Hay que analizar si el problema no era prioritario, el flujo no encaja, falta valor o la solución necesita cambiar.</p>
-        </details>
-        <details>
-          <summary>¿Un MVP puede convertirse directamente en producto?</summary>
-          <p>Puede servir como base, pero antes conviene revisar arquitectura, seguridad, soporte, escalabilidad y experiencia de usuario.</p>
-        </details>
-        <details>
-          <summary>¿Cuál es el primer paso?</summary>
-          <p>Definir el problema, el usuario, la hipótesis principal y la evidencia que permitiría tomar una decisión.</p>
-        </details>
-
-        <h2 id="conclusion">Conclusión</h2>
-        <p>
+<h2 id="faq">Preguntas frecuentes sobre MVP</h2>
+<details>
+<summary>¿Qué significa MVP?</summary>
+<p>Significa producto mínimo viable: una primera versión funcional diseñada para validar una hipótesis con el menor alcance razonable.</p>
+</details>
+<details>
+<summary>¿Un MVP es una versión barata del producto final?</summary>
+<p>No necesariamente. Es una versión enfocada en aprendizaje. Puede requerir inversión si la hipótesis implica hardware, integración o datos complejos.</p>
+</details>
+<details>
+<summary>¿Qué diferencia hay entre MVP y prototipo?</summary>
+<p>El prototipo explora diseño o funcionamiento. El MVP permite utilizar un flujo real y medir resultados.</p>
+</details>
+<details>
+<summary>¿Cuántas funciones debe tener?</summary>
+<p>Las imprescindibles para validar la hipótesis principal. El número importa menos que la relación de cada función con el aprendizaje esperado.</p>
+</details>
+<details>
+<summary>¿Cuánto tiempo debe durar?</summary>
+<p>Lo suficiente para construir y probar el flujo principal, evitando plazos tan largos que retrasen el aprendizaje.</p>
+</details>
+<details>
+<summary>¿Se puede usar código temporal?</summary>
+<p>Puede utilizarse una arquitectura simplificada, pero deben evitarse decisiones que impidan medir, proteger datos o evolucionar si la prueba funciona.</p>
+</details>
+<details>
+<summary>¿Quién debe probarlo?</summary>
+<p>Usuarios representativos del público real, en condiciones suficientemente cercanas al uso previsto.</p>
+</details>
+<details>
+<summary>¿Qué pasa si los usuarios no lo utilizan?</summary>
+<p>Hay que analizar si el problema no era prioritario, el flujo no encaja, falta valor o la solución necesita cambiar.</p>
+</details>
+<details>
+<summary>¿Un MVP puede convertirse directamente en producto?</summary>
+<p>Puede servir como base, pero antes conviene revisar arquitectura, seguridad, soporte, escalabilidad y experiencia de usuario.</p>
+</details>
+<details>
+<summary>¿Cuál es el primer paso?</summary>
+<p>Definir el problema, el usuario, la hipótesis principal y la evidencia que permitiría tomar una decisión.</p>
+</details>
+<h2 id="conclusion">Conclusión</h2>
+<p>
           Un MVP es una herramienta de aprendizaje. Permite validar una idea mediante una solución funcional, reduciendo el
           coste de descubrir errores y evitando desarrollar funciones que todavía no han demostrado valor.
         </p>
-        <p>
+<p>
           El mejor MVP no es el que incluye más, sino el que responde con claridad a la pregunta más importante del proyecto.
           Definir una hipótesis, acotar el flujo, medir y decidir son las piezas que convierten una primera versión en una
           estrategia real de reducción de riesgo.
         </p>
-
-        <div class="cta">
-          <h2>¿Quieres validar una idea antes de desarrollar el producto completo?</h2>
-          <p>
-            ARVELA puede ayudarte a definir la hipótesis, diseñar el alcance mínimo, construir un MVP y preparar un piloto con
-            métricas y criterios de decisión.
-          </p>
-          <a href="/#contacto">Plantear un MVP tecnológico</a>
-        </div>
-      </article>
-
-      <aside class="toc" aria-label="Índice del artículo">
-        <strong>Contenido</strong>
-        <ol>
-          <li><a href="#introduccion">Desarrollar antes de validar</a></li>
-          <li><a href="#que-es">Qué es un MVP</a></li>
-          <li><a href="#diferencias">MVP, prototipo y piloto</a></li>
-          <li><a href="#no-es">Qué no es</a></li>
-          <li><a href="#beneficios">Cómo reduce riesgo</a></li>
-          <li><a href="#cuando-usar">Cuándo utilizarlo</a></li>
-          <li><a href="#hipotesis">Hipótesis</a></li>
-          <li><a href="#flujo">Proceso de aprendizaje</a></li>
-          <li><a href="#alcance">Alcance mínimo</a></li>
-          <li><a href="#componentes">Componentes</a></li>
-          <li><a href="#metricas">Métricas</a></li>
-          <li><a href="#tipos">Tipos de MVP</a></li>
-          <li><a href="#proceso">Paso a paso</a></li>
-          <li><a href="#coste">Factores de coste</a></li>
-          <li><a href="#errores">Errores habituales</a></li>
-          <li><a href="#despues">Qué ocurre después</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ol>
-      </aside>
-    </div>
-
-    <section class="related">
-      <h2>Contenidos y soluciones relacionados</h2>
-      <div class="related-grid">
-        <article class="related-card">
-          <span>Solución</span>
-          <h3>Innovación e I+D+i</h3>
-          <p>Definición de hipótesis, prototipos, pilotos, métricas y transferencia tecnológica.</p>
-          <a href="/soluciones/innovacion-idi.html">Ver solución →</a>
-        </article>
-        <article class="related-card">
-          <span>Solución</span>
-          <h3>Soluciones Digitales a Medida</h3>
-          <p>Aplicaciones y plataformas que pueden comenzar con una primera versión funcional.</p>
-          <a href="/soluciones/software-medida.html">Ver solución →</a>
-        </article>
-        <article class="related-card">
-          <span>Artículo</span>
-          <h3>Cuándo desarrollar software a medida</h3>
-          <p>Criterios para comparar una herramienta existente con una solución personalizada.</p>
-          <a href="/blog/cuando-desarrollar-software-a-medida/">Leer artículo →</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <div id="footer-container"></div>
-  <script>
-  fetch('/Components/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-  </script>
+</article>
+<aside aria-label="Índice del artículo" class="toc">
+<strong>Contenido</strong>
+<ol>
+<li><a href="#introduccion">Desarrollar antes de validar</a></li>
+<li><a href="#que-es">Qué es un MVP</a></li>
+<li><a href="#diferencias">MVP, prototipo y piloto</a></li>
+<li><a href="#no-es">Qué no es</a></li>
+<li><a href="#beneficios">Cómo reduce riesgo</a></li>
+<li><a href="#cuando-usar">Cuándo utilizarlo</a></li>
+<li><a href="#hipotesis">Hipótesis</a></li>
+<li><a href="#flujo">Proceso de aprendizaje</a></li>
+<li><a href="#alcance">Alcance mínimo</a></li>
+<li><a href="#componentes">Componentes</a></li>
+<li><a href="#metricas">Métricas</a></li>
+<li><a href="#tipos">Tipos de MVP</a></li>
+<li><a href="#proceso">Paso a paso</a></li>
+<li><a href="#coste">Factores de coste</a></li>
+<li><a href="#errores">Errores habituales</a></li>
+<li><a href="#despues">Qué ocurre después</a></li>
+<li><a href="#faq">Preguntas frecuentes</a></li>
+</ol>
+</aside>
+</div>
+<section class="related">
+<h2>Contenidos y soluciones relacionados</h2>
+<div class="related-grid">
+<article class="related-card">
+<span>Solución</span>
+<h3>Innovación e I+D+i</h3>
+<p>Definición de hipótesis, prototipos, pilotos, métricas y transferencia tecnológica.</p>
+<a href="/soluciones/innovacion-idi.html">Ver solución →</a>
+</article>
+<article class="related-card">
+<span>Solución</span>
+<h3>Soluciones Digitales a Medida</h3>
+<p>Aplicaciones y plataformas que pueden comenzar con una primera versión funcional.</p>
+<a href="/soluciones/soluciones-digitales-medida.html">Ver solución →</a>
+</article>
+<article class="related-card">
+<span>Artículo</span>
+<h3>Cuándo desarrollar software a medida</h3>
+<p>Criterios para comparar una herramienta existente con una solución personalizada.</p>
+<a href="/blog/blog-cuando-desarrollar-software-a-medida.html">Leer artículo →</a>
+</article>
+</div>
+</section>
+<section aria-labelledby="cta-final-title" class="site-cta"><h2 id="cta-final-title">¿Quieres construir un MVP para validar tu idea?</h2><p>Cuéntanos el contexto, el objetivo y el punto en el que estás. Te ayudamos a definir un primer alcance realista y los siguientes pasos.</p><div class="cta-row"><a class="btn btn-primary" href="/contacto.html#formulario">Cuéntanos tu proyecto</a></div></section></main>
+<div id="footer-container"></div>
 </body>
 </html>

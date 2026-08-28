@@ -1,33 +1,138 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Qué es IoT y para qué sirven los sensores inteligentes | ARVELA</title>
-<meta name="description" content="Guía completa sobre IoT y sensores inteligentes: funcionamiento, conectividad, protocolos, plataformas, casos de uso, riesgos y cómo empezar un proyecto IoT.">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://arvelainnova.es/blog/que-es-iot-sensores-inteligentes/">
-<meta property="og:locale" content="es_ES"><meta property="og:type" content="article">
-<meta property="og:title" content="Qué es IoT y para qué sirven los sensores inteligentes">
-<meta property="og:description" content="Cómo sensores, conectividad, plataformas y alertas convierten el mundo físico en datos útiles.">
-<meta property="og:url" content="https://arvelainnova.es/blog/que-es-iot-sensores-inteligentes/">
-<meta property="og:site_name" content="ARVELA Innovación"><meta property="og:image" content="https://arvelainnova.es/og-image.png">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Qué es IoT y para qué sirven los sensores inteligentes"><meta name="twitter:description" content="Sensores, conectividad, protocolos, plataformas, alertas y casos de uso explicados de forma práctica."><meta name="twitter:image" content="https://arvelainnova.es/og-image.png">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#172033">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Qué es IoT y para qué sirven los sensores inteligentes","description":"Guía práctica sobre Internet de las Cosas, sensores inteligentes, conectividad, plataformas, alertas y casos de uso.","url":"https://arvelainnova.es/blog/que-es-iot-sensores-inteligentes/","mainEntityOfPage":{"@type":"WebPage","@id":"https://arvelainnova.es/blog/que-es-iot-sensores-inteligentes/"},"image":"https://arvelainnova.es/og-image.png","author":{"@type":"Organization","name":"ARVELA Innovación","url":"https://arvelainnova.es/"},"publisher":{"@type":"Organization","name":"ARVELA Innovación","url":"https://arvelainnova.es/","logo":{"@type":"ImageObject","url":"https://arvelainnova.es/logo.jpg"}},"datePublished":"2026-08-06","dateModified":"2026-08-06","inLanguage":"es","articleSection":"IoT y sensores","keywords":["qué es IoT","sensores inteligentes","Internet de las Cosas para empresas","integración IoT","plataformas IoT"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://arvelainnova.es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://arvelainnova.es/blog/"},{"@type":"ListItem","position":3,"name":"Qué es IoT y para qué sirven los sensores inteligentes","item":"https://arvelainnova.es/blog/que-es-iot-sensores-inteligentes/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué significa IoT?","acceptedAnswer":{"@type":"Answer","text":"IoT significa Internet de las Cosas y describe sistemas donde objetos físicos, sensores o dispositivos capturan datos y los envían a una plataforma para analizarlos o activar acciones."}},{"@type":"Question","name":"¿Qué es un sensor inteligente?","acceptedAnswer":{"@type":"Answer","text":"Es un dispositivo capaz de medir una variable física y comunicarla digitalmente, incorporando en ocasiones procesamiento local, memoria o reglas básicas."}},{"@type":"Question","name":"¿Hace falta conexión permanente a Internet?","acceptedAnswer":{"@type":"Answer","text":"No siempre. Algunos dispositivos almacenan datos y los envían cuando recuperan cobertura o procesan eventos localmente."}},{"@type":"Question","name":"¿Cómo se empieza un proyecto IoT?","acceptedAnswer":{"@type":"Answer","text":"Se empieza definiendo el activo, la variable que debe medirse, la decisión que mejorará y las condiciones físicas de instalación."}}]}</script>
-<style>
-:root{--bg:#f5f7fb;--surface:#fff;--soft:#f8fafc;--text:#172033;--muted:#5f6b85;--line:#e5e9f2;--primary:#1f6feb;--green:#0f9f76;--shadow:0 20px 55px rgba(23,32,51,.08);--radius:22px;--max:1180px;--article:790px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 0%,rgba(15,159,118,.09),transparent 27rem),radial-gradient(circle at 90% 12%,rgba(8,145,178,.08),transparent 28rem),var(--bg);line-height:1.72}a{color:inherit}.wrap{width:min(calc(100% - 32px),var(--max));margin:0 auto}header{padding:22px 0 12px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:15px 18px;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.brand{display:flex;align-items:center;gap:13px;text-decoration:none}.brand-logo{width:52px;height:52px;border-radius:15px;overflow:hidden;border:1px solid #dbeafe;background:#eff6ff;flex:0 0 auto}.brand-logo img{width:100%;height:100%;object-fit:cover}.brand strong{display:block;line-height:1.15}.brand span span{display:block;margin-top:4px;color:var(--muted);font-size:.9rem}nav{display:flex;gap:8px;flex-wrap:wrap}nav a{text-decoration:none;color:var(--muted);font-size:.92rem;padding:8px 10px;border-radius:999px}nav a:hover,nav a.active{color:var(--text);background:#f3f4f6}.breadcrumb{padding:18px 0 0;color:var(--muted);font-size:.92rem}.breadcrumb a{color:var(--primary);text-decoration:none;font-weight:700}.hero{padding:28px 0 22px}.hero-card{padding:42px;background:linear-gradient(135deg,rgba(255,255,255,.97),rgba(245,253,250,.97));border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}.category{display:inline-flex;padding:7px 11px;border-radius:999px;background:#ecfdf5;color:var(--green);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em}.hero h1{margin:18px 0 0;max-width:960px;font-size:clamp(2.25rem,5vw,4.5rem);line-height:1.05;letter-spacing:-.045em}.lead{max-width:880px;margin:22px 0 0;color:var(--muted);font-size:1.16rem}.meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:.92rem}.layout{display:grid;grid-template-columns:minmax(0,var(--article)) 290px;gap:28px;align-items:start;padding:12px 0 38px;justify-content:center}article{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px;min-width:0}article h2{margin:2.6rem 0 1rem;font-size:clamp(1.55rem,3vw,2.15rem);line-height:1.2;letter-spacing:-.025em;scroll-margin-top:20px}article h2:first-of-type{margin-top:0}article h3{margin:2rem 0 .75rem;font-size:1.24rem;line-height:1.3}article p,article li{color:var(--muted)}article strong{color:var(--text)}article ul,article ol{padding-left:1.25rem}article li+li{margin-top:.55rem}.toc{position:sticky;top:20px;padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.94);border-radius:20px;box-shadow:var(--shadow)}.toc strong{display:block;margin-bottom:12px}.toc ol{margin:0;padding-left:18px}.toc li+li{margin-top:8px}.toc a{color:var(--muted);text-decoration:none;font-size:.9rem}.highlight,.warning{margin:24px 0;padding:22px;border-radius:18px}.highlight{background:linear-gradient(135deg,#f0fdfa,#effcff);border:1px solid #cceee5}.warning{background:#fffaf0;border:1px solid #f2dfb2}.highlight strong,.warning strong{display:block;margin-bottom:7px}.highlight p,.warning p{margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0}.card{border:1px solid var(--line);background:var(--soft);border-radius:18px;padding:19px}.card h3{margin:0 0 8px;font-size:1.04rem}.card p{margin:0;font-size:.95rem}.comparison{width:100%;border-collapse:collapse;margin:24px 0;font-size:.95rem;box-shadow:0 10px 30px rgba(23,32,51,.06)}.comparison th,.comparison td{padding:14px;border:1px solid var(--line);text-align:left;vertical-align:top}.comparison th{background:#f8fafc}.comparison td{color:var(--muted)}.architecture{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:24px 0}.node{padding:14px 10px;text-align:center;border:1px solid var(--line);border-radius:15px;background:var(--soft)}.node strong{display:block;font-size:.9rem}.node span{display:block;margin-top:6px;color:var(--muted);font-size:.8rem}.steps{counter-reset:step;display:grid;gap:14px;margin:24px 0}.step{position:relative;padding:20px 20px 20px 68px;border:1px solid var(--line);border-radius:18px;background:var(--soft)}.step:before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:19px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:var(--green);color:#fff;font-weight:800}.step h3{margin:0 0 7px;font-size:1.05rem}.step p{margin:0}.internal-link{color:var(--primary);font-weight:750}details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}details+details{margin-top:10px}summary{cursor:pointer;font-weight:800}.cta{margin-top:36px;padding:28px;border-radius:22px;background:linear-gradient(135deg,#172033,#164e63);color:#fff}.cta h2{margin:0 0 10px;color:#fff}.cta p{color:rgba(255,255,255,.78)}.cta a{display:inline-flex;margin-top:8px;padding:12px 16px;border-radius:13px;background:#fff;color:var(--text);font-weight:800;text-decoration:none}.related{padding:12px 0 42px}.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.related-card{background:#fff;border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow);padding:20px}.related-card span{color:var(--green);font-size:.82rem;font-weight:800}.related-card h3{margin:9px 0;font-size:1.08rem}.related-card p{color:var(--muted);font-size:.93rem}.related-card a{color:var(--primary);font-weight:800;text-decoration:none}footer{padding:26px 0 34px;color:var(--muted);font-size:.92rem}@media(max-width:980px){.layout{grid-template-columns:1fr}.toc{position:static;order:-1}.related-grid{grid-template-columns:1fr}.architecture{grid-template-columns:repeat(3,1fr)}}@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column}.hero-card,article{padding:24px}.grid,.architecture{grid-template-columns:1fr}.comparison{display:block;overflow-x:auto}.hero h1{font-size:2.45rem}}
-</style>
+<meta content="Guía completa sobre IoT y sensores inteligentes: funcionamiento, conectividad, protocolos, plataformas, casos de uso, riesgos y cómo empezar un proyecto IoT." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://arvelainnova.es/blog/blog-que-es-iot-sensores-inteligentes.html" rel="canonical"/>
+<meta content="es_ES" property="og:locale"/><meta content="article" property="og:type"/>
+<meta content="Qué es IoT y para qué sirven los sensores inteligentes" property="og:title"/>
+<meta content="Cómo sensores, conectividad, plataformas y alertas convierten el mundo físico en datos útiles." property="og:description"/>
+<meta content="https://arvelainnova.es/blog/blog-que-es-iot-sensores-inteligentes.html" property="og:url"/>
+<meta content="ARVELA Innovación" property="og:site_name"/><meta content="https://arvelainnova.es/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/><meta content="Qué es IoT y para qué sirven los sensores inteligentes" name="twitter:title"/><meta content="Sensores, conectividad, protocolos, plataformas, alertas y casos de uso explicados de forma práctica." name="twitter:description"/><meta content="https://arvelainnova.es/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/apple-touch-icon.png" rel="apple-touch-icon"/><link href="/site.webmanifest" rel="manifest"/><meta content="#172033" name="theme-color"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Qué es IoT y para qué sirven los sensores inteligentes",
+  "description": "Guía práctica sobre Internet de las Cosas, sensores inteligentes, conectividad, plataformas, alertas y casos de uso.",
+  "url": "https://arvelainnova.es/blog/blog-que-es-iot-sensores-inteligentes.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://arvelainnova.es/blog/blog-que-es-iot-sensores-inteligentes.html"
+  },
+  "image": "https://arvelainnova.es/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergio Alonso",
+    "jobTitle": "CEO",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "ARVELA Innovación",
+      "url": "https://arvelainnova.es/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARVELA Innovación",
+    "url": "https://arvelainnova.es/blog/blog-que-es-iot-sensores-inteligentes.html",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arvelainnova.es/logo.jpg"
+    }
+  },
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-08-28",
+  "inLanguage": "es",
+  "articleSection": "IoT y sensores",
+  "keywords": [
+    "qué es IoT",
+    "sensores inteligentes",
+    "Internet de las Cosas para empresas",
+    "integración IoT",
+    "plataformas IoT"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://arvelainnova.es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://arvelainnova.es/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Qué es IoT y para qué sirven los sensores inteligentes",
+      "item": "https://arvelainnova.es/blog/blog-que-es-iot-sensores-inteligentes.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué significa IoT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IoT significa Internet de las Cosas y describe sistemas donde objetos físicos, sensores o dispositivos capturan datos y los envían a una plataforma para analizarlos o activar acciones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es un sensor inteligente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es un dispositivo capaz de medir una variable física y comunicarla digitalmente, incorporando en ocasiones procesamiento local, memoria o reglas básicas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hace falta conexión permanente a Internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No siempre. Algunos dispositivos almacenan datos y los envían cuando recuperan cobertura o procesan eventos localmente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se empieza un proyecto IoT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se empieza definiendo el activo, la variable que debe medirse, la decisión que mejorará y las condiciones físicas de instalación."
+      }
+    }
+  ]
+}
+</script>
+<link href="/Components/styles.css" rel="stylesheet"/>
 </head>
 <body>
-
-<script src="/Components/header-loader.js"></script>
-
+<div id="header-container"></div>
+<script src="/Components/components.js"></script>
 <main class="wrap">
 <div class="breadcrumb"><a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Qué es IoT y para qué sirven los sensores inteligentes</div>
-<section class="hero"><div class="hero-card"><span class="category">IoT y sensores</span><h1>Qué es IoT y para qué sirven los sensores inteligentes</h1><p class="lead">El Internet de las Cosas conecta activos físicos, sensores y dispositivos con plataformas digitales. Su valor no está en acumular lecturas, sino en transformar esas señales en contexto, alertas, indicadores y decisiones.</p><div class="meta"><span>Publicado por ARVELA Innovación</span><span>6 de agosto de 2026</span><span>Lectura aproximada: 19 minutos</span></div></div></section>
+<section class="hero"><div class="hero-card"><span class="category">IoT y sensores</span><h1>Qué es IoT y para qué sirven los sensores inteligentes</h1><p class="lead">El Internet de las Cosas conecta activos físicos, sensores y dispositivos con plataformas digitales. Su valor no está en acumular lecturas, sino en transformar esas señales en contexto, alertas, indicadores y decisiones.</p><div class="meta"><span>Sergio Alonso · CEO</span><span>27 de julio de 2026</span><span>Lectura aproximada: 9 min</span></div></div></section>
 <div class="layout">
 <article>
 <h2 id="introduccion">IoT: conectar el mundo físico con el digital</h2>
@@ -56,7 +161,7 @@
 <h2 id="plataforma">Qué hace una plataforma IoT</h2>
 <p>La plataforma convierte lecturas aisladas en información organizada. Debe saber qué dispositivo envió cada dato, a qué activo pertenece, cuándo se recibió, si es válido y qué relación tiene con el histórico.</p>
 <ul><li>Registro y configuración de dispositivos.</li><li>Asignación de sensores a activos, animales o zonas.</li><li>Almacenamiento de históricos y series temporales.</li><li>Mapas, dashboards y visualización del estado.</li><li>Reglas, umbrales y detección de falta de comunicación.</li><li>Alertas y notificaciones.</li><li>Gestión de batería, cobertura y calidad del dato.</li><li>APIs para compartir información.</li></ul>
-<p>La solución de <a class="internal-link" href="/soluciones/integracion-iot-sensores.html">Integración IoT y Sensores</a> de ARVELA se centra en conectar dispositivos con software, contexto, alertas y explotación de datos.</p>
+<p>La solución de <a class="internal-link" href="/soluciones/iot-sensores.html">Integración IoT y Sensores</a> de ARVELA se centra en conectar dispositivos con software, contexto, alertas y explotación de datos.</p>
 <h2 id="alertas">Del dato a una alerta útil</h2>
 <p>Una lectura no debería generar una alerta sin contexto. Una temperatura de 35 grados puede ser normal en un entorno y crítica en otro. Un dispositivo sin comunicar durante diez minutos puede ser aceptable si envía cada hora, pero grave si debe reportar cada minuto.</p>
 <table class="comparison"><thead><tr><th>Lectura</th><th>Contexto</th><th>Acción</th></tr></thead><tbody><tr><td>Temperatura elevada</td><td>Umbral, duración, activo e histórico.</td><td>Revisar riesgo térmico o fallo.</td></tr><tr><td>Salida de geocerca</td><td>Activo, zona permitida y tiempo fuera.</td><td>Generar aviso de salida.</td></tr><tr><td>Consumo anómalo</td><td>Horario, patrón e instalación.</td><td>Comprobar fuga o avería.</td></tr><tr><td>Sin comunicación</td><td>Frecuencia, batería, cobertura y criticidad.</td><td>Crear tarea de mantenimiento.</td></tr><tr><td>Vibración inusual</td><td>Máquina, régimen, intensidad y repetición.</td><td>Programar revisión.</td></tr></tbody></table>
@@ -90,20 +195,10 @@
 <h2 id="conclusion">Conclusión</h2>
 <p>IoT permite observar procesos y activos físicos mediante datos integrados con software, dashboards y automatizaciones. Sin embargo, instalar sensores no garantiza valor. El proyecto debe diseñarse alrededor de una decisión, una acción y unas condiciones reales.</p>
 <p>Empezar con un piloto pequeño, probar conectividad, medir calidad y ajustar alertas reduce el riesgo. Cuando hardware, comunicaciones, contexto, plataforma y usuarios están alineados, los sensores dejan de ser dispositivos aislados y se convierten en herramientas de gestión.</p>
-<div class="cta"><h2>¿Quieres conectar sensores o dispositivos con una plataforma?</h2><p>ARVELA puede ayudarte a definir el caso de uso, revisar conectividad, integrar dispositivos y construir dashboards, alertas y procesos adaptados.</p><a href="/#contacto">Hablar sobre el proyecto IoT</a></div>
 </article>
 <aside class="toc"><strong>Contenido</strong><ol><li><a href="#introduccion">Mundo físico y digital</a></li><li><a href="#que-es-iot">Qué significa IoT</a></li><li><a href="#sensor">Sensor inteligente</a></li><li><a href="#componentes">Componentes</a></li><li><a href="#tipos">Tipos de sensores</a></li><li><a href="#conectividad">Conectividad</a></li><li><a href="#protocolos">Protocolos</a></li><li><a href="#plataforma">Plataforma IoT</a></li><li><a href="#alertas">Datos y alertas</a></li><li><a href="#casos">Casos de uso</a></li><li><a href="#beneficios">Beneficios</a></li><li><a href="#riesgos">Riesgos</a></li><li><a href="#edge">Edge y nube</a></li><li><a href="#empezar">Cómo empezar</a></li><li><a href="#errores">Errores habituales</a></li><li><a href="#ia">IoT e IA</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ol></aside>
 </div>
-<section class="related"><h2>Contenidos y soluciones relacionados</h2><div class="related-grid"><article class="related-card"><span>Solución</span><h3>Integración IoT y Sensores</h3><p>Conexión de dispositivos, gateways, APIs, dashboards, históricos y alertas.</p><a href="/soluciones/integracion-iot-sensores.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>AVEGA · Ganadería Inteligente</h3><p>Sensores, localización, datos ambientales y alertas para explotaciones ganaderas.</p><a href="/soluciones/avega-ganaderia-inteligente.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>Analítica y Apoyo a la Decisión</h3><p>Conversión de datos IoT en indicadores, tendencias y cuadros de mando.</p><a href="/soluciones/analitica-datos-decision.html">Ver solución →</a></article></div></section>
-</main>
-  
+<section class="related"><h2>Contenidos y soluciones relacionados</h2><div class="related-grid"><article class="related-card"><span>Solución</span><h3>Integración IoT y Sensores</h3><p>Conexión de dispositivos, gateways, APIs, dashboards, históricos y alertas.</p><a href="/soluciones/iot-sensores.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>AVEGA · Ganadería Inteligente</h3><p>Sensores, localización, datos ambientales y alertas para explotaciones ganaderas.</p><a href="/soluciones/avega-ganaderia-inteligente.html">Ver solución →</a></article><article class="related-card"><span>Solución</span><h3>Analítica y Apoyo a la Decisión</h3><p>Conversión de datos IoT en indicadores, tendencias y cuadros de mando.</p><a href="/soluciones/analitica-datos-decision.html">Ver solución →</a></article></div></section>
+<section aria-labelledby="cta-final-title" class="site-cta"><h2 id="cta-final-title">¿Quieres aplicar IoT y sensores en un caso real?</h2><p>Cuéntanos el contexto, el objetivo y el punto en el que estás. Te ayudamos a definir un primer alcance realista y los siguientes pasos.</p><div class="cta-row"><a class="btn btn-primary" href="/contacto.html#formulario">Cuéntanos tu proyecto</a></div></section></main>
 <div id="footer-container"></div>
-  <script>
-  fetch('/Components/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-  </script>
-  
 </body></html>

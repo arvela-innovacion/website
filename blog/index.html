@@ -1,54 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Blog de tecnología, IA, IoT e innovación | ARVELA Innovación</title>
-  <meta name="description" content="Blog de ARVELA sobre Inteligencia Artificial, IoT, software a medida, visión artificial, analítica, innovación, ganadería inteligente, educación y transformación digital municipal." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://arvelainnova.es/blog/" />
-
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Blog de tecnología, IA, IoT e innovación | ARVELA" />
-  <meta property="og:description" content="Guías y contenidos prácticos sobre IA, IoT, software, datos, innovación, educación, ganadería y administración pública." />
-  <meta property="og:url" content="https://arvelainnova.es/blog/" />
-  <meta property="og:site_name" content="ARVELA Innovación" />
-  <meta property="og:image" content="https://arvelainnova.es/og-image.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blog de ARVELA Innovación" />
-  <meta name="twitter:description" content="Tecnología aplicada, IA, IoT, software, datos, innovación y transformación digital." />
-  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#172033" />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Blog",
-    "name":"Blog de ARVELA Innovación",
-    "url":"https://arvelainnova.es/blog/",
-    "description":"Contenidos sobre Inteligencia Artificial, IoT, software, analítica, innovación y transformación digital aplicada.",
-    "publisher":{
-      "@type":"Organization",
-      "name":"ARVELA Innovación",
-      "url":"https://arvelainnova.es/",
-      "logo":{
-        "@type":"ImageObject",
-        "url":"https://arvelainnova.es/logo.jpg"
-      }
-    },
-    "inLanguage":"es"
-  }
-  </script>
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog de tecnología, IA, IoT e innovación | ARVELA Innovación</title>
+<meta content="Blog de ARVELA sobre Inteligencia Artificial, IoT, software a medida, visión artificial, analítica, innovación, ganadería inteligente, educación y transformación digital municipal." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://arvelainnova.es/blog/" rel="canonical"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="Blog de tecnología, IA, IoT e innovación | ARVELA" property="og:title"/>
+<meta content="Guías y contenidos prácticos sobre IA, IoT, software, datos, innovación, educación, ganadería y administración pública." property="og:description"/>
+<meta content="https://arvelainnova.es/blog/" property="og:url"/>
+<meta content="ARVELA Innovación" property="og:site_name"/>
+<meta content="https://arvelainnova.es/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Blog de ARVELA Innovación" name="twitter:title"/>
+<meta content="Tecnología aplicada, IA, IoT, software, datos, innovación y transformación digital." name="twitter:description"/>
+<meta content="https://arvelainnova.es/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#172033" name="theme-color"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog de ARVELA Innovación","url":"https://arvelainnova.es/blog/","description":"Contenidos sobre Inteligencia Artificial, IoT, software, analítica, innovación y transformación digital aplicada.","publisher":{"@type":"Organization","name":"ARVELA Innovación","url":"https://arvelainnova.es/blog/","logo":{"@type":"ImageObject","url":"https://arvelainnova.es/logo.jpg"}},"inLanguage":"es"}</script>
+<script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
@@ -68,557 +45,189 @@
     ]
   }
   </script>
-
-  <style>
-    :root{
-      --bg:#f5f7fb;
-      --surface:#ffffff;
-      --surface-soft:#f8fafc;
-      --text:#172033;
-      --muted:#5f6b85;
-      --line:#e5e9f2;
-      --primary:#1f6feb;
-      --violet:#6d5dfc;
-      --cyan:#0891b2;
-      --green:#0f9f76;
-      --orange:#d97706;
-      --pink:#c2418c;
-      --shadow:0 20px 55px rgba(23,32,51,.08);
-      --radius:22px;
-      --max:1180px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at 12% 0%,rgba(31,111,235,.08),transparent 27rem),
-        radial-gradient(circle at 90% 10%,rgba(109,93,252,.08),transparent 28rem),
-        var(--bg);
-      line-height:1.7;
-    }
-
-    a{color:inherit}
-    .wrap{width:min(calc(100% - 32px),var(--max));margin:0 auto}
-
-    header{padding:22px 0 12px}
-    .topbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:18px;
-      padding:15px 18px;
-      background:rgba(255,255,255,.88);
-      backdrop-filter:blur(12px);
-      border:1px solid rgba(229,233,242,.95);
-      border-radius:22px;
-      box-shadow:var(--shadow);
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:13px;
-      text-decoration:none;
-      min-width:0;
-    }
-
-    .brand-logo{
-      width:52px;
-      height:52px;
-      border-radius:15px;
-      overflow:hidden;
-      border:1px solid #dbeafe;
-      background:linear-gradient(135deg,#eff6ff,#f5f3ff);
-      display:grid;
-      place-items:center;
-      flex:0 0 auto;
-    }
-
-    .brand-logo img{width:100%;height:100%;object-fit:cover}
-    .brand strong{display:block;line-height:1.15;letter-spacing:.02em}
-    .brand span{display:block;margin-top:4px;color:var(--muted);font-size:.9rem}
-
-    nav{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
-    nav a{
-      text-decoration:none;
-      color:var(--muted);
-      font-size:.92rem;
-      padding:8px 10px;
-      border-radius:999px;
-    }
-
-    nav a:hover,nav a.active{color:var(--text);background:#f3f4f6}
-
-    .breadcrumb{
-      padding:18px 0 0;
-      color:var(--muted);
-      font-size:.92rem;
-    }
-
-    .breadcrumb a{
-      color:var(--primary);
-      text-decoration:none;
-      font-weight:700;
-    }
-
-    .hero{padding:28px 0 24px}
-    .hero-card{
-      padding:48px;
-      border:1px solid var(--line);
-      border-radius:28px;
-      background:linear-gradient(135deg,rgba(255,255,255,.97),rgba(246,248,255,.97));
-      box-shadow:var(--shadow);
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      padding:7px 11px;
-      border-radius:999px;
-      background:#eef4ff;
-      color:var(--primary);
-      font-size:.82rem;
-      font-weight:800;
-      letter-spacing:.09em;
-      text-transform:uppercase;
-    }
-
-    h1{
-      margin:18px 0 0;
-      max-width:970px;
-      font-size:clamp(2.4rem,5vw,4.7rem);
-      line-height:1.03;
-      letter-spacing:-.05em;
-    }
-
-    .hero p{
-      max-width:900px;
-      margin:22px 0 0;
-      color:var(--muted);
-      font-size:1.15rem;
-    }
-
-    .intro{
-      display:grid;
-      grid-template-columns:1.35fr .65fr;
-      gap:18px;
-      margin:0 0 26px;
-    }
-
-    .intro-card,.topics-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:22px;
-      box-shadow:var(--shadow);
-      padding:26px;
-    }
-
-    .intro-card h2,.topics-card h2{margin:0 0 10px;line-height:1.2}
-    .intro-card p,.topics-card p{color:var(--muted);margin:0}
-
-    .topics{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin-top:15px;
-    }
-
-    .topic{
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:var(--surface-soft);
-      color:var(--muted);
-      font-size:.84rem;
-      font-weight:700;
-    }
-
-    .section-title{
-      margin:42px 0 18px;
-      display:flex;
-      justify-content:space-between;
-      gap:16px;
-      align-items:end;
-    }
-
-    .section-title h2{
-      margin:0;
-      font-size:clamp(1.8rem,3vw,2.6rem);
-      letter-spacing:-.03em;
-      line-height:1.1;
-    }
-
-    .section-title p{
-      margin:0;
-      max-width:530px;
-      text-align:right;
-      color:var(--muted);
-    }
-
-    .articles{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
-      padding-bottom:42px;
-    }
-
-    .article-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:22px;
-      box-shadow:var(--shadow);
-      padding:24px;
-      display:flex;
-      flex-direction:column;
-      min-height:330px;
-      transition:transform .18s ease,box-shadow .18s ease;
-    }
-
-    .article-card:hover{
-      transform:translateY(-3px);
-      box-shadow:0 25px 60px rgba(23,32,51,.11);
-    }
-
-    .category{
-      align-self:flex-start;
-      display:inline-flex;
-      padding:6px 9px;
-      border-radius:999px;
-      font-size:.76rem;
-      font-weight:800;
-      letter-spacing:.07em;
-      text-transform:uppercase;
-      margin-bottom:15px;
-    }
-
-    .cat-ia{background:#f5f3ff;color:var(--violet)}
-    .cat-iot{background:#ecfdf5;color:var(--green)}
-    .cat-soft{background:#eff6ff;color:var(--primary)}
-    .cat-data{background:#ecfeff;color:var(--cyan)}
-    .cat-public{background:#effcff;color:var(--cyan)}
-    .cat-rural{background:#f0fdf4;color:var(--green)}
-    .cat-idi{background:#fff7ed;color:var(--orange)}
-    .cat-edu{background:#fdf2f8;color:var(--pink)}
-
-    .article-card h3{
-      margin:0;
-      font-size:1.25rem;
-      line-height:1.25;
-      letter-spacing:-.02em;
-    }
-
-    .article-card p{
-      margin:14px 0 0;
-      color:var(--muted);
-      font-size:.95rem;
-      flex:1;
-    }
-
-    .article-meta{
-      margin-top:20px;
-      padding-top:16px;
-      border-top:1px solid var(--line);
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      align-items:center;
-    }
-
-    .article-meta span{
-      color:var(--muted);
-      font-size:.82rem;
-    }
-
-    .article-meta a{
-      color:var(--primary);
-      font-weight:800;
-      text-decoration:none;
-      white-space:nowrap;
-    }
-
-    .cta{
-      margin:8px 0 46px;
-      padding:34px;
-      border-radius:24px;
-      background:linear-gradient(135deg,#172033,#263a66);
-      color:#fff;
-      box-shadow:var(--shadow);
-    }
-
-    .cta h2{
-      margin:0;
-      font-size:clamp(1.7rem,3vw,2.4rem);
-      line-height:1.15;
-    }
-
-    .cta p{
-      max-width:800px;
-      color:rgba(255,255,255,.78);
-      margin:12px 0 0;
-    }
-
-    .cta a{
-      display:inline-flex;
-      margin-top:18px;
-      padding:12px 16px;
-      border-radius:13px;
-      background:#fff;
-      color:var(--text);
-      font-weight:800;
-      text-decoration:none;
-    }
-
-    footer{
-      padding:26px 0 34px;
-      color:var(--muted);
-      font-size:.92rem;
-    }
-
-    @media(max-width:980px){
-      .articles{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .intro{grid-template-columns:1fr}
-      .section-title{align-items:start;flex-direction:column}
-      .section-title p{text-align:left}
-    }
-
-    @media(max-width:720px){
-      .topbar{align-items:flex-start;flex-direction:column}
-      nav{justify-content:flex-start}
-      .hero-card{padding:28px 24px}
-      .articles{grid-template-columns:1fr}
-      .article-card{min-height:auto}
-      h1{font-size:2.55rem}
-    }
-  </style>
+<link href="/Components/styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-  
-  <script src="/Components/header-loader.js"></script>
-
-  <main class="wrap">
-    <div class="breadcrumb">
-      <a href="/">Inicio</a> · Blog
+<div id="header-container"></div>
+<script src="/Components/components.js"></script>
+<main class="wrap">
+<div class="breadcrumb">
+<a href="/">Inicio</a> · Blog
     </div>
-
-    <section class="hero">
-      <div class="hero-card">
-        <span class="eyebrow">Conocimiento y tecnología aplicada</span>
-        <h1>Blog de innovación, Inteligencia Artificial, IoT y transformación digital</h1>
-        <p>
+<section class="hero">
+<div class="hero-card">
+<span class="eyebrow">Conocimiento y tecnología aplicada</span>
+<h1>Blog de innovación, Inteligencia Artificial, IoT y transformación digital</h1>
+<p>
           Guías desarrolladas desde una perspectiva práctica sobre tecnologías y sectores en los que trabaja ARVELA:
           software, Inteligencia Artificial, visión artificial, IoT, analítica, I+D+i, educación, ganadería inteligente
           y administración pública.
         </p>
-      </div>
-    </section>
-
-    <section class="intro">
-      <div class="intro-card">
-        <h2>Tecnología explicada desde el problema que resuelve</h2>
-        <p>
+</div>
+</section>
+<section class="intro">
+<div class="intro-card">
+<h2>Tecnología explicada desde el problema que resuelve</h2>
+<p>
           Los artículos profundizan en conceptos, arquitecturas, criterios de decisión, errores habituales y formas de
           iniciar proyectos reales. El objetivo es que cada contenido complemente las páginas de soluciones y permita
           ampliar temas que no tendría sentido desarrollar completamente dentro de una página comercial.
         </p>
-      </div>
+</div>
+<div class="topics-card">
+<h2>Temas</h2>
+<p>La biblioteca crecerá por áreas relacionadas entre sí.</p>
+<div class="topics">
+<span class="topic">IA</span>
+<span class="topic">IoT</span>
+<span class="topic">Software</span>
+<span class="topic">Datos</span>
+<span class="topic">I+D+i</span>
+<span class="topic">Ganadería</span>
+<span class="topic">Educación</span>
+<span class="topic">Sector público</span>
+</div>
+</div>
+</section>
+<div class="section-title">
+<h2>Todos los artículos</h2>
+<p>12 contenidos especializados, enlazados con las áreas y soluciones de ARVELA.</p>
+</div>
+<section aria-label="Artículos del blog" class="articles">
 
-      <div class="topics-card">
-        <h2>Temas</h2>
-        <p>La biblioteca crecerá por áreas relacionadas entre sí.</p>
-        <div class="topics">
-          <span class="topic">IA</span>
-          <span class="topic">IoT</span>
-          <span class="topic">Software</span>
-          <span class="topic">Datos</span>
-          <span class="topic">I+D+i</span>
-          <span class="topic">Ganadería</span>
-          <span class="topic">Educación</span>
-          <span class="topic">Sector público</span>
-        </div>
-      </div>
-    </section>
 
-    <div class="section-title">
-      <h2>Todos los artículos</h2>
-      <p>12 contenidos especializados, enlazados con las áreas y soluciones de ARVELA.</p>
-    </div>
 
-    <section class="articles" aria-label="Artículos del blog">
 
-      <article class="article-card">
-        <span class="category cat-ia">Inteligencia Artificial</span>
-        <h3>Qué es la Inteligencia Artificial para empresas y cómo aplicarla</h3>
-        <p>
-          Conceptos, casos de uso, datos, automatización, modelos, riesgos y una metodología para empezar un proyecto de IA con objetivos medibles.
-        </p>
-        <div class="article-meta">
-          <span>Guía práctica</span>
-          <a href="/blog/blog-que-es-inteligencia-artificial-empresas.html">Leer artículo →</a>
-        </div>
-      </article>
 
-      <article class="article-card">
-        <span class="category cat-iot">IoT y sensores</span>
-        <h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
-        <p>
-          Dispositivos conectados, telemetría, redes, plataformas, alertas y aplicaciones del Internet de las Cosas en entornos reales.
-        </p>
-        <div class="article-meta">
-          <span>IoT</span>
-          <a href="/blog/blog-que-es-iot-sensores-inteligentes.html">Leer artículo →</a>
-        </div>
-      </article>
 
-      <article class="article-card">
-        <span class="category cat-soft">Software a medida</span>
-        <h3>Cuándo desarrollar software a medida y cuándo utilizar una solución existente</h3>
-        <p>
-          Criterios para decidir entre software estándar y desarrollo personalizado: costes, integraciones, procesos, escalabilidad y retorno.
-        </p>
-        <div class="article-meta">
-          <span>Desarrollo de software</span>
-          <a href="/blog/blog-cuando-desarrollar-software-a-medida.html">Leer artículo →</a>
-        </div>
-      </article>
 
-      <article class="article-card">
-        <span class="category cat-idi">Innovación</span>
-        <h3>Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico</h3>
-        <p>
-          Diferencias entre MVP, prototipo, prueba de concepto y piloto, con criterios para validar una idea antes de desarrollar el producto completo.
-        </p>
-        <div class="article-meta">
-          <span>MVP y producto</span>
-          <a href="/blog/blog-que-es-un-mvp.html">Leer artículo →</a>
-        </div>
-      </article>
 
-      <article class="article-card">
-        <span class="category cat-data">Analítica de datos</span>
-        <h3>Cómo convertir datos en decisiones mediante cuadros de mando y KPIs</h3>
-        <p>
-          Diseño de dashboards, selección de indicadores, calidad del dato, alertas y analítica orientada a decisiones reales.
-        </p>
-        <div class="article-meta">
-          <span>Datos y BI</span>
-          <a href="/blog/blog-cuadros-de-mando-analitica-datos.html">Leer artículo →</a>
-        </div>
-      </article>
 
-      <article class="article-card">
-        <span class="category cat-rural">Ganadería inteligente</span>
-        <h3>Inteligencia Artificial en ganadería: sensores, bienestar y digitalización</h3>
-        <p>
-          GPS, geovallas, actividad, bienestar animal, datos, predicción, cuadros de mando y aplicaciones de IA en explotaciones ganaderas.
-        </p>
-        <div class="article-meta">
-          <span>AVEGA y ganadería</span>
-          <a href="/blog/blog-inteligencia-artificial-ganaderia.html">Leer artículo →</a>
-        </div>
-      </article>
 
-      <article class="article-card">
-        <span class="category cat-ia">Visión artificial</span>
-        <h3>Qué es la visión artificial y cómo funciona</h3>
-        <p>
-          Computer Vision, detección de objetos, segmentación, OCR, seguimiento, Edge AI, cámaras inteligentes y aplicaciones empresariales.
-        </p>
-        <div class="article-meta">
-          <span>Computer Vision</span>
-          <a href="/blog/blog-vision-artificial-inteligencia-artificial.html">Leer artículo →</a>
-        </div>
-      </article>
 
-      <article class="article-card">
-        <span class="category cat-public">Administración pública</span>
-        <h3>Cómo digitalizar un Ayuntamiento paso a paso</h3>
-        <p>
-          Procesos, ciudadanía, GIS, IoT, analítica, Smart City, integración e Inteligencia Artificial dentro de una hoja de ruta municipal.
-        </p>
-        <div class="article-meta">
-          <span>Transformación municipal</span>
-          <a href="/blog/blog-digitalizacion-ayuntamientos.html">Leer artículo →</a>
-        </div>
-      </article>
 
-      <article class="article-card">
-        <span class="category cat-idi">Innovación e I+D+i</span>
-        <h3>Proyectos de I+D+i: financiación, TRL y cómo preparar una propuesta</h3>
-        <p>
+<article class="article-card">
+<span class="category">Innovación e I+D+i</span>
+<h3>Proyectos de I+D+i: financiación, TRL y cómo preparar una propuesta</h3>
+<p>
           De la oportunidad tecnológica al piloto: objetivos, TRL, paquetes de trabajo, riesgos, impacto, consorcios y explotación de resultados.
         </p>
-        <div class="article-meta">
-          <span>I+D+i</span>
-          <a href="/blog/blog-proyectos-idi-financiacion.html">Leer artículo →</a>
-        </div>
-      </article>
-
-      <article class="article-card">
-        <span class="category cat-iot">IoT técnico</span>
-        <h3>Cómo integrar sensores IoT en una plataforma web</h3>
-        <p>
-          Arquitectura IoT, MQTT, HTTP, LoRaWAN, gateways, APIs, series temporales, alertas, seguridad y escalabilidad de dispositivos.
-        </p>
-        <div class="article-meta">
-          <span>Arquitectura IoT</span>
-          <a href="/blog/blog-integracion-sensores-iot-plataformas.html">Leer artículo →</a>
-        </div>
-      </article>
-
-      <article class="article-card">
-        <span class="category cat-edu">Educación y formación</span>
-        <h3>Aprendizaje adaptativo: cómo personalizar la formación con datos e IA</h3>
-        <p>
-          Competencias, evaluación, analítica educativa, reglas de adaptación, recomendaciones, feedback e Inteligencia Artificial aplicada al aprendizaje.
-        </p>
-        <div class="article-meta">
-          <span>EdTech</span>
-          <a href="/blog/blog-aprendizaje-adaptativo-inteligencia-artificial.html">Leer artículo →</a>
-        </div>
-      </article>
-
-      <article class="article-card">
-        <span class="category cat-public">Administración pública</span>
-        <h3>Gestión de incidencias municipales: cómo digitalizar avisos y actuaciones</h3>
-        <p>
+<div class="article-meta">
+<span>Sergio Alonso · 24 de agosto 2026 · 10 min</span>
+<a href="/blog/blog-proyectos-idi-financiacion.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Administración pública</span>
+<h3>Gestión de incidencias municipales: cómo digitalizar avisos y actuaciones</h3>
+<p>
           Canales ciudadanos, geolocalización, GIS, clasificación, duplicados, SLA, contratas, cuadros de mando, IoT e IA.
         </p>
-        <div class="article-meta">
-          <span>Servicios municipales</span>
-          <a href="/blog/blog-gestion-incidencias-municipales.html">Leer artículo →</a>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="cta">
-      <h2>De la lectura al proyecto</h2>
-      <p>
-        Los contenidos del blog están conectados con las soluciones de ARVELA. Si una necesidad requiere pasar de la idea
-        a un piloto, una integración o una plataforma completa, podemos analizar el caso y definir un alcance tecnológico.
-      </p>
-      <a href="/#contacto">Hablar con ARVELA</a>
-    </section>
-  </main>
-
-  <div id="footer-container"></div>
-  <script>
-  fetch('/Components/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-  </script>
+<div class="article-meta">
+<span>Sergio Alonso · 20 de agosto 2026 · 8 min</span>
+<a href="/blog/blog-gestion-incidencias-municipales.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Administración pública</span>
+<h3>Cómo digitalizar un Ayuntamiento paso a paso</h3>
+<p>
+          Procesos, ciudadanía, GIS, IoT, analítica, Smart City, integración e Inteligencia Artificial dentro de una hoja de ruta municipal.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 16 de agosto 2026 · 8 min</span>
+<a href="/blog/blog-digitalizacion-ayuntamientos.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Educación y formación</span>
+<h3>Aprendizaje adaptativo: cómo personalizar la formación con datos e IA</h3>
+<p>
+          Competencias, evaluación, analítica educativa, reglas de adaptación, recomendaciones, feedback e Inteligencia Artificial aplicada al aprendizaje.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 12 de agosto 2026 · 8 min</span>
+<a href="/blog/blog-aprendizaje-adaptativo-inteligencia-artificial.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Ganadería inteligente</span>
+<h3>Inteligencia Artificial en ganadería: sensores, bienestar y digitalización</h3>
+<p>
+          GPS, geovallas, actividad, bienestar animal, datos, predicción, cuadros de mando y aplicaciones de IA en explotaciones ganaderas.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 8 de agosto 2026 · 10 min</span>
+<a href="/blog/blog-inteligencia-artificial-ganaderia.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">IoT técnico</span>
+<h3>Cómo integrar sensores IoT en una plataforma web</h3>
+<p>
+          Arquitectura IoT, MQTT, HTTP, LoRaWAN, gateways, APIs, series temporales, alertas, seguridad y escalabilidad de dispositivos.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 4 de agosto 2026 · 10 min</span>
+<a href="/blog/blog-integracion-sensores-iot-plataformas.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Inteligencia Artificial</span>
+<h3>Qué es la Inteligencia Artificial para empresas y cómo aplicarla</h3>
+<p>
+          Conceptos, casos de uso, datos, automatización, modelos, riesgos y una metodología para empezar un proyecto de IA con objetivos medibles.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 31 de julio 2026 · 11 min</span>
+<a href="/blog/blog-que-es-inteligencia-artificial-empresas.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">IoT y sensores</span>
+<h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
+<p>
+          Dispositivos conectados, telemetría, redes, plataformas, alertas y aplicaciones del Internet de las Cosas en entornos reales.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 27 de julio 2026 · 9 min</span>
+<a href="/blog/blog-que-es-iot-sensores-inteligentes.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Software a medida</span>
+<h3>Cuándo desarrollar software a medida y cuándo utilizar una solución existente</h3>
+<p>
+          Criterios para decidir entre software estándar y desarrollo personalizado: costes, integraciones, procesos, escalabilidad y retorno.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 23 de julio 2026 · 10 min</span>
+<a href="/blog/blog-cuando-desarrollar-software-a-medida.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Innovación</span>
+<h3>Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico</h3>
+<p>
+          Diferencias entre MVP, prototipo, prueba de concepto y piloto, con criterios para validar una idea antes de desarrollar el producto completo.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 18 de julio 2026 · 10 min</span>
+<a href="/blog/blog-que-es-un-mvp.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Analítica de datos</span>
+<h3>Cómo convertir datos en decisiones mediante cuadros de mando y KPIs</h3>
+<p>
+          Diseño de dashboards, selección de indicadores, calidad del dato, alertas y analítica orientada a decisiones reales.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 14 de julio 2026 · 9 min</span>
+<a href="/blog/blog-cuadros-de-mando-analitica-datos.html">Leer artículo →</a>
+</div>
+</article><article class="article-card">
+<span class="category">Visión artificial</span>
+<h3>Qué es la visión artificial y cómo funciona</h3>
+<p>
+          Computer Vision, detección de objetos, segmentación, OCR, seguimiento, Edge AI, cámaras inteligentes y aplicaciones empresariales.
+        </p>
+<div class="article-meta">
+<span>Sergio Alonso · 9 de julio 2026 · 9 min</span>
+<a href="/blog/blog-vision-artificial-inteligencia-artificial.html">Leer artículo →</a>
+</div>
+</article></section>
+<section aria-labelledby="cta-final-title" class="site-cta"><h2 id="cta-final-title">¿Quieres llevar una idea del blog a un proyecto real?</h2><p>Cuéntanos el contexto, el objetivo y el punto en el que estás. Te ayudamos a definir un primer alcance realista y los siguientes pasos.</p><div class="cta-row"><a class="btn btn-primary" href="/contacto.html#formulario">Cuéntanos tu proyecto</a></div></section></main>
+<div id="footer-container"></div>
 </body>
 </html>

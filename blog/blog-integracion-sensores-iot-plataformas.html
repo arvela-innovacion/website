@@ -1,741 +1,386 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Cómo integrar sensores IoT en una plataforma web | MQTT, APIs y tiempo real | ARVELA</title>
-  <meta name="description" content="Guía completa para integrar sensores IoT en una plataforma web: dispositivos, gateways, MQTT, HTTP, LoRaWAN, NB-IoT, APIs, bases de datos, dashboards, alertas, seguridad y escalabilidad." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://arvelainnova.es/blog/integracion-sensores-iot-plataformas/" />
-
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cómo integrar sensores IoT en una plataforma web" />
-  <meta property="og:description" content="Arquitectura práctica para conectar sensores, gateways, MQTT, APIs, bases de datos, dashboards y alertas." />
-  <meta property="og:url" content="https://arvelainnova.es/blog/integracion-sensores-iot-plataformas/" />
-  <meta property="og:site_name" content="ARVELA Innovación" />
-  <meta property="og:image" content="https://arvelainnova.es/og-image.png" />
-  <meta property="article:publisher" content="https://arvelainnova.es/" />
-  <meta property="article:section" content="IoT e integración" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cómo integrar sensores IoT en una plataforma web" />
-  <meta name="twitter:description" content="MQTT, LoRaWAN, APIs, gateways, tiempo real, almacenamiento, dashboards, alertas y seguridad." />
-  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#172033" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Cómo integrar sensores IoT en una plataforma web",
-    "description": "Guía técnica y práctica sobre integración de sensores, dispositivos, gateways, MQTT, HTTP, LoRaWAN, APIs, bases de datos, dashboards, alertas y seguridad.",
-    "url": "https://arvelainnova.es/blog/integracion-sensores-iot-plataformas/",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://arvelainnova.es/blog/integracion-sensores-iot-plataformas/"
-    },
-    "image": "https://arvelainnova.es/og-image.png",
-    "author": {
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cómo integrar sensores IoT en una plataforma web | MQTT, APIs y tiempo real | ARVELA</title>
+<meta content="Guía completa para integrar sensores IoT en una plataforma web: dispositivos, gateways, MQTT, HTTP, LoRaWAN, NB-IoT, APIs, bases de datos, dashboards, alertas, seguridad y escalabilidad." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://arvelainnova.es/blog/blog-integracion-sensores-iot-plataformas.html" rel="canonical"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="Cómo integrar sensores IoT en una plataforma web" property="og:title"/>
+<meta content="Arquitectura práctica para conectar sensores, gateways, MQTT, APIs, bases de datos, dashboards y alertas." property="og:description"/>
+<meta content="https://arvelainnova.es/blog/blog-integracion-sensores-iot-plataformas.html" property="og:url"/>
+<meta content="ARVELA Innovación" property="og:site_name"/>
+<meta content="https://arvelainnova.es/og-image.png" property="og:image"/>
+<meta content="https://arvelainnova.es/" property="article:publisher"/>
+<meta content="IoT e integración" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cómo integrar sensores IoT en una plataforma web" name="twitter:title"/>
+<meta content="MQTT, LoRaWAN, APIs, gateways, tiempo real, almacenamiento, dashboards, alertas y seguridad." name="twitter:description"/>
+<meta content="https://arvelainnova.es/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#172033" name="theme-color"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cómo integrar sensores IoT en una plataforma web",
+  "description": "Guía técnica y práctica sobre integración de sensores, dispositivos, gateways, MQTT, HTTP, LoRaWAN, APIs, bases de datos, dashboards, alertas y seguridad.",
+  "url": "https://arvelainnova.es/blog/blog-integracion-sensores-iot-plataformas.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://arvelainnova.es/blog/blog-integracion-sensores-iot-plataformas.html"
+  },
+  "image": "https://arvelainnova.es/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "Sergio Alonso",
+    "jobTitle": "CEO",
+    "worksFor": {
       "@type": "Organization",
       "name": "ARVELA Innovación",
       "url": "https://arvelainnova.es/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARVELA Innovación",
+    "url": "https://arvelainnova.es/blog/blog-integracion-sensores-iot-plataformas.html",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arvelainnova.es/logo.jpg"
+    }
+  },
+  "datePublished": "2026-08-04",
+  "dateModified": "2026-08-28",
+  "inLanguage": "es",
+  "articleSection": "IoT e integración",
+  "keywords": [
+    "integrar sensores IoT",
+    "plataforma IoT",
+    "MQTT",
+    "LoRaWAN",
+    "NB-IoT",
+    "APIs IoT",
+    "dashboard IoT",
+    "datos en tiempo real",
+    "gateway IoT",
+    "arquitectura IoT"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://arvelainnova.es/"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ARVELA Innovación",
-      "url": "https://arvelainnova.es/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://arvelainnova.es/logo.jpg"
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://arvelainnova.es/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Integración de sensores IoT en plataformas web",
+      "item": "https://arvelainnova.es/blog/blog-integracion-sensores-iot-plataformas.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo se conecta un sensor IoT con una plataforma web?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El sensor envía datos mediante una red o gateway utilizando protocolos como MQTT o HTTP. La plataforma recibe, valida, almacena y relaciona los datos con el dispositivo y el activo correspondiente."
       }
     },
-    "datePublished": "2026-08-06",
-    "dateModified": "2026-08-06",
-    "inLanguage": "es",
-    "articleSection": "IoT e integración",
-    "keywords": [
-      "integrar sensores IoT",
-      "plataforma IoT",
-      "MQTT",
-      "LoRaWAN",
-      "NB-IoT",
-      "APIs IoT",
-      "dashboard IoT",
-      "datos en tiempo real",
-      "gateway IoT",
-      "arquitectura IoT"
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://arvelainnova.es/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://arvelainnova.es/blog/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Integración de sensores IoT en plataformas web",
-        "item": "https://arvelainnova.es/blog/integracion-sensores-iot-plataformas/"
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre MQTT y HTTP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MQTT utiliza un modelo de publicación y suscripción ligero, adecuado para mensajería IoT. HTTP se basa en peticiones y respuestas y es habitual para APIs y operaciones puntuales."
       }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cómo se conecta un sensor IoT con una plataforma web?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El sensor envía datos mediante una red o gateway utilizando protocolos como MQTT o HTTP. La plataforma recibe, valida, almacena y relaciona los datos con el dispositivo y el activo correspondiente."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué diferencia hay entre MQTT y HTTP?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "MQTT utiliza un modelo de publicación y suscripción ligero, adecuado para mensajería IoT. HTTP se basa en peticiones y respuestas y es habitual para APIs y operaciones puntuales."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué es un gateway IoT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Es un equipo intermedio que recibe datos de sensores, adapta protocolos, aplica procesamiento local y comunica la información a la plataforma."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Hace falta una base de datos especial para IoT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Depende del volumen y de las consultas. Las series temporales pueden almacenarse en bases especializadas o en sistemas relacionales correctamente diseñados."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo se empieza una integración IoT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Se empieza definiendo el caso de uso, el activo, la frecuencia de datos, la conectividad, el formato de mensajes, las reglas de alerta y un piloto con pocos dispositivos."
-        }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es un gateway IoT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es un equipo intermedio que recibe datos de sensores, adapta protocolos, aplica procesamiento local y comunica la información a la plataforma."
       }
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-soft: #f8fafc;
-      --text: #172033;
-      --muted: #5f6b85;
-      --line: #e5e9f2;
-      --primary: #1f6feb;
-      --green: #0f9f76;
-      --cyan: #0891b2;
-      --violet: #6d5dfc;
-      --warning: #9a6700;
-      --shadow: 0 20px 55px rgba(23, 32, 51, 0.08);
-      --radius: 22px;
-      --max: 1180px;
-      --article: 790px;
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hace falta una base de datos especial para IoT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del volumen y de las consultas. Las series temporales pueden almacenarse en bases especializadas o en sistemas relacionales correctamente diseñados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se empieza una integración IoT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se empieza definiendo el caso de uso, el activo, la frecuencia de datos, la conectividad, el formato de mensajes, las reglas de alerta y un piloto con pocos dispositivos."
+      }
     }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 12% 0%, rgba(15,159,118,.09), transparent 27rem),
-        radial-gradient(circle at 90% 10%, rgba(8,145,178,.08), transparent 28rem),
-        var(--bg);
-      line-height: 1.72;
-    }
-
-    a { color: inherit; }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: .92em;
-      background: #eef2f7;
-      padding: .12rem .36rem;
-      border-radius: 6px;
-    }
-    pre {
-      overflow-x: auto;
-      padding: 18px;
-      border-radius: 16px;
-      background: #172033;
-      color: #edf2f7;
-      font-size: .9rem;
-      line-height: 1.55;
-    }
-    pre code { background: transparent; padding: 0; color: inherit; }
-
-    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
-
-    header { padding: 22px 0 12px; }
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 15px 18px;
-      background: rgba(255,255,255,.88);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(229,233,242,.95);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; min-width: 0; }
-    .brand-logo {
-      width: 52px; height: 52px; border-radius: 15px; overflow: hidden;
-      border: 1px solid #dbeafe; background: linear-gradient(135deg,#eff6ff,#ecfdf5);
-      display: grid; place-items: center; flex: 0 0 auto;
-    }
-    .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
-    .brand strong { display: block; line-height: 1.15; letter-spacing: .02em; }
-    .brand span { display: block; margin-top: 4px; color: var(--muted); font-size: .9rem; }
-
-    nav { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-    nav a {
-      text-decoration: none; color: var(--muted); font-size: .92rem;
-      padding: 8px 10px; border-radius: 999px;
-    }
-    nav a:hover, nav a.active { color: var(--text); background: #f3f4f6; }
-
-    .breadcrumb { padding: 18px 0 0; color: var(--muted); font-size: .92rem; }
-    .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 700; }
-
-    .hero { padding: 28px 0 22px; }
-    .hero-card {
-      padding: 42px;
-      background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(242,253,249,.96));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-    .category {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 7px 11px; border-radius: 999px;
-      background: #ecfdf5; color: var(--green);
-      font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em;
-    }
-    .hero h1 {
-      margin: 18px 0 0;
-      max-width: 980px;
-      font-size: clamp(2.25rem, 5vw, 4.5rem);
-      line-height: 1.05;
-      letter-spacing: -.045em;
-    }
-    .lead {
-      max-width: 900px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 1.16rem;
-    }
-    .meta {
-      display: flex; gap: 16px; flex-wrap: wrap;
-      margin-top: 24px; color: var(--muted); font-size: .92rem;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, var(--article)) 290px;
-      gap: 28px;
-      align-items: start;
-      padding: 12px 0 38px;
-      justify-content: center;
-    }
-
-    article {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 38px;
-      min-width: 0;
-    }
-    article h2 {
-      margin: 2.6rem 0 1rem;
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
-      line-height: 1.2;
-      letter-spacing: -.025em;
-      scroll-margin-top: 20px;
-    }
-    article h2:first-of-type { margin-top: 0; }
-    article h3 {
-      margin: 2rem 0 .75rem;
-      font-size: 1.24rem;
-      line-height: 1.3;
-      scroll-margin-top: 20px;
-    }
-    article p, article li { color: var(--muted); }
-    article strong { color: var(--text); }
-    article ul, article ol { padding-left: 1.25rem; }
-    article li + li { margin-top: .55rem; }
-
-    .toc {
-      position: sticky;
-      top: 20px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.94);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-    .toc strong { display: block; margin-bottom: 12px; }
-    .toc ol { margin: 0; padding-left: 18px; }
-    .toc li + li { margin-top: 8px; }
-    .toc a { color: var(--muted); text-decoration: none; font-size: .9rem; }
-    .toc a:hover { color: var(--primary); }
-
-    .highlight {
-      margin: 24px 0;
-      padding: 22px;
-      border-radius: 18px;
-      background: linear-gradient(135deg,#effdf7,#effcff);
-      border: 1px solid #cfeade;
-    }
-    .highlight strong { display: block; margin-bottom: 7px; }
-    .highlight p { margin: 0; }
-
-    .warning {
-      margin: 24px 0;
-      padding: 20px 22px;
-      border-radius: 18px;
-      background: #fffaf0;
-      border: 1px solid #f2dfb2;
-    }
-    .warning strong { color: var(--warning); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 14px;
-      margin: 22px 0;
-    }
-    .card {
-      border: 1px solid var(--line);
-      background: var(--surface-soft);
-      border-radius: 18px;
-      padding: 19px;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 1.04rem; }
-    .card p { margin: 0; font-size: .95rem; }
-
-    .comparison {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 24px 0;
-      font-size: .95rem;
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(23,32,51,.06);
-    }
-    .comparison th, .comparison td {
-      padding: 14px;
-      border: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-    .comparison th { background: #f8fafc; color: var(--text); }
-    .comparison td { color: var(--muted); }
-
-    .pipeline {
-      display: grid;
-      grid-template-columns: repeat(7,minmax(0,1fr));
-      gap: 8px;
-      margin: 24px 0;
-    }
-    .node {
-      padding: 14px 8px;
-      text-align: center;
-      border-radius: 15px;
-      background: var(--surface-soft);
-      border: 1px solid var(--line);
-    }
-    .node strong { display:block; font-size:.86rem; }
-    .node span { display:block; margin-top:6px; color:var(--muted); font-size:.76rem; }
-
-    .steps {
-      counter-reset: step;
-      display: grid;
-      gap: 14px;
-      margin: 24px 0;
-    }
-    .step {
-      position: relative;
-      padding: 20px 20px 20px 68px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--surface-soft);
-    }
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 20px; top: 19px;
-      width: 32px; height: 32px;
-      display: grid; place-items: center;
-      border-radius: 50%;
-      background: var(--green);
-      color: white; font-weight: 800;
-    }
-    .step h3 { margin: 0 0 7px; font-size: 1.05rem; }
-    .step p { margin: 0; }
-
-    .internal-link {
-      color: var(--primary);
-      font-weight: 750;
-      text-decoration-thickness: .08em;
-      text-underline-offset: .16em;
-    }
-
-    details {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px 18px;
-    }
-    details + details { margin-top: 10px; }
-    summary { cursor: pointer; font-weight: 800; }
-    details p { margin-bottom: 0; }
-
-    .cta {
-      margin-top: 36px;
-      padding: 28px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #172033, #174c4b);
-      color: white;
-    }
-    .cta h2 { margin: 0 0 10px; color: white; }
-    .cta p { color: rgba(255,255,255,.78); }
-    .cta a {
-      display: inline-flex;
-      margin-top: 8px;
-      padding: 12px 16px;
-      border-radius: 13px;
-      background: white;
-      color: var(--text);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .related { padding: 12px 0 42px; }
-    .related h2 { margin-bottom: 16px; letter-spacing: -.02em; }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 16px;
-    }
-    .related-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 19px;
-      box-shadow: var(--shadow);
-      padding: 20px;
-    }
-    .related-card span { color: var(--green); font-size: .82rem; font-weight: 800; }
-    .related-card h3 { margin: 9px 0; font-size: 1.08rem; }
-    .related-card p { color: var(--muted); font-size: .93rem; }
-    .related-card a { color: var(--primary); font-weight: 800; text-decoration: none; }
-
-    footer { padding: 26px 0 34px; color: var(--muted); font-size: .92rem; }
-
-    @media (max-width: 980px) {
-      .layout { grid-template-columns: 1fr; }
-      .toc { position: static; order: -1; }
-      .related-grid { grid-template-columns: 1fr; }
-      .pipeline { grid-template-columns: repeat(3,1fr); }
-    }
-
-    @media (max-width: 760px) {
-      .topbar { align-items: flex-start; flex-direction: column; }
-      nav { justify-content: flex-start; }
-      .hero-card, article { padding: 24px; }
-      .grid, .pipeline { grid-template-columns: 1fr; }
-      .comparison { display: block; overflow-x: auto; }
-      .hero h1 { font-size: 2.45rem; }
-    }
-  </style>
+  ]
+}
+</script>
+<link href="/Components/styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-  
-  <script src="/Components/header-loader.js"></script>
-
-  <main class="wrap">
-    <div class="breadcrumb">
-      <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Integración de sensores IoT
+<div id="header-container"></div>
+<script src="/Components/components.js"></script>
+<main class="wrap">
+<div class="breadcrumb">
+<a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Integración de sensores IoT
     </div>
-
-    <section class="hero">
-      <div class="hero-card">
-        <span class="category">IoT e integración</span>
-        <h1>Cómo integrar sensores IoT en una plataforma web</h1>
-        <p class="lead">
+<section class="hero">
+<div class="hero-card">
+<span class="category">IoT e integración</span>
+<h1>Cómo integrar sensores IoT en una plataforma web</h1>
+<p class="lead">
           Una solución IoT completa conecta dispositivos, redes, gateways, protocolos, APIs, almacenamiento, dashboards
           y alertas. El reto no consiste en recibir una lectura, sino en construir una arquitectura fiable que mantenga
           identidad, contexto, seguridad y trazabilidad desde el sensor hasta la decisión.
         </p>
-        <div class="meta">
-          <span>Publicado por ARVELA Innovación</span>
-          <span>6 de agosto de 2026</span>
-          <span>Lectura aproximada: 22 minutos</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="layout">
-      <article>
-        <h2 id="introduccion">Un sensor conectado no es todavía una solución IoT</h2>
-        <p>
+<div class="meta"><span>Sergio Alonso · CEO</span><span>4 de agosto de 2026</span><span>Lectura aproximada: 10 min</span></div>
+</div>
+</section>
+<div class="layout">
+<article>
+<h2 id="introduccion">Un sensor conectado no es todavía una solución IoT</h2>
+<p>
           Conseguir que un dispositivo envíe un valor a Internet puede ser relativamente sencillo. Construir una plataforma
           capaz de recibir datos de cientos o miles de dispositivos, identificar su origen, detectar errores, conservar
           históricos y generar alertas fiables es un problema mucho más amplio.
         </p>
-        <p>
+<p>
           La integración IoT debe resolver preguntas que no aparecen en una demostración inicial. ¿Qué ocurre si el dispositivo
           repite un mensaje? ¿Cómo se sabe que una lectura pertenece al sensor correcto? ¿Qué pasa si llega tarde, sin unidad o
           con una marca temporal incorrecta? ¿Cómo se actualizan credenciales? ¿Quién recibe una alerta y cómo se evita generar
           cientos de avisos?
         </p>
-        <div class="highlight">
-          <strong>Idea principal</strong>
-          <p>
+<div class="highlight">
+<strong>Idea principal</strong>
+<p>
             La arquitectura debe diseñarse para gestionar dispositivos y eventos, no solo para almacenar valores.
           </p>
-        </div>
-
-        <h2 id="arquitectura">Arquitectura básica de una plataforma IoT</h2>
-        <div class="pipeline" aria-label="Arquitectura IoT de extremo a extremo">
-          <div class="node"><strong>Activo</strong><span>Máquina, animal o espacio</span></div>
-          <div class="node"><strong>Sensor</strong><span>Captura</span></div>
-          <div class="node"><strong>Red</strong><span>Transporte</span></div>
-          <div class="node"><strong>Gateway</strong><span>Adaptación</span></div>
-          <div class="node"><strong>Ingesta</strong><span>Recepción</span></div>
-          <div class="node"><strong>Plataforma</strong><span>Datos y reglas</span></div>
-          <div class="node"><strong>Usuario</strong><span>Decisión</span></div>
-        </div>
-        <p>
+</div>
+<h2 id="arquitectura">Arquitectura básica de una plataforma IoT</h2>
+<div aria-label="Arquitectura IoT de extremo a extremo" class="pipeline">
+<div class="node"><strong>Activo</strong><span>Máquina, animal o espacio</span></div>
+<div class="node"><strong>Sensor</strong><span>Captura</span></div>
+<div class="node"><strong>Red</strong><span>Transporte</span></div>
+<div class="node"><strong>Gateway</strong><span>Adaptación</span></div>
+<div class="node"><strong>Ingesta</strong><span>Recepción</span></div>
+<div class="node"><strong>Plataforma</strong><span>Datos y reglas</span></div>
+<div class="node"><strong>Usuario</strong><span>Decisión</span></div>
+</div>
+<p>
           No todos los proyectos utilizan un gateway físico. Un dispositivo con conectividad móvil puede comunicarse directamente
           con la plataforma. Sin embargo, la separación conceptual sigue siendo útil para entender dónde se mide, dónde se
           transporta, dónde se transforma y dónde se interpreta.
         </p>
-        <p>
-          La solución de <a class="internal-link" href="/soluciones/integracion-iot-sensores.html">Integración IoT y Sensores</a>
+<p>
+          La solución de <a class="internal-link" href="/soluciones/iot-sensores.html">Integración IoT y Sensores</a>
           de ARVELA aborda estas capas desde el dispositivo hasta el dashboard.
         </p>
-
-        <h2 id="activo-dispositivo">Diferenciar activo, dispositivo y sensor</h2>
-        <p>
+<h2 id="activo-dispositivo">Diferenciar activo, dispositivo y sensor</h2>
+<p>
           Un error habitual es utilizar estos conceptos como si fueran equivalentes. El activo es aquello que la organización
           quiere supervisar: una máquina, un animal, un depósito, una parcela, un vehículo o una sala. El dispositivo es el
           equipo físico conectado. El sensor es el elemento que mide una variable.
         </p>
-        <p>
+<p>
           Un dispositivo puede incorporar varios sensores y cambiar de activo durante su vida útil. Por eso la plataforma
           debería mantener la asignación entre dispositivo y activo, incluyendo fechas de instalación, sustitución y mantenimiento.
         </p>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Entidad</th>
-              <th>Ejemplo</th>
-              <th>Información necesaria</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Activo</strong></td>
-              <td>Vaca, bomba, vehículo o depósito.</td>
-              <td>Identidad, ubicación, propietario, estado y contexto.</td>
-            </tr>
-            <tr>
-              <td><strong>Dispositivo</strong></td>
-              <td>Collar GPS o nodo industrial.</td>
-              <td>Serie, firmware, batería, cobertura y credenciales.</td>
-            </tr>
-            <tr>
-              <td><strong>Sensor</strong></td>
-              <td>Temperatura, presión o acelerómetro.</td>
-              <td>Magnitud, unidad, rango, precisión y calibración.</td>
-            </tr>
-            <tr>
-              <td><strong>Medición</strong></td>
-              <td>21,4 °C a una hora concreta.</td>
-              <td>Valor, unidad, fecha, calidad y origen.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="conectividad">Elegir la conectividad</h2>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Entidad</th>
+<th>Ejemplo</th>
+<th>Información necesaria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Activo</strong></td>
+<td>Vaca, bomba, vehículo o depósito.</td>
+<td>Identidad, ubicación, propietario, estado y contexto.</td>
+</tr>
+<tr>
+<td><strong>Dispositivo</strong></td>
+<td>Collar GPS o nodo industrial.</td>
+<td>Serie, firmware, batería, cobertura y credenciales.</td>
+</tr>
+<tr>
+<td><strong>Sensor</strong></td>
+<td>Temperatura, presión o acelerómetro.</td>
+<td>Magnitud, unidad, rango, precisión y calibración.</td>
+</tr>
+<tr>
+<td><strong>Medición</strong></td>
+<td>21,4 °C a una hora concreta.</td>
+<td>Valor, unidad, fecha, calidad y origen.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conectividad">Elegir la conectividad</h2>
+<p>
           La red debe seleccionarse según distancia, consumo, volumen de datos, movilidad, cobertura, latencia y coste. La mejor
           opción no es la más moderna, sino la que responde al entorno.
         </p>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Tecnología</th>
-              <th>Uso frecuente</th>
-              <th>Consideraciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Ethernet</strong></td>
-              <td>Equipos fijos e instalaciones.</td>
-              <td>Alta estabilidad, pero requiere cableado.</td>
-            </tr>
-            <tr>
-              <td><strong>Wi-Fi</strong></td>
-              <td>Edificios y dispositivos con alimentación.</td>
-              <td>Buen ancho de banda, consumo y cobertura variables.</td>
-            </tr>
-            <tr>
-              <td><strong>Bluetooth</strong></td>
-              <td>Distancias cortas y sensores personales.</td>
-              <td>Necesita gateway o teléfono cercano.</td>
-            </tr>
-            <tr>
-              <td><strong>LoRaWAN</strong></td>
-              <td>Largo alcance y mensajes pequeños.</td>
-              <td>Bajo consumo, bajo ancho de banda y gateway.</td>
-            </tr>
-            <tr>
-              <td><strong>NB-IoT / LTE-M</strong></td>
-              <td>Dispositivos distribuidos con operador móvil.</td>
-              <td>Cobertura, coste y disponibilidad según proveedor.</td>
-            </tr>
-            <tr>
-              <td><strong>4G / 5G</strong></td>
-              <td>Mayor volumen, movilidad, vídeo o gateways.</td>
-              <td>Consumo y coste superiores.</td>
-            </tr>
-            <tr>
-              <td><strong>Satélite</strong></td>
-              <td>Zonas sin cobertura terrestre.</td>
-              <td>Coste, latencia y volumen limitado.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="gateway">Qué hace un gateway IoT</h2>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Tecnología</th>
+<th>Uso frecuente</th>
+<th>Consideraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ethernet</strong></td>
+<td>Equipos fijos e instalaciones.</td>
+<td>Alta estabilidad, pero requiere cableado.</td>
+</tr>
+<tr>
+<td><strong>Wi-Fi</strong></td>
+<td>Edificios y dispositivos con alimentación.</td>
+<td>Buen ancho de banda, consumo y cobertura variables.</td>
+</tr>
+<tr>
+<td><strong>Bluetooth</strong></td>
+<td>Distancias cortas y sensores personales.</td>
+<td>Necesita gateway o teléfono cercano.</td>
+</tr>
+<tr>
+<td><strong>LoRaWAN</strong></td>
+<td>Largo alcance y mensajes pequeños.</td>
+<td>Bajo consumo, bajo ancho de banda y gateway.</td>
+</tr>
+<tr>
+<td><strong>NB-IoT / LTE-M</strong></td>
+<td>Dispositivos distribuidos con operador móvil.</td>
+<td>Cobertura, coste y disponibilidad según proveedor.</td>
+</tr>
+<tr>
+<td><strong>4G / 5G</strong></td>
+<td>Mayor volumen, movilidad, vídeo o gateways.</td>
+<td>Consumo y coste superiores.</td>
+</tr>
+<tr>
+<td><strong>Satélite</strong></td>
+<td>Zonas sin cobertura terrestre.</td>
+<td>Coste, latencia y volumen limitado.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gateway">Qué hace un gateway IoT</h2>
+<p>
           El gateway actúa como puente entre dispositivos y plataforma. Puede recibir Bluetooth, Modbus, LoRa, serie u otros
           protocolos y convertirlos a MQTT, HTTP o un formato común.
         </p>
-        <p>
+<p>
           También puede:
         </p>
-        <ul>
-          <li>Filtrar o agregar lecturas.</li>
-          <li>Almacenar datos si se pierde la conexión.</li>
-          <li>Ejecutar reglas locales.</li>
-          <li>Convertir unidades y formatos.</li>
-          <li>Gestionar dispositivos de una instalación.</li>
-          <li>Enviar solo eventos relevantes.</li>
-          <li>Actualizar configuración de sensores.</li>
-        </ul>
-        <p>
+<ul>
+<li>Filtrar o agregar lecturas.</li>
+<li>Almacenar datos si se pierde la conexión.</li>
+<li>Ejecutar reglas locales.</li>
+<li>Convertir unidades y formatos.</li>
+<li>Gestionar dispositivos de una instalación.</li>
+<li>Enviar solo eventos relevantes.</li>
+<li>Actualizar configuración de sensores.</li>
+</ul>
+<p>
           El gateway introduce capacidad, pero también un nuevo elemento que debe desplegarse, actualizarse y monitorizarse.
         </p>
-
-        <h2 id="mqtt-http">MQTT frente a HTTP</h2>
-        <p>
+<h2 id="mqtt-http">MQTT frente a HTTP</h2>
+<p>
           MQTT y HTTP pueden convivir dentro de la misma solución. MQTT es habitual para telemetría y eventos continuos.
           HTTP es muy útil para APIs, configuración, consultas y operaciones administrativas.
         </p>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Criterio</th>
-              <th>MQTT</th>
-              <th>HTTP</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Modelo</strong></td>
-              <td>Publicación y suscripción mediante broker.</td>
-              <td>Petición y respuesta cliente-servidor.</td>
-            </tr>
-            <tr>
-              <td><strong>Uso</strong></td>
-              <td>Telemetría, eventos y comandos.</td>
-              <td>APIs, configuración y operaciones puntuales.</td>
-            </tr>
-            <tr>
-              <td><strong>Conexión</strong></td>
-              <td>Puede mantenerse abierta.</td>
-              <td>Normalmente una petición por operación.</td>
-            </tr>
-            <tr>
-              <td><strong>Distribución</strong></td>
-              <td>Varios consumidores pueden suscribirse.</td>
-              <td>El cliente llama a un endpoint definido.</td>
-            </tr>
-            <tr>
-              <td><strong>Dispositivos limitados</strong></td>
-              <td>Frecuentemente adecuado.</td>
-              <td>Puede ser suficiente para mensajes poco frecuentes.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 id="topics">Diseñar temas MQTT</h2>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Criterio</th>
+<th>MQTT</th>
+<th>HTTP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modelo</strong></td>
+<td>Publicación y suscripción mediante broker.</td>
+<td>Petición y respuesta cliente-servidor.</td>
+</tr>
+<tr>
+<td><strong>Uso</strong></td>
+<td>Telemetría, eventos y comandos.</td>
+<td>APIs, configuración y operaciones puntuales.</td>
+</tr>
+<tr>
+<td><strong>Conexión</strong></td>
+<td>Puede mantenerse abierta.</td>
+<td>Normalmente una petición por operación.</td>
+</tr>
+<tr>
+<td><strong>Distribución</strong></td>
+<td>Varios consumidores pueden suscribirse.</td>
+<td>El cliente llama a un endpoint definido.</td>
+</tr>
+<tr>
+<td><strong>Dispositivos limitados</strong></td>
+<td>Frecuentemente adecuado.</td>
+<td>Puede ser suficiente para mensajes poco frecuentes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="topics">Diseñar temas MQTT</h2>
+<p>
           Los topics deben permitir enrutar mensajes sin incluir información sensible ni crear una estructura imposible de
           mantener. Una organización frecuente separa entorno, organización, dispositivo y tipo de mensaje.
         </p>
-        <pre><code>produccion/organizacion-42/dispositivo-928/telemetria
+<pre><code>produccion/organizacion-42/dispositivo-928/telemetria
 produccion/organizacion-42/dispositivo-928/eventos
 produccion/organizacion-42/dispositivo-928/estado
 produccion/organizacion-42/dispositivo-928/comandos</code></pre>
-        <p>
+<p>
           La estructura exacta depende del broker, la multitenencia y las reglas de autorización. Los permisos deben limitar qué
           topics puede publicar y consumir cada identidad.
         </p>
-
-        <h2 id="mensajes">Diseñar el formato de los mensajes</h2>
-        <p>
+<h2 id="mensajes">Diseñar el formato de los mensajes</h2>
+<p>
           Un mensaje debe incluir información suficiente para interpretarse, pero no repetir datos estáticos innecesariamente.
           Conviene versionar el esquema para permitir cambios futuros.
         </p>
-        <pre><code>{
+<pre><code>{
   "schema_version": "1.0",
   "device_id": "sensor-928",
   "timestamp": "2026-08-06T10:30:00Z",
@@ -747,420 +392,381 @@ produccion/organizacion-42/dispositivo-928/comandos</code></pre>
   "battery_pct": 78,
   "signal_dbm": -91
 }</code></pre>
-        <p>
+<p>
           Los campos habituales incluyen identificador, fecha del dispositivo, número de secuencia, mediciones, unidad,
           batería, cobertura, firmware y calidad. La plataforma puede enriquecer el mensaje con organización, activo y ubicación.
         </p>
-
-        <h2 id="tiempo">Marcas temporales y orden de eventos</h2>
-        <p>
+<h2 id="tiempo">Marcas temporales y orden de eventos</h2>
+<p>
           En IoT existen al menos dos tiempos relevantes: cuándo ocurrió la medición y cuándo la recibió la plataforma. Pueden
           diferir si el dispositivo trabaja sin cobertura y envía datos más tarde.
         </p>
-        <p>
+<p>
           La plataforma debería conservar ambos. También debe gestionar mensajes duplicados, fuera de orden y relojes incorrectos.
           Un número de secuencia o identificador de evento facilita la deduplicación.
         </p>
-        <div class="warning">
-          <strong>Recibir ahora no significa que el evento haya ocurrido ahora.</strong>
-          <p>
+<div class="warning">
+<strong>Recibir ahora no significa que el evento haya ocurrido ahora.</strong>
+<p>
             Utilizar solo la fecha de recepción puede distorsionar históricos, reglas y análisis.
           </p>
-        </div>
-
-        <h2 id="ingesta">La capa de ingesta</h2>
-        <p>
+</div>
+<h2 id="ingesta">La capa de ingesta</h2>
+<p>
           La ingesta recibe mensajes, autentica al dispositivo, valida el formato y los convierte a un modelo interno. Debe ser
           rápida y resistente, evitando que una operación lenta bloquee la recepción.
         </p>
-        <p>
+<p>
           Las tareas típicas son:
         </p>
-        <ul>
-          <li>Autenticación y autorización.</li>
-          <li>Validación del esquema.</li>
-          <li>Normalización de unidades.</li>
-          <li>Deduplicación.</li>
-          <li>Enriquecimiento con metadatos.</li>
-          <li>Envío a almacenamiento o colas.</li>
-          <li>Registro de errores y mensajes rechazados.</li>
-        </ul>
-        <p>
+<ul>
+<li>Autenticación y autorización.</li>
+<li>Validación del esquema.</li>
+<li>Normalización de unidades.</li>
+<li>Deduplicación.</li>
+<li>Enriquecimiento con metadatos.</li>
+<li>Envío a almacenamiento o colas.</li>
+<li>Registro de errores y mensajes rechazados.</li>
+</ul>
+<p>
           En arquitecturas de mayor volumen es habitual desacoplar recepción, procesamiento y persistencia mediante colas o
           sistemas de eventos.
         </p>
-
-        <h2 id="modelo-datos">Diseñar el modelo de datos</h2>
-        <p>
+<h2 id="modelo-datos">Diseñar el modelo de datos</h2>
+<p>
           La plataforma necesita almacenar configuración y telemetría. La configuración cambia lentamente: usuarios, activos,
           dispositivos, sensores y reglas. La telemetría puede crecer con rapidez.
         </p>
-        <div class="grid">
-          <div class="card">
-            <h3>Datos maestros</h3>
-            <p>Organizaciones, activos, dispositivos, modelos, firmware, usuarios y permisos.</p>
-          </div>
-          <div class="card">
-            <h3>Series temporales</h3>
-            <p>Valores asociados a sensor, fecha, calidad y origen.</p>
-          </div>
-          <div class="card">
-            <h3>Eventos</h3>
-            <p>Salidas de geovalla, anomalías, fallos, aperturas y detecciones.</p>
-          </div>
-          <div class="card">
-            <h3>Alertas</h3>
-            <p>Estado, prioridad, destinatario, evidencia, reconocimiento y cierre.</p>
-          </div>
-          <div class="card">
-            <h3>Mantenimiento</h3>
-            <p>Batería, cobertura, última comunicación, instalación y sustituciones.</p>
-          </div>
-          <div class="card">
-            <h3>Auditoría</h3>
-            <p>Cambios, accesos, configuración y acciones realizadas.</p>
-          </div>
-        </div>
-
-        <h2 id="base-datos">Base relacional o series temporales</h2>
-        <p>
+<div class="grid">
+<div class="card">
+<h3>Datos maestros</h3>
+<p>Organizaciones, activos, dispositivos, modelos, firmware, usuarios y permisos.</p>
+</div>
+<div class="card">
+<h3>Series temporales</h3>
+<p>Valores asociados a sensor, fecha, calidad y origen.</p>
+</div>
+<div class="card">
+<h3>Eventos</h3>
+<p>Salidas de geovalla, anomalías, fallos, aperturas y detecciones.</p>
+</div>
+<div class="card">
+<h3>Alertas</h3>
+<p>Estado, prioridad, destinatario, evidencia, reconocimiento y cierre.</p>
+</div>
+<div class="card">
+<h3>Mantenimiento</h3>
+<p>Batería, cobertura, última comunicación, instalación y sustituciones.</p>
+</div>
+<div class="card">
+<h3>Auditoría</h3>
+<p>Cambios, accesos, configuración y acciones realizadas.</p>
+</div>
+</div>
+<h2 id="base-datos">Base relacional o series temporales</h2>
+<p>
           No siempre hace falta una tecnología especializada. Una base relacional puede gestionar volúmenes moderados si se
           particiona, indexa y modela correctamente. Una base de series temporales puede facilitar retención, agregación y
           consultas por intervalos.
         </p>
-        <p>
+<p>
           La decisión depende de:
         </p>
-        <ul>
-          <li>Número de dispositivos.</li>
-          <li>Frecuencia de mensajes.</li>
-          <li>Duración del histórico.</li>
-          <li>Consultas y agregaciones.</li>
-          <li>Necesidad de tiempo real.</li>
-          <li>Coste operativo y experiencia del equipo.</li>
-        </ul>
-
-        <h2 id="reglas">Motor de reglas y alertas</h2>
-        <p>
+<ul>
+<li>Número de dispositivos.</li>
+<li>Frecuencia de mensajes.</li>
+<li>Duración del histórico.</li>
+<li>Consultas y agregaciones.</li>
+<li>Necesidad de tiempo real.</li>
+<li>Coste operativo y experiencia del equipo.</li>
+</ul>
+<h2 id="reglas">Motor de reglas y alertas</h2>
+<p>
           Las reglas convierten datos en eventos. Pueden basarse en umbrales, duración, variaciones, ausencia de mensajes,
           geovallas, combinación de sensores o modelos de IA.
         </p>
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Regla</th>
-              <th>Contexto necesario</th>
-              <th>Resultado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Temperatura elevada</td>
-              <td>Umbral, duración, activo y ambiente.</td>
-              <td>Evento de revisión térmica.</td>
-            </tr>
-            <tr>
-              <td>Sin comunicación</td>
-              <td>Frecuencia esperada y criticidad.</td>
-              <td>Alerta de dispositivo desconectado.</td>
-            </tr>
-            <tr>
-              <td>Salida de geovalla</td>
-              <td>Posición, precisión, perímetro y permanencia.</td>
-              <td>Evento geográfico.</td>
-            </tr>
-            <tr>
-              <td>Consumo anómalo</td>
-              <td>Histórico, horario y patrón.</td>
-              <td>Alerta de desviación.</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
+<table class="comparison">
+<thead>
+<tr>
+<th>Regla</th>
+<th>Contexto necesario</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temperatura elevada</td>
+<td>Umbral, duración, activo y ambiente.</td>
+<td>Evento de revisión térmica.</td>
+</tr>
+<tr>
+<td>Sin comunicación</td>
+<td>Frecuencia esperada y criticidad.</td>
+<td>Alerta de dispositivo desconectado.</td>
+</tr>
+<tr>
+<td>Salida de geovalla</td>
+<td>Posición, precisión, perímetro y permanencia.</td>
+<td>Evento geográfico.</td>
+</tr>
+<tr>
+<td>Consumo anómalo</td>
+<td>Histórico, horario y patrón.</td>
+<td>Alerta de desviación.</td>
+</tr>
+</tbody>
+</table>
+<p>
           Una alerta debe tener ciclo de vida: abierta, reconocida, en revisión, resuelta o descartada. Sin este flujo, la
           plataforma genera notificaciones, pero no gestiona incidencias.
         </p>
-
-        <h2 id="tiempo-real">Tiempo real, WebSockets y actualización de dashboards</h2>
-        <p>
+<h2 id="tiempo-real">Tiempo real, WebSockets y actualización de dashboards</h2>
+<p>
           Para mostrar datos nuevos sin recargar la página pueden utilizarse WebSockets o Server-Sent Events. Sin embargo, el
           dashboard no necesita recibir cada lectura si el usuario solo requiere una actualización agregada.
         </p>
-        <p>
+<p>
           Es importante separar la frecuencia de captura de la frecuencia de visualización. Un sensor puede reportar cada segundo,
           mientras la interfaz muestra un promedio cada minuto.
         </p>
-
-        <h2 id="api">Diseño de APIs para IoT</h2>
-        <p>
+<h2 id="api">Diseño de APIs para IoT</h2>
+<p>
           Las APIs permiten consultar activos, dispositivos, telemetría, eventos y alertas. También pueden utilizarse para
           aprovisionamiento y configuración.
         </p>
-        <pre><code>GET  /api/v1/assets/{assetId}
+<pre><code>GET  /api/v1/assets/{assetId}
 GET  /api/v1/devices/{deviceId}/telemetry
 GET  /api/v1/alerts?status=open
 POST /api/v1/devices/{deviceId}/commands
 POST /api/v1/webhooks/integrations</code></pre>
-        <p>
+<p>
           Las APIs deben incluir autenticación, paginación, filtros, límites, versionado y respuestas de error consistentes.
           Los datos de varias organizaciones deben aislarse correctamente.
         </p>
-
-        <h2 id="comandos">Comunicación desde la plataforma hacia el dispositivo</h2>
-        <p>
+<h2 id="comandos">Comunicación desde la plataforma hacia el dispositivo</h2>
+<p>
           Algunos proyectos necesitan enviar configuración o comandos. Esto introduce nuevas responsabilidades: autorización,
           confirmación, expiración, reintentos y seguridad.
         </p>
-        <p>
+<p>
           La plataforma debe distinguir entre comando solicitado, entregado, ejecutado y confirmado. Un mensaje publicado no
           garantiza que el dispositivo haya realizado la acción.
         </p>
-
-        <h2 id="seguridad">Seguridad de extremo a extremo</h2>
-        <p>
+<h2 id="seguridad">Seguridad de extremo a extremo</h2>
+<p>
           Cada dispositivo debe tener una identidad propia o un mecanismo seguro de pertenencia. Compartir credenciales entre
           toda una flota dificulta revocar un equipo comprometido.
         </p>
-        <ul>
-          <li>Cifrado en tránsito.</li>
-          <li>Credenciales individuales o certificados.</li>
-          <li>Rotación y revocación.</li>
-          <li>Permisos mínimos por topic o endpoint.</li>
-          <li>Firma o validación de firmware.</li>
-          <li>Actualizaciones seguras.</li>
-          <li>Auditoría de comandos y configuración.</li>
-          <li>Segmentación de red para gateways.</li>
-        </ul>
-        <p>
+<ul>
+<li>Cifrado en tránsito.</li>
+<li>Credenciales individuales o certificados.</li>
+<li>Rotación y revocación.</li>
+<li>Permisos mínimos por topic o endpoint.</li>
+<li>Firma o validación de firmware.</li>
+<li>Actualizaciones seguras.</li>
+<li>Auditoría de comandos y configuración.</li>
+<li>Segmentación de red para gateways.</li>
+</ul>
+<p>
           La seguridad debe considerarse desde el aprovisionamiento hasta la retirada del dispositivo.
         </p>
-
-        <h2 id="observabilidad">Monitorizar la propia plataforma</h2>
-        <p>
+<h2 id="observabilidad">Monitorizar la propia plataforma</h2>
+<p>
           Una solución IoT debe supervisar tanto los activos como su infraestructura. Conviene medir mensajes recibidos,
           errores, latencia, dispositivos activos, colas, almacenamiento y reglas ejecutadas.
         </p>
-        <p>
+<p>
           Indicadores útiles:
         </p>
-        <ul>
-          <li>Última comunicación por dispositivo.</li>
-          <li>Porcentaje de mensajes rechazados.</li>
-          <li>Latencia entre medición e ingesta.</li>
-          <li>Duplicados y mensajes fuera de orden.</li>
-          <li>Consumo de almacenamiento.</li>
-          <li>Alertas generadas y reconocidas.</li>
-          <li>Versión de firmware por flota.</li>
-        </ul>
-
-        <h2 id="escalabilidad">Cómo preparar el escalado</h2>
-        <p>
+<ul>
+<li>Última comunicación por dispositivo.</li>
+<li>Porcentaje de mensajes rechazados.</li>
+<li>Latencia entre medición e ingesta.</li>
+<li>Duplicados y mensajes fuera de orden.</li>
+<li>Consumo de almacenamiento.</li>
+<li>Alertas generadas y reconocidas.</li>
+<li>Versión de firmware por flota.</li>
+</ul>
+<h2 id="escalabilidad">Cómo preparar el escalado</h2>
+<p>
           Escalar no significa solo añadir servidores. También implica altas de dispositivos, soporte, actualizaciones,
           mantenimiento, límites de red y costes de almacenamiento.
         </p>
-        <p>
+<p>
           Conviene estimar:
         </p>
-        <ul>
-          <li>Dispositivos activos y crecimiento anual.</li>
-          <li>Mensajes por dispositivo y día.</li>
-          <li>Tamaño medio de cada mensaje.</li>
-          <li>Retención de datos brutos y agregados.</li>
-          <li>Número de reglas y alertas.</li>
-          <li>Usuarios simultáneos y frecuencia de consultas.</li>
-          <li>Coste de conectividad y soporte.</li>
-        </ul>
-
-        <h2 id="casos">Casos de uso</h2>
-
-        <h3>Ganadería inteligente</h3>
-        <p>
+<ul>
+<li>Dispositivos activos y crecimiento anual.</li>
+<li>Mensajes por dispositivo y día.</li>
+<li>Tamaño medio de cada mensaje.</li>
+<li>Retención de datos brutos y agregados.</li>
+<li>Número de reglas y alertas.</li>
+<li>Usuarios simultáneos y frecuencia de consultas.</li>
+<li>Coste de conectividad y soporte.</li>
+</ul>
+<h2 id="casos">Casos de uso</h2>
+<h3>Ganadería inteligente</h3>
+<p>
           Collares GPS, bolos y estaciones ambientales pueden integrarse con mapas, geovallas, actividad y alertas. La solución
           <a class="internal-link" href="/soluciones/avega-ganaderia-inteligente.html">AVEGA</a> es un ejemplo de plataforma
           sectorial construida sobre datos IoT.
         </p>
-
-        <h3>Industria</h3>
-        <p>
+<h3>Industria</h3>
+<p>
           Sensores de vibración, consumo, presión o temperatura pueden alimentar mantenimiento, históricos y detección de
           desviaciones.
         </p>
-
-        <h3>Edificios y Smart City</h3>
-        <p>
+<h3>Edificios y Smart City</h3>
+<p>
           Calidad ambiental, presencia, energía, alumbrado, riego o aforos pueden centralizarse en cuadros de mando y sistemas
           de actuación.
         </p>
-
-        <h3>Logística</h3>
-        <p>
+<h3>Logística</h3>
+<p>
           Posición, apertura, temperatura y golpes pueden relacionarse con vehículos, rutas, pedidos y mercancías.
         </p>
-
-        <h2 id="piloto">Cómo empezar con un piloto</h2>
-        <div class="steps">
-          <div class="step">
-            <h3>Definir el caso de uso</h3>
-            <p>Precisar el activo, la variable, la decisión y la acción esperada.</p>
-          </div>
-          <div class="step">
-            <h3>Seleccionar conectividad y dispositivos</h3>
-            <p>Probar cobertura, autonomía, instalación y acceso a los datos.</p>
-          </div>
-          <div class="step">
-            <h3>Definir mensajes e identidad</h3>
-            <p>Acordar formato, unidades, fechas, secuencias, credenciales y versionado.</p>
-          </div>
-          <div class="step">
-            <h3>Construir la ingesta</h3>
-            <p>Validar, normalizar, almacenar y registrar errores de forma trazable.</p>
-          </div>
-          <div class="step">
-            <h3>Crear dashboard y alertas</h3>
-            <p>Mostrar contexto y definir responsables, estados y acciones.</p>
-          </div>
-          <div class="step">
-            <h3>Medir y escalar</h3>
-            <p>Evaluar calidad, cobertura, falsos avisos, mantenimiento y coste total.</p>
-          </div>
-        </div>
-
-        <h2 id="errores">Errores habituales</h2>
-        <ul>
-          <li><strong>Guardar lecturas sin modelar activos y dispositivos.</strong></li>
-          <li><strong>Confiar únicamente en la fecha de recepción.</strong></li>
-          <li><strong>No versionar el esquema de mensajes.</strong></li>
-          <li><strong>Compartir credenciales entre todos los dispositivos.</strong></li>
-          <li><strong>No gestionar duplicados y mensajes fuera de orden.</strong></li>
-          <li><strong>Mostrar cada lectura en tiempo real sin necesidad.</strong></li>
-          <li><strong>Crear alertas sin ciclo de vida.</strong></li>
-          <li><strong>Olvidar firmware, batería y mantenimiento.</strong></li>
-          <li><strong>Escalar antes de validar conectividad y operación.</strong></li>
-          <li><strong>Depender de un proveedor sin acceso exportable al dato.</strong></li>
-        </ul>
-
-        <h2 id="faq">Preguntas frecuentes sobre integración IoT</h2>
-        <details>
-          <summary>¿Cómo se conecta un sensor con una plataforma web?</summary>
-          <p>Mediante una red y un protocolo de comunicación, directamente o a través de un gateway. La plataforma recibe y procesa el mensaje.</p>
-        </details>
-        <details>
-          <summary>¿Es mejor MQTT o HTTP?</summary>
-          <p>Depende del caso. MQTT es muy útil para telemetría y eventos; HTTP es adecuado para APIs y operaciones puntuales.</p>
-        </details>
-        <details>
-          <summary>¿Qué es un broker MQTT?</summary>
-          <p>Es el servidor que recibe mensajes publicados en topics y los distribuye a los clientes suscritos.</p>
-        </details>
-        <details>
-          <summary>¿Hace falta un gateway?</summary>
-          <p>No siempre. Es útil cuando hay que adaptar protocolos, agrupar sensores o procesar datos localmente.</p>
-        </details>
-        <details>
-          <summary>¿Cómo se identifica cada dispositivo?</summary>
-          <p>Mediante un identificador y credenciales o certificados propios asociados a su registro en la plataforma.</p>
-        </details>
-        <details>
-          <summary>¿Qué datos debe incluir un mensaje?</summary>
-          <p>Identidad, fecha de medición, secuencia, valores, unidades o esquema, además de información de estado cuando sea necesaria.</p>
-        </details>
-        <details>
-          <summary>¿Cómo se gestionan mensajes duplicados?</summary>
-          <p>Con identificadores de evento, números de secuencia y reglas de idempotencia en la ingesta.</p>
-        </details>
-        <details>
-          <summary>¿Qué base de datos debe utilizarse?</summary>
-          <p>Depende del volumen, retención y consultas. Puede utilizarse una base relacional, de series temporales o una combinación.</p>
-        </details>
-        <details>
-          <summary>¿Cómo se muestran datos en tiempo real?</summary>
-          <p>Mediante WebSockets, Server-Sent Events o actualizaciones periódicas, según la necesidad de la interfaz.</p>
-        </details>
-        <details>
-          <summary>¿Cuál es el primer paso?</summary>
-          <p>Definir el activo, la variable, la conectividad, la frecuencia, el formato de mensajes y la decisión que debe mejorar.</p>
-        </details>
-
-        <h2 id="conclusion">Conclusión</h2>
-        <p>
+<h2 id="piloto">Cómo empezar con un piloto</h2>
+<div class="steps">
+<div class="step">
+<h3>Definir el caso de uso</h3>
+<p>Precisar el activo, la variable, la decisión y la acción esperada.</p>
+</div>
+<div class="step">
+<h3>Seleccionar conectividad y dispositivos</h3>
+<p>Probar cobertura, autonomía, instalación y acceso a los datos.</p>
+</div>
+<div class="step">
+<h3>Definir mensajes e identidad</h3>
+<p>Acordar formato, unidades, fechas, secuencias, credenciales y versionado.</p>
+</div>
+<div class="step">
+<h3>Construir la ingesta</h3>
+<p>Validar, normalizar, almacenar y registrar errores de forma trazable.</p>
+</div>
+<div class="step">
+<h3>Crear dashboard y alertas</h3>
+<p>Mostrar contexto y definir responsables, estados y acciones.</p>
+</div>
+<div class="step">
+<h3>Medir y escalar</h3>
+<p>Evaluar calidad, cobertura, falsos avisos, mantenimiento y coste total.</p>
+</div>
+</div>
+<h2 id="errores">Errores habituales</h2>
+<ul>
+<li><strong>Guardar lecturas sin modelar activos y dispositivos.</strong></li>
+<li><strong>Confiar únicamente en la fecha de recepción.</strong></li>
+<li><strong>No versionar el esquema de mensajes.</strong></li>
+<li><strong>Compartir credenciales entre todos los dispositivos.</strong></li>
+<li><strong>No gestionar duplicados y mensajes fuera de orden.</strong></li>
+<li><strong>Mostrar cada lectura en tiempo real sin necesidad.</strong></li>
+<li><strong>Crear alertas sin ciclo de vida.</strong></li>
+<li><strong>Olvidar firmware, batería y mantenimiento.</strong></li>
+<li><strong>Escalar antes de validar conectividad y operación.</strong></li>
+<li><strong>Depender de un proveedor sin acceso exportable al dato.</strong></li>
+</ul>
+<h2 id="faq">Preguntas frecuentes sobre integración IoT</h2>
+<details>
+<summary>¿Cómo se conecta un sensor con una plataforma web?</summary>
+<p>Mediante una red y un protocolo de comunicación, directamente o a través de un gateway. La plataforma recibe y procesa el mensaje.</p>
+</details>
+<details>
+<summary>¿Es mejor MQTT o HTTP?</summary>
+<p>Depende del caso. MQTT es muy útil para telemetría y eventos; HTTP es adecuado para APIs y operaciones puntuales.</p>
+</details>
+<details>
+<summary>¿Qué es un broker MQTT?</summary>
+<p>Es el servidor que recibe mensajes publicados en topics y los distribuye a los clientes suscritos.</p>
+</details>
+<details>
+<summary>¿Hace falta un gateway?</summary>
+<p>No siempre. Es útil cuando hay que adaptar protocolos, agrupar sensores o procesar datos localmente.</p>
+</details>
+<details>
+<summary>¿Cómo se identifica cada dispositivo?</summary>
+<p>Mediante un identificador y credenciales o certificados propios asociados a su registro en la plataforma.</p>
+</details>
+<details>
+<summary>¿Qué datos debe incluir un mensaje?</summary>
+<p>Identidad, fecha de medición, secuencia, valores, unidades o esquema, además de información de estado cuando sea necesaria.</p>
+</details>
+<details>
+<summary>¿Cómo se gestionan mensajes duplicados?</summary>
+<p>Con identificadores de evento, números de secuencia y reglas de idempotencia en la ingesta.</p>
+</details>
+<details>
+<summary>¿Qué base de datos debe utilizarse?</summary>
+<p>Depende del volumen, retención y consultas. Puede utilizarse una base relacional, de series temporales o una combinación.</p>
+</details>
+<details>
+<summary>¿Cómo se muestran datos en tiempo real?</summary>
+<p>Mediante WebSockets, Server-Sent Events o actualizaciones periódicas, según la necesidad de la interfaz.</p>
+</details>
+<details>
+<summary>¿Cuál es el primer paso?</summary>
+<p>Definir el activo, la variable, la conectividad, la frecuencia, el formato de mensajes y la decisión que debe mejorar.</p>
+</details>
+<h2 id="conclusion">Conclusión</h2>
+<p>
           Integrar sensores IoT en una plataforma web exige coordinar hardware, conectividad, protocolos, seguridad, modelos de
           datos, APIs, reglas y experiencia de usuario. La dificultad real no está en recibir el primer dato, sino en mantener
           una solución fiable durante toda la vida de los dispositivos.
         </p>
-        <p>
+<p>
           Una buena arquitectura conserva identidad, tiempo, contexto y trazabilidad. También diferencia la telemetría de los
           eventos, las alertas y las acciones. Empezar con un piloto permite validar cobertura, autonomía, formato, utilidad y
           costes antes de ampliar el despliegue.
         </p>
-
-        <div class="cta">
-          <h2>¿Necesitas conectar sensores, dispositivos o gateways con una plataforma?</h2>
-          <p>
-            ARVELA puede ayudarte a diseñar la arquitectura, integrar protocolos y APIs, modelar los datos y construir dashboards,
-            alertas y procesos adaptados al proyecto.
-          </p>
-          <a href="/soluciones/integracion-iot-sensores.html">Ver Integración IoT y Sensores</a>
-        </div>
-      </article>
-
-      <aside class="toc" aria-label="Índice del artículo">
-        <strong>Contenido</strong>
-        <ol>
-          <li><a href="#introduccion">Más que recibir datos</a></li>
-          <li><a href="#arquitectura">Arquitectura IoT</a></li>
-          <li><a href="#activo-dispositivo">Activo y dispositivo</a></li>
-          <li><a href="#conectividad">Conectividad</a></li>
-          <li><a href="#gateway">Gateway</a></li>
-          <li><a href="#mqtt-http">MQTT y HTTP</a></li>
-          <li><a href="#topics">Topics MQTT</a></li>
-          <li><a href="#mensajes">Formato de mensajes</a></li>
-          <li><a href="#tiempo">Marcas temporales</a></li>
-          <li><a href="#ingesta">Ingesta</a></li>
-          <li><a href="#modelo-datos">Modelo de datos</a></li>
-          <li><a href="#base-datos">Almacenamiento</a></li>
-          <li><a href="#reglas">Reglas y alertas</a></li>
-          <li><a href="#tiempo-real">Tiempo real</a></li>
-          <li><a href="#api">APIs</a></li>
-          <li><a href="#seguridad">Seguridad</a></li>
-          <li><a href="#escalabilidad">Escalabilidad</a></li>
-          <li><a href="#piloto">Cómo empezar</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ol>
-      </aside>
-    </div>
-
-    <section class="related">
-      <h2>Contenidos y soluciones relacionados</h2>
-      <div class="related-grid">
-        <article class="related-card">
-          <span>Solución</span>
-          <h3>Integración IoT y Sensores</h3>
-          <p>Dispositivos, gateways, APIs, dashboards, históricos y alertas operativas.</p>
-          <a href="/soluciones/integracion-iot-sensores.html">Ver solución →</a>
-        </article>
-        <article class="related-card">
-          <span>Artículo</span>
-          <h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
-          <p>Conceptos, conectividad, dispositivos, plataformas y casos de uso.</p>
-          <a href="/blog/que-es-iot-sensores-inteligentes/">Leer artículo →</a>
-        </article>
-        <article class="related-card">
-          <span>Artículo</span>
-          <h3>Cuadros de mando y KPIs</h3>
-          <p>Cómo transformar telemetría y eventos en indicadores y decisiones.</p>
-          <a href="/blog/cuadros-de-mando-analitica-datos/">Leer artículo →</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <div id="footer-container"></div>
-  <script>
-  fetch('/Components/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-  </script>
+</article>
+<aside aria-label="Índice del artículo" class="toc">
+<strong>Contenido</strong>
+<ol>
+<li><a href="#introduccion">Más que recibir datos</a></li>
+<li><a href="#arquitectura">Arquitectura IoT</a></li>
+<li><a href="#activo-dispositivo">Activo y dispositivo</a></li>
+<li><a href="#conectividad">Conectividad</a></li>
+<li><a href="#gateway">Gateway</a></li>
+<li><a href="#mqtt-http">MQTT y HTTP</a></li>
+<li><a href="#topics">Topics MQTT</a></li>
+<li><a href="#mensajes">Formato de mensajes</a></li>
+<li><a href="#tiempo">Marcas temporales</a></li>
+<li><a href="#ingesta">Ingesta</a></li>
+<li><a href="#modelo-datos">Modelo de datos</a></li>
+<li><a href="#base-datos">Almacenamiento</a></li>
+<li><a href="#reglas">Reglas y alertas</a></li>
+<li><a href="#tiempo-real">Tiempo real</a></li>
+<li><a href="#api">APIs</a></li>
+<li><a href="#seguridad">Seguridad</a></li>
+<li><a href="#escalabilidad">Escalabilidad</a></li>
+<li><a href="#piloto">Cómo empezar</a></li>
+<li><a href="#faq">Preguntas frecuentes</a></li>
+</ol>
+</aside>
+</div>
+<section class="related">
+<h2>Contenidos y soluciones relacionados</h2>
+<div class="related-grid">
+<article class="related-card">
+<span>Solución</span>
+<h3>Integración IoT y Sensores</h3>
+<p>Dispositivos, gateways, APIs, dashboards, históricos y alertas operativas.</p>
+<a href="/soluciones/iot-sensores.html">Ver solución →</a>
+</article>
+<article class="related-card">
+<span>Artículo</span>
+<h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
+<p>Conceptos, conectividad, dispositivos, plataformas y casos de uso.</p>
+<a href="/blog/blog-que-es-iot-sensores-inteligentes.html">Leer artículo →</a>
+</article>
+<article class="related-card">
+<span>Artículo</span>
+<h3>Cuadros de mando y KPIs</h3>
+<p>Cómo transformar telemetría y eventos en indicadores y decisiones.</p>
+<a href="/blog/blog-cuadros-de-mando-analitica-datos.html">Leer artículo →</a>
+</article>
+</div>
+</section>
+<section aria-labelledby="cta-final-title" class="site-cta"><h2 id="cta-final-title">¿Quieres integrar sensores, IoT y plataformas en un proyecto real?</h2><p>Cuéntanos el contexto, el objetivo y el punto en el que estás. Te ayudamos a definir un primer alcance realista y los siguientes pasos.</p><div class="cta-row"><a class="btn btn-primary" href="/contacto.html#formulario">Cuéntanos tu proyecto</a></div></section></main>
+<div id="footer-container"></div>
 </body>
 </html>
