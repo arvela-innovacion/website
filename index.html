@@ -1,253 +1,77 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARVELA Innovación | Soluciones tecnológicas con IA, IoT y software</title>
-  <meta name="description" content="ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://arvelainnova.es/" />
-  <meta property="og:title" content="ARVELA Innovación | Soluciones tecnológicas con IA, IoT y software" />
-  <meta property="og:description" content="ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://arvelainnova.es/" />
-  <meta property="og:image" content="https://arvelainnova.es/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ARVELA Innovación | Soluciones tecnológicas con IA, IoT y software" />
-  <meta name="twitter:description" content="ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada." />
-  <meta name="twitter:image" content="https://arvelainnova.es/og-image.png" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#172033" />
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "ARVELA Innovación | Soluciones tecnológicas con IA, IoT y software",
-    "description": "ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada.",
-    "url": "https://arvelainnova.es/",
-    "email": "arvelainnovacion@gmail.com",
-    "publisher": {
-      "@type": "Organization",
-      "name": "ARVELA Innovación",
-      "url": "https://arvelainnova.es/",
-      "logo": "https://arvelainnova.es/logo.jpg"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/arvela-innovacion/",
-      "https://x.com/arvela_innova",
-      "https://www.facebook.com/arvela.innova",
-      "https://www.instagram.com/arvela.innova/",
-      "https://www.tiktok.com/@arvela.innova",
-      "https://www.youtube.com/@arvela.innova",
-      "https://www.pinterest.com/arvela_innova"
-    ]
-  }
-  </script>
-  <style>
-:root {
-  --bg: #f6f7fb;
-  --card: #ffffff;
-  --text: #172033;
-  --muted: #5f6b85;
-  --line: #e6e9f2;
-  --accent: #1f6feb;
-  --accent-2: #10b981;
-  --gold: #c99b45;
-  --shadow: 0 18px 50px rgba(16, 24, 40, 0.08);
-  --radius: 22px;
-  --max: 1100px;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 52%, #eef2ff 100%);
-  color: var(--text);
-  line-height: 1.62;
-}
-a { color: inherit; }
-.wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
-header { padding: 22px 0 10px; }
-.topbar {
-  display: flex; align-items: center; justify-content: space-between; gap: 18px;
-  padding: 16px 18px; border: 1px solid rgba(230, 233, 242, 0.95);
-  background: rgba(255, 255, 255, 0.84); backdrop-filter: blur(10px);
-  border-radius: 22px; box-shadow: var(--shadow);
-}
-.brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
-.logo-box {
-  width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center;
-  background: linear-gradient(135deg, #eff6ff, #ecfeff);
-  border: 1px solid #dbeafe; overflow: hidden; flex: 0 0 auto;
-}
-.logo-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.brand-text h1 { margin: 0; font-size: 1rem; line-height: 1.15; letter-spacing: 0.02em; }
-.brand-text p { margin: 4px 0 0; font-size: 0.92rem; color: var(--muted); }
-nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-nav a {
-  text-decoration: none; font-size: 0.93rem; color: var(--muted);
-  padding: 8px 10px; border-radius: 999px;
-  transition: background .2s ease, color .2s ease;
-}
-nav a:hover { color: var(--text); background: #f3f4f6; }
-.hero { padding: 28px 0 18px; }
-.hero-grid { display: grid; grid-template-columns: 1.35fr 0.9fr; gap: 18px; align-items: stretch; }
-.panel {
-  background: rgba(255,255,255,0.86); border: 1px solid rgba(230, 233, 242, 0.95);
-  border-radius: var(--radius); box-shadow: var(--shadow);
-}
-.hero-main { padding: 34px; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em;
-  color: var(--accent); font-weight: 700; margin-bottom: 14px;
-}
-.hero h1 {
-  margin: 0; font-size: clamp(2rem, 4vw, 3.6rem);
-  line-height: 1.06; letter-spacing: -0.03em;
-}
-.hero p { margin: 18px 0 0; font-size: 1.04rem; color: var(--muted); max-width: 70ch; }
-.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
-.btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  padding: 12px 16px; border-radius: 14px; text-decoration: none;
-  font-weight: 600; border: 1px solid transparent; transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-}
-.btn:hover { transform: translateY(-1px); }
-.btn-primary { background: var(--accent); color: white; box-shadow: 0 10px 24px rgba(31, 111, 235, 0.22); }
-.btn-secondary { background: white; color: var(--text); border-color: var(--line); }
-.hero-side { padding: 22px; display: grid; gap: 14px; }
-.mini-card {
-  padding: 18px; border-radius: 18px; background: linear-gradient(180deg, #ffffff, #fbfcff);
-  border: 1px solid var(--line);
-}
-.mini-card strong { display: block; margin-bottom: 8px; font-size: 1rem; }
-.mini-card span { color: var(--muted); font-size: 0.96rem; }
-section { padding: 18px 0; }
-.section-title { margin: 0 0 14px; font-size: 1.45rem; letter-spacing: -0.02em; }
-.section-subtitle { margin: 0 0 18px; color: var(--muted); max-width: 82ch; }
-.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.cards.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.card {
-  padding: 22px; background: var(--card); border: 1px solid var(--line);
-  border-radius: 20px; box-shadow: var(--shadow);
-}
-.card h3 { margin: 0 0 10px; font-size: 1.03rem; }
-.card p, .card li { color: var(--muted); margin: 0; }
-.card ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
-.card a.more {
-  display: inline-flex; margin-top: 14px; color: var(--accent);
-  font-weight: 700; text-decoration: none;
-}
-.tag {
-  display: inline-flex; padding: 6px 10px; border-radius: 999px;
-  background: #eef2ff; color: #3730a3; font-size: 0.82rem;
-  font-weight: 700; margin-bottom: 12px;
-}
-.tag.gold { background: #fff7e6; color: #8a5a00; }
-.content { padding: 30px; }
-.content h2 { margin-top: 34px; font-size: 1.55rem; letter-spacing: -0.02em; }
-.content h3 { margin-top: 24px; font-size: 1.18rem; }
-.content p { color: var(--muted); }
-.content ul { color: var(--muted); display: grid; gap: 8px; }
-.highlight {
-  padding: 20px; border-radius: 20px; background: #fff7e6; border: 1px solid #f3d9a4;
-}
-.breadcrumb { margin: 18px 0 0; font-size: .92rem; color: var(--muted); }
-.breadcrumb a { color: var(--accent); text-decoration: none; font-weight: 700; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.contact-box {
-  padding: 22px; border-radius: 20px; border: 1px solid var(--line);
-  background: var(--card); box-shadow: var(--shadow);
-}
-.contact-box a { color: var(--accent); font-weight: 700; text-decoration: none; }
-footer { padding: 22px 0 30px; color: var(--muted); font-size: 0.92rem; }
-@media (max-width: 900px) {
-  .hero-grid, .cards, .cards.three, .contact-grid { grid-template-columns: 1fr; }
-  .topbar { border-radius: 24px; align-items: flex-start; flex-direction: column; }
-  nav { justify-content: flex-start; }
-  .hero-main { padding: 24px; }
-  .content { padding: 22px; }
-}
-</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARVELA Innovación | Soluciones tecnológicas con IA, IoT y software</title>
+<meta content="ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://arvelainnova.es/" rel="canonical"/>
+<meta content="ARVELA Innovación | Soluciones tecnológicas con IA, IoT y software" property="og:title"/>
+<meta content="ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://arvelainnova.es/" property="og:url"/>
+<meta content="https://arvelainnova.es/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="ARVELA Innovación | Soluciones tecnológicas con IA, IoT y software" name="twitter:title"/>
+<meta content="ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada." name="twitter:description"/>
+<meta content="https://arvelainnova.es/og-image.png" name="twitter:image"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="#172033" name="theme-color"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ARVELA Innovación | Soluciones tecnológicas con IA, IoT y software","description":"ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada.","url":"https://arvelainnova.es/","email":"arvelainnovacion@gmail.com","publisher":{"@type":"Organization","name":"ARVELA Innovación","url":"https://arvelainnova.es/","logo":"https://arvelainnova.es/logo.jpg"},"sameAs":["https://www.linkedin.com/company/arvela-innovacion/","https://x.com/arvela_innova","https://www.facebook.com/arvela.innova","https://www.instagram.com/arvela.innova/","https://www.tiktok.com/@arvela.innova","https://www.youtube.com/@arvela.innova","https://www.pinterest.com/arvela_innova"]}</script>
+<link href="/Components/styles.css" rel="stylesheet"/>
 </head>
 <body>
+<div id="header-container"></div>
+<script src="/Components/components.js"></script>
+<main class="wrap">
+<div class="breadcrumb"><a href="/">Inicio</a> · Inicio</div>
+<section class="hero">
+<div class="hero-grid">
+<div class="panel hero-main">
+<div class="eyebrow">IA • Software • IoT • Datos • I+D+i</div>
+<h1>Soluciones tecnológicas para resolver problemas reales.</h1>
+<p>ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="/contacto.html">Solicitar información</a>
+<a class="btn btn-secondary" href="/soluciones/">Ver soluciones</a>
+</div>
+</div>
+<aside class="panel hero-side">
+<div class="mini-card"><strong>Soluciones completas</strong><span>Del análisis inicial al diseño, desarrollo, integración y evolución.</span></div>
+<div class="mini-card"><strong>IA, IoT, software y datos</strong><span>Tecnología aplicada a problemas concretos y medibles.</span></div>
+<div class="mini-card"><strong>Preparado para crecer</strong><span>Arquitecturas pensadas para ampliar módulos, datos, usuarios y casos de uso.</span></div>
+</aside>
+</div>
+</section>
+<section id="soluciones">
+<h2 class="section-title">Soluciones</h2>
+<p class="section-subtitle">Cada solución tiene su propia página para ampliar contenido, mejorar SEO y preparar futuros artículos relacionados.</p>
+<div class="cards">
+<article class="card"><div class="tag">Ganadería inteligente</div><h3>AVEGA · Ganadería Inteligente</h3><p>Monitorización y análisis de explotaciones ganaderas mediante sensores, datos e Inteligencia Artificial.</p><a class="more" href="/soluciones/avega-ganaderia-inteligente.html">Ampliar →</a></article>
+<article class="card"><div class="tag">Educación y formación</div><h3>Plataformas de Aprendizaje</h3><p>Herramientas digitales para formación, evaluación, seguimiento del progreso y aprendizaje adaptativo.</p><a class="more" href="/soluciones/plataformas-aprendizaje.html">Ampliar →</a></article>
+<article class="card"><div class="tag">Administración pública</div><h3>Ciudadanía y Participación</h3><p>Soluciones para comunicar incidencias, seguir actuaciones y mejorar la interacción entre administración y ciudadanía.</p><a class="more" href="/soluciones/ciudadania-participacion.html">Ampliar →</a></article>
+<article class="card"><div class="tag">Visión artificial</div><h3>Monitorización Inteligente mediante IA</h3><p>Cámaras y modelos de Inteligencia Artificial para reconocer personas, animales, vehículos, objetos y eventos.</p><a class="more" href="/soluciones/monitorizacion-inteligente-ia.html">Ampliar →</a></article>
+<article class="card"><div class="tag">IoT y sensores</div><h3>Integración IoT y Sensores</h3><p>Conectamos sensores, dispositivos y hardware con plataformas digitales para explotar datos en tiempo real.</p><a class="more" href="/soluciones/iot-sensores.html">Ampliar →</a></article>
+<article class="card"><div class="tag">Analítica</div><h3>Analítica y Apoyo a la Decisión</h3><p>Cuadros de mando, KPIs, automatización y explotación de datos para facilitar decisiones informadas.</p><a class="more" href="/soluciones/analitica-datos-decision.html">Ampliar →</a></article>
+<article class="card"><div class="tag">Innovación</div><h3>Innovación e I+D+i</h3><p>Diseño y ejecución de proyectos de investigación, desarrollo e innovación tecnológica aplicada.</p><a class="more" href="/soluciones/innovacion-idi.html">Ampliar →</a></article>
+<article class="card"><div class="tag">Software a medida</div><h3>Soluciones Digitales a Medida</h3><p>Aplicaciones web, plataformas SaaS, sistemas de gestión e integraciones adaptadas a cada organización.</p><a class="more" href="/soluciones/soluciones-digitales-medida.html">Ampliar →</a></article>
+</div>
+</section>
+<section id="proyectos">
+<h2 class="section-title">Blog y contacto</h2>
+<div class="cards three">
+<article class="card"><h3>Blog</h3><p>Artículos técnicos sobre IA, IoT, software, datos e innovación.</p><a class="more" href="/blog/">Ir al blog →</a></article>
+<article class="card"><h3>Contacto</h3><p>Colaboraciones, ideas y proyectos tecnológicos.</p><a class="more" href="/contacto.html">Contactar →</a></article>
+</div>
+</section>
 
-  <script src="/Components/header-loader.js"></script>
-  
-  <main class="wrap">
-    <div class="breadcrumb"><a href="/">Inicio</a> · Inicio</div>
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="panel hero-main">
-          <div class="eyebrow">IA • Software • IoT • Datos • I+D+i</div>
-          <h1>Soluciones tecnológicas para resolver problemas reales.</h1>
-          <p>ARVELA Innovación desarrolla soluciones tecnológicas basadas en Inteligencia Artificial, Visión Artificial, IoT, plataformas SaaS, analítica de datos e innovación aplicada.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="/contacto.html">Solicitar información</a>
-            <a class="btn btn-secondary" href="/soluciones/">Ver soluciones</a>
-          </div>
-        </div>
-        <aside class="panel hero-side">
-          <div class="mini-card"><strong>Soluciones completas</strong><span>Del análisis inicial al diseño, desarrollo, integración y evolución.</span></div>
-          <div class="mini-card"><strong>IA, IoT, software y datos</strong><span>Tecnología aplicada a problemas concretos y medibles.</span></div>
-          <div class="mini-card"><strong>Preparado para crecer</strong><span>Arquitecturas pensadas para ampliar módulos, datos, usuarios y casos de uso.</span></div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="soluciones">
-      <h2 class="section-title">Soluciones</h2>
-      <p class="section-subtitle">Cada solución tiene su propia página para ampliar contenido, mejorar SEO y preparar futuros artículos relacionados.</p>
-      <div class="cards">
-        <article class="card"><div class="tag gold">Ganadería inteligente</div><h3>AVEGA · Ganadería Inteligente</h3><p>Monitorización y análisis de explotaciones ganaderas mediante sensores, datos e Inteligencia Artificial.</p><a class="more" href="/soluciones/avega-ganaderia-inteligente.html">Ampliar →</a></article>
-        <article class="card"><div class="tag gold">Educación y formación</div><h3>Plataformas de Aprendizaje</h3><p>Herramientas digitales para formación, evaluación, seguimiento del progreso y aprendizaje adaptativo.</p><a class="more" href="/soluciones/plataformas-aprendizaje.html">Ampliar →</a></article>
-        <article class="card"><div class="tag gold">Administración pública</div><h3>Ciudadanía y Participación</h3><p>Soluciones para comunicar incidencias, seguir actuaciones y mejorar la interacción entre administración y ciudadanía.</p><a class="more" href="/soluciones/ciudadania-participacion.html">Ampliar →</a></article>
-        <article class="card"><div class="tag gold">Visión artificial</div><h3>Monitorización Inteligente mediante IA</h3><p>Cámaras y modelos de Inteligencia Artificial para reconocer personas, animales, vehículos, objetos y eventos.</p><a class="more" href="/soluciones/monitorizacion-inteligente-ia.html">Ampliar →</a></article>
-        <article class="card"><div class="tag gold">IoT y sensores</div><h3>Integración IoT y Sensores</h3><p>Conectamos sensores, dispositivos y hardware con plataformas digitales para explotar datos en tiempo real.</p><a class="more" href="/soluciones/iot-sensores.html">Ampliar →</a></article>
-        <article class="card"><div class="tag gold">Analítica</div><h3>Analítica y Apoyo a la Decisión</h3><p>Cuadros de mando, KPIs, automatización y explotación de datos para facilitar decisiones informadas.</p><a class="more" href="/soluciones/analitica-datos-decision.html">Ampliar →</a></article>
-        <article class="card"><div class="tag gold">Innovación</div><h3>Innovación e I+D+i</h3><p>Diseño y ejecución de proyectos de investigación, desarrollo e innovación tecnológica aplicada.</p><a class="more" href="/soluciones/innovacion-idi.html">Ampliar →</a></article>
-        <article class="card"><div class="tag gold">Software a medida</div><h3>Soluciones Digitales a Medida</h3><p>Aplicaciones web, plataformas SaaS, sistemas de gestión e integraciones adaptadas a cada organización.</p><a class="more" href="/soluciones/soluciones-digitales-medida.html">Ampliar →</a></article>
-      </div>
-    </section>
-    <section id="proyectos">
-      <h2 class="section-title">Blog y contacto</h2>
-      <div class="cards three">
-        <article class="card"><h3>Blog</h3><p>Artículos técnicos sobre IA, IoT, software, datos e innovación.</p><a class="more" href="/blog/">Ir al blog →</a></article>
-        <article class="card"><h3>Contacto</h3><p>Colaboraciones, ideas y proyectos tecnológicos.</p><a class="more" href="/contacto.html">Contactar →</a></article>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <h2 class="section-title">Hablemos de tu proyecto</h2>
-      <p class="section-subtitle">Si quieres valorar una colaboración, una idea de producto o una línea de innovación, puedes escribirnos.</p>
-      <div class="contact-grid">
-        <div class="contact-box">
-          <h3 style="margin-top:0;">Correo electrónico</h3>
-          <p><a href="mailto:arvelainnovacion@gmail.com?subject=Quiero%20m%C3%A1s%20informaci%C3%B3n">arvelainnovacion@gmail.com</a></p>
-        </div>
-        <div class="contact-box">
-          <h3 style="margin-top:0;">Madrid, España</h3>
-          <p style="color:var(--muted);">Soluciones tecnológicas, innovación aplicada e I+D+i.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  
-  <div id="footer-container"></div>
-  <script>
-  fetch('/Components/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-  </script>
-  
+<section aria-labelledby="cta-final-title" class="site-cta"><h2 id="cta-final-title">¿Tienes una idea o un problema tecnológico que resolver?</h2><p>Cuéntanos el contexto, el objetivo y el punto en el que estás. Te ayudamos a definir un primer alcance realista y los siguientes pasos.</p><div class="cta-row"><a class="btn btn-primary" href="/contacto.html#formulario">Cuéntanos tu proyecto</a></div></section></main>
+<div id="footer-container"></div>
 </body>
 </html>
