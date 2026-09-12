@@ -1,233 +1,88 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Blog de tecnología, IA, IoT e innovación | ARVELA Innovación</title>
-<meta content="Blog de ARVELA sobre Inteligencia Artificial, IoT, software a medida, visión artificial, analítica, innovación, ganadería inteligente, educación y transformación digital municipal." name="description"/>
-<meta content="index, follow, max-image-preview:large" name="robots"/>
-<link href="https://arvelainnova.es/blog/" rel="canonical"/>
-<meta content="es_ES" property="og:locale"/>
-<meta content="website" property="og:type"/>
-<meta content="Blog de tecnología, IA, IoT e innovación | ARVELA" property="og:title"/>
-<meta content="Guías y contenidos prácticos sobre IA, IoT, software, datos, innovación, educación, ganadería y administración pública." property="og:description"/>
-<meta content="https://arvelainnova.es/blog/" property="og:url"/>
-<meta content="ARVELA Innovación" property="og:site_name"/>
-<meta content="https://arvelainnova.es/og-image.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Blog de ARVELA Innovación" name="twitter:title"/>
-<meta content="Tecnología aplicada, IA, IoT, software, datos, innovación y transformación digital." name="twitter:description"/>
-<meta content="https://arvelainnova.es/og-image.png" name="twitter:image"/>
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<meta content="#172033" name="theme-color"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog de ARVELA Innovación","url":"https://arvelainnova.es/blog/","description":"Contenidos sobre Inteligencia Artificial, IoT, software, analítica, innovación y transformación digital aplicada.","publisher":{"@type":"Organization","name":"ARVELA Innovación","url":"https://arvelainnova.es/blog/","logo":{"@type":"ImageObject","url":"https://arvelainnova.es/logo.jpg"}},"inLanguage":"es"}</script>
-<script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {
-        "@type":"ListItem",
-        "position":1,
-        "name":"Inicio",
-        "item":"https://arvelainnova.es/"
-      },
-      {
-        "@type":"ListItem",
-        "position":2,
-        "name":"Blog",
-        "item":"https://arvelainnova.es/blog/"
-      }
-    ]
-  }
-  </script>
-<link href="/Components/styles.css" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog de Tecnología, IA, IoT y Software | ARVELA Innovación</title>
+<meta name="description" content="Artículos sobre Inteligencia Artificial, IoT, software, SaaS, datos, automatización, innovación, digitalización y ganadería inteligente.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://arvelainnova.es/blog/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog de Tecnología, IA, IoT y Software | ARVELA Innovación">
+<meta property="og:description" content="Ideas, guías y aplicaciones prácticas sobre IA, IoT, software, datos, innovación y ganadería inteligente.">
+<meta property="og:url" content="https://arvelainnova.es/blog/">
+<meta property="og:image" content="https://arvelainnova.es/logo.jpg">
+<style>
+:root{--bg:#fff;--surface:#f6f8fb;--text:#172033;--muted:#5f6b7a;--line:#e5eaf0;--primary:#173f73;--primary2:#2367a6;--radius:18px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit}main{overflow:hidden}.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}.hero{padding:72px 0 60px;background:linear-gradient(180deg,#f7faff 0%,#fff 100%);border-bottom:1px solid var(--line)}.eyebrow,.section-label{display:inline-flex;color:var(--primary);font-weight:800;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}h1,h2,h3{line-height:1.18}h1{font-size:clamp(2.45rem,6vw,4.55rem);letter-spacing:-.045em;max-width:850px;margin:16px 0 20px}h2{font-size:clamp(1.8rem,3.5vw,2.6rem);letter-spacing:-.03em;margin:8px 0 9px}h3{font-size:1.2rem;letter-spacing:-.015em;margin:10px 0 10px}.lead{font-size:1.18rem;color:var(--muted);max-width:790px;margin:0}.intro{padding:38px 0 12px}.intro p{color:var(--muted);max-width:850px;font-size:1.03rem}.cluster-nav{display:flex;flex-wrap:wrap;gap:9px;margin:27px 0 15px}.cluster-nav a{padding:9px 13px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:#fff;font-size:.9rem;font-weight:700;color:var(--primary)}.cluster-nav a:hover{border-color:#bfd0e2;background:#f7faff}.cluster{padding:60px 0;border-top:1px solid var(--line);scroll-margin-top:24px}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;margin-bottom:25px}.section-head p{margin:0;color:var(--muted);max-width:690px}.count{white-space:nowrap;padding:7px 11px;border-radius:999px;background:var(--surface);color:var(--muted);font-size:.82rem;font-weight:750}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;min-width:0}.card:hover{transform:translateY(-3px);border-color:#cdd9e7;box-shadow:0 12px 30px rgba(23,63,115,.07)}.card-link{display:flex;flex-direction:column;height:100%;padding:24px;text-decoration:none}.kw{font-size:.76rem;font-weight:800;color:var(--primary2);text-transform:uppercase;letter-spacing:.035em}.card p{color:var(--muted);font-size:.94rem;margin:0 0 22px;flex:1}.read{font-size:.9rem;font-weight:800;color:var(--primary)}.cta{margin:26px 0 76px;padding:38px;border-radius:24px;background:var(--primary);color:#fff}.cta h2{margin-top:0;color:#fff}.cta p{color:#e6eef7;max-width:750px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:0 19px;border-radius:11px;background:#fff;color:var(--primary);font-weight:800;text-decoration:none}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.wrap{width:min(100% - 28px,1120px)}.hero{padding:48px 0 42px}.grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column;gap:12px}.cluster{padding:46px 0}.cta{padding:27px 23px;margin-bottom:54px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Blog de tecnología e innovación | ARVELA Innovación","description":"Artículos sobre Inteligencia Artificial, IoT, software, SaaS, datos, automatización, innovación, digitalización y ganadería inteligente.","url":"https://arvelainnova.es/blog/","isPartOf":{"@type":"WebSite","name":"ARVELA Innovación","url":"https://arvelainnova.es/"},"publisher":{"@type":"Organization","name":"ARVELA Innovación","url":"https://arvelainnova.es/"}}</script>
 </head>
 <body>
-<div id="header-container"></div>
-<script src="/Components/components.js"></script>
-<main class="wrap">
-<div class="breadcrumb">
-<a href="/">Inicio</a> · Blog
-    </div>
-<section class="hero">
-<div class="hero-card">
-<span class="eyebrow">Conocimiento y tecnología aplicada</span>
-<h1>Blog de innovación, Inteligencia Artificial, IoT y transformación digital</h1>
-<p>
-          Guías desarrolladas desde una perspectiva práctica sobre tecnologías y sectores en los que trabaja ARVELA:
-          software, Inteligencia Artificial, visión artificial, IoT, analítica, I+D+i, educación, ganadería inteligente
-          y administración pública.
-        </p>
-</div>
-</section>
-<section class="intro">
-<div class="intro-card">
-<h2>Tecnología explicada desde el problema que resuelve</h2>
-<p>
-          Los artículos profundizan en conceptos, arquitecturas, criterios de decisión, errores habituales y formas de
-          iniciar proyectos reales. El objetivo es que cada contenido complemente las páginas de soluciones y permita
-          ampliar temas que no tendría sentido desarrollar completamente dentro de una página comercial.
-        </p>
-</div>
-<div class="topics-card">
-<h2>Temas</h2>
-<p>La biblioteca crecerá por áreas relacionadas entre sí.</p>
-<div class="topics">
-<span class="topic">IA</span>
-<span class="topic">IoT</span>
-<span class="topic">Software</span>
-<span class="topic">Datos</span>
-<span class="topic">I+D+i</span>
-<span class="topic">Ganadería</span>
-<span class="topic">Educación</span>
-<span class="topic">Sector público</span>
-</div>
-</div>
-</section>
-<div class="section-title">
-<h2>Todos los artículos</h2>
-<p>12 contenidos especializados, enlazados con las áreas y soluciones de ARVELA.</p>
-</div>
-<section aria-label="Artículos del blog" class="articles">
+<script src="/Components/header-loader.js"></script>
+<main>
+<section class="hero"><div class="wrap"><span class="eyebrow">ARVELA Innovación · Blog</span><h1>Blog de tecnología e innovación</h1><p class="lead">Ideas, guías y aplicaciones prácticas sobre Inteligencia Artificial, IoT, software, datos e innovación aplicada a empresas, administraciones y ganadería.</p></div></section>
+<section class="intro"><div class="wrap"><h2>Inteligencia Artificial, IoT, software, datos e innovación aplicada</h2><p>Explora los contenidos por temática. Cada cluster reúne artículos relacionados para profundizar desde los conceptos básicos hasta la implantación práctica y los casos de uso.</p><nav class="cluster-nav" aria-label="Temáticas del blog"><a href="#ia">Inteligencia Artificial</a><a href="#iot">IoT, APIs y Automatización</a><a href="#software">Software y SaaS</a><a href="#datos">Datos y Analítica</a><a href="#idi">Innovación e I+D+i</a><a href="#ganaderia">Ganadería inteligente</a><a href="#admin">Administración y Ciudadanía</a><a href="#educacion">Educación y Aprendizaje</a></nav></div></section>
+<div class="wrap">
 
+<section class="cluster" id="ia"><div class="section-head"><div><span class="section-label">Cluster temático</span><h2>Inteligencia Artificial</h2><p>Conceptos, implantación, pymes y visión artificial.</p></div><span class="count">4 artículos</span></div><div class="grid">
+<article class="card"><a class="card-link" href="/blog/blog-que-es-inteligencia-artificial-empresas.html"><span class="kw">qué es la inteligencia artificial para empresas</span><h3>Qué es la inteligencia artificial para empresas</h3><p>Una introducción práctica a la IA empresarial, sus aplicaciones y cómo puede aportar valor.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-inteligencia-artificial-pymes.html"><span class="kw">inteligencia artificial para pymes</span><h3>Inteligencia artificial para pymes</h3><p>Aplicaciones reales de IA en pymes y criterios para empezar con un proyecto viable.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-como-implementar-ia-empresa.html"><span class="kw">cómo implementar inteligencia artificial en una empresa</span><h3>Cómo implementar Inteligencia Artificial en una empresa</h3><p>Guía paso a paso: caso de uso, datos, MVP, integración, validación y despliegue.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-vision-artificial-inteligencia-artificial.html"><span class="kw">visión artificial vs inteligencia artificial</span><h3>Visión artificial vs Inteligencia Artificial</h3><p>Diferencias entre ambos conceptos y cuándo utilizar visión artificial dentro de una solución de IA.</p><span class="read">Leer artículo →</span></a></article>
+</div></section>
 
+<section class="cluster" id="iot"><div class="section-head"><div><span class="section-label">Cluster temático</span><h2>IoT, APIs y Automatización</h2><p>Sensores, integración de sistemas, APIs y automatización de procesos.</p></div><span class="count">4 artículos</span></div><div class="grid">
+<article class="card"><a class="card-link" href="/blog/blog-que-es-iot-sensores-inteligentes.html"><span class="kw">qué es IoT</span><h3>Qué es IoT y cómo funcionan los sensores inteligentes</h3><p>Conceptos básicos de IoT, sensores, conectividad y plataformas digitales.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-integracion-sensores-iot-plataformas.html"><span class="kw">cómo integrar sensores IoT</span><h3>Cómo integrar sensores IoT con plataformas digitales</h3><p>Arquitectura, conectividad y flujo de datos para integrar sensores con aplicaciones.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-api-integracion-sistemas.html"><span class="kw">integración de sistemas mediante APIs</span><h3>Integración de sistemas mediante APIs</h3><p>Cómo conectar aplicaciones, datos y procesos mediante APIs de forma mantenible.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-automatizacion-procesos-empresa.html"><span class="kw">automatización de procesos empresariales</span><h3>Automatización de procesos empresariales</h3><p>Qué procesos automatizar, cómo conectar sistemas y cómo medir el resultado.</p><span class="read">Leer artículo →</span></a></article>
+</div></section>
 
+<section class="cluster" id="software"><div class="section-head"><div><span class="section-label">Cluster temático</span><h2>Software y SaaS</h2><p>Desarrollo a medida, software como servicio y criterios para elegir.</p></div><span class="count">3 artículos</span></div><div class="grid">
+<article class="card"><a class="card-link" href="/blog/blog-cuando-desarrollar-software-a-medida.html"><span class="kw">cuándo desarrollar software a medida</span><h3>Cuándo desarrollar software a medida</h3><p>Cómo decidir si un proceso necesita una solución propia en lugar de una herramienta estándar.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-saas-que-es.html"><span class="kw">qué es SaaS</span><h3>Qué es SaaS</h3><p>Cómo funciona el software como servicio, sus ventajas y qué implica desarrollar una plataforma SaaS.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-software-medida-vs-saas.html"><span class="kw">software a medida vs SaaS</span><h3>Software a medida vs SaaS</h3><p>Comparativa de personalización, costes, integración, escalabilidad y control para elegir mejor.</p><span class="read">Leer artículo →</span></a></article>
+</div></section>
 
+<section class="cluster" id="datos"><div class="section-head"><div><span class="section-label">Cluster temático</span><h2>Datos y Analítica</h2><p>Dashboards, cuadros de mando, KPIs y apoyo a la decisión.</p></div><span class="count">2 artículos</span></div><div class="grid">
+<article class="card"><a class="card-link" href="/blog/blog-cuadros-de-mando-analitica-datos.html"><span class="kw">cuadros de mando y KPIs</span><h3>Cuadros de mando, analítica de datos y KPIs</h3><p>Cómo transformar datos dispersos en indicadores útiles para seguimiento y decisión.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-dashboard-empresa.html"><span class="kw">dashboard para empresas</span><h3>Dashboard para empresas</h3><p>Cómo definir KPIs, integrar fuentes de datos y diseñar un dashboard realmente útil.</p><span class="read">Leer artículo →</span></a></article>
+</div></section>
 
+<section class="cluster" id="idi"><div class="section-head"><div><span class="section-label">Cluster temático</span><h2>Innovación e I+D+i</h2><p>MVP, prototipos, pilotos, TRL y financiación de innovación.</p></div><span class="count">4 artículos</span></div><div class="grid">
+<article class="card"><a class="card-link" href="/blog/blog-que-es-un-mvp.html"><span class="kw">qué es un MVP</span><h3>Qué es un MVP</h3><p>Qué significa producto mínimo viable y cómo utilizarlo para validar una solución tecnológica.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-prototipo-mvp-piloto-diferencias.html"><span class="kw">diferencias prototipo MVP piloto</span><h3>Prototipo, MVP y piloto: diferencias</h3><p>Qué valida cada etapa y cuándo utilizarla en un proyecto tecnológico.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-trl-proyectos-idi.html"><span class="kw">niveles TRL</span><h3>Niveles TRL</h3><p>Cómo se utilizan los niveles TRL para describir la madurez tecnológica de un proyecto.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-proyectos-idi-financiacion.html"><span class="kw">financiación de proyectos I+D+i</span><h3>Financiación de proyectos de I+D+i</h3><p>Aspectos clave para estructurar proyectos tecnológicos orientados a programas de financiación.</p><span class="read">Leer artículo →</span></a></article>
+</div></section>
 
+<section class="cluster" id="ganaderia"><div class="section-head"><div><span class="section-label">Cluster temático</span><h2>Ganadería inteligente</h2><p>IA, IoT, sensores, geolocalización y analítica aplicados a ganadería.</p></div><span class="count">11 artículos</span></div><div class="grid">
+<article class="card"><a class="card-link" href="/blog/blog-inteligencia-artificial-ganaderia.html"><span class="kw">inteligencia artificial en ganadería</span><h3>Inteligencia Artificial en ganadería</h3><p>Aplicaciones de IA para analizar datos, detectar patrones y apoyar decisiones.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-ganaderia-precision.html"><span class="kw">ganadería de precisión</span><h3>Ganadería de precisión</h3><p>Qué es y cómo utiliza sensores, datos y tecnología para mejorar el seguimiento animal.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-gps-para-ganado.html"><span class="kw">GPS para ganado</span><h3>GPS para ganado</h3><p>Cómo se utilizan dispositivos GPS para localizar y monitorizar animales en extensivo.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-bolos-ruminales.html"><span class="kw">bolos ruminales</span><h3>Bolos ruminales</h3><p>Qué son, qué variables pueden registrar y cómo se utilizan sus datos.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-sensores-para-ganado.html"><span class="kw">sensores para ganado</span><h3>Sensores para ganado</h3><p>Tipos de sensores ganaderos, datos que pueden aportar y aplicaciones habituales.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-iot-en-ganaderia.html"><span class="kw">IoT en ganadería</span><h3>IoT en ganadería</h3><p>Cómo conectar sensores, dispositivos y plataformas para construir sistemas ganaderos basados en datos.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-monitorizacion-ganado.html"><span class="kw">monitorización de ganado</span><h3>Monitorización de ganado</h3><p>Qué variables pueden monitorizarse y cómo combinar localización, actividad y sensores.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-geolocalizacion-ganado.html"><span class="kw">geolocalización de ganado</span><h3>Geolocalización de ganado</h3><p>Tecnologías y usos de la geolocalización para seguimiento de animales y gestión de explotaciones.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-datos-ganaderia-inteligente.html"><span class="kw">analítica de datos en ganadería</span><h3>Analítica de datos en ganadería</h3><p>Cómo integrar y analizar datos ganaderos para convertirlos en información útil.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-bienestar-animal-sensores.html"><span class="kw">bienestar animal mediante sensores</span><h3>Bienestar animal mediante sensores</h3><p>Cómo los sensores pueden apoyar la monitorización de variables relacionadas con el bienestar animal.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-parto-celo-alertas-ganado.html"><span class="kw">detección de celo y parto en ganado</span><h3>Detección de celo y parto en ganado</h3><p>Cómo combinar variables y alertas para identificar posibles eventos reproductivos que requieren revisión.</p><span class="read">Leer artículo →</span></a></article>
+</div></section>
 
+<section class="cluster" id="admin"><div class="section-head"><div><span class="section-label">Cluster temático</span><h2>Administración y Ciudadanía</h2><p>Digitalización municipal y participación mediante herramientas digitales.</p></div><span class="count">2 artículos</span></div><div class="grid">
+<article class="card"><a class="card-link" href="/blog/blog-digitalizacion-ayuntamientos-corregido.html"><span class="kw">digitalización de ayuntamientos</span><h3>Digitalización de ayuntamientos</h3><p>Tecnologías y procesos para avanzar en la transformación digital de administraciones locales.</p><span class="read">Leer artículo →</span></a></article>
+<article class="card"><a class="card-link" href="/blog/blog-gestion-incidencias-municipales.html"><span class="kw">gestión de incidencias municipales</span><h3>Gestión de incidencias municipales</h3><p>Cómo digitalizar la comunicación, clasificación y seguimiento de incidencias.</p><span class="read">Leer artículo →</span></a></article>
+</div></section>
 
+<section class="cluster" id="educacion"><div class="section-head"><div><span class="section-label">Cluster temático</span><h2>Educación y Aprendizaje</h2><p>Tecnología e IA aplicada a formación y aprendizaje adaptativo.</p></div><span class="count">1 artículo</span></div><div class="grid">
+<article class="card"><a class="card-link" href="/blog/blog-aprendizaje-adaptativo-inteligencia-artificial.html"><span class="kw">aprendizaje adaptativo con inteligencia artificial</span><h3>Aprendizaje adaptativo con Inteligencia Artificial</h3><p>Cómo utilizar IA y datos para personalizar experiencias de aprendizaje y seguimiento.</p><span class="read">Leer artículo →</span></a></article>
+</div></section>
 
-
-
-
-<article class="article-card">
-<span class="category">Innovación e I+D+i</span>
-<h3>Proyectos de I+D+i: financiación, TRL y cómo preparar una propuesta</h3>
-<p>
-          De la oportunidad tecnológica al piloto: objetivos, TRL, paquetes de trabajo, riesgos, impacto, consorcios y explotación de resultados.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 24 de agosto 2026 · 10 min</span>
-<a href="/blog/blog-proyectos-idi-financiacion.html">Leer artículo →</a>
+<section class="cta"><h2>¿Quieres convertir una idea tecnológica en una solución real?</h2><p>En ARVELA combinamos Inteligencia Artificial, IoT, software, analítica de datos, automatización e I+D+i para desarrollar soluciones adaptadas a necesidades concretas.</p><a class="btn" href="/contacto.html">Hablemos de tu proyecto →</a></section>
 </div>
-</article><article class="article-card">
-<span class="category">Administración pública</span>
-<h3>Gestión de incidencias municipales: cómo digitalizar avisos y actuaciones</h3>
-<p>
-          Canales ciudadanos, geolocalización, GIS, clasificación, duplicados, SLA, contratas, cuadros de mando, IoT e IA.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 20 de agosto 2026 · 8 min</span>
-<a href="/blog/blog-gestion-incidencias-municipales.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">Administración pública</span>
-<h3>Cómo digitalizar un Ayuntamiento paso a paso</h3>
-<p>
-          Procesos, ciudadanía, GIS, IoT, analítica, Smart City, integración e Inteligencia Artificial dentro de una hoja de ruta municipal.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 16 de agosto 2026 · 8 min</span>
-<a href="/blog/blog-digitalizacion-ayuntamientos.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">Educación y formación</span>
-<h3>Aprendizaje adaptativo: cómo personalizar la formación con datos e IA</h3>
-<p>
-          Competencias, evaluación, analítica educativa, reglas de adaptación, recomendaciones, feedback e Inteligencia Artificial aplicada al aprendizaje.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 12 de agosto 2026 · 8 min</span>
-<a href="/blog/blog-aprendizaje-adaptativo-inteligencia-artificial.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">Ganadería inteligente</span>
-<h3>Inteligencia Artificial en ganadería: sensores, bienestar y digitalización</h3>
-<p>
-          GPS, geovallas, actividad, bienestar animal, datos, predicción, cuadros de mando y aplicaciones de IA en explotaciones ganaderas.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 8 de agosto 2026 · 10 min</span>
-<a href="/blog/blog-inteligencia-artificial-ganaderia.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">IoT técnico</span>
-<h3>Cómo integrar sensores IoT en una plataforma web</h3>
-<p>
-          Arquitectura IoT, MQTT, HTTP, LoRaWAN, gateways, APIs, series temporales, alertas, seguridad y escalabilidad de dispositivos.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 4 de agosto 2026 · 10 min</span>
-<a href="/blog/blog-integracion-sensores-iot-plataformas.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">Inteligencia Artificial</span>
-<h3>Qué es la Inteligencia Artificial para empresas y cómo aplicarla</h3>
-<p>
-          Conceptos, casos de uso, datos, automatización, modelos, riesgos y una metodología para empezar un proyecto de IA con objetivos medibles.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 31 de julio 2026 · 11 min</span>
-<a href="/blog/blog-que-es-inteligencia-artificial-empresas.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">IoT y sensores</span>
-<h3>Qué es IoT y para qué sirven los sensores inteligentes</h3>
-<p>
-          Dispositivos conectados, telemetría, redes, plataformas, alertas y aplicaciones del Internet de las Cosas en entornos reales.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 27 de julio 2026 · 9 min</span>
-<a href="/blog/blog-que-es-iot-sensores-inteligentes.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">Software a medida</span>
-<h3>Cuándo desarrollar software a medida y cuándo utilizar una solución existente</h3>
-<p>
-          Criterios para decidir entre software estándar y desarrollo personalizado: costes, integraciones, procesos, escalabilidad y retorno.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 23 de julio 2026 · 10 min</span>
-<a href="/blog/blog-cuando-desarrollar-software-a-medida.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">Innovación</span>
-<h3>Qué es un MVP y cómo reduce el riesgo de un proyecto tecnológico</h3>
-<p>
-          Diferencias entre MVP, prototipo, prueba de concepto y piloto, con criterios para validar una idea antes de desarrollar el producto completo.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 18 de julio 2026 · 10 min</span>
-<a href="/blog/blog-que-es-un-mvp.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">Analítica de datos</span>
-<h3>Cómo convertir datos en decisiones mediante cuadros de mando y KPIs</h3>
-<p>
-          Diseño de dashboards, selección de indicadores, calidad del dato, alertas y analítica orientada a decisiones reales.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 14 de julio 2026 · 9 min</span>
-<a href="/blog/blog-cuadros-de-mando-analitica-datos.html">Leer artículo →</a>
-</div>
-</article><article class="article-card">
-<span class="category">Visión artificial</span>
-<h3>Qué es la visión artificial y cómo funciona</h3>
-<p>
-          Computer Vision, detección de objetos, segmentación, OCR, seguimiento, Edge AI, cámaras inteligentes y aplicaciones empresariales.
-        </p>
-<div class="article-meta">
-<span>Sergio Alonso · 9 de julio 2026 · 9 min</span>
-<a href="/blog/blog-vision-artificial-inteligencia-artificial.html">Leer artículo →</a>
-</div>
-</article></section>
-<section aria-labelledby="cta-final-title" class="site-cta"><h2 id="cta-final-title">¿Quieres llevar una idea del blog a un proyecto real?</h2><p>Cuéntanos el contexto, el objetivo y el punto en el que estás. Te ayudamos a definir un primer alcance realista y los siguientes pasos.</p><div class="cta-row"><a class="btn btn-primary" href="/contacto.html#formulario">Cuéntanos tu proyecto</a></div></section></main>
+</main>
 <div id="footer-container"></div>
+<script>fetch('/Components/footer.html').then(r=>{if(!r.ok)throw new Error('No se pudo cargar el footer');return r.text()}).then(html=>{document.getElementById('footer-container').innerHTML=html}).catch(e=>console.error('Footer ARVELA:',e));</script>
 </body>
 </html>
