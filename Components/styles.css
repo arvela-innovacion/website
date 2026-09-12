@@ -44,6 +44,7 @@ h1, h2 { letter-spacing: -0.03em; }
 p { text-wrap: pretty; }
 
 /* Header */
+.header-wrap { width: min(calc(100% - 32px), var(--max)); margin-inline: auto; }
 #header-container:empty { min-height: 106px; }
 header { padding: 22px 0 10px; }
 .topbar {
@@ -59,14 +60,14 @@ header { padding: 22px 0 10px; }
   backdrop-filter: blur(12px);
 }
 .brand { display: flex; min-width: 0; align-items: center; gap: 14px; }
-.logo-box,
-.logo-box img img { width: 100%; height: 100%; display: block; object-fit: cover; }
+header .logo-box { width: 54px; height: 54px; flex: 0 0 54px; display: block; overflow: hidden; border-radius: 12px; }
+header .logo-box img { width: 100%; height: 100%; display: block; object-fit: contain; }
 .brand-title,
 .brand strong { margin: 0; font-size: 1rem; line-height: 1.15; letter-spacing: .02em; }
 .brand-text p,
 .brand span { display: block; margin: 4px 0 0; color: var(--muted); font-size: .92rem; }
-nav { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; }
-nav a {
+header nav { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; }
+header nav a {
   padding: 8px 10px;
   border-radius: 999px;
   color: var(--muted);
@@ -74,8 +75,8 @@ nav a {
   font-size: .93rem;
   transition: color .2s ease, background .2s ease;
 }
-nav a:hover,
-nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); }
+header nav a:hover,
+header nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); }
 
 /* Navegación secundaria */
 .breadcrumb { margin: 18px 0 0; color: var(--muted); font-size: .92rem; }
@@ -405,7 +406,7 @@ nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft
 /* Responsive */
 @media (max-width: 900px) {
   .topbar { align-items: flex-start; flex-direction: column; }
-  nav { justify-content: flex-start; }
+  header nav { justify-content: flex-start; }
   .hero-grid,
   .intro,
   .layout { grid-template-columns: 1fr; }
@@ -421,6 +422,7 @@ nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft
 
 @media (max-width: 640px) {
   .wrap { width: min(calc(100% - 22px), var(--max)); }
+  .header-wrap { width: min(calc(100% - 22px), var(--max)); }
   #header-container:empty { min-height: 150px; }
   header { padding-top: 12px; }
   .topbar { padding: 14px; border-radius: var(--radius-md); }
@@ -486,12 +488,12 @@ nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft
     gap: 10px;
   }
 
-  nav {
+  header nav {
     gap: 5px;
     width: 100%;
   }
 
-  nav a {
+  header nav a {
     padding: 7px 9px;
     font-size: .86rem;
     line-height: 1.2;
